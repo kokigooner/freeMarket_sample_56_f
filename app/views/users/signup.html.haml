@@ -2,14 +2,29 @@
   %header.signup__header
     %h1
       %a(href="/")
-        = image_tag 'mercari_logo_horizontal', alt: 'mercari', class: 'signup__header__logo'
+        = image_tag 'mercari_logo_horizontal', class: 'signup__header__logo'
   %main.signup__main
     .signup__main__content
       .signup__main__content__title
         %h2 新規会員登録
       .signup__main__content__form
         .signup__main__content__form__btns
-          .signup__main__content__form__btn
-          .signup__main__content__form__btn
-          .signup__main__content__form__btn
-  %footer
+          %a{href: "/", class: "signup__form__btn signup__form__btn--mail"}
+            メールアドレスで登録する
+          %a{href: "/", class: "signup__form__btn signup__form__btn--facebook"}
+            Facebookで登録する
+          %a{href: "/", class: "signup__form__btn signup__form__btn--google"}
+            Googleで登録する
+  %footer.signup__footer
+    .signup__footer__nav
+      %ul.signup__footer__nav__links
+        %li
+          %a{href: "/", class: "signup__footer__nav__link"} プライバシーポリシー
+        %li
+          %a{href: "/", class: "signup__footer__nav__link"} メルカリ利用規約
+        %li
+          %a{href: "/", class: "signup__footer__nav__link"} 特定商取引に関する表記
+      %a(href="/")
+        = image_tag 'mercari_logo_vertical', class: 'signup__footer__nav__logo'
+      %p.signup__footer__nav__text
+        © 2019 Mercari
