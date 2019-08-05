@@ -1,0 +1,11 @@
+.sms_confirmation {
+  color: #333;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic,
+    メイリオ, Meiryo, sans-serif;
+  &__form {
+    &__text {
+      font-size: 14px;
+      margin: 8px 0 0;
+    }
+  }
+}
