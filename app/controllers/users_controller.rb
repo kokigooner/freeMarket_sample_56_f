@@ -9,6 +9,9 @@ class UsersController < ApplicationController
   def sms_confirmation
   end
 
+  def sms_authentication
+  end
+
   def mypage_profile    
   end
 end
