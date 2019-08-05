@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'users/mypage_profile' => 'users#mypage_profile'
   get "/users/signup" => "users#signup"
   get "/users/signup/registration" => "users#registration"
+  get "/users/signup/sms_confirmation" => "users#sms_confirmation"
 end
