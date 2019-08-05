@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   get "/users/signup/registration" => "users#registration"
   get "/users/signup/sms_confirmation" => "users#sms_confirmation"
   get "/users/signup/sms_authentication" => "users#sms_authentication" 
+  get "/users/signup/address" => "users#address" 
+  get "/users/signup/payment" => "users#payment" 
+  get "/users/signup/complete" => "users#complete" 
 end

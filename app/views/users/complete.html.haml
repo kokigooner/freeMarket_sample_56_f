@@ -1,0 +1,54 @@
+.registration-container
+  %header.registration-header
+    %h1
+      %a(href="/" class="registration-header__logo")
+        = image_tag 'mercari_logo_horizontal', class: 'registration-header__logo--img'
+    %nav.registration-header__progress-bar
+      %ol
+        %li
+          会員情報
+          .registration-header__progress-status.registration-header__progress-status--active
+          .progress-status__bar.progress-status__bar--after.progress-status__bar--active
+        %li
+          電話番号認証
+          .progress-status__bar.progress-status__bar--before.progress-status__bar--active
+          .registration-header__progress-status.registration-header__progress-status--active
+          .progress-status__bar.progress-status__bar--after.progress-status__bar--active
+        %li
+          お届け先住所入力
+          .progress-status__bar.progress-status__bar--before.progress-status__bar--active
+          .registration-header__progress-status.registration-header__progress-status--active
+          .progress-status__bar.progress-status__bar--after.progress-status__bar--active
+        %li
+          支払い方法
+          .progress-status__bar.progress-status__bar--before.progress-status__bar--active
+          .registration-header__progress-status.registration-header__progress-status--active
+          .progress-status__bar.progress-status__bar--after.progress-status__bar--active
+        %li.registration-header--active
+          完了
+          .progress-status__bar.progress-status__bar--before.progress-status__bar--active
+          .registration-header__progress-status.registration-header__progress-status--active
+  %main.registration-main
+    .registration-main__container
+      .registration-main__form__content.signup-complete__content
+        %h2 会員登録完了
+        %p.registration-main__form__confirm-text.signup-complete__text
+          ありがとうございます。
+          %br/
+          会員登録が完了しました。
+        %a{href: "/", class: "signup__form__btn signup__form__btn--mail registration-main__form__next-btn"}
+          メルカリをはじめる
+      = image_tag 'users_signup_complete.png', class: 'signup-complete__image'
+  %footer.signup__footer
+    .signup__footer__nav
+      %ul.signup__footer__nav__links
+        %li
+          %a{href: "/", class: "signup__footer__nav__link"} プライバシーポリシー
+        %li
+          %a{href: "/", class: "signup__footer__nav__link"} メルカリ利用規約
+        %li
+          %a{href: "/", class: "signup__footer__nav__link"} 特定商取引に関する表記
+      %a(href="/")
+        = image_tag 'mercari_logo_vertical', class: 'signup__footer__nav__logo'
+      %p.signup__footer__nav__text
+        © 2019 Mercari
