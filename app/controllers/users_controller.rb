@@ -12,6 +12,15 @@ class UsersController < ApplicationController
   def sms_authentication
   end
 
+  def address
+  end
+
+  def payment
+  end
+
+  def complete
+  end
+
   def mypage_profile    
   end
 end
