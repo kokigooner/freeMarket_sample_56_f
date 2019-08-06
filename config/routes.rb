@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'users/mypage_profile' => 'users#mypage_profile'
   get '/users/mypage/card' => "users#card"
   get '/users/mypage/card/create' => "users#card_create"
+  get "users/mypage" => "users#mypage"
   get "/users/signup" => "users#signup"
   get "/users/signup/registration" => "users#registration"
   get "/users/signup/sms_confirmation" => "users#sms_confirmation"

@@ -24,6 +24,9 @@ class UsersController < ApplicationController
   def mypage_profile    
   end
 
+  def mypage
+  end
+
   def card
   end
 
