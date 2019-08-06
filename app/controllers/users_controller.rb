@@ -23,4 +23,9 @@ class UsersController < ApplicationController
 
   def mypage_profile    
   end
+
+  def identification
+    @test_model = {name:"山田太郎",}
+  end
+
 end
