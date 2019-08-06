@@ -1,0 +1,31 @@
+.mypage-nav-list li {
+  border-top: 1px solid #eee;
+}
+
+.mypage-nav-list-item .icon-arrow-right {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  color: #ccc;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+}
+
+.l-side {
+  float: left;
+  width: 280px;
+  margin: 0 40px 0 0;
+
+}
+nav ol, nav ul {
+  list-style: none;
+}
+.l-single-content {
+  max-width: 320px;
+  margin: 0 auto;
+}
+.l-single-inner {
+  padding: 64px;
+}

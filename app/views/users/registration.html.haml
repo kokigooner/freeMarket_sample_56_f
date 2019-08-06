@@ -28,10 +28,9 @@
           完了
           .progress-status__bar.progress-status__bar--before
           .registration-header__progress-status
-
   %main.registration-main
     .registration-main__container
-      %h2 会員情報入力
+      %h2.registration-main__container__text 会員情報入力
       =form_for :user, html: { class: "registration-main__form" } do |f|
         .registration-main__form__content
           .registration-main__form__group

@@ -12,6 +12,30 @@ class UsersController < ApplicationController
   def sms_authentication
   end
 
+  def address
+  end
+
+  def payment
+  end
+
+  def complete
+  end
+
   def mypage_profile    
   end
+
+  def card
+  end
+
+  def card_create
+  end
+
+  def identification
+    @test_model = {name:"山田太郎",kana_name:"山田　太郎",birthday:"2000年01日01日"}
+  end
+
+  def logout
+  end
+
+
 end
