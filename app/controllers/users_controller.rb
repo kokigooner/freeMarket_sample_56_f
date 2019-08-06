@@ -25,7 +25,11 @@ class UsersController < ApplicationController
   end
 
   def identification
-    @test_model = {name:"山田太郎",}
+    @test_model = {name:"山田太郎",kana_name:"山田　太郎",birthday:"2000年01日01日"}
   end
+
+  def logout
+  end
+
 
 end
