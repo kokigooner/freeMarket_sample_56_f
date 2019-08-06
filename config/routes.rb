@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   get "/users/syuppin" => "users#syuppin"
   get "/users/signup/address" => "users#address" 
   get "/users/signup/payment" => "users#payment" 
-  get "/users/signup/complete" => "users#complete" 
+  get "/users/signup/complete" => "users#complete"
+  get "/users/login" => "users#login"
   get "/mypage/identification/"=> "users#identification" 
   get "/mypage/logout/"=> "users#logout" 
 
