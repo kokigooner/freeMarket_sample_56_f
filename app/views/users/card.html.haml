@@ -1,0 +1,23 @@
+.mypage-card
+  %header.mypage-card__header
+  .mypage-card__main__container
+    .mypage-card__sidebar
+    .mypage-card__container
+      %h2.mypage-card__head
+        支払い方法
+      .mypage-card__inner
+        %p.mypage-card__inner__text
+          クレジットカード一覧
+        %ul.mypage-card__cards
+          %li.mypage-card__card
+            = image_tag 'visa.svg', class: 'mypage-card__card__icon'
+            .mypage-card__card__payment-num
+              ************1111
+            .mypage-card__card__payment-expire-date
+              05 / 05
+            .mypage-card__card__payment-remove-btn
+              削除する
+        %a(href="/" class="mypage-card__btn")
+          クレジットカードを追加する
+        %a(href="/" class="mypage-card__link")
+          支払い方法について＞

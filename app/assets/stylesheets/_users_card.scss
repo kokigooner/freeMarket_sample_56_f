@@ -1,0 +1,121 @@
+.mypage-card {
+  background-color: #f5f5f5;
+  color: #333;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic,
+    メイリオ, Meiryo, sans-serif;
+  &__header {
+    height: 150px;
+    width: 100vw;
+    background-color: #fff;
+  }
+  &__main__container {
+    margin: 40px auto 0;
+    width: 1020px;
+    display: flex;
+  }
+  &__sidebar {
+    width: 280px;
+    height: 1000px;
+    margin-right: 40px;
+    background-color: #fff;
+  }
+
+  &__container {
+    height: 100%;
+    width: 700px;
+    background-color: #fff;
+  }
+  &__head {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px 24px;
+    border-bottom: 2px solid #f5f5f5;
+  }
+  &__inner {
+    padding: 64px;
+    &__text {
+      font-size: 16px;
+      font-weight: bold;
+      width: 320px;
+      margin: 0 auto;
+    }
+  }
+
+  &__btn {
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+    display: block;
+    height: 50px;
+    width: 320px;
+    box-sizing: border-box;
+    line-height: 48px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin: 24px auto;
+    &:hover {
+      opacity: 0.7;
+      transition: all ease-out 0.3s;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 40px 0 0 0;
+    margin: 0 auto;
+    width: 572px;
+    border-top: 1px solid #eee;
+    color: #0099e8;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: right;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__card {
+    margin: 0 auto;
+    padding: 24px 0;
+    width: 320px;
+    &__icon {
+      height: 15px;
+    }
+    &__payment-num {
+      padding: 8px 0 0 0;
+      font-size: 16px;
+    }
+    &__payment-expire-date {
+      padding: 8px 0 0 0;
+      font-size: 16px;
+    }
+    &__payment-remove-btn {
+      float: right;
+      position: relative;
+      bottom: 70px;
+      height: 24px;
+      width: 70px;
+      line-height: 24px;
+      box-sizing: border-box;
+      font-size: 14px;
+      padding: 0 6px;
+      background: #fff;
+      border-radius: 3px;
+      border: 1px solid #ea352d;
+      color: #ea352d;
+      cursor: pointer;
+    }
+  }
+}
+
+.mypage-card-create {
+  &__head {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 8px 0;
+    text-align: center;
+    border-bottom: 1px solid #f5f5f5;
+  }
+}
