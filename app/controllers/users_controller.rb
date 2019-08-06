@@ -14,4 +14,8 @@ class UsersController < ApplicationController
 
   def mypage_profile    
   end
+
+  def syuppin
+  end
+
 end
