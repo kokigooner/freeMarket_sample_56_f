@@ -1,0 +1,191 @@
+%div.default-container 
+  = render 'header'
+  = render 'bread-crumbs'
+  %main.l-container.clearfix
+    %div.l-content
+      %section.l-chapter-container.mypage-identification
+        %h2.l-chapter-head 本人情報の登録
+        = form_tag('users_identification_path', method: :post,class: "l-single-inner" ) do |f|
+          %div
+            = simple_format @text1 
+            .text-right 
+              = link_to '本人確認書類のアップロードについて',"/"
+              %i 
+          %div.form-group
+            %label
+              お名前
+            %p
+              =  @test_model[:name]
+          %div.form-group
+            お名前カナ
+            %p
+              =  @test_model[:kana_name]
+          %div.form-group
+            生年月日
+            %p
+              =  @test_model[:birthday]
+          %div.form-group
+            %label 
+              郵便番号
+            %span.form-arbitrary
+              任意
+            = text_field_tag "zip_code", '', {class: "input-default",placeholder: '111-0000'} 
+          %div.form-group
+            %label 
+              都道府県
+            %span.form-arbitrary
+              任意
+            %div.select-wrap
+              = select_tag 'name', options_for_select({北海道:1,青森県:2,岩手県:3,宮城県:4,秋田県:5,山形県:6,福島県:7,茨城県:8,栃木県:9,群馬県:10,埼玉県:11,千葉県:12,東京都:13,神奈川県:14,新潟県:15,富山県:16,石川県:17,福井県:18,山梨県:19,長野県:20,岐阜県:21,静岡県:22,愛知県:23,三重県:24,滋賀県:25,京都府:26,大阪府:27,兵庫県:28,奈良県:29,和歌山県:30,鳥取県:31,島根県:32,岡山県:33,広島県:34,山口県:35,徳島県:36,香川県:37,愛媛県:38,高知県:39,福岡県:40,佐賀県:41,長崎県:42,熊本県:43,大分県:44,宮崎県:45,鹿児島県:46,沖縄県:47}), class:'select-default',prompt: "--"
+          %div.form-group
+            %label 
+              市町村
+            %span.form-arbitrary
+              任意
+            = text_field_tag "city", '', {class: "input-default",placeholder: '例）横浜市緑区'} 
+          %div.form-group
+            %label 
+              番地
+            %span.form-arbitrary
+              任意
+            = text_field_tag "address1", '', {class: "input-default",placeholder: '例）青山1-1-1'} 
+          %div.form-group
+            %label 
+              建物名
+            %span.form-arbitrary
+              任意
+            = text_field_tag "address2", '', {class: "input-default",placeholder: '例）柳ビル'} 
+          %div.form-group
+            = submit_tag "登録", {class: "btn-red btn-default"} 
+          %div.form-group.text_right
+            %p.mypage-identification
+              .text-right
+                = link_to "本人情報の登録について", "/"
+    %div.l-side
+      %nav.mypage-nav
+        %ul.mypage-nav-list
+          %li
+            %a.mypage-nav-list-item
+              マイページ
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              お知らせ
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              やることリスト
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              いいね一覧
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              出品する
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              出品した商品・出品中
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              出品した商品・取引中
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              出品した商品・売却済み
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              購入した商品・取引中
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              購入した商品・過去の取引
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              ニュース一覧
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              評価一覧
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              ガイド
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              お問い合わせ
+              %i.icon-arrow-right
+                >
+        %h3.mypage-bav-head
+          メルペイ
+        %ul.mypage-nav-list
+          %li
+            %a.mypage-nav-list-item
+              売上・振り込み申請
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              ポイント
+              %i.icon-arrow-right
+                >
+        %h3.mypage-bav-head
+          設定
+        %ul.mypage-nav-list
+          %li
+            %a.mypage-nav-list-item
+              プロフィール
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              発送元・お届け先住所変更
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              お支払い方法
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              メール/パスワード
+              %i.icon-arrow-right
+                >
+        %h3.mypage-bav-head
+          本人情報
+        %ul.mypage-nav-list
+          %li
+            %a.mypage-nav-list-item
+              電話番号の確認
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              お支払い方法
+              %i.icon-arrow-right
+                >
+          %li
+            %a.mypage-nav-list-item
+              メール/パスワード
+              %i.icon-arrow-right
+                >
+  = render 'footer'
