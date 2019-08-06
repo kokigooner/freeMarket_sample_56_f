@@ -1,28 +1,28 @@
 @import url(http://fonts.googleapis.com/css?family=Unica+One);
 
-$accent: #ffa500;
-$accents: #2d918c;
-$black: #543f32;
-$dark: #6b395f;
-$darkGray: #cbd0d3;
-$gray: #a4c1d7;
-$lightGray: #fce27d;
-$white: white;
+// $accent: #ffa500;
+// $accents: #2d918c;
+// $black: #543f32;
+// $dark: #6b395f;
+// $darkGray: #cbd0d3;
+// $gray: #a4c1d7;
+// $lightGray: #fce27d;
+// $white: white;
 
 * {
   box-sizing: border-box;
 }
 
-@mixin boxBase($margin: 30px auto, $padding: 10px) {
-  margin: $margin;
-  padding: $padding;
-}
-@mixin basePadding($padding: 10px) {
-  padding: $padding;
-}
-@mixin baseMargin($margin: 10px auto) {
-  margin: $margin;
-}
+// @mixin boxBase($margin: 30px auto, $padding: 10px) {
+//   margin: $margin;
+//   padding: $padding;
+// }
+// @mixin basePadding($padding: 10px) {
+//   padding: $padding;
+// }
+// @mixin baseMargin($margin: 10px auto) {
+//   margin: $margin;
+// }
 
 // body,
 // html {
@@ -90,6 +90,7 @@ $white: white;
 .title {
   font-weight: bold;
 }
+
 
 div.top-page__pickupone {
   width: 100%;

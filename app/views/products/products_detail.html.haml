@@ -1,0 +1,59 @@
+.default-container
+  %section.item-box-container.l-single-container
+    %h1.item-name MacBook エアー
+    .item-main-content.clearfix
+      .item-photo
+        .owl-carousel.owl-loaded.owl-drag
+          .owl-stage-outer
+            .owl-stage
+              .owl-item.active
+                .owl-item-inner.is-higher-height
+                  = image_tag 'macbook_product_picture', class: 'owl-lazy'
+          .owl-dots
+            .owl-dot
+              .owl-dot-inner
+                = image_tag 'macbook_product_picture', class: 'owl-lazy'
+      %table.item-detail-table
+        %tbody
+          %tr
+            %th 出品者
+            %td
+              %a{href: "/"} JP
+              %div
+                .item-user-ratings
+                  %i.icon-good
+                  %span 87
+                .item-user-ratings
+                  %i.icon-normal
+                  %span 7
+                .item-user-ratings
+                  %i.icon-bad
+                  %span 2
+          %tr
+            %th カテゴリー
+            %td
+              %a{href: "/"} 家電・スマホ・カメラ
+              %a{href: "/"} > PC/タブレット
+              %a{href: "/"} > ノートPC
+          %tr
+            %th ブランド
+            %td 
+              %a{href: "/"} アップル
+          %tr
+            %th 商品の状態
+            %td 未使用品に近い
+          %tr
+            %th 配送料の負担
+            %td 着払い(購入者負担)
+          %tr
+            %th 配送の方法
+            %td 未定
+          %tr
+            %th 配送元地域
+            %td 
+              %a{href: "/"} 鳥取県
+          %tr
+            %th 発送日の目安
+            %td 4~7日で発送
+
+    
