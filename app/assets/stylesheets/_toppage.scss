@@ -1,102 +1,25 @@
-// @import url(http://fonts.googleapis.com/css?family=Unica+One);
 
-// // $accent: #ffa500;
-// // $accents: #2d918c;
-// // $black: #543f32;
-// // $dark: #6b395f;
-// // $darkGray: #cbd0d3;
-// // $gray: #a4c1d7;
-// // $lightGray: #fce27d;
-// // $white: white;
+* {
+  box-sizing: border-box;
+}
 
-// * {
-//   box-sizing: border-box;
-// }
 
-// // @mixin boxBase($margin: 30px auto, $padding: 10px) {
-//   margin: $margin;
-//   padding: $padding;
-// }
-// @mixin basePadding($padding: 10px) {
-//   padding: $padding;
-// }
-// @mixin baseMargin($margin: 10px auto) {
-//   margin: $margin;
-// }
+body,
+html {
+  height: 100%;
+  background-color: whitesmoke;
+}
 
-// body,
-// html {
-//   height: 100%;
-//   background-color: whitesmoke;
-// }
-
-// body {
-//   padding-top: 60px;
-// }
-
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6,
-// body {
-//   line-height: 1.57;
-//   letter-spacing: 0.15em;
-//   font-size: 16px;
-//   color: $dark;
-//   font-family: "Unica One", "Avenir", "游ゴシック", "YuGothic",
-//     "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6",
-//     "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック",
-//     "MS P Gothic", sans-serif;
-//   margin: 0;
-// }
-
-// a {
-//   text-decoration: none;
-//   color: $black;
-//   &:hover {
-//     color: $accent;
-//   }
-// }
-
-// .bold {
-//   font-weight: bold;
-// }
-
-// .ultra {
-//   font-size: 2em !important;
-// }
-
-// // ::selection {
-// //   background: $gray;
-// // }
-
-// .btn {
-//   @include basePadding(8px 20px);
-//   font-size: 14px;
-//   border: 2px solid $accents;
-//   color: $accents;
-//   font-weight: bold;
-//   text-align: center;
-//   border-radius: 30px;
-//   display: inline-block;
-//   &:hover {
-//     border-color: lighten($accent, 15%);
-//     color: lighten($accent, 15%);
-//   }
-// }
-
-// .title {
-//   font-weight: bold;
-// }
+body {
+  padding-top: 60px;
+}
 
 
 div.top-page__pickupone {
   width: 100%;
   box-sizing: border-box;
   div.top-page__categori {
-    height: 200px;
+    height: 300px;
     width: 100%;
     margin-top: 80px;
     padding: 0 40px;
@@ -108,6 +31,7 @@ div.top-page__pickupone {
       color: rgb(27, 20, 20);
       font-size: 30px;
       text-align: center;
+      margin-top: 80px;
     }
     div.top-page__bannerimg {
       background-color: white;
@@ -120,25 +44,28 @@ div.top-page__pickupone {
     margin-top: 0px;
     padding: 0 40px;
     h4 {
-      color: rgb(27, 20, 20);
-      font-size: 30px;
+      color: rgb(46, 40, 40);
+      font-size: 25px;
       text-align: center;
+      font-weight: bold;
     }
   }
   div.top-page__categoritwo {
-    height: 300px;
+    height: 400px;
     margin-top: 0px;
     padding: 0 40px;
     h5 {
-      color: rgb(27, 20, 20);
+      color: rgb(0, 172, 252);
+      font-weight: bold;
       font-size: 20px;
       height: 30px;
       text-align: center;
+      margin-top: 10px;
+      margin-bottom: 30px;
     }
     div.top-page__item_clearfix {
       display: flex;
       height: 300px;
-      margin-top: 0px;
       padding: 0 40px;
       width: calc(100% - 100px);
       div.top-page__item {
@@ -179,19 +106,22 @@ div.top-page__pickupone {
     padding: 0 40px;
     text-align: right;
     h6 {
-      color: rgb(19, 17, 51);
+      color: rgb(0, 172, 252);
       font-size: 10px;
     }
   }
   div.top-page__categorithree {
-    height: 300px;
+    height: 400px;
     margin-top: 0px;
     padding: 0 40px;
     h5 {
-      color: rgb(27, 20, 20);
+      color: rgb(0, 172, 252);
+      font-weight: bold;
       font-size: 20px;
       height: 30px;
       text-align: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
     }
     div.top-page__item_clearfix {
       display: flex;
@@ -237,19 +167,22 @@ div.top-page__pickupone {
     padding: 0 40px;
     text-align: right;
     h6 {
-      color: rgb(19, 17, 51);
+      color: rgb(0, 172, 252);
       font-size: 10px;
     }
   }
   div.top-page__categorifour {
-    height: 300px;
+    height: 400px;
     margin-top: 0px;
     padding: 0 40px;
     h5 {
-      color: rgb(27, 20, 20);
+      color: rgb(0, 172, 252);
+      font-weight: bold;
       font-size: 20px;
       height: 30px;
       text-align: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
     }
     div.top-page__item_clearfix {
       display: flex;
@@ -295,19 +228,22 @@ div.top-page__pickupone {
     padding: 0 40px;
     text-align: right;
     h6 {
-      color: rgb(19, 17, 51);
+      color: rgb(0, 172, 252);
       font-size: 10px;
     }
   }
   div.top-page__categorifive {
-    height: 300px;
+    height: 400px;
     margin-top: 0px;
     padding: 0 40px;
     h5 {
-      color: rgb(27, 20, 20);
+      color: rgb(0, 172, 252);
+      font-weight: bold;
       font-size: 20px;
       height: 30px;
       text-align: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
     }
     div.top-page__item_clearfix {
       display: flex;
@@ -353,7 +289,7 @@ div.top-page__pickupone {
     padding: 0 40px;
     text-align: right;
     h6 {
-      color: rgb(19, 17, 51);
+      color: rgb(0, 172, 252);
       font-size: 10px;
     }
   }
@@ -363,20 +299,24 @@ div.top-page__pickupone {
     margin-top: 0px;
     padding: 0 40px;
     h4 {
-      color: rgb(27, 20, 20);
-      font-size: 30px;
+      color: rgb(46, 40, 40);
+      font-size: 25px;
       text-align: center;
+      font-weight: bold;
     }
   }
   div.top-page__categorisix {
-    height: 300px;
+    height: 400px;
     margin-top: 0px;
     padding: 0 40px;
     h5 {
-      color: rgb(27, 20, 20);
+      color: rgb(0, 172, 252);
+      font-weight: bold;
       font-size: 20px;
       height: 30px;
       text-align: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
     }
     div.top-page__item_clearfix {
       display: flex;
@@ -422,19 +362,22 @@ div.top-page__pickupone {
     padding: 0 40px;
     text-align: right;
     h6 {
-      color: rgb(19, 17, 51);
+      color: rgb(0, 172, 252);
       font-size: 10px;
     }
   }
   div.top-page__categoriseven {
-    height: 300px;
+    height: 400px;
     margin-top: 0px;
     padding: 0 40px;
     h5 {
-      color: rgb(27, 20, 20);
+      color: rgb(0, 172, 252);
+      font-weight: bold;
       font-size: 20px;
       height: 30px;
       text-align: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
     }
     div.top-page__item_clearfix {
       display: flex;
@@ -480,19 +423,22 @@ div.top-page__pickupone {
     padding: 0 40px;
     text-align: right;
     h6 {
-      color: rgb(19, 17, 51);
+      color: rgb(0, 172, 252);
       font-size: 10px;
     }
   }
   div.top-page__categorieight {
-    height: 300px;
+    height: 400px;
     margin-top: 0px;
     padding: 0 40px;
     h5 {
-      color: rgb(27, 20, 20);
+      color: rgb(0, 172, 252);
+      font-weight: bold;
       font-size: 20px;
       height: 30px;
       text-align: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
     }
     div.top-page__item_clearfix {
       display: flex;
@@ -538,19 +484,22 @@ div.top-page__pickupone {
     padding: 0 40px;
     text-align: right;
     h6 {
-      color: rgb(19, 17, 51);
+      color: rgb(0, 172, 252);
       font-size: 10px;
     }
   }
   div.top-page__categorinine {
-    height: 300px;
+    height: 400px;
     margin-top: 0px;
     padding: 0 40px;
     h5 {
-      color: rgb(27, 20, 20);
+      color: rgb(0, 172, 252);
+      font-weight: bold;
       font-size: 20px;
       height: 30px;
       text-align: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
     }
     div.top-page__item_clearfix {
       display: flex;
@@ -602,7 +551,7 @@ div.top-page__pickupone {
     padding: 0 40px;
     text-align: right;
     h6 {
-      color: rgb(19, 17, 51);
+      color: rgb(0, 172, 252);
       font-size: 10px;
     }
   }
