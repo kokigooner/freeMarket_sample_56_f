@@ -1,19 +1,19 @@
-@import url(http://fonts.googleapis.com/css?family=Unica+One);
+// @import url(http://fonts.googleapis.com/css?family=Unica+One);
 
-// $accent: #ffa500;
-// $accents: #2d918c;
-// $black: #543f32;
-// $dark: #6b395f;
-// $darkGray: #cbd0d3;
-// $gray: #a4c1d7;
-// $lightGray: #fce27d;
-// $white: white;
+// // $accent: #ffa500;
+// // $accents: #2d918c;
+// // $black: #543f32;
+// // $dark: #6b395f;
+// // $darkGray: #cbd0d3;
+// // $gray: #a4c1d7;
+// // $lightGray: #fce27d;
+// // $white: white;
 
-* {
-  box-sizing: border-box;
-}
+// * {
+//   box-sizing: border-box;
+// }
 
-// @mixin boxBase($margin: 30px auto, $padding: 10px) {
+// // @mixin boxBase($margin: 30px auto, $padding: 10px) {
 //   margin: $margin;
 //   padding: $padding;
 // }
@@ -60,36 +60,36 @@
 //   }
 // }
 
-.bold {
-  font-weight: bold;
-}
+// .bold {
+//   font-weight: bold;
+// }
 
-.ultra {
-  font-size: 2em !important;
-}
+// .ultra {
+//   font-size: 2em !important;
+// }
 
-::selection {
-  background: $gray;
-}
+// // ::selection {
+// //   background: $gray;
+// // }
 
-.btn {
-  @include basePadding(8px 20px);
-  font-size: 14px;
-  border: 2px solid $accents;
-  color: $accents;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 30px;
-  display: inline-block;
-  &:hover {
-    border-color: lighten($accent, 15%);
-    color: lighten($accent, 15%);
-  }
-}
+// .btn {
+//   @include basePadding(8px 20px);
+//   font-size: 14px;
+//   border: 2px solid $accents;
+//   color: $accents;
+//   font-weight: bold;
+//   text-align: center;
+//   border-radius: 30px;
+//   display: inline-block;
+//   &:hover {
+//     border-color: lighten($accent, 15%);
+//     color: lighten($accent, 15%);
+//   }
+// }
 
-.title {
-  font-weight: bold;
-}
+// .title {
+//   font-weight: bold;
+// }
 
 
 div.top-page__pickupone {
