@@ -2,21 +2,24 @@
   text-decoration: none;
 }
 
+.mypage__header{
+  width:100%;
+}
+
 .mypage__container{
   width:100vw;
   background-color: #f5f5f5;
   &__box{
-    margin: 40px auto 0;
+    margin: 0 auto 0;
     width: 1020px;
     display: flex;
     &__side-bar{
       width: 280px;
-      margin: 0 40px 0 0;
-      height:1200px;
-      background-color: #fff;
+      margin: 40px 40px 40px 0;
     }
     &__content{
       width: 700px;
+      margin-top:40px;
       &__icon{
         position: relative;
         height: 155px;
@@ -148,7 +151,7 @@
                   width: 48px;
                   height: 48px;
                   margin:0;
-                  img{
+                  &__url{
                     position: absolute;
                     top: 0;
                     right: 0;
@@ -170,12 +173,12 @@
                     line-height: 1.5;
                     height:21px;
                   }
-                  time{
+                  &__time{
                     display: inline-block;
                     color: #888;
-                    .mypage__clock__icon{
+                    &__icon{
                       margin: 0 8px 0 0;
-                      span{
+                      &__text{
                         vertical-align: middle;
                       }
                     }

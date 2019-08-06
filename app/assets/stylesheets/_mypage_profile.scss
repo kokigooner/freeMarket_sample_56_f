@@ -1,4 +1,4 @@
-.mypage__header{
+.mypage__profile__header{
   width:100%
 }
 
@@ -34,7 +34,7 @@
         background-size: cover;
         text-align: center;
         box-sizing: border-box;
-        figure{
+        &__picture{
           display: inline-block;
           overflow: hidden;
           width: 60px;
@@ -42,7 +42,7 @@
           border-radius: 50%;
           vertical-align: middle;
         }
-        input{
+        .input-default{
           width: 220px;
           margin: 0 0 0 8px;
           vertical-align: middle;
@@ -57,7 +57,7 @@
       }
       &__text{
         padding: 40px 16px;
-        textarea{
+        .textarea-default{
           min-height: 216px;
           display: block;
           width: 100%;
@@ -69,7 +69,7 @@
           font-size: 16px;
           line-height: 1.5;
         }
-        button{
+        .btn-default.btn-red{
           margin: 16px 0 0;
           background: #ea352d;
           border: 1px solid #ea352d;
@@ -86,6 +86,6 @@
     } 
   }
 }
-.mypage__fotter{
+.mypage__profile__fotter{
   width:100%;
 }
