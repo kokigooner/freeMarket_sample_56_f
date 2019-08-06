@@ -1,91 +1,91 @@
 
 
 
-@import url(http://fonts.googleapis.com/css?family=Unica+One);
+// @import url(http://fonts.googleapis.com/css?family=Unica+One);
 
-$accent: #ffa500;
-$accents: #2d918c;
-$black: #543f32;
-$dark: #6b395f;
-$darkGray: #cbd0d3;
-$gray: #a4c1d7;
-$lightGray: #fce27d;
-$white: white;
+// $accent: #ffa500;
+// $accents: #2d918c;
+// $black: #543f32;
+// $dark: #6b395f;
+// $darkGray: #cbd0d3;
+// $gray: #a4c1d7;
+// $lightGray: #fce27d;
+// $white: white;
 
-*{box-sizing: border-box;}
+// *{box-sizing: border-box;}
 
-@mixin boxBase($margin: 30px auto, $padding: 10px) {
-  margin: $margin;
-  padding: $padding;
-}
-@mixin basePadding($padding: 10px) {
-  padding: $padding;
-}
-@mixin baseMargin($margin: 10px auto) {
-  margin: $margin;
-}
+// @mixin boxBase($margin: 30px auto, $padding: 10px) {
+//   margin: $margin;
+//   padding: $padding;
+// }
+// @mixin basePadding($padding: 10px) {
+//   padding: $padding;
+// }
+// @mixin baseMargin($margin: 10px auto) {
+//   margin: $margin;
+// }
 
-body,html {
-  height: 100%;
-  background-color: whitesmoke;
-}
+// body,html {
+//   height: 100%;
+//   background-color: whitesmoke;
+// }
 
-body {
-  padding-top: 60px;
-}
+// body {
+//   padding-top: 60px;
+// }
 
-h1,h2,h3,h4,h5,h6,body {
-  line-height: 1.57;
-    letter-spacing: 0.15em;
-    font-size: 16px;
-    color: $dark;
-    font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
-    margin: 0;
-  }
+// h1,h2,h3,h4,h5,h6,body {
+//   line-height: 1.57;
+//     letter-spacing: 0.15em;
+//     font-size: 16px;
+//     color: $dark;
+//     font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+//     margin: 0;
+//   }
   
-  a {
-    text-decoration: none;
-    color: $black;
-    &:hover {
-      color: $accent;
-    }
-  }
+//   a {
+//     text-decoration: none;
+//     color: $black;
+//     &:hover {
+//       color: $accent;
+//     }
+//   }
   
-  .bold {
-    font-weight: bold;
-  }
-  
-  
-  .ultra {
-    font-size: 2em !important;
-  }
-  
-  ::selection {
-    background: $gray;
-  }
+//   .bold {
+//     font-weight: bold;
+//   }
   
   
-  .btn {
-      @include basePadding(8px 20px);
-      font-size: 14px;
-      border: 2px solid $accents;
-      color: $accents;
-      font-weight: bold;
-      text-align: center;
-      border-radius: 30px;
-      display: inline-block;
-    &:hover {
-      border-color: lighten($accent, 15%);
-      color: lighten($accent, 15%);
-    }
-  }
+//   .ultra {
+//     font-size: 2em !important;
+//   }
   
-  h1,h2,h3,h4,h5,h6 {
-  }
+//   ::selection {
+//     background: $gray;
+//   }
   
-  .title {
-    font-weight: bold;
-  }
+  
+//   .btn {
+//       @include basePadding(8px 20px);
+//       font-size: 14px;
+//       border: 2px solid $accents;
+//       color: $accents;
+//       font-weight: bold;
+//       text-align: center;
+//       border-radius: 30px;
+//       display: inline-block;
+//     &:hover {
+//       border-color: lighten($accent, 15%);
+//       color: lighten($accent, 15%);
+//     }
+//   }
+  
+//   h1,h2,h3,h4,h5,h6 {
+//   }
+  
+//   .title {
+//     font-weight: bold;
+//   }
 
 div.top-page__pickupone{
   width: 100%;
