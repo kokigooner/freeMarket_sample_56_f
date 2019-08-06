@@ -24,6 +24,9 @@ class UsersController < ApplicationController
   def mypage_profile    
   end
 
+  def syuppin
+  end
+
   def mypage
   end
 
@@ -39,6 +42,5 @@ class UsersController < ApplicationController
 
   def logout
   end
-
 
 end

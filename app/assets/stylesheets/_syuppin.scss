@@ -1,0 +1,529 @@
+body,html {
+  height: 100%;
+  background-color: whitesmoke;
+}
+.syuppin__wrapper{
+  width: 100%;
+  box-sizing: border-box;
+
+  header.syuppin__header{
+    a {
+      display: block;
+    }
+    .mercari__icon{width: 10%;} 
+  }
+  
+  .syuppin__item_clearfix{
+    height: 100%;
+    width: calc(100% - 140px);
+    margin: auto;
+    // margin-top: 40px;
+    background-color: white;
+    overflow: hidden;
+    .syuppin__info{
+      height: 80px;
+      margin-top: 0px;
+      padding: 30px 70px;
+      border-bottom: 1px solid whitesmoke;
+      .syuppin__banner{
+        h4{
+          color: rgb(27, 20, 20);
+          font-size: 15px;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+    }
+    .syuppin__photo{
+      height: 250px;
+      margin-top: 20px;
+      padding: 10px 30px;
+      border-bottom: 1px solid whitesmoke;
+      h4{
+        color: rgb(27, 20, 20);
+        font-size: 12px;
+        text-align: left;
+        font-weight: bold;
+        span{
+          height: 20px;
+          border-radius: 2px;
+          font-size: 11px;
+          text-align: center;
+          font-weight: bold;
+          padding: 3px;
+          color: white;
+          background-color: rgb(230, 33, 33);
+        }
+      }
+      img{
+        float: left;
+      }
+      h5{
+        color: rgb(27, 20, 20);
+        font-size: 10px;
+        text-align: left;
+        margin-top: 10px;
+      }
+      .syuppin__box {
+        height: 130px;
+        border: dashed 1px;
+        color: rgb(197, 197, 197);
+        background-color: whitesmoke;
+        h4{
+          color: rgb(27, 20, 20);
+          font-size: 12px;
+          text-align: center;
+          font-weight: bold;
+        }
+        h5{
+          color: rgb(27, 20, 20);
+          font-size: 10px;
+          text-align: center;
+          padding: 10px 40px;
+        }
+      }
+      .syuppin__eroor_message{
+        h5{
+          color: red;
+          font-size: 12px;
+          text-align: left;
+          padding: 0px;
+        }
+      }
+    }
+    .syuppin__item_boxone{
+      height: 300px;
+      margin-top: 0px;
+      padding: 10px 30px;
+      border-bottom: 1px solid whitesmoke;
+      .syuppin__item{
+        h4{
+          color: rgb(27, 20, 20);
+          font-size: 12px;
+          text-align: left;
+          font-weight: bold;
+          span{
+            height: 20px;
+            border-radius: 2px;
+            font-size: 11px;
+            text-align: center;
+            font-weight: bold;
+            padding: 3px;
+            color: white;
+            background-color: rgb(230, 33, 33);
+          }
+        }
+        img{
+          float: left;
+        }
+      }
+      .syuppin__item_write{
+        height: 50px;
+        border-radius: 10px;
+        border: solid 1px rgb(196, 196, 196);
+        h5{
+          color: rgb(27, 20, 20);
+          font-size: 10px;
+          text-align: center;
+          padding: 10px 40px;
+        }
+      }
+      .syuppin__eroor_message{
+        h5{
+          color: red;
+          font-size: 12px;
+          text-align: left;
+          padding: 0px;
+        }
+      }
+      .syuppin__item__description{
+        h4{
+          color: rgb(27, 20, 20);
+          font-size: 12px;
+          text-align: left;
+          font-weight: bold;
+          margin-top: 30px;
+          span{
+            height: 20px;
+            border-radius: 2px;
+            font-size: 11px;
+            text-align: center;
+            font-weight: bold;
+            padding: 3px;
+            color: white;
+            background-color: rgb(230, 33, 33);
+          }
+        }
+        img{
+          float: left;
+        }
+      }
+      .syuppin__item__description_write{
+        height: 120px;
+        border: solid 1px rgb(196, 196, 196);
+        h5{
+          color: rgb(27, 20, 20);
+          font-size: 10px;
+          text-align: center;
+          padding: 10px 40px;
+        }
+      }
+      .syuppin__eroor_message{
+        h5{
+          color: red;
+          font-size: 12px;
+          text-align: left;
+          padding: 0px;
+        }
+      }
+    }
+    .syuppin__item_boxtwo{
+      height: 300px;
+      margin-top: 0px;
+      padding: 10px 30px;
+      border-bottom: 1px solid whitesmoke;
+      h5{
+        color: rgb(177, 176, 176);
+        font-size: 15px;
+        text-align: left;
+        padding: 10px 10px;
+        font-weight: bold;
+      }
+      .syuppin__item_boxindex{
+        .syuppin__itemcat{
+          h4{
+            color: rgb(27, 20, 20);
+            font-size: 12px;
+            text-align: left;
+            font-weight: bold;
+            margin-top: 10px;
+            span{
+              height: 20px;
+              border-radius: 2px;
+              font-size: 11px;
+              text-align: center;
+              font-weight: bold;
+              padding: 3px;
+              color: white;
+              background-color: rgb(230, 33, 33);
+            }
+          }
+        }
+        .syuppin__itemcatbox{
+          height: 50px;
+          border-radius: 10px;
+          border: solid 1px rgb(196, 196, 196);
+        }
+        .syuppin__eroor_message{
+          h5{
+            color: red;
+            font-size: 12px;
+            text-align: left;
+            padding: 0px;
+            font-weight: normal;
+          }
+        }
+      }
+      .syuppin__itemstate{
+        margin-top: 40px;
+        h4{
+          color: rgb(27, 20, 20);
+          font-size: 12px;
+          text-align: left;
+          font-weight: bold;
+          span{
+            height: 20px;
+            border-radius: 2px;
+            font-size: 11px;
+            text-align: center;
+            font-weight: bold;
+            padding: 3px;
+            color: white;
+            background-color: rgb(230, 33, 33);
+          }
+        }
+        img{
+          float: left;
+        }
+      }
+        .syuppin__itemstatebox{
+          height: 50px;
+          border-radius: 10px;
+          border: solid 1px rgb(196, 196, 196); 
+        }
+        .syuppin__eroor_message{
+          h5{
+            color: red;
+            font-size: 12px;
+            text-align: left;
+            padding: 0px;
+          }
+        }
+    }
+    .syuppin__delivery{
+      height: 500px;
+      margin-top: 0px;
+      padding: 10px 30px;
+      border-bottom: 1px solid whitesmoke;
+      h5{
+        color: rgb(177, 176, 176);
+        font-size: 15px;
+        text-align: left;
+        padding: 40px 0px;
+        font-weight: bold;
+      }
+      .syuppin__delivery_boxindex{
+        .syuppin__delivery_charge{
+          h4{
+            color: rgb(27, 20, 20);
+            font-size: 12px;
+            text-align: left;
+            font-weight: bold;
+            span{
+              height: 20px;
+              border-radius: 2px;
+              font-size: 11px;
+              text-align: center;
+              font-weight: bold;
+              padding: 3px;
+              color: white;
+              background-color: rgb(230, 33, 33);
+            }
+          }
+        }
+        .syuppin__delivery_chargebox{
+          height: 50px;
+          border-radius: 10px;
+          border: solid 1px rgb(196, 196, 196); 
+        }
+        .syuppin__eroor_message{
+          h5{
+            color: red;
+            font-size: 12px;
+            text-align: left;
+            padding: 0px;
+            font-weight: normal;
+          }
+        }
+        .syuppin__delivery_region{
+          h4{
+            color: rgb(27, 20, 20);
+            font-size: 12px;
+            text-align: left;
+            font-weight: bold;
+            margin-top: 20px;
+            span{
+              height: 20px;
+              border-radius: 2px;
+              font-size: 11px;
+              text-align: center;
+              font-weight: bold;
+              padding: 3px;
+              color: white;
+              background-color: rgb(230, 33, 33);
+            }
+          }  
+        }
+        .syuppin__delivery_regionbox{
+          height: 50px;
+          border-radius: 10px;
+          border: solid 1px rgb(196, 196, 196); 
+        }
+        .syuppin__eroor_message{
+          h5{
+            color: red;
+            font-size: 12px;
+            text-align: left;
+            padding: 0px;
+          }
+        }
+        .syuppin__delivery_days{
+          h4{
+            color: rgb(27, 20, 20);
+            font-size: 12px;
+            text-align: left;
+            font-weight: bold;
+            margin-top: 20px;
+            span{
+              height: 20px;
+              border-radius: 2px;
+              font-size: 11px;
+              text-align: center;
+              font-weight: bold;
+              padding: 3px;
+              color: white;
+              background-color: rgb(230, 33, 33);
+            }
+          }
+        }
+        .syuppin__delivery_daysbox{
+          height: 50px;
+          border-radius: 10px;
+          border: solid 1px rgb(196, 196, 196); 
+        }
+        .syuppin__eroor_message{
+          h5{
+            color: red;
+            font-size: 12px;
+            text-align: left;
+            padding: 0px;
+          }
+        }
+      }
+    }
+
+    .syuppin__price{
+      height: 500px;
+      margin-top: 0px;
+      padding: 5px 30px;
+      border-bottom: 1px solid whitesmoke;
+      h5{
+        color: rgb(177, 176, 176);
+        font-size: 14px;
+        text-align: left;
+        padding: 20px 0px;
+        font-weight: bold;
+      }
+      .syuppin__price_boxindex{
+        .syuppin__price_charge_clearfix{
+          .syuppin__price_charge_left{
+            height: 50px;
+            float: left;
+            margin-top: 0px;
+            width: 40%;
+            h4{
+              color: rgb(27, 20, 20);
+              font-size: 12px;
+              text-align: left;
+              font-weight: bold;
+              span{
+                height: 20px;
+                border-radius: 2px;
+                font-size: 11px;
+                text-align: center;
+                font-weight: bold;
+                padding: 3px;
+                color: white;
+                background-color: rgb(230, 33, 33);
+              }
+            }
+          }
+          .syuppin__price_charge_right{
+            height: 50px;
+            float: right;
+            margin-top: 0px;
+            width: 40%;
+            border-radius: 10px;
+            border: solid 1px rgb(196, 196, 196);
+            span{
+              color: rgb(27, 20, 20);
+              font-size: 12px;
+              text-align: left;
+            }
+          }
+        }
+        .syuppin__eroor_message{
+          h5{
+            color: red;
+            float: left;
+            font-size: 12px;
+            text-align: left;
+            padding: 0px;
+            font-weight: normal;
+          }
+        }
+        .syuppin__price_chargebox{
+          height: 100px;
+          margin-top: 0px;
+          border-bottom: 1px solid rgb(196, 196, 196); 
+        }
+      }
+      .syuppin__price_fee{
+        h5{
+          color: rgb(27, 20, 20);
+          font-size: 12px;
+          text-align: left;
+          font-weight: bold;
+        }
+        .syuppin__price_feebox{
+          height: 60px;
+          border-bottom: 1px solid rgb(196, 196, 196);  
+        }
+      }
+      .syuppin__sales_profit{
+        h4{
+          color: rgb(27, 20, 20);
+          font-size: 12px;
+          text-align: left;
+          font-weight: bold;
+        }
+        .syuppin__sales_profitbox{
+          height: 60px;
+          border-bottom: 1px solid rgb(196, 196, 196);  
+        }
+      }
+    }
+
+    .syuppin__tips{
+      height: 100px;
+      margin-top: 0px;
+      padding: 10px 30px;
+      h5{
+        color: rgb(27, 20, 20);
+        font-size: 13px;
+        text-align: left;
+        span{
+          color: rgb(39, 197, 250);
+        }
+      }
+    }
+    .syuppin__btn{
+      height: 40px;
+      margin: auto;
+      width: calc(100% - 200px);
+      margin-top: 30px;
+      background-color: rgb(245, 53, 53); 
+      h5{
+        color: white;
+        font-size: 15px;
+        text-align: center;
+        padding-top: 10px;
+      }
+    }
+    .syuppin__return_btn{
+      height: 40px;
+      width: calc(100% - 280px);
+      background-color: grey;
+      margin: auto; 
+      margin-top: 10px;
+      margin-bottom: 40px;
+      h5{
+        color: white;
+        font-size: 15px;
+        text-align: center;
+        padding-top: 10px;
+      }
+    }
+  }
+  .syuppin__footer{
+    .syuppin__rules{
+      margin-top: 35px;
+      h6{
+        color: rgb(27, 20, 20);
+        font-size: 10px;
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
+    .syuppin__footer_right_one{
+      text-align: center;
+    }
+    .syuppin__last_year{
+      h6{
+        color: rgb(27, 20, 20);
+        font-size: 10px;
+        text-align: center;
+      }
+    }
+  }
+}
