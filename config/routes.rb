@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get "/users/signup/address" => "users#address" 
   get "/users/signup/payment" => "users#payment" 
   get "/users/signup/complete" => "users#complete" 
+  get "/mypage/identification/"=> "users#identification" 
 end

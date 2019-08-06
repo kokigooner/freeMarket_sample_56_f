@@ -29,4 +29,9 @@ class UsersController < ApplicationController
 
   def card_create
   end
+
+  def identification
+    @test_model = {name: "山田太郎"}
+  end
+
 end
