@@ -1,0 +1,39 @@
+.sms_confirmation {
+  color: #333;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic,
+    メイリオ, Meiryo, sans-serif;
+  &__form {
+    &__text {
+      font-size: 14px;
+      margin: 8px 0 0;
+    }
+  }
+}
+
+.sms_authentication {
+  &__content {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #f5f5f5;
+    & h3 {
+      font-weight: bold;
+      padding: 30px 0 0 0;
+    }
+    & p {
+      font-size: 14px;
+      padding: 8px 0 0 0;
+    }
+    &--tel {
+      & a {
+        font-size: 14px;
+        color: #0099e8;
+        text-decoration: none;
+      }
+    }
+    &__text {
+      padding-top: 10px;
+      & p {
+        font-size: 13.5px;
+      }
+    }
+  }
+}
