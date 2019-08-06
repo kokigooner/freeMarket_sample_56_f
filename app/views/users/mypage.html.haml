@@ -1,6 +1,12 @@
+.mypage__header
+  = render 'header'
+  = render 'bread-crumbs'
+
+
 .mypage__container
   .mypage__container__box
     .mypage__container__box__side-bar
+      = render 'l-side'
     .mypage__container__box__content
       %section.mypage__container__box__content__icon
         %a.mypage__icon__box{href: ""}
@@ -32,14 +38,14 @@
             %li.mypage__container__box__content__upper__list__news__flame
               %a.mypage__news{href:""}
                 %figure.mypage__mercari__logo
-                  %img{:alt => "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", :src => "//static.mercdn.net/images/mercari_profile.png"}/
+                  %img.mypage__mercari__logo__url{:alt => "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", :src => "//static.mercdn.net/images/mercari_profile.png"}/
                 .mypage__news__body
                   .mypage__news__body__text
                     《まもなく終了！》今なら最大”P1500”もらえる！詳しくはこちらから♪
-                  %time
-                    %i.mypage__clock__icon
+                  %time.mypage__news__body__text__time
+                    %i.mypage__news__body__text__time__icon
                       ●
-                    %span
+                    %span.mypage__news__body__text__time__text
                       22時間前
                 %i.mypage__click__icon
                   >
@@ -68,4 +74,5 @@
           -# %ul.mypage__tab__past
           -#   %li.mypage__item__nothing
           -#     過去に取引した商品はありません
-
+.mypage__footer
+  = render 'footer'
