@@ -1,0 +1,282 @@
+*{
+  text-decoration: none;
+}
+
+.mypage__container{
+  width:100vw;
+  background-color: #f5f5f5;
+  &__box{
+    margin: 40px auto 0;
+    width: 1020px;
+    display: flex;
+    &__side-bar{
+      width: 280px;
+      margin: 0 40px 0 0;
+      height:1200px;
+      background-color: #fff;
+    }
+    &__content{
+      width: 700px;
+      &__icon{
+        position: relative;
+        height: 155px;
+        padding: 20px;
+        background-image: url(image_path("mypage-bg.jpg"));
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        .mypage__icon__box{
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          transform: translate(0, -50%);
+          color: #333;
+          figure{
+            overflow: hidden;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            border-radius: 50%;
+          }
+          .mypage__user-name{
+            margin: 8px 0 0;
+            font-size: 14px;
+            color:black;
+            font-weight: 600;
+          }
+        }
+        .mypage__user__info{
+          margin: 8px 0 0;
+          display: flex;
+          justify-content: center;
+          &__value{
+            display: inline-block;
+            font-size: 14px;
+            color:black;
+            .mypage__value__num{
+              margin: 0 0 0 8px;
+              font-size: 16px;
+              font-weight: 600;
+            }
+          }
+          &__item{
+            display: inline-block;
+            font-size: 14px;
+            margin: 0 0 0 16px;
+            color:black;
+            .mypage__item__num{
+              font-size: 16px;
+              margin: 0 0 0 8px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      &__upper{
+        margin: 0;
+        background: #fff;
+        &__menu{
+          border: 0;
+          background-color: #fff;
+          font-size: 0;
+          display:flex;
+          
+          &__left{
+            display: inline-block;
+            text-align: center;
+            vertical-align: top;
+            width: 50%;
+            height:70px;
+            line-height:70px;
+            border-top: solid 2px red;
+            box-sizing: border-box;
+            .mypage__user__news{
+              font-size: 22px;
+              color:black;
+              font-weight:bold;
+              &__link{
+                display: block;
+                color: #333;
+                font-size: 16px;
+                line-height: 70px;
+              }
+            }
+          }
+          &__right{
+            width: 50%;
+            display: block;
+            background-color: #eee;
+            line-height: 70px;
+            text-align: center;
+            height:70px;
+            .mypage__user__todo{
+              font-size: 22px;
+              color:black;
+              font-weight:bold;
+              &__link{
+                font-size: 16px;
+                color:black;
+                font-weight: bold;
+              }
+            }
+          }        
+        }
+        &__list{
+          background-repeat: no-repeat;
+          &__news{
+            display: block;
+            font-size:14px; 
+            background-color: #fff;           
+            &__flame{
+              border-bottom: 1px solid #eee;
+              height:81px;
+              box-sizing: border-box;
+              .mypage__news{
+                position: relative;
+                display: block;
+                padding: 16px;
+                color: #333;
+                min-height: 80px;
+                width:680px;
+                box-sizing: border-box;
+                .mypage__mercari__logo{
+                  position: relative;
+                  overflow: hidden;
+                  float: left;
+                  width: 48px;
+                  height: 48px;
+                  margin:0;
+                  img{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 1;
+                    width: 100%;
+                  }
+                }
+                .mypage__news__body{
+                  margin: 0 40px 0 68px;
+                  &__text{
+                    overflow: hidden;
+                    display: -webkit-box;
+                    max-height: 4.4em;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    line-height: 1.5;
+                    height:21px;
+                  }
+                  time{
+                    display: inline-block;
+                    color: #888;
+                    .mypage__clock__icon{
+                      margin: 0 8px 0 0;
+                      span{
+                        vertical-align: middle;
+                      }
+                    }
+                  }           
+                }
+                .mypage__click__icon{
+                  position: absolute;
+                  top: 50%;
+                  right: 16px;
+                }
+              }
+            }
+            .mypage__tab__list__btn{
+              padding:16px;
+              &__text{
+                display: block;
+                height: 56px;
+                margin: 0 auto;
+                background: #eee;
+                color: #333;
+                line-height: 56px;
+                text-align: center;
+                box-sizing: border-box;
+              }
+            }          
+          }
+        }       
+      }
+      &__bottom{
+        margin:40px 0 0;
+        background-color: #fff;
+        &__header{
+          padding: 0 4%;
+          background-color: #fafafa;
+          font-size: 16px;
+          line-height: 72px;
+          font-weight: bold;
+        }
+        &__menu{
+          border: 0;
+          background-color: #fff;
+          font-size: 0;
+          display:flex;
+          &__left{
+            display: inline-block;
+            text-align: center;
+            vertical-align: top;
+            width: 50%;
+            height:70px;
+            line-height:70px;
+            border-top: solid 2px red;
+            box-sizing: border-box;
+            &__now-trade{
+              font-size: 22px;
+              color:black;
+              font-weight:bold;
+              &__link{
+                display: block;
+                color: #333;
+                font-size: 16px;
+                line-height: 70px;
+              }
+            }
+          }
+          &__right{
+            width: 50%;
+            display: block;
+            background-color: #eee;
+            line-height: 70px;
+            text-align: center;
+            height:70px;
+            &__past-trade{
+              font-size: 22px;
+              color:black;
+              font-weight:bold;
+              &__link{
+                display: block;
+                color: #333;
+                font-size: 16px;
+                line-height: 70px;
+              }
+            }
+          }
+        }
+        &__tag{
+          list-style:none;
+          &__list{
+            
+            &__text{
+              padding: 160px 0 60px;
+              background: url(logo-gray-icon.svg);
+              background-repeat: no-repeat;
+              background-position: center 40px;
+              background-size: 78px 85px;
+              text-align: center;
+              font-size: 16px;
+              color: #ccc;
+            }
+          }
+        }
+      }
+    }
+  }
+}

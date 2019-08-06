@@ -1,0 +1,76 @@
+.registration-container
+  %header.registration-header
+    %h1
+      %a(href="/" class="registration-header__logo")
+        = image_tag 'mercari_logo_horizontal', class: 'registration-header__logo--img'
+    %nav.registration-header__progress-bar
+      %ol
+        %li
+          会員情報
+          .registration-header__progress-status.registration-header__progress-status--active
+          .progress-status__bar.progress-status__bar--after.progress-status__bar--active
+        %li
+          電話番号認証
+          .progress-status__bar.progress-status__bar--before.progress-status__bar--active
+          .registration-header__progress-status.registration-header__progress-status--active
+          .progress-status__bar.progress-status__bar--after.progress-status__bar--active
+        %li
+          お届け先住所入力
+          .progress-status__bar.progress-status__bar--before.progress-status__bar--active
+          .registration-header__progress-status.registration-header__progress-status--active
+          .progress-status__bar.progress-status__bar--after.progress-status__bar--active
+        %li.registration-header--active
+          支払い方法
+          .progress-status__bar.progress-status__bar--before.progress-status__bar--active
+          .registration-header__progress-status.registration-header__progress-status--active
+          .progress-status__bar.progress-status__bar--after
+        %li
+          完了
+          .progress-status__bar.progress-status__bar--before
+          .registration-header__progress-status
+  %main.registration-main
+    .registration-main__container
+      %h2.registration-main__container__text 支払い方法
+      =form_for :user, html: { class: "registration-main__form" } do |f|
+        .registration-main__form__content
+          .registration-main__form__group
+            = f.label :card_number, "カード番号"
+            %span.registration-main__form--require 必須
+            = f.text_field :card_number, class: "registration-main__form__input", placeholder: "半角数字のみ"
+          .signup-payment__card-list
+            = image_tag 'visa.svg', class: "signup-payment__card"
+            = image_tag 'master-card.svg', class: "signup-payment__card"
+            = image_tag 'saison-card.svg', class: "signup-payment__card"
+            = image_tag 'jcb.svg', class: "signup-payment__card"
+            = image_tag 'american_express.svg', class: "signup-payment__card"
+            = image_tag 'dinersclub.svg', class: "signup-payment__card"
+            = image_tag 'discover.svg', class: "signup-payment__card"
+          .registration-main__form__group
+            %div
+              = f.label :expiration_month, "有効期限"
+              %span.registration-main__form--require 必須
+            = f.select :expiration_month, ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"], {}, { class: "registration-main__form__input signup-payment__input--half" }
+            %span.signup-payment__form__text 月
+            = f.select :expiration_year, ["19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29"], {}, { class: "registration-main__form__input signup-payment__input--half" }
+            %span.signup-payment__form__text 年
+          .registration-main__form__group
+            = f.label :card_number, "セキュリティコード"
+            %span.registration-main__form--require 必須
+            = f.text_field :card_number, class: "registration-main__form__input", placeholder: "カード背面4桁もしくは3桁の番号"
+          %div.signup-payment__security-code
+            %span ?
+            カード裏面の番号とは？
+          = f.submit class: "signup__form__btn signup__form__btn--mail registration-main__form__next-btn", value: "次へ進む"
+  %footer.signup__footer
+    .signup__footer__nav
+      %ul.signup__footer__nav__links
+        %li
+          %a{href: "/", class: "signup__footer__nav__link"} プライバシーポリシー
+        %li
+          %a{href: "/", class: "signup__footer__nav__link"} メルカリ利用規約
+        %li
+          %a{href: "/", class: "signup__footer__nav__link"} 特定商取引に関する表記
+      %a(href="/")
+        = image_tag 'mercari_logo_vertical', class: 'signup__footer__nav__logo'
+      %p.signup__footer__nav__text
+        © 2019 Mercari
