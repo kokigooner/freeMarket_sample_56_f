@@ -1,6 +1,6 @@
 %div.default-container 
-  = render 'header'
-  = render 'bread-crumbs'
+  = render 'shared/header'
+  = render 'shared/bread-crumbs'
   %main.l-container.clearfix
     %div.l-content
       %section.l-chapter-container.mypage-identification
@@ -61,5 +61,6 @@
             %p.mypage-identification
               .text-right
                 = link_to "本人情報の登録について", "/"
-    = render 'l-side'
-  = render 'footer'
+    = render  'shared/l-side'
+  = render  'shared/footer'
+  = render  'shared/selling_btn'

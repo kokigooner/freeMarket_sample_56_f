@@ -1,12 +1,11 @@
 %div.default-container 
-  = render 'header'
-  = render 'bread-crumbs'
+  = render  'shared/header'
+  = render 'shared/bread-crumbs'
   %main.l-container.clearfix
     %div.l-content
       %div.l-chapter-container
         = form_tag('users_identification_path', method: :post,class: "l-single-inner" ) do |f|
           %div.l-single-content
             = submit_tag "ログアウト", {class: "btn-red btn-default"} 
-
-    = render 'l-side'
-  = render 'footer'
+    = render  'shared/l-side'
+  = render  'shared/footer'
