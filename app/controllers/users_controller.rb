@@ -9,10 +9,10 @@ class UsersController < ApplicationController
   def registration
   end
 
-  def sms_confirmation
+  def confirmation
   end
 
-  def sms_authentication
+  def authentication
   end
 
   def address
