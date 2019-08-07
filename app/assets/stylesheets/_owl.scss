@@ -1,0 +1,66 @@
+.owl{
+
+  &-carousel {
+    position: relative;
+    // overflow: hidden;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    // display: none;
+    width: 100%;
+    height: 0;
+    padding: 0 0 100%;
+
+  }
+  &-item {
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &-inner {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding: 0 0 100%;
+    }
+  }
+  &-stage-outer {
+    position: relative;
+    overflow: hidden;
+  }
+  &-stage {
+    position: relative;
+  }
+  &-dots {
+    line-height: 0;
+    .active {
+      opacity: 1;
+      cursor: default;
+    }
+  }
+  &-dot {
+    width: 60px;
+    height: 60px;
+    max-height: none;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    opacity: .4;
+    cursor: pointer;
+  }
+}
+
+.owl-nav.disabled .owl-prev, .owl-nav.disabled .owl-next {
+  // display: none;
+}

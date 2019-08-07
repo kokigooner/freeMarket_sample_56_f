@@ -1,18 +1,19 @@
-.default-container
+.default-container 
+  = render  'shared/header'
   %section.item-box-container.l-single-container
     %h1.item-name MacBook エアー
     .item-main-content.clearfix
       .item-photo
         .owl-carousel.owl-loaded.owl-drag
           .owl-stage-outer
-            .owl-stage
-              .owl-item.active
+            .owl-stage{"style": "#{'left: 0px width: 900px'}"}  
+              .owl-item.active{"style": "#{'width: 300px'}"} 
                 .owl-item-inner.is-higher-height
-                  = image_tag 'macbook_product_picture', class: 'owl-lazy'
+                  = image_tag 'macbookpro.jpeg', class: 'owl-lazy',width: "300" ,hight: "300"
           .owl-dots
             .owl-dot
               .owl-dot-inner
-                = image_tag 'macbook_product_picture', class: 'owl-lazy'
+                = image_tag 'macbookpro.jpeg', class: 'owl-lazy',width: "60" ,hight: "60"
       %table.item-detail-table
         %tbody
           %tr
@@ -22,19 +23,25 @@
               %div
                 .item-user-ratings
                   %i.icon-good
+                    = image_tag "sample_smile.png",width: "16" ,hight: "16"
                   %span 87
                 .item-user-ratings
                   %i.icon-normal
+                    = image_tag "sample_meh.png",width: "16" ,hight: "16"
                   %span 7
                 .item-user-ratings
                   %i.icon-bad
+                    = image_tag "sample_sad.png",width: "16" ,hight: "16"
                   %span 2
           %tr
             %th カテゴリー
             %td
-              %a{href: "/"} 家電・スマホ・カメラ
-              %a{href: "/"} > PC/タブレット
-              %a{href: "/"} > ノートPC
+              %a{href: "/"} 
+                %div 家電・スマホ・カメラ
+              %a{href: "/"} 
+                %div > PC/タブレット
+              %a{href: "/"}
+                %div > ノートPC
           %tr
             %th ブランド
             %td 
@@ -55,5 +62,199 @@
           %tr
             %th 発送日の目安
             %td 4~7日で発送
-
-    
+    %div.item-price-box.text-center
+      %span.item-price.bold
+        ¥ 2,500
+      %span.item-tax
+        (税込)
+      %span.item-shipping-fee
+        送料込み
+    %a.item-buy-btn.f18-24{"data-client": "#{'hidden'}"}
+      購入画面に進む
+    %a.item-btn-client
+      %div{"data-client": "#{'visible'}"}
+        購入画面に進む
+      -# %div.item-action-text{"data-toggle": "#{'open-app'}","data-url-scheme": "#{'mercari://'}","data-action": "#{'item/openDetail'}",'data-key': "#{'id=aaaaaaaa'}","data-paly-id": "#{"com.kouzoh.mercari"}","data-adjust-url": "http://app.adjust.io/xio2ii?campaign=iOS&adgroup=items.buy_button1aaaaaa"}
+      -#   アプリで購入　　←※スマホ用
+    %div.item-description.f14
+      =simple_format("うウェーーーい.ウェイウェイウェイウィ英ウェイウィ\n絵ウィ英ウィ絵ウ\nシヴァ（[ˈʃivə]; サンスクリット: शिव, Śiva、「吉祥者」の意）はヒンドゥー教の神（英語版）である。現代のヒンドゥー教では最も影響力を持つ3柱の主神の中の1人であり、特にシヴァ派では最高神に位置付けられている[1][2]。\nトリムルティ（ヒンドゥーの理論の1つ）ではシヴァは「破壊/再生」を司る様相であり、ブラフマー、ヴィシュヌとともに3柱の重要な神の中の1人として扱われている[3][4]。また、シヴァ派では世界の創造、維持、再生を司る最高神として位置づけられている[5][6][7]。デーヴィ（ヒンドゥーの女神）らを重視するシャクティ派では女神らが最高神として位置づけられている一方で、シヴァもヴィシュヌ、ブラフマーとともに崇拝の対象となっている。このシャクティ派では女神らがシヴァやそれぞれの神の根源であると考えられており、パールヴァティー（女神）がシヴァに対応する相互補完的なパートナーであるとされている[8][9]。スマールタ派のパンチャヤタナ・プージャ（英語版）（儀式）ではシヴァは礼拝の対象となる5柱の中の1人に数えられる[1]", class: 'item-description-inner')
+    %div.item-button-container.clearfix
+      %div.item-button-left
+        %button.item-button.item-button-like{"name": "like!","data-toggle": "like","data-id": "#{"xxxxxxxx"}","data-ga":"#{"element"}","dara-ga-category": "#{'LIKE'}"}
+          %i.icon-like-border
+            = image_tag "sample_heart.png",width: "15" ,hight: "15"
+            %span
+              良いね！
+            %span.fade-in-down{"data-num":"#{"like"}"}
+              0
+        %button.item-button.item-button-report.clearfix{"data-modal":"#{"report-item"}","data-open":"#{"modal"}"}
+          %i.icon-flag
+            = image_tag "sample_flag.png",width: "15" ,hight: "15"
+            %span
+              不適切な商品の報告
+        %input{"type":"#{"hidden"}","name":"#{"like_add_url"}","value":"#{""}"}
+        %input{"type":"#{"hidden"}","name":"#{"like_del_url"}","value":"#{""}"}
+        %input{"type":"#{"hidden"}","name":"#{"__csrf_value"}","value":"#{""}"}
+      %div.item-button-right
+        %i.icon-lock
+          %span
+            あんしん・あんぜんへの取り込み
+  %div.item-detail-message
+    %div.message-container
+      %div.message-content
+        =form_for :user, html: { class: "message-form" } do |f|
+          %input{"type":"#{"hidden"}","name":"#{"__csrf_value"}","value":"#{""}"}
+          %p
+            相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+          %input{"type":"#{"hidden"}","name":"#{"item_id"}","value":"#{""}"}
+          %input{"type":"#{"hidden"}","name":"#{"redirect_url_key"}","value":"#{"item_detail"}"}
+          = text_field_tag "body", '', {class: "textarea-default"} 
+          = submit_tag "コメントする", {class: "message-submit btn-default btn-gray"} 
+    %aside.modal{"data-modal": "delete-comment","data-close": "modal"} 
+      %div.modal-inner.modal-banner
+        %div.modal-body
+          %div.modal-head.bold
+          %div{"data-comment": "body"}
+            本当にこのコメントを削除してよろしいですか？
+        =form_for :user do |f|
+          %div.clearfix
+            %div.modal-btn.modal-btn-cancel{"data-close": "modal"}
+              キャンセル
+            = submit_tag "削除する", {class: "modal-btn modal-btn-submit"} 
+          %input{"type":"#{"hidden"}","name":"#{"item_id"}","value":"#{""}"}
+          %input{"type":"#{"hidden"}","name":"#{"comment_id"}","value":"#{""}"}
+          %input{"type":"#{"hidden"}","name":"#{"redirect_url_key"}","value":"#{"item_detail"}"}
+          %input{"type":"#{"hidden"}","name":"#{"__csrf_value"}","value":"#{""}"}
+  %ul.nav-item-link-prev-next.clearfix
+    %li.nav-item-link-prev
+      %a
+        %i.icon-arrow-left
+        MITSUBISHI ビデオデッキ HV-S200
+    %li.nav-item-link-next
+      %a
+        %i.icon-arrow-left
+        MITSUBISHI ビデオデッキ HV-S200
+  %div.item-social-media-box
+    %div.text-center
+      %div.fb-save.fb_iframe_widget{"data-uri":"#{""}","fb-xfbml-state":"#{""}","fb-iframe-plugin-query":"#{""}"}
+    %ul.social-media-box
+      %li
+        %a
+          = image_tag "fb_b.png",width: "44" ,hight: "44"
+      %li
+        %a
+          = image_tag "tw_b.png",width: "44" ,hight: "44"
+      %li
+        %a
+          = image_tag "pin_r.jpg",width: "44" ,hight: "44"
+  %div.items-in-user-profile
+    %section.items-box-container.clearfix.related-item-column.items-in-user-profile
+      %h2.items-box-head
+        %a
+          = "#{"丸々"}"+"さんのその他の出品"
+      %div.items-box-content.clearfix
+        %section.items-box
+          %figure.items-box-photo
+            = image_tag "sample_item.jpg",width: "220" ,hight: "220"
+          %div.items-box-body
+            %h3.items-box-name.font-2
+              コーギー　ケルベロス隊
+            %div.items-box-num
+              %div.items-box-price.font-5
+                = "¥ "+"#{"4,800"}"
+              %div.font-2
+                %i.icon-like-border
+                  ♡
+                  %span
+                  = "#{"200"}"
+        %section.items-box
+          %figure.items-box-photo
+            = image_tag "sample_item.jpg",width: "220" ,hight: "220"
+          %div.items-box-body
+            %h3.items-box-name.font-2
+              コーギー　ケルベロス隊
+            %div.items-box-num
+              %div.items-box-price.font-5
+                = "¥ "+"#{"4,800"}"
+              %div.font-2
+                %i.icon-like-border
+                  ♡
+                  %span
+                  = "#{"200"}"
+        %section.items-box
+          %figure.items-box-photo
+            = image_tag "sample_item.jpg",width: "220" ,hight: "220"
+          %div.items-box-body
+            %h3.items-box-name.font-2
+              コーギー　ケルベロス隊
+            %div.items-box-num
+              %div.items-box-price.font-5
+                = "¥ "+"#{"4,800"}"
+              %div.font-2
+                %i.icon-like-border
+                  ♡
+                  %span
+                  = "#{"200"}"
+    %section.items-box-container.clearfix.related-item-column
+      %h2.items-box-head
+        %a
+          = "#{"家畜"}"+"のその他の出品"
+      %div.items-box-content.clearfix
+        %section.items-box
+          %figure.items-box-photo
+            = image_tag "sample_item.jpg",width: "220" ,hight: "220"
+          %div.items-box-body
+            %h3.items-box-name.font-2
+              コーギー　ケルベロス隊
+            %div.items-box-num
+              %div.items-box-price.font-5
+                = "¥ "+"#{"4,800"}"
+              %div.font-2
+                %i.icon-like-border
+                  ♡
+                  %span
+                  = "#{"200"}"
+        %section.items-box
+          %figure.items-box-photo
+            = image_tag "sample_item.jpg",width: "220" ,hight: "220"
+          %div.items-box-body
+            %h3.items-box-name.font-2
+              コーギー　ケルベロス隊
+            %div.items-box-num
+              %div.items-box-price.font-5
+                = "¥ "+"#{"4,800"}"
+              %div.font-2
+                %i.icon-like-border
+                  ♡
+                  %span
+                  = "#{"200"}"
+        %section.items-box
+          %figure.items-box-photo
+            = image_tag "sample_item.jpg",width: "220" ,hight: "220"
+          %div.items-box-body
+            %h3.items-box-name.font-2
+              コーギー　ケルベロス隊
+            %div.items-box-num
+              %div.items-box-price.font-5
+                = "¥ "+"#{"4,800"}"
+              %div.font-2
+                %i.icon-like-border
+                  ♡
+                  %span
+                  = "#{"200"}"
+        %section.items-box
+          %figure.items-box-photo
+            = image_tag "sample_item.jpg",width: "220" ,hight: "220"
+          %div.items-box-body
+            %h3.items-box-name.font-2
+              コーギー　ケルベロス隊
+            %div.items-box-num
+              %div.items-box-price.font-5
+                = "¥ "+"#{"4,800"}"
+              %div.font-2
+                %i.icon-like-border
+                  ♡
+                  %span
+                  = "#{"200"}"
+  = render 'shared/bread-crumbs'
+  = render  'shared/footer'
