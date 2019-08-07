@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   def complete
   end
 
-  def mypage_profile    
+  def profile    
   end
 
   def syuppin
