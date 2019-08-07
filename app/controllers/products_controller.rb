@@ -4,5 +4,8 @@ class ProductsController < ApplicationController
 
   def detail
   end
+
+  def confirm
+  end
   
 end

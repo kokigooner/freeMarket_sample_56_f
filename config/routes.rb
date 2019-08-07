@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'products' => 'products#toppage'
   get "products/detail" => "products#products_detail"
+  get "products/confirm" => "products#confirm"
+
   get 'users/mypage_profile' => 'users#mypage_profile'
   get '/users/mypage/card' => "users#card"
   get '/users/mypage/card/create' => "users#card_create"
@@ -16,6 +18,8 @@ Rails.application.routes.draw do
   get "/users/signup/payment" => "users#payment" 
   get "/users/signup/complete" => "users#complete"
   get "/users/login" => "users#login"
+
+
   get "/mypage/identification/"=> "users#identification" 
   get "/mypage/logout/"=> "users#logout" 
 

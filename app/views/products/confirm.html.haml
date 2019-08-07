@@ -1,0 +1,64 @@
+.products-confirm
+  %header.products-confirm__header
+    %a(href="/")
+      = image_tag 'mercari_logo_horizontal.png', class: 'products-confirm__header__logo'
+  %main.products-confirm__main
+    .products-confirm__main__container
+      %h2.products-confirm__main__head 購入内容の確認
+      .products-confirm__main__item
+        .products-confirm__main--inner
+          = image_tag 'products_confirm_img.jpg',  class: 'products-confirm__image'
+          %p.products-confirm__product-name
+            DevOps導入指南 Infrastructure as Codeでチーム開発…
+          %p.products-confirm__product-price
+            ¥1,799
+            %span.products-confirm__product-price--shipment-fee 送料込み
+          .products-confirm__users-point--none
+            ポイントはありません
+          .products-confirm__buy-price-label
+            支払い金額
+            %span.products-confirm__buy-price 
+              ¥1,799
+          .products-confirm__error-message
+            配送先と支払い方法の入力を完了してください。
+          .products-confirm__purchase-btn
+            購入する
+        .products-confirm__user-info
+          .products-confirm__main--inner
+            %h3.products-confirm__user-info__address--head
+              配送先
+            .products-confirm__user-info__address
+              〒150-0041
+              %br
+              東京都渋谷区神南1-18-2 フレーム神南坂4F
+              %br
+              メルカリ太郎
+            .products-confirm__user-info__link
+              %a(href="/" class="products-confirm__user-info__change")
+                変更する＞
+        .products-confirm__user-info.products-confirm__user-info--bottom
+          .products-confirm__main--inner
+            %h3.products-confirm__user-info__payment--head
+              支払い方法
+            .products-confirm__user-info__payment
+              ************1234
+              %br
+              12 / 34
+              %br
+              = image_tag 'visa.svg', class: 'products-confirm__user-info__payment__img'
+            .products-confirm__user-info__link
+              %a(href="/" class="products-confirm__user-info__change")
+                変更する＞
+  %footer.signup__footer
+    .signup__footer__nav
+      %ul.signup__footer__nav__links
+        %li
+          %a{href: "/", class: "signup__footer__nav__link"} プライバシーポリシー
+        %li
+          %a{href: "/", class: "signup__footer__nav__link"} メルカリ利用規約
+        %li
+          %a{href: "/", class: "signup__footer__nav__link"} 特定商取引に関する表記
+      %a(href="/")
+        = image_tag 'mercari_logo_vertical', class: 'signup__footer__nav__logo'
+      %p.signup__footer__nav__text
+        © 2019 Mercari
