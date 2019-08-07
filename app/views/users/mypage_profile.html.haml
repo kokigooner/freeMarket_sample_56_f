@@ -1,46 +1,20 @@
+.mypage__profile__header
+  = render "header"
+  = render "bread-crumbs"
+
 .mypage-profile
   .mypage-profile__container
     .mypage-profile__container__side-bar
+      = render  "l-side"
     .mypage-profile__container__content
       .mypage-profile__container__content__header
         プロフィール
       .mypage-profile__container__content__icon
-        %figure
-          %img{height: "60", src: "//static.mercdn.net/images/member_photo_noimage_thumb.png", width: "60"}/
+        %figure.mypage-profile__container__content__icon__picture
+          %img.mypage-profile__container__content__icon__picture__url{height: "60", src: "//static.mercdn.net/images/member_photo_noimage_thumb.png", width: "60"}/
         %input.input-default{name: "nickname", placeholder: "例)AYA☆セール中", type: "text", }/
       .mypage-profile__container__content__text
         %textarea.textarea-default{name: "introduction", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}     
         %button.btn-default.btn-red{type: "submit"} 変更する
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    -# .mypage-profile__content__left
-    -# .mypage-profile__content__right
-    -#   .mypage-profile__content__right__header
-    -#     プロフィール
-    -#   .mypage-profile__content__right__middle
-    -#     -# =form_tag url: users_mypage_profile_path, method: :get, local:true do
-    -#     .mypage-profile__content__right__middle__form 
-    -#       .mypage-profile__content__right__middle__form__icon
-    -#         %figure
-    -#           %img{:height => "60", :src => "//static.mercdn.net/images/member_photo_noimage_thumb.png", :width => "60"}/ 
-    -#       .mypage-profile__content__right__middle__form__name
-    -#         = text_field :content, class: "name_form", placeholder: "例) AYA☆セール中"
-    -#   .mypage-profile__content__right__fotter
-    -#     .mypage-profile__content__right__fotter__text
-    -#       = text_area :content, class: "text_form", placeholder: "例）例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"
-    -#     .mypage-profile__content__right__fotter__btn
-    -#       = submit_tag "変更する", :class => "btn-red"
+  .mypage__profile__footer
+    = render "footer"

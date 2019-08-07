@@ -2,100 +2,87 @@
   %header.registration-header
     %h1
       %a(href="/" class="registration-header__logo")
-        = image_tag 'mercari_logo_horizontal', class: 'registration-header__logo--img'
+        = image_tag 'mercari_logo_horizontal', class: 'registration-header__logo__img'
     %nav.registration-header__progress-bar
       %ol
         %li.registration-header--active
           会員情報
-          .registration-header__progress-status.registration-header__progress-status--active
-          .progress-status__bar.progress-status__bar--after
+          .progress__status.progress__status--active
+          .progress__bar.progress__bar--after
         %li
           電話番号認証
-          .progress-status__bar.progress-status__bar--before
-          .registration-header__progress-status
-          .progress-status__bar.progress-status__bar--after
+          .progress__bar.progress__bar--before
+          .progress__status
+          .progress__bar.progress__bar--after
         %li
           お届け先住所入力
-          .progress-status__bar.progress-status__bar--before
-          .registration-header__progress-status
-          .progress-status__bar.progress-status__bar--after
+          .progress__bar.progress__bar--before
+          .progress__status
+          .progress__bar.progress__bar--after
         %li
           支払い方法
-          .progress-status__bar.progress-status__bar--before
-          .registration-header__progress-status
-          .progress-status__bar.progress-status__bar--after
+          .progress__bar.progress__bar--before
+          .progress__status
+          .progress__bar.progress__bar--after
         %li
           完了
-          .progress-status__bar.progress-status__bar--before
-          .registration-header__progress-status
+          .progress__bar.progress__bar--before
+          .progress__status
   %main.registration-main
     .registration-main__container
-      %h2.registration-main__container__text 会員情報入力
-      =form_for :user, html: { class: "registration-main__form" } do |f|
-        .registration-main__form__content
-          .registration-main__form__group
+      %h2.registration-main__text 会員情報入力
+      =form_for :user, html: { class: "registration__form" } do |f|
+        .registration__form__content
+          .registration__form__group
             = f.label :nickname, "ニックネーム"
-            %span.registration-main__form--require 必須
-            = f.text_field :nickname, class: "registration-main__form__input", placeholder: "例) メルカリ太郎" 
-          .registration-main__form__group
+            %span.registration__form--require 必須
+            = f.text_field :nickname, class: "registration__form__input", placeholder: "例) メルカリ太郎" 
+          .registration__form__group
             = f.label :email, "メールアドレス"
-            %span.registration-main__form--require 必須
-            = f.text_field :email, class: "registration-main__form__input", placeholder: "PC・携帯どちらでも可"
-          .registration-main__form__group
+            %span.registration__form--require 必須
+            = f.text_field :email, class: "registration__form__input", placeholder: "PC・携帯どちらでも可"
+          .registration__form__group
             = f.label :password, "パスワード"
-            %span.registration-main__form--require 必須
-            = f.text_field :password, class: "registration-main__form__input", placeholder: "6文字以上"
-
-          .registration-main__form__group
+            %span.registration__form--require 必須
+            = f.text_field :password, class: "registration__form__input", placeholder: "6文字以上"
+          .registration__form__group
             = f.label :password_conformation, "パスワード (確認)"
-            %span.registration-main__form--require 必須
-            = f.text_field :password_conformation, class: "registration-main__form__input", placeholder: "6文字以上"
-          .registration-main__form__group
+            %span.registration__form--require 必須
+            = f.text_field :password_conformation, class: "registration__form__input", placeholder: "6文字以上"
+          .registration__form__group
             %h3 本人確認
-            %p.registration-main__form__confirm-text
-            安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
-          .registration-main__form__group
+            %p.registration__form__text
+              安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+          .registration__form__group
             %div
               = f.label :name, "お名前(全角)"
-              %span.registration-main__form--require 必須
-            = f.text_field :name, class: "registration-main__form__input registration-main__form__input--half registration-main__form__input--half--left", placeholder: "例) 山田"
-            = f.text_field :name, class: "registration-main__form__input registration-main__form__input--half", placeholder: "例) 彩"
-          .registration-main__form__group
+              %span.registration__form--require 必須
+            = f.text_field :name, class: "registration__form__input registration__form__input--half registration__form__input--half--left", placeholder: "例) 山田"
+            = f.text_field :name, class: "registration__form__input registration__form__input--half", placeholder: "例) 彩"
+          .registration__form__group
             %div
               = f.label :name, "お名前カナ(全角)"
-              %span.registration-main__form--require 必須
-            = f.text_field :name, class: "registration-main__form__input registration-main__form__input--half registration-main__form__input--half--left", placeholder: "例) ヤマダ"
-            = f.text_field :name, class: "registration-main__form__input registration-main__form__input--half", placeholder: "例) アヤ" 
-          .registration-main__form__group
+              %span.registration__form--require 必須
+            = f.text_field :name, class: "registration__form__input registration__form__input--half registration__form__input--half--left", placeholder: "例) ヤマダ"
+            = f.text_field :name, class: "registration__form__input registration__form__input--half", placeholder: "例) アヤ" 
+          .registration__form__group
             %div
               %label(for="name") 生年月日
-              %span.registration-main__form--require 必須
-            .registration-main__form__birthday-wrapper
-              .registration-main__form__select-wrapper
+              %span.registration__form--require 必須
+            .registration__form__birthday-wrapper
+              .registration__form__select-wrapper
                 = f.date_select :birthday, start_year: 2019, end_year: 1900, use_month_numbers: true, prompt: "--"
-                %span.registration-main__form__select--year 年
-                %span.registration-main__form__select--month 月
-                %span.registration-main__form__select--day 日
-          %p.registration-main__form__caution-text
+                %span.registration__form__select--year 年
+                %span.registration__form__select--month 月
+                %span.registration__form__select--day 日
+          %p.registration__form__caution-text
             ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
-          = image_tag 'recaptcha.jpeg', class: 'registration-main__form__recaptcha-icon'
-          %p.registration-main__form__confirm-text
+          = image_tag 'recaptcha.jpeg', class: 'registration__form__recaptcha-icon'
+          %p.registration__form__text.registration__form__text--center
             「次へ進む」のボタンを押すことにより、
             %a(href="/")>利用規約
             に同意したものとみなします
-          = f.submit class: "signup__form__btn signup__form__btn--mail registration-main__form__next-btn", value: "次へ進む"
-          .registration-main__form__about-text
+          = f.submit class: "signup__form__btn signup__form__btn--mail registration__form__next-btn", value: "次へ進む"
+          .registration__form__about-text
             %a(href="/") 本人情報の登録について＞
-  %footer.signup__footer
-    .signup__footer__nav
-      %ul.signup__footer__nav__links
-        %li
-          %a{href: "/", class: "signup__footer__nav__link"} プライバシーポリシー
-        %li
-          %a{href: "/", class: "signup__footer__nav__link"} メルカリ利用規約
-        %li
-          %a{href: "/", class: "signup__footer__nav__link"} 特定商取引に関する表記
-      %a(href="/")
-        = image_tag 'mercari_logo_vertical', class: 'signup__footer__nav__logo'
-      %p.signup__footer__nav__text
-        © 2019 Mercari
+  = render partial: "users/signup-footer"

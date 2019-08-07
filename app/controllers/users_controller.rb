@@ -3,13 +3,16 @@ class UsersController < ApplicationController
   def signup
   end
 
+  def login
+  end
+
   def registration
   end
 
-  def sms_confirmation
+  def confirmation
   end
 
-  def sms_authentication
+  def authentication
   end
 
   def address
@@ -24,6 +27,12 @@ class UsersController < ApplicationController
   def mypage_profile    
   end
 
+  def syuppin
+  end
+
+  def mypage
+  end
+
   def card
   end
 
@@ -36,6 +45,5 @@ class UsersController < ApplicationController
 
   def logout
   end
-
 
 end

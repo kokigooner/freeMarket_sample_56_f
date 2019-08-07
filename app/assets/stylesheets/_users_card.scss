@@ -3,23 +3,11 @@
   color: #333;
   font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic,
     メイリオ, Meiryo, sans-serif;
-  &__header {
-    height: 150px;
-    width: 100vw;
-    background-color: #fff;
-  }
   &__main__container {
     margin: 40px auto 0;
     width: 1020px;
     display: flex;
   }
-  &__sidebar {
-    width: 280px;
-    height: 1000px;
-    margin-right: 40px;
-    background-color: #fff;
-  }
-
   &__container {
     height: 100%;
     width: 700px;
@@ -108,7 +96,6 @@
     }
   }
 }
-
 .mypage-card-create {
   &__head {
     font-size: 24px;

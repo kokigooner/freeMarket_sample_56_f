@@ -1,0 +1,96 @@
+.login-header {
+  height: 128px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__logo {
+    width: 230px;
+  }
+}
+.login-main {
+  background-color: #f5f5f5;
+  color: #333;
+  font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic",
+    "メイリオ", "Meiryo", sans-serif;
+}
+.login-panel {
+  background-color: #fff;
+  width: 456px;
+  margin: 0 auto;
+}
+.login {
+  &__new-account {
+    font-size: 14px;
+    padding: 40px 64px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    &__btn {
+      display: block;
+      margin: 8px 0 0;
+      border: 1px solid #0099e8;
+      background: #0099e8;
+      color: #fff;
+      line-height: 40px;
+    }
+  }
+  &__external-account {
+    font-size: 14px;
+    padding: 32px 64px;
+    &__btn {
+      display: block;
+      width: 100%;
+      line-height: 48px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-align: center;
+      &--facebook {
+        background-color: #385185;
+        color: #fff;
+      }
+      &--google {
+        margin-top: 16px;
+        border: #979797 solid 1px;
+        color: #333;
+      }
+    }
+  }
+  &__form {
+    padding: 24px 64px 32px;
+    &__input {
+      box-sizing: border-box;
+      width: 100%;
+      height: 48px;
+      padding: 10px 16px 8px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: #fff;
+      line-height: 1.5;
+      font-size: 16px;
+    }
+    &__recaptcha-img {
+      width: 300px;
+    }
+    &__submit-btn {
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+      display: block;
+      width: 100%;
+      line-height: 48px;
+      font-size: 14px;
+      cursor: pointer;
+      text-align: center;
+      margin-top: 24px;
+    }
+    &__forgot-pass-text {
+      display: block;
+      font-size: 14px;
+      padding-top: 40px;
+      color: #0099e8;
+      text-decoration: none;
+    }
+  }
+}
