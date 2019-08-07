@@ -1,0 +1,25 @@
+.social-media-box {
+  margin: 16px 0 0;
+  text-align: center;
+  font-size: 0;
+  li {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    vertical-align: middle;
+    text-align: center;
+  }
+  li a {
+    display: block;
+  }
+  i {
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    line-height: 44px;
+  }
+}
+
+.fb_iframe_widget {
+  display: inline-block;
+  position: relative;
+}

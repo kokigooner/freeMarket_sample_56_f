@@ -1,135 +1,67 @@
-.app-banner {
+.app-banner{
+  background-image: url(image-path("bg_pc.jpg"));
   background-position: center;
   background-size: cover;
-}
-.app-banner-pc{
-  overflow: hidden;
-  position: relative;
-  display: none;
-  width: 750px;
   height: 260px;
-  margin: 0 auto;
-  color: #fff;
+  li:last-child {
+  margin: 0 0 0 16px;
+  float: left;
+  }
+  &-icon {
+    margin: 20px 0 0;
+    figure {
+      float: left;
+      }
+    img{
+      vertical-align: middle;
+      }
+      ul{
+        float: left;
+        margin: 0 0 0 24px;
+        line-height: 68px;
+      }
+      li {
+        float: left;
+        line-height: 68px;
+        }
+    }
+  &-pc{
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 750px;
+    height: 260px;
+    margin: 0 auto;
+    color: #fff;
+    &-inner {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+    }
+    p {
+      margin: 10px 0 0;
+      font-size: 35px;
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+      }
+    h2 {
+      margin: 0;
+      font-size: 16px;
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+      }
+  }
 }
 
-.global-footer {
-padding: 0 20px 10px 20px;
-background: #212121;
-color: #fff;
-nav {
-  width: 1020px;
-  margin: 0 auto;
-}
-.footer-nav-lang {
-width: auto!important;
-margin-top: 35px;
-padding: 0!important;
-}
-.footer-cell {
-display: block;
-float: left;
-margin-top: 18px;
-width: 20%;
-padding: 0 40px 0 0;
-// vertical-align: top;
-
-}
-.footer-cell li:first-child {
-margin: 16px 0 0;
-}
-.footer-cell li {
-margin: 14px 0 0;
-}
-.footer-cell:first-child {
-padding: 0 20px 0 0;
-width: 20%;
-}
-.full-width {
-margin-top: 18px;
-padding: 0 40px 0 0;
-width: 42%;
-}
-.inner-footer-cell {
-float: left;
-padding-left: 10px;
-vertical-align: top;
-width: 45%;
-
-}
-.inner-footer-cell:first-of-type {
-padding: 0 10px 0 0;
-}
-}
-.app-banner {
-background-image: url(image-path("bg_pc.jpg"));
-background-position: center;
-background-size: cover;
-height: 260px;
-li:last-child {
-margin: 0 0 0 16px;
-float: left;
-}
-}
-.app-banner-pc {
-overflow: hidden;
-position: relative;
-display: block;
-width: 750px;
-height: 260px;
-margin: 0 auto;
-color: #fff;
-}
-.app-banner-pc-inner {
-position: absolute;
-top: 50%;
-left: 16px;
--webkit-transform: translate(0, -50%);
-transform: translate(0, -50%);
-}
-
-.app-banner-icon {
-margin: 20px 0 0;
-}
-.app-banner-icon figure {
-float: left;
-}
-
-.app-banner-icon img {
-vertical-align: middle;
-}
 .app-banner-icon ul {
 float: left;
 margin: 0 0 0 24px;
 line-height: 68px;
 }
-.app-banner-icon li {
-float: left;
 
-line-height: 68px;
-}
-.app-banner-pc p {
-margin: 10px 0 0;
-font-size: 24px;
-}
-
-.app-banner-pc h2 {
-margin: 0;
-font-size: 16px;
-}
-
-
-.app-banner-pc h2, .app-banner-pc p {
-text-shadow: 0 0 5px rgba(0,0,0,0.4);
-
-}
-
-* {
-background-repeat: no-repeat;
-margin: 0;
-padding: 0;
-}
 
 .app-banner-pc>figure {
+box-sizing: inherit;
 position: absolute;
 top: 0;
 right: 0;
@@ -142,62 +74,109 @@ height: 100%;
 width: 100%;
 }
 
-.footer-head {
-color: #fff;
-font-size: 16px;
-font-weight: 100;
-}
-.global-footer a {
-color: #fff;
-font-size: 12px;
-line-height: 1.5em;
-}
-.footer-cell a {
-display: block;
-opacity: .7;
-}
+.footer{
+  &-head {
 
-.footer-bottom {
-margin: 30px auto 20px;
-width: 1020px;
-}
-.footer-copyright {
-width: 745px;
-}
-.footer-copyright small {
-font-size: 12px;
-}
-.footer-copyright {
-display: inline-block;
-margin: 8px 0 0;
-text-align: center;
-vertical-align: sub;
-}
-.footer-logo {
-display: inline-block;
-margin-right: 10px;
-width: auto;
-}
-.footer-social-link {
-display: inline-block;
-}
-
-.footer-sell-btn {
-  position: fixed;
-  bottom: 32px;
-  right: 32px;
-  z-index: 1000;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: #ea352d;
   color: #fff;
-  text-align: center;
-  font-size: 22px;
+  font-size: 16px;
+  font-weight: 100;
+  }
+  &-cell a {
+    display: block;
+    opacity: .7;
+  }
+  &-bottom {
+    margin: 30px auto 20px;
+    width: 1020px;
+    }
+  &-copyright {
+    width: 745px;
+  }
+  &-copyright {
+    display: inline-block;
+    margin: 8px 0 0;
+    text-align: center;
+    vertical-align: sub;
+    small {
+      font-size: 12px;
+      }
+    }
+  &-logo {
+    display: inline-block;
+    margin-right: 10px;
+    width: auto;
+    }
+  &-social-link {
+    display: inline-block;
+    }
+  &-sell-btn {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 1000;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: #ea352d;
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    div {
+      margin: 32px 0 0;
+    }
+  }
+  &-nav-lang {
+    width: auto!important;
+    margin-top: 35px;
+    padding: 0!important;
+    }
+  &-cell {
+    display: block;
+    float: left;
+    margin-top: 18px;
+    width: 20%;
+    padding: 0 40px 0 0;
+    // vertical-align: top;
+    li:first-child {
+      margin: 16px 0 0;
+      }
+      li {
+        margin: 14px 0 0;
+        }
+    }
+  &-cell:first-child {
+    padding: 0 20px 0 0;
+    width: 20%;
+    }
 }
-
-.footer-sell-btn div {
-  margin: 32px 0 0;
+.global-footer {
+  padding: 0 20px 10px 20px;
+  background: #212121;
+  color: #fff;
+  nav {
+    width: 1020px;
+    margin: 0 auto;
+  }
+  a {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.5em;
+    }
+  .full-width {
+  margin-top: 18px;
+  padding: 0 40px 0 0;
+  width: 42%;
+  }
+  .inner{
+    &-footer-cell {
+    float: left;
+    padding-left: 10px;
+    vertical-align: top;
+    width: 45%;
+    }
+    &-footer-cell:first-of-type {
+    padding: 0 10px 0 0;
+    }
+  }
 }
-
-
+  
