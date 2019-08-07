@@ -49,16 +49,4 @@
             .products-confirm__user-info__link
               %a(href="/" class="products-confirm__user-info__change")
                 変更する＞
-  %footer.signup__footer
-    .signup__footer__nav
-      %ul.signup__footer__nav__links
-        %li
-          %a{href: "/", class: "signup__footer__nav__link"} プライバシーポリシー
-        %li
-          %a{href: "/", class: "signup__footer__nav__link"} メルカリ利用規約
-        %li
-          %a{href: "/", class: "signup__footer__nav__link"} 特定商取引に関する表記
-      %a(href="/")
-        = image_tag 'mercari_logo_vertical', class: 'signup__footer__nav__logo'
-      %p.signup__footer__nav__text
-        © 2019 Mercari
+  = render partial: "users/signup-footer"
