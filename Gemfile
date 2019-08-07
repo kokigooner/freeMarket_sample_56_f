@@ -60,6 +60,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'haml-rails'
+gem 'fog-aws'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :production do
   gem 'unicorn', '5.4.1'
