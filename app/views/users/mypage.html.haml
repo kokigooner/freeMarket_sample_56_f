@@ -1,12 +1,12 @@
 .mypage__header
-  = render 'header'
-  = render 'bread-crumbs'
+  = render 'shared/header'
+  = render 'shared/bread-crumbs'
 
 
 .mypage__container
   .mypage__container__box
     .mypage__container__box__side-bar
-      = render 'l-side'
+      = render 'shared/l-side'
     .mypage__container__box__content
       %section.mypage__container__box__content__icon
         %a.mypage__icon__box{href: ""}
@@ -75,4 +75,4 @@
           -#   %li.mypage__item__nothing
           -#     過去に取引した商品はありません
 .mypage__footer
-  = render 'footer'
+  = render 'shared/footer'
