@@ -37,7 +37,7 @@
       }
     }
   }
-  &__progress-status {
+  &__progress {
     margin: 8px auto 0;
     height: 12px;
     width: 12px;
@@ -54,7 +54,7 @@
   }
 }
 
-.progress-status__bar {
+.progress__bar {
   height: 2px;
   width: 100%;
   background-color: #ccc;
