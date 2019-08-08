@@ -1,35 +1,35 @@
 .default-container 
   = render  'shared/header'
-  %section.item-box-container.l-single-container
-    %h1.item-name MacBook エアー
-    .item-main-content.clearfix
-      .item-photo
+  %section.product-box-container.large-single-container
+    %h1.product-name MacBook エアー
+    .product-main-content.clearfix
+      .product-photo
         .owl-carousel.owl-loaded.owl-drag
           .owl-stage-outer
             .owl-stage{"style": "#{'left: 0px width: 900px'}"}  
-              .owl-item.active{"style": "#{'width: 300px'}"} 
-                .owl-item-inner.is-higher-height
+              .owl-product.active{"style": "#{'width: 300px'}"} 
+                .owl-product-inner.is-higher-height
                   = image_tag 'macbookpro.jpeg', class: 'owl-lazy',width: "300" ,hight: "300"
           .owl-dots
             .owl-dot
               .owl-dot-inner
                 = image_tag 'macbookpro.jpeg', class: 'owl-lazy',width: "60" ,hight: "60"
-      %table.item-detail-table
+      %table.product-detail-table
         %tbody
           %tr
             %th 出品者
             %td
               %a{href: "/"} JP
               %div
-                .item-user-ratings
+                .product-user-ratings
                   %i.icon-good
                     = image_tag "sample_smile.png",width: "16" ,hight: "16"
                   %span 87
-                .item-user-ratings
+                .product-user-ratings
                   %i.icon-normal
                     = image_tag "sample_meh.png",width: "16" ,hight: "16"
                   %span 7
-                .item-user-ratings
+                .product-user-ratings
                   %i.icon-bad
                     = image_tag "sample_sad.png",width: "16" ,hight: "16"
                   %span 2
@@ -62,32 +62,32 @@
           %tr
             %th 発送日の目安
             %td 4~7日で発送
-    %div.item-price-box.text-center
-      %span.item-price.bold
+    %div.product-price-box.text-center
+      %span.product-price.bold
         ¥ 2,500
-      %span.item-tax
+      %span.product-tax
         (税込)
-      %span.item-shipping-fee
+      %span.product-shipping-fee
         送料込み
-    %a.item-buy-btn.f18-24{"data-client": "#{'hidden'}"}
+    %a.product-buy-btn.f18-24{"data-client": "#{'hidden'}"}
       購入画面に進む
-    %a.item-btn-client
+    %a.product-btn-client
       %div{"data-client": "#{'visible'}"}
         購入画面に進む
-      -# %div.item-action-text{"data-toggle": "#{'open-app'}","data-url-scheme": "#{'mercari://'}","data-action": "#{'item/openDetail'}",'data-key': "#{'id=aaaaaaaa'}","data-paly-id": "#{"com.kouzoh.mercari"}","data-adjust-url": "http://app.adjust.io/xio2ii?campaign=iOS&adgroup=items.buy_button1aaaaaa"}
+      -# %div.product-action-text{"data-toggle": "#{'open-app'}","data-url-scheme": "#{'mercari://'}","data-action": "#{'product/openDetail'}",'data-key': "#{'id=aaaaaaaa'}","data-paly-id": "#{"com.kouzoh.mercari"}","data-adjust-url": "http://app.adjust.io/xio2ii?campaign=iOS&adgroup=items.buy_button1aaaaaa"}
       -#   アプリで購入　　←※スマホ用
-    %div.item-description.f14
-      =simple_format("うウェーーーい.ウェイウェイウェイウィ英ウェイウィ\n絵ウィ英ウィ絵ウ\nシヴァ（[ˈʃivə]; サンスクリット: शिव, Śiva、「吉祥者」の意）はヒンドゥー教の神（英語版）である。現代のヒンドゥー教では最も影響力を持つ3柱の主神の中の1人であり、特にシヴァ派では最高神に位置付けられている[1][2]。\nトリムルティ（ヒンドゥーの理論の1つ）ではシヴァは「破壊/再生」を司る様相であり、ブラフマー、ヴィシュヌとともに3柱の重要な神の中の1人として扱われている[3][4]。また、シヴァ派では世界の創造、維持、再生を司る最高神として位置づけられている[5][6][7]。デーヴィ（ヒンドゥーの女神）らを重視するシャクティ派では女神らが最高神として位置づけられている一方で、シヴァもヴィシュヌ、ブラフマーとともに崇拝の対象となっている。このシャクティ派では女神らがシヴァやそれぞれの神の根源であると考えられており、パールヴァティー（女神）がシヴァに対応する相互補完的なパートナーであるとされている[8][9]。スマールタ派のパンチャヤタナ・プージャ（英語版）（儀式）ではシヴァは礼拝の対象となる5柱の中の1人に数えられる[1]", class: 'item-description-inner')
-    %div.item-button-container.clearfix
-      %div.item-button-left
-        %button.item-button.item-button-like{"name": "like!","data-toggle": "like","data-id": "#{"xxxxxxxx"}","data-ga":"#{"element"}","dara-ga-category": "#{'LIKE'}"}
+    %div.product-description.f14
+      =simple_format("うウェーーーい.ウェイウェイウェイウィ英ウェイウィ\n絵ウィ英ウィ絵ウ\nシヴァ（[ˈʃivə]; サンスクリット: शिव, Śiva、「吉祥者」の意）はヒンドゥー教の神（英語版）である。現代のヒンドゥー教では最も影響力を持つ3柱の主神の中の1人であり、特にシヴァ派では最高神に位置付けられている[1][2]。\nトリムルティ（ヒンドゥーの理論の1つ）ではシヴァは「破壊/再生」を司る様相であり、ブラフマー、ヴィシュヌとともに3柱の重要な神の中の1人として扱われている[3][4]。また、シヴァ派では世界の創造、維持、再生を司る最高神として位置づけられている[5][6][7]。デーヴィ（ヒンドゥーの女神）らを重視するシャクティ派では女神らが最高神として位置づけられている一方で、シヴァもヴィシュヌ、ブラフマーとともに崇拝の対象となっている。このシャクティ派では女神らがシヴァやそれぞれの神の根源であると考えられており、パールヴァティー（女神）がシヴァに対応する相互補完的なパートナーであるとされている[8][9]。スマールタ派のパンチャヤタナ・プージャ（英語版）（儀式）ではシヴァは礼拝の対象となる5柱の中の1人に数えられる[1]", class: 'product-description-inner')
+    %div.product-button-container.clearfix
+      %div.product-button-left
+        %button.product-button.product-button-like{"name": "like!","data-toggle": "like","data-id": "#{"xxxxxxxx"}","data-ga":"#{"element"}","dara-ga-category": "#{'LIKE'}"}
           %i.icon-like-border
             = image_tag "sample_heart.png",width: "15" ,hight: "15"
             %span
               良いね！
             %span.fade-in-down{"data-num":"#{"like"}"}
               0
-        %button.item-button.item-button-report.clearfix{"data-modal":"#{"report-item"}","data-open":"#{"modal"}"}
+        %button.product-button.product-button-report.clearfix{"data-modal":"#{"report-product"}","data-open":"#{"modal"}"}
           %i.icon-flag
             = image_tag "sample_flag.png",width: "15" ,hight: "15"
             %span
@@ -95,19 +95,19 @@
         %input{"type":"#{"hidden"}","name":"#{"like_add_url"}","value":"#{""}"}
         %input{"type":"#{"hidden"}","name":"#{"like_del_url"}","value":"#{""}"}
         %input{"type":"#{"hidden"}","name":"#{"__csrf_value"}","value":"#{""}"}
-      %div.item-button-right
+      %div.product-button-right
         %i.icon-lock
           %span
             あんしん・あんぜんへの取り込み
-  %div.item-detail-message
+  %div.product-detail-message
     %div.message-container
       %div.message-content
         =form_for :user, html: { class: "message-form" } do |f|
           %input{"type":"#{"hidden"}","name":"#{"__csrf_value"}","value":"#{""}"}
           %p
             相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
-          %input{"type":"#{"hidden"}","name":"#{"item_id"}","value":"#{""}"}
-          %input{"type":"#{"hidden"}","name":"#{"redirect_url_key"}","value":"#{"item_detail"}"}
+          %input{"type":"#{"hidden"}","name":"#{"product_id"}","value":"#{""}"}
+          %input{"type":"#{"hidden"}","name":"#{"redirect_url_key"}","value":"#{"product_detail"}"}
           = text_field_tag "body", '', {class: "textarea-default"} 
           = submit_tag "コメントする", {class: "message-submit btn-default btn-gray"} 
     %aside.modal{"data-modal": "delete-comment","data-close": "modal"} 
@@ -121,20 +121,20 @@
             %div.modal-btn.modal-btn-cancel{"data-close": "modal"}
               キャンセル
             = submit_tag "削除する", {class: "modal-btn modal-btn-submit"} 
-          %input{"type":"#{"hidden"}","name":"#{"item_id"}","value":"#{""}"}
+          %input{"type":"#{"hidden"}","name":"#{"product_id"}","value":"#{""}"}
           %input{"type":"#{"hidden"}","name":"#{"comment_id"}","value":"#{""}"}
-          %input{"type":"#{"hidden"}","name":"#{"redirect_url_key"}","value":"#{"item_detail"}"}
+          %input{"type":"#{"hidden"}","name":"#{"redirect_url_key"}","value":"#{"product_detail"}"}
           %input{"type":"#{"hidden"}","name":"#{"__csrf_value"}","value":"#{""}"}
-  %ul.nav-item-link-prev-next.clearfix
-    %li.nav-item-link-prev
+  %ul.navigation-product-link-prev-next.clearfix
+    %li.navigation-product-link-prev
       %a
         %i.icon-arrow-left
         MITSUBISHI ビデオデッキ HV-S200
-    %li.nav-item-link-next
+    %li.navigation-product-link-next
       %a
         %i.icon-arrow-left
         MITSUBISHI ビデオデッキ HV-S200
-  %div.item-social-media-box
+  %div.product-social-media-box
     %div.text-center
       %div.fb-save.fb_iframe_widget{"data-uri":"#{""}","fb-xfbml-state":"#{""}","fb-iframe-plugin-query":"#{""}"}
     %ul.social-media-box
@@ -147,109 +147,109 @@
       %li
         %a
           = image_tag "pin_r.jpg",width: "44" ,hight: "44"
-  %div.items-in-user-profile
-    %section.items-box-container.clearfix.related-item-column.items-in-user-profile
-      %h2.items-box-head
+  %div.products-in-user-profile
+    %section.products-box-container.clearfix.related-product-column.products-in-user-profile
+      %h2.products-box-head
         %a
           = "#{"丸々"}"+"さんのその他の出品"
-      %div.items-box-content.clearfix
-        %section.items-box
-          %figure.items-box-photo
+      %div.products-box-content.clearfix
+        %section.products-box
+          %figure.products-box-photo
             = image_tag "sample_item.jpg",width: "220" ,hight: "220"
-          %div.items-box-body
-            %h3.items-box-name.font-2
+          %div.products-box-body
+            %h3.products-box-name.font-2
               コーギー　ケルベロス隊
-            %div.items-box-num
-              %div.items-box-price.font-5
+            %div.products-box-num
+              %div.products-box-price.font-5
                 = "¥ "+"#{"4,800"}"
               %div.font-2
                 %i.icon-like-border
                   ♡
                   %span
                   = "#{"200"}"
-        %section.items-box
-          %figure.items-box-photo
+        %section.products-box
+          %figure.products-box-photo
             = image_tag "sample_item.jpg",width: "220" ,hight: "220"
-          %div.items-box-body
-            %h3.items-box-name.font-2
+          %div.products-box-body
+            %h3.products-box-name.font-2
               コーギー　ケルベロス隊
-            %div.items-box-num
-              %div.items-box-price.font-5
+            %div.products-box-num
+              %div.products-box-price.font-5
                 = "¥ "+"#{"4,800"}"
               %div.font-2
                 %i.icon-like-border
                   ♡
                   %span
                   = "#{"200"}"
-        %section.items-box
-          %figure.items-box-photo
+        %section.products-box
+          %figure.products-box-photo
             = image_tag "sample_item.jpg",width: "220" ,hight: "220"
-          %div.items-box-body
-            %h3.items-box-name.font-2
+          %div.products-box-body
+            %h3.products-box-name.font-2
               コーギー　ケルベロス隊
-            %div.items-box-num
-              %div.items-box-price.font-5
+            %div.products-box-num
+              %div.products-box-price.font-5
                 = "¥ "+"#{"4,800"}"
               %div.font-2
                 %i.icon-like-border
                   ♡
                   %span
                   = "#{"200"}"
-    %section.items-box-container.clearfix.related-item-column
-      %h2.items-box-head
+    %section.products-box-container.clearfix.related-product-column
+      %h2.products-box-head
         %a
           = "#{"家畜"}"+"のその他の出品"
-      %div.items-box-content.clearfix
-        %section.items-box
-          %figure.items-box-photo
+      %div.products-box-content.clearfix
+        %section.products-box
+          %figure.products-box-photo
             = image_tag "sample_item.jpg",width: "220" ,hight: "220"
-          %div.items-box-body
-            %h3.items-box-name.font-2
+          %div.products-box-body
+            %h3.products-box-name.font-2
               コーギー　ケルベロス隊
-            %div.items-box-num
-              %div.items-box-price.font-5
+            %div.products-box-num
+              %div.products-box-price.font-5
                 = "¥ "+"#{"4,800"}"
               %div.font-2
                 %i.icon-like-border
                   ♡
                   %span
                   = "#{"200"}"
-        %section.items-box
-          %figure.items-box-photo
+        %section.products-box
+          %figure.products-box-photo
             = image_tag "sample_item.jpg",width: "220" ,hight: "220"
-          %div.items-box-body
-            %h3.items-box-name.font-2
+          %div.products-box-body
+            %h3.products-box-name.font-2
               コーギー　ケルベロス隊
-            %div.items-box-num
-              %div.items-box-price.font-5
+            %div.products-box-num
+              %div.products-box-price.font-5
                 = "¥ "+"#{"4,800"}"
               %div.font-2
                 %i.icon-like-border
                   ♡
                   %span
                   = "#{"200"}"
-        %section.items-box
-          %figure.items-box-photo
+        %section.products-box
+          %figure.products-box-photo
             = image_tag "sample_item.jpg",width: "220" ,hight: "220"
-          %div.items-box-body
-            %h3.items-box-name.font-2
+          %div.products-box-body
+            %h3.products-box-name.font-2
               コーギー　ケルベロス隊
-            %div.items-box-num
-              %div.items-box-price.font-5
+            %div.products-box-num
+              %div.products-box-price.font-5
                 = "¥ "+"#{"4,800"}"
               %div.font-2
                 %i.icon-like-border
                   ♡
                   %span
                   = "#{"200"}"
-        %section.items-box
-          %figure.items-box-photo
+        %section.products-box
+          %figure.products-box-photo
             = image_tag "sample_item.jpg",width: "220" ,hight: "220"
-          %div.items-box-body
-            %h3.items-box-name.font-2
+          %div.products-box-body
+            %h3.products-box-name.font-2
               コーギー　ケルベロス隊
-            %div.items-box-num
-              %div.items-box-price.font-5
+            %div.products-box-num
+              %div.products-box-price.font-5
                 = "¥ "+"#{"4,800"}"
               %div.font-2
                 %i.icon-like-border
