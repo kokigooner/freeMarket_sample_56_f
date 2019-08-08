@@ -53,27 +53,25 @@
   }
 }
 
-.app-banner-icon ul {
-float: left;
-margin: 0 0 0 24px;
-line-height: 68px;
+.app{
+  &-banner-icon ul {
+  float: left;
+  margin: 0 0 0 24px;
+  line-height: 68px;
+  }
+  &-banner-pc>figure {
+  box-sizing: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  height: 100%;
+  }
+  &-banner-pc>figure img {
+  width: 100%;
+  }
 }
-
-
-.app-banner-pc>figure {
-box-sizing: inherit;
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-width: 300px;
-height: 100%;
-}
-
-.app-banner-pc>figure img {
-width: 100%;
-}
-
 .footer{
   &-head {
 
