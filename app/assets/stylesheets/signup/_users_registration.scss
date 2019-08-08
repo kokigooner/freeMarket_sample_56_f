@@ -1,5 +1,7 @@
 .registration-container {
+  height: 100vh;
   color: #333;
+  background-color: #f5f5f5;
   font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic",
     "メイリオ", "Meiryo", sans-serif;
 }
@@ -145,36 +147,47 @@
         }
       }
     }
-    &__select-wrapper {
+    &__select {
       & span {
         font-size: 14px;
       }
       & select {
-        position: relative;
-        z-index: 2;
-        height: 48px;
         width: 76px;
+        height: 48px;
         margin: 0 20px 0 0;
-        background: 0;
+        padding: 0 10px;
         border-radius: 4px;
         border: 1px solid #ccc;
         font-size: 16px;
         line-height: 1.5;
         cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: image-url("select-form-arrow-down.svg");
+        background-repeat: no-repeat;
+        background-size: 15px 45px;
+        background-position: right 10px center;
+        background-color: white;
+      }
+      &--wide select {
+        width: 100%;
       }
     }
-    &__select--year {
-      position: relative;
-      right: 220px;
-    }
-    &__select--month {
-      position: relative;
-      right: 138px;
-    }
-    &__select--day {
-      position: relative;
-      left: 282px;
-      bottom: 34px;
+    &__select {
+      &--day {
+        position: relative;
+        left: 282px;
+        bottom: 32px;
+      }
+      &--month {
+        position: relative;
+        right: 138px;
+      }
+      &--year {
+        position: relative;
+        right: 220px;
+      }
     }
     &__caution-text {
       margin: 8px 0 0 0;
@@ -240,6 +253,15 @@
   &__input--half {
     width: 131.5px;
     font-size: 16px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: image-url("select-form-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-size: 15px 45px;
+    background-position: right 10px center;
+    background-color: white;
   }
   &__form__text {
     font-size: 14px;

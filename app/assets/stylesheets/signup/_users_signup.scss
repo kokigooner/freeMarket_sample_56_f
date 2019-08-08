@@ -51,6 +51,34 @@
     padding: 40px 40px 64px;
     display: flex;
     justify-content: center;
+    &__mail {
+      color: #fff;
+      position: relative;
+      right: 60px;
+      &--text {
+        position: relative;
+        right: 9px;
+      }
+    }
+    &__facebook {
+      color: #fff;
+      position: relative;
+      top: 5px;
+      right: 75px;
+      &--text {
+        position: relative;
+        right: 12px;
+      }
+    }
+    &__google {
+      color: #666;
+      position: relative;
+      right: 85px;
+      &--text {
+        position: relative;
+        right: 9px;
+      }
+    }
     &__btn {
       display: block;
       width: 100%;

@@ -70,11 +70,14 @@
               %label(for="name") 生年月日
               %span.registration__form--require 必須
             .registration__form__birthday-wrapper
-              .registration__form__select-wrapper
+              .registration__form__select
                 = f.date_select :birthday, start_year: 2019, end_year: 1900, use_month_numbers: true, prompt: "--"
-                %span.registration__form__select--year 年
-                %span.registration__form__select--month 月
-                %span.registration__form__select--day 日
+                %span.registration__form__select--year 
+                  年
+                %span.registration__form__select--month
+                  月
+                %span.registration__form__select--day
+                  日
           %p.registration__form__caution-text
             ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
           = image_tag 'recaptcha.jpeg', class: 'registration__form__recaptcha-icon'
