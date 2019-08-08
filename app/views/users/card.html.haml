@@ -1,7 +1,7 @@
 .mypage-card
-  = render partial: 'header'
+  = render partial: 'shared/header'
   .mypage-card__main__container
-    = render partial: 'l-side'
+    = render partial: 'shared/l-side'
     .mypage-card__container
       %h2.mypage-card__head
         支払い方法
@@ -17,7 +17,7 @@
               05 / 05
             .mypage-card__card__payment-remove-btn
               削除する
-        %a(href="/" class="mypage-card__btn")
+        %a(href="/users/mypage/card/create" class="mypage-card__btn")
           クレジットカードを追加する
         %a(href="/" class="mypage-card__link")
           支払い方法について＞
