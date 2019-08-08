@@ -3,9 +3,8 @@
   %div.mpcheader-inner
     %div.mpcheader-top
       %h1
-        %a
-          = image_tag "logo.svg",width: "134" ,hight: "36"
-      = form_tag('users_identification_path', method: :post,class: "mpcheader-form" ) do |f|
+        = link_to image_tag("logo.svg", width: '134',hight: "36", alt: "サンプル画像"), root_path
+      = form_tag('users_identification_path', method: :post,class: "pcheader-form" ) do |f|
         = text_field_tag "keyword", '', {class: "input-default",placeholder: '何をお探しですか？'} 
         = image_tag "scope.jpg",width: "20" ,hight: "20",class: "icon-search"
     %div.mpcheader-nav-box.clearfix
