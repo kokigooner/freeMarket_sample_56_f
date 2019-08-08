@@ -64,6 +64,7 @@ gem 'fog-aws'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'font-awesome-sass', '~> 5.9.0'
+gem 'rake'
 
 group :production do
   gem 'unicorn', '5.4.1'
