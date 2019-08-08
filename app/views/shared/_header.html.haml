@@ -68,25 +68,25 @@
         %ul.pcheader-user-nav
           %li.liked-items-link
             %a.pcheader-menu-link{"data-id": "#{"pcheader-user-nav"}"}
-              = image_tag "scope.jpg",width: "20" ,hight: "20"
+              = icon 'far', 'heart', class: "pcheader-menu-icon"
               %span
                 良いね！一覧
               %ul.pcheader-user-box.pcheader-notification-box.mypage-item-list
           %li
             %a.pcheader-menu-link
-              = image_tag "scope.jpg",width: "20" ,hight: "20"
+              = icon 'far', 'bell', class: "pcheader-menu-icon"
               %span
                 お知らせ
               %ul.pcheader-user-box.pcheader-notification-box.mypage-item-list
           %li
             %a.pcheader-menu-link
-              = image_tag "scope.jpg",width: "20" ,hight: "20"
+              = icon 'fas', 'check', class: "pcheader-menu-icon"
               %span
                 やることリスト
               %ul.pcheader-user-box.pcheader-notification-box.mypage-item-list
           %li
             %a(href="/users/mypage" class="pcheader-menu-link")
-              = image_tag "member.png",width: "20" ,hight: "20"
+              = image_tag "member.png", class: "pcheader-menu-mypage-img"
               %span
                 マイページ
             -# %div.pcheader-user-box.pcheader-mypage-box
