@@ -58,11 +58,11 @@ $color-white: #fff;
       color: $color-white;
       position: relative;
       right: 60px;
+    }
 
-      &--text {
-        position: relative;
-        right: 9px;
-      }
+    &__mail--text {
+      position: relative;
+      right: 9px;
     }
 
     &__facebook {
@@ -78,7 +78,7 @@ $color-white: #fff;
     }
 
     &__google {
-      color: #666666;
+      color: #666;
       position: relative;
       right: 85px;
     }

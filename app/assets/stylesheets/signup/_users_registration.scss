@@ -181,24 +181,24 @@ $color-white: #fff;
         background-repeat: no-repeat;
         background-size: 15px 45px;
         background-position: right 10px center;
-        background-color: #fff;
+        background-color: $color-white;
       }
+    }
 
-      &--day {
-        bottom: 32px;
-        left: 282px;
-        position: relative;
-      }
+    &__select--day {
+      bottom: 32px;
+      left: 282px;
+      position: relative;
+    }
 
-      &--month {
-        position: relative;
-        right: 138px;
-      }
+    &__select--month {
+      position: relative;
+      right: 138px;
+    }
 
-      &--year {
-        position: relative;
-        right: 220px;
-      }
+    &__select--year {
+      position: relative;
+      right: 220px;
     }
 
     &__select--wide select {
