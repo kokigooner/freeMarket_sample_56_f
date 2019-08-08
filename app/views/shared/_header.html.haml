@@ -1,50 +1,50 @@
 -# %header.sp-header.visible-sp
-%header.pcheader.visible-pc 
-  %div.pcheader-inner
-    %div.pcheader-top
+%header.mpcheader.visible-pc 
+  %div.mpcheader-inner
+    %div.mpcheader-top
       %h1
         = link_to image_tag("logo.svg", width: '134',hight: "36", alt: "サンプル画像"), root_path
       = form_tag('users_identification_path', method: :post,class: "pcheader-form" ) do |f|
         = text_field_tag "keyword", '', {class: "input-default",placeholder: '何をお探しですか？'} 
         = image_tag "scope.jpg",width: "20" ,hight: "20",class: "icon-search"
-    %div.pcheader-nav-box.clearfix
-      %nav.l-left
-        %ul.pcheader-nav
+    %div.mpcheader-nav-box.clearfix
+      %nav.large-left
+        %ul.mpcheader-nav
           %li
             %h2
               %a
                 = image_tag "scope.jpg",width: "20" ,hight: "20"
               %span
                 カテゴリーから探す
-            %ul.pcheader-nav-parent-wrap{"data-mega": "#{1}"}
-              %li.pcheader-nav-parent
+            %ul.mpcheader-nav-parent-wrap{"data-mega": "#{1}"}
+              %li.mpcheader-nav-parent
                 %h3
                   レディース
-                %ul.pcheader-nav-child-wrap{"data-mega": "#{2}"}
-                  %li.pcheader-nav-child
+                %ul.mpcheader-nav-child-wrap{"data-mega": "#{2}"}
+                  %li.mpcheader-nav-child
                     %a
                       トップス
-                    %ul.pcheader-nav-grand-child-wrap{"data-mega": "#{3}"}
-                      %li.pcheader-nav-grand-child
+                    %ul.mpcheader-nav-grand-child-wrap{"data-mega": "#{3}"}
+                      %li.mpcheader-nav-grand-child
                         %a
                           Tシャツ/カットソー（半袖/袖なし）
-                      %li.pcheader-nav-grand-child
+                      %li.mpcheader-nav-grand-child
                         %a
                           Tシャツ/カットソー（七分/長袖）
-                  %li.pcheader-nav-child
+                  %li.mpcheader-nav-child
                     %a
                       ジャケット/アウター
-                    %ul.pcheader-nav-grand-child-wrap{"data-mega": "#{3}"}
-                      %li.pcheader-nav-grand-child
+                    %ul.mpcheader-nav-grand-child-wrap{"data-mega": "#{3}"}
+                      %li.mpcheader-nav-grand-child
                         %a
                           なんたら
-                      %li.pcheader-nav-grand-child
+                      %li.mpcheader-nav-grand-child
                         %a
                           かんたら
-              %li.pcheader-nav-parent
+              %li.mpcheader-nav-parent
                 %h3
                   メンズ
-                %ul.pcheader-nav-child-wrap{"data-mega": "#{2}"}
+                %ul.mpcheader-nav-child-wrap{"data-mega": "#{2}"}
                 
           %li
             %h2
@@ -52,68 +52,68 @@
                 = image_tag "scope.jpg",width: "20" ,hight: "20"
               %span
                 ブランドから探す
-              -# %ul.pcheader-nav-parent-wrap
-              -#   %li.pcheader-nav-parent
+              -# %ul.mpcheader-nav-parent-wrap
+              -#   %li.mpcheader-nav-parent
               -#     %h3
               -#       %a
               -#         ナイキ
-              -# %ul.pcheader-nav-parent-wrap
-              -#   %li.pcheader-nav-parent
+              -# %ul.mpcheader-nav-parent-wrap
+              -#   %li.mpcheader-nav-parent
               -#     %h3
               -#       %a
               -#         シュプリーム
 
-      %div.l-right
-        %ul.pcheader-user-nav
+      %div.large-right
+        %ul.mpcheader-user-nav
           %li.liked-items-link
-            %a.pcheader-menu-link{"data-id": "#{"pcheader-user-nav"}"}
-              = image_tag "scope.jpg",width: "20" ,hight: "20"
+            %a.mpcheader-menu-link{"data-id": "#{"mpcheader-user-nav"}"}
+              = icon 'far', 'heart', class: "mpcheader-menu-icon"
               %span
                 良いね！一覧
-              %ul.pcheader-user-box.pcheader-notification-box.mypage-item-list
+              %ul.mpcheader-user-box.mpcheader-notification-box.mypage-item-list
           %li
-            %a.pcheader-menu-link
-              = image_tag "scope.jpg",width: "20" ,hight: "20"
+            %a.mpcheader-menu-link
+              = icon 'far', 'bell', class: "mpcheader-menu-icon"
               %span
                 お知らせ
-              %ul.pcheader-user-box.pcheader-notification-box.mypage-item-list
+              %ul.mpcheader-user-box.mpcheader-notification-box.mypage-item-list
           %li
-            %a.pcheader-menu-link
-              = image_tag "scope.jpg",width: "20" ,hight: "20"
+            %a.mcheader-menu-link
+              = icon 'fas', 'check', class: "mpcheader-menu-icon"
               %span
                 やることリスト
-              %ul.pcheader-user-box.pcheader-notification-box.mypage-item-list
+              %ul.mpcheader-user-box.mpcheader-notification-box.mypage-item-list
           %li
-            %a(href="/users/mypage" class="pcheader-menu-link")
-              = image_tag "member.png",width: "20" ,hight: "20"
+            %a(href="/users/mypage" class="mpcheader-menu-link")
+              = image_tag "member.png", class: "mpcheader-menu-mypage-img"
               %span
                 マイページ
-            -# %div.pcheader-user-box.pcheader-mypage-box
-              %div.pcheader-mypage-state.text-center
+            -# %div.mpcheader-user-box.mpcheader-mypage-box
+              %div.mpcheader-mypage-state.text-center
                 %figure
                   %div
                     = image_tag "member.png"
                   %figcaption
                     =  @test_model[:name]
-                %ul.pcheader-mypage-review-listing
+                %ul.mpcheader-mypage-review-listing
                   %li
-                    %a.pcheader-link
+                    %a.mpcheader-link
                       = "評価:"+"#{0}"
                   %li
-                    %a.pcheader-link
+                    %a.mpcheader-link
                       = "出品集:"+"#{0}"
-                %ul.pcheader-mypage-sales-point
+                %ul.mpcheader-mypage-sales-point
                   %li
-                    %a.pcheader-link.clearfix
-                      %div.l-left
+                    %a.mpcheader-link.clearfix
+                      %div.large-left
                         売上金
                       %div.right
                       =  "¥ "+"#{0}"
                       %i.icon-arrow-right
                         >
                   %li
-                    %a.pcheader-link.clearfix
-                      %div.l-left
+                    %a.mpcheader-link.clearfix
+                      %div.large-left
                         ポイント
                       %div.right
                       ="P "+ "#{0}"
