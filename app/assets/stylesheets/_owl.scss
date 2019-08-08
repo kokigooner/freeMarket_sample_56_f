@@ -5,7 +5,6 @@
     // overflow: hidden;
     min-height: 1px;
     float: left;
-    -webkit-backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -59,8 +58,4 @@
     opacity: .4;
     cursor: pointer;
   }
-}
-
-.owl-nav.disabled .owl-prev, .owl-nav.disabled .owl-next {
-  // display: none;
 }

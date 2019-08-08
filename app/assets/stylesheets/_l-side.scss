@@ -1,15 +1,20 @@
-.mypage-nav-list li {
+.mypage-nav{
+&-list li {
   border-top: 1px solid #eee;
 }
+  &-list-item .icon-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    color: #ccc;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -webkit-transition: all ease-out .2s;
+    transition: all ease-out .2s;
+  }
 
-.mypage-nav-list-item .icon-arrow-right {
-  position: absolute;
-  top: 50%;
-  right: 16px;
-  color: #ccc;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
+  &-head {
+    font-size: 16px;
+    margin: 40px 0 0;
+  }
 }
-
