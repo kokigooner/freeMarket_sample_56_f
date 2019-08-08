@@ -63,7 +63,7 @@ gem 'haml-rails'
 gem 'fog-aws'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'font-awesome-sass', '~> 5.9.0'
+
 
 
 group :production do
