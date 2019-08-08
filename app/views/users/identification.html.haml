@@ -1,11 +1,11 @@
 %div.default-container 
   = render 'shared/header'
   = render 'shared/bread-crumbs'
-  %main.l-container.clearfix
-    %div.l-content
-      %section.l-chapter-container.mypage-identification
-        %h2.l-chapter-head 本人情報の登録
-        = form_tag('users_identification_path', method: :post,class: "l-single-inner" ) do |f|
+  %main.large-container.clearfix
+    %div.large-content
+      %section.large-chapter-container.mypage-identification
+        %h2.large-chapter-head 本人情報の登録
+        = form_tag('users_identification_path', method: :post,class: "large-single-inner" ) do |f|
           %div
             = simple_format @text1 
             .text-right 

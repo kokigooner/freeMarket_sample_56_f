@@ -1,4 +1,4 @@
-.l{
+.large{
   &-single{
     &-container {
       width: 700px;
@@ -45,16 +45,12 @@
       background-color: #ffffff;
     }
   }
-
-
-&-left {
-  float: left;
-}
-&-right {
-  float: right;
-}
-
-
+  &-left {
+    float: left;
+  }
+  &-right {
+    float: right;
+  }
 }
 
 
