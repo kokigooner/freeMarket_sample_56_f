@@ -58,6 +58,21 @@
       font-size: 16px;
       vertical-align: middle;
     }
+    .icon-good{
+      color: red;
+      vertical-align: middle;
+    }
+    .icon-normal{
+      color: orange;
+      vertical-align: middle;
+    }
+    .icon-bad{
+      color: blue;
+      vertical-align: middle;
+    }
+    span{
+      vertical-align: middle;
+    }
   }
 
   &-shipping{
