@@ -68,25 +68,25 @@
         %ul.mpcheader-user-nav
           %li.liked-items-link
             %a.mpcheader-menu-link{"data-id": "#{"mpcheader-user-nav"}"}
-              = image_tag "scope.jpg",width: "20" ,hight: "20"
+              = icon 'far', 'heart', class: "mpcheader-menu-icon"
               %span
                 良いね！一覧
               %ul.mpcheader-user-box.mpcheader-notification-box.mypage-item-list
           %li
             %a.mpcheader-menu-link
-              = image_tag "scope.jpg",width: "20" ,hight: "20"
+              = icon 'far', 'bell', class: "mpcheader-menu-icon"
               %span
                 お知らせ
               %ul.mpcheader-user-box.mpcheader-notification-box.mypage-item-list
           %li
-            %a.mpcheader-menu-link
-              = image_tag "scope.jpg",width: "20" ,hight: "20"
+            %a.mcheader-menu-link
+              = icon 'fas', 'check', class: "mpcheader-menu-icon"
               %span
                 やることリスト
               %ul.mpcheader-user-box.mpcheader-notification-box.mypage-item-list
           %li
             %a(href="/users/mypage" class="mpcheader-menu-link")
-              = image_tag "member.png",width: "20" ,hight: "20"
+              = image_tag "member.png", class: "mpcheader-menu-mypage-img"
               %span
                 マイページ
             -# %div.mpcheader-user-box.mpcheader-mypage-box
