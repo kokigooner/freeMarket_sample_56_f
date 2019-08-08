@@ -1,13 +1,18 @@
+$color-bg-gray: #f5f5f5;
+$color-white: #fff;
+
 .registration-container {
+  background-color: $color-bg-gray;
   color: #333;
   font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic",
     "メイリオ", "Meiryo", sans-serif;
+  height: 100vh;
 }
 
 .registration-header {
   width: 100vw;
   height: 128px;
-  background-color: #f5f5f5;
+  background-color: $color-bg-gray;
   display: flex;
   justify-content: center;
   &--active {
@@ -49,6 +54,7 @@
     &:first-child {
       margin-top: 10px;
     }
+
     &--active {
       background-color: #ea362e;
       position: relative;
@@ -65,10 +71,12 @@
       top: 15px;
       right: 50%;
     }
+
     &--after {
-      bottom: 7px;
       left: 50%;
+      bottom: 7px;
     }
+
     &--active {
       background-color: #ea362e;
     }
@@ -77,18 +85,19 @@
 
 .registration-main {
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: $color-bg-gray;
   &__container {
     margin: 0 auto;
     width: 700px;
-    background-color: #fff;
+    background-color: $color-white;
   }
+
   &__text {
     padding: 32px;
     font-size: 22px;
     font-weight: bold;
     text-align: center;
-    border-bottom: 1px solid #f5f5f5;
+    border-bottom: 1px solid $color-bg-gray;
   }
 }
 
@@ -96,8 +105,9 @@
   &__form {
     padding: 24px 16px 40px;
     &--border {
-      border-bottom: 1px solid #f5f5f5;
+      border-bottom: 1px solid $color-bg-gray;
     }
+
     &__content {
       width: 343px;
       margin: 0 auto;
@@ -105,6 +115,7 @@
         font-weight: bold;
       }
     }
+
     &__group {
       margin: 24px 0 0 0;
       &:first-child {
@@ -115,6 +126,7 @@
         font-weight: bold;
       }
     }
+
     &--require {
       background-color: #ea362e;
       margin: 0 0 0 8px;
@@ -124,10 +136,12 @@
       font-size: 12px;
       vertical-align: top;
     }
+
     & h3 {
       font-size: 16px;
       font-weight: bold;
     }
+
     &__input {
       height: 48px;
       width: 100%;
@@ -145,46 +159,63 @@
         }
       }
     }
-    &__select-wrapper {
+    &__select {
       & span {
         font-size: 14px;
       }
+
       & select {
-        position: relative;
-        z-index: 2;
-        height: 48px;
         width: 76px;
+        height: 48px;
         margin: 0 20px 0 0;
-        background: 0;
+        padding: 0 10px;
         border-radius: 4px;
         border: 1px solid #ccc;
         font-size: 16px;
         line-height: 1.5;
         cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: image-url("select-form-arrow-down.svg");
+        background-repeat: no-repeat;
+        background-size: 15px 45px;
+        background-position: right 10px center;
+        background-color: $color-white;
       }
     }
-    &__select--year {
+
+    &__select--day {
+      bottom: 32px;
+      left: 282px;
       position: relative;
-      right: 220px;
     }
+
     &__select--month {
       position: relative;
       right: 138px;
     }
-    &__select--day {
+
+    &__select--year {
       position: relative;
-      left: 282px;
-      bottom: 34px;
+      right: 220px;
     }
+
+    &__select--wide select {
+      width: 100%;
+    }
+
     &__caution-text {
       margin: 8px 0 0 0;
       font-size: 14px;
       color: #888;
     }
+
     &__recaptcha-icon {
       width: 300px;
       padding: 30px 0 0 0;
     }
+
     &__text {
       font-size: 14px;
       margin: 8px 0 0;
@@ -192,6 +223,7 @@
         color: #0099e8;
         text-decoration: none;
       }
+
       &--center {
         text-align: center;
       }
@@ -224,6 +256,7 @@
       background-color: #cccccc;
     }
   }
+
   &__input {
     margin-top: 8px;
   }
@@ -233,18 +266,31 @@
     width: 100%;
     margin-top: 8px;
   }
+
   &__card {
     height: 20px;
     margin-right: 7px;
   }
+
   &__input--half {
     width: 131.5px;
     font-size: 16px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: image-url("select-form-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-size: 15px 45px;
+    background-position: right 10px center;
+    background-color: $color-white;
   }
+
   &__form__text {
     font-size: 14px;
     padding: 0 5px;
   }
+
   &__security-code {
     display: flex;
     justify-content: flex-end;
@@ -272,9 +318,11 @@
     padding-bottom: 15px;
     text-align: center;
   }
+
   &__content {
     padding-bottom: 60px;
   }
+
   &__image {
     width: 100%;
   }

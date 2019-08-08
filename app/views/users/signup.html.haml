@@ -1,5 +1,5 @@
 .signup-container
-  = render partial: "shared/signup-header"
+  = render partial: "signup-header"
   %main.signup__main
     .signup__main__content
       .signup__main__content__title
@@ -7,9 +7,15 @@
       .signup__form
         .signup__form__btns
           %a{href: "/users/signup/registration", class: "signup__form__btn signup__form__btn--mail"}
-            メールアドレスで登録する
+            %i.far.fa-envelope.fa-lg.signup__form__mail
+            %span.signup__form__mail--text
+              メールアドレスで登録する
           %a{href: "/", class: "signup__form__btn signup__form__btn--facebook"}
-            Facebookで登録する
+            %i.fab.fa-facebook-square.fa-2x.signup__form__facebook
+            %span.signup__form__facebook--text
+              Facebookで登録する
           %a{href: "/", class: "signup__form__btn signup__form__btn--google"}
-            Googleで登録する
+            %i.fab.fa-google.signup__form__google.fa-lg
+            %span.signup__form__google--text
+              Googleで登録する
   = render partial: "users/signup-footer"
