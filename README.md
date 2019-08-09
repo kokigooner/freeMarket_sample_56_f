@@ -17,13 +17,7 @@
 |birthday_month|integer|null:false|
 |birthday_day|integer|null:false|
 |phone_number|integer|null:false,unique|
-|postal_code|integer|null:false|
-|prefecture_id|reference|foreign_key:true|
-|minicipality|string|null:false|
-|address|string|null:false|
-|building|string||
 |introduction|text||
-|point_id|reference||
 
 * has_many :products
 * has_many :orders
@@ -36,7 +30,17 @@
 * has_many :comments
 * has_many :ratings
 * belongs_to :evalution
-* belongs_to :prefecture
+* belongs_to :addresses
+
+## adressesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|postal_code|integer|null:false|
+|minicipality|string|null:false|
+|address|string|null:false|
+|building|string||
+
+* has_many :users
 
 ## productsテーブル
 
@@ -53,11 +57,11 @@
 |size_id|reference|foreign_key:true|
 |condition|string|null:false|
 |delivery_charge|string|null:false|
-|prefecture_id|reference|foreign_key:true|
 |delivery_date|string|null:false|
 |delivery_way|string|null:false|
 |order_status_id|reference|foreign_key:true|
 |image_id|reference|foreign_key:true|
+|profit_id|reference|foreign_key:true|
 
 * has_many :images
 * has_many :communications
@@ -65,7 +69,6 @@
 * has_many :ratings
 * belongs_to :order
 * belongs_to :profit
-* belongs_to :prefecture
 * belongs_to :user
 * belongs_to :first_category
 * belongs_to :second_category
@@ -83,7 +86,6 @@
 |family_name_delivert|string|null:false|
 |first_name_delivert|string|null:false|
 |family_name_kana_delivery|string|null:false|
-|prefecture_delivery|string|null:false|
 |city_delivery|string|null:false|
 |address_delivery|string|null:false|
 |building_delivery|string||
@@ -129,8 +131,8 @@
 |seller_position|boolean||
 |buyer_position|boolean||
 
-* has_many :products
-* has_many :users
+* belongs_to :products
+* belongs_to :users
 * belongs_to :rating
 
 ## ratingsテーブル
@@ -281,12 +283,3 @@
 
 * belongs_to :size_category
 * has_many :users
-
-## prefectureテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|prefecture|string|null:false|
-
-* has_many: users
-* has_many: products
