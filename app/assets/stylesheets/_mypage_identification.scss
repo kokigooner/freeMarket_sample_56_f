@@ -13,11 +13,11 @@ main {
   }
 
   .mypage-nav-list {
-    li {
-      a {
+  li {
+    a {
         color: $light-black;
-      }
     }
+  }
 
   &-item {
     position: relative;
