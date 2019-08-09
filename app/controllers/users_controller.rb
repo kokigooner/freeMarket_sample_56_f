@@ -27,7 +27,7 @@ class UsersController < ApplicationController
   def profile    
   end
 
-  def syuppin
+  def sell
   end
 
   def mypage
