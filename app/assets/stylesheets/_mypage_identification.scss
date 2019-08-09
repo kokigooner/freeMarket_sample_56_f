@@ -1,3 +1,8 @@
+$white:rgb(250, 250, 250);
+$gray:rgb(170, 170, 170);
+$light-gray:rgb(204, 204, 204);
+$red: #ea352d;
+$black: (51, 51, 51);
 main {
   display: block;
 }
@@ -5,28 +10,29 @@ main {
     display: list-item;
     text-align: -webkit-match-parent;
   }
+
   .mypage-nav-list-item {
     position: relative;
     display: block;
     max-height: 48px;
     padding: 16px;
-    background: #fff;
+    background: $white;
     font-size: 14px;
-    color: #333;
+    color: $black;
   }
+
   .clearfix:after {
   content: '';
   display: block;
   clear: both;
   }
 
-
 .form{
   &-arbitrary{
     margin: 0 0 0 8px;
     padding: 2px 4px;
     border-radius: 2px;
-    color: #fff;
+    color: $white;
     font-size: 12px;
     vertical-align: top;
   }
@@ -35,21 +41,34 @@ main {
     select {
       width: 100%;
     }
+
       label {
       font-weight: 600;
     }
+
+    .input-default {
+      background: $white;
+      border: 1px solid $light-gray;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+      height: 48px;
+      line-height: 1.5;
+      margin: 8px 0 0;
+      padding: 10px 16px 8px;
+      width: 100%;
+    }
   }
   &-arbitrary{
-    background: #ccc;
+    background: $gray;
     margin: 0 0 0 8px;
     padding: 2px 4px;
     border-radius: 2px;
-    color: #fff;
+    color: $white;
     font-size: 12px;
     vertical-align: top;
   }
 }
-
 
 option {
   font-weight: normal;
@@ -62,9 +81,8 @@ option {
 .select{
   &-wrap {
     position: relative;
-    background: #fff;
+    background: $white;
     margin: 8px 0 0;
-    
   }
   &-default {
     position: relative;
@@ -72,7 +90,7 @@ option {
     height: 48px;
     padding: 0 16px;
     border-radius: 4px;
-    border: 1px solid #ccc;
+    border: 1px solid $light-gray;
     background: 0;
     font-size: 16px;
     line-height: 1.5;
@@ -90,9 +108,9 @@ option {
 
 .btn{
   &-red {
-    background: #ea352d;
-    border: 1px solid #ea352d;
-    color: #fff;
+    background: $red;
+    border: 1px solid $red;
+    color: $white;
   }
   &-default {
     display: block;
@@ -107,7 +125,6 @@ option {
   }
 }
 
-
 i[class^='icon-'], i[class*='icon-'] {
   display: inline-block;
   font-family: 'icon-font';
@@ -120,6 +137,7 @@ i[class^='icon-'], i[class*='icon-'] {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 h3 {
   display: block;
   font-size: 1.17em;
