@@ -1,33 +1,33 @@
 .message{
-    &-content {
+  &-content {
     padding: 24px;
-    background: #fff;
+    background: rgb(250,250,250);
   }
-    &-form {
-      p {
-      padding: 8px;
-      font-size: 14px;
-      background: #fff6de;
-      }
-      .textarea-default {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        min-height: 104px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        background: #fff;
-        font-size: 16px;
-        line-height: 1.5;
-        margin: 8px 0 0;
-        box-sizing: border-box;
-      }
-      .btn-gray {
-        background: #aaa;
-        border: 1px solid #aaa;
-        color: #fff;
-      }
-      }
+  &-form {
+    p {
+    padding: 8px;
+    font-size: 14px;
+    background: rgb(250,250,250);
+    }
+    .textarea-default {
+      background: rgb(250,250,250);
+      border: 1px solid rgb(204,204,204);
+      box-sizing: border-box;
+      display: block;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 8px 0 0;
+      max-width: 100%;
+      min-height: 104px;
+      width: 100%;
+      padding: 10px;
+    }
+    .btn-gray {
+      background: rgb(170,170,170);
+      border: 1px solid rgb(170,170,170);
+      color: rgb(250,250,250);
+    }
+  }
     &-submit {
       width: 100%;
       margin: 8px 0 0;
