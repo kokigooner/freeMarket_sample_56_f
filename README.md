@@ -19,17 +19,17 @@
 |phone_number|integer|null:false,unique|
 |introduction|text||
 
-* has_many :products
+* has_many :products, dependent: :destroy
 * has_many :orders
-* has_many :profits
+* has_many :profits, dependent: :destroy
 * has_many :points
 * has_many :product_purchase_messages
 * has_many :likes
-* has_many :points
-* has_many :payments
+* has_many :points, dependent: :destroy
+* has_many :payments, dependent: :destroy
 * has_many :comments
 * has_many :ratings
-* has_many :evalution
+* has_many :evalution, dependent: :destroy
 * has_one :address
 
 ## adressesテーブル
@@ -63,10 +63,10 @@ belongs_to :user
 |profit_id|reference|foreign_key:true|
 |order_status|text||
 
-* has_many :images
-* has_many :product_purchase_messages
-* has_many :likes
-* has_many :ratings
+* has_many :images, dependent: :destroy
+* has_many :product_purchase_messages, dependent: :destroy
+* has_many :likes, dependent: :destroy
+* has_many :ratings, dependent: :destroy
 * has_one :profit
 * belongs_to :order
 * belongs_to :user
