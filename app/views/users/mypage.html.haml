@@ -1,73 +1,78 @@
-.mypage__header
-  = render 'shared/header'
-  = render 'shared/bread-crumbs'
-.mypage__container
-  .mypage__container__box
-    .mypage__container__box__side-bar
+= render 'shared/header'
+= render 'shared/bread-crumbs'
+.mypage-container
+  .mypage-container__box
+    .l-side-bar
       = render 'shared/l-side'
-    .mypage__container__box__content
-      %section.mypage__container__box__content__icon
-        %a.mypage__icon__box{href: ""}
-          %figure
-            %img{alt: "", height: "60", src: "//static.mercdn.net/images/member_photo_noimage_thumb.png", width: "60"}/
-          %h2.mypage__user-name
+    .mypage-content
+      %section.mypage-content__icon
+        = link_to(root_path, class: "mypage-icon") do
+          .mypage-icon__figure
+            = image_tag 'member.png', height: '60px', width: '60px'
+          %h2.mypage-user
             みね
-          .mypage__user__info
-            .mypage__user__info__value
+          .mypage-user__info
+            .mypage-user__review
               評価
-              %span.mypage__value__num
+              %span.mypage-user__num
                 2
-            .mypage__user__info__item
+            .mypage-user__products
               商品数
-              %span.mypage__item__num
+              %span.mypage-user__num
                 16
-      %section.mypage__container__box__content__upper
-        %ul.mypage__container__box__content__upper__menu
-          %li.mypage__container__box__content__upper__menu__left
-            %h3.mypage__user__news
-              %a.mypage__user__news__link{href: "" }
-                お知らせ
-          %li.mypage__container__box__content__upper__menu__right
-            %h3.mypage__user__todo
-              %a.mypage__user__todo__link{href:""}
-                やることリスト
-        .mypage__container__box__content__upper__list
-          %ul.mypage__container__box__content__upper__list__news
-            %li.mypage__container__box__content__upper__list__news__flame
-              %a.mypage__news{href:""}
-                %figure.mypage__mercari__logo
-                  %img.mypage__mercari__logo__url{:alt => "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", :src => "//static.mercdn.net/images/mercari_profile.png"}/
-                .mypage__news__body
-                  .mypage__news__body__text
+      %section.mypage-news
+        %ul.mypage-news__menu
+          %li.mypage-news__menu__left
+            = link_to(root_path, class: "mypage-news__menu__tabs") do
+              お知らせ
+          %li.mypage-news__menu__right
+            = link_to(root_path, class: "mypage-news__menu__tabs") do
+              やることリスト
+        %div
+          %ul.mypage-news
+            %li
+              = link_to(root_path, class: "mypage-news__item") do
+                = image_tag 'mercari_items_logo.png', class: 'mypage-news__logo'
+                .mypage-news__body
+                  .mypage-news__text
                     《まもなく終了！》今なら最大”P1500”もらえる！詳しくはこちらから♪
-                  %time.mypage__news__body__text__time
-                    %i.mypage__news__body__text__time__icon
-                      ●
-                    %span.mypage__news__body__text__time__text
+                  .mypage-news__time
+                    %i.far.fa-clock
+                    %span
                       22時間前
-                %i.mypage__click__icon
-                  >
-            %li.mypage__tab__list__btn
-              %a.mypage__tab__list__btn__text{href:""}
+                .mypage-news__click
+                  %i.fas.fa-angle-right.fa-2x.mypage-news__click--icon
+            %li
+              = link_to(root_path, class: "mypage-news__item") do
+                = image_tag 'mercari_items_logo.png', class: 'mypage-news__logo'
+                .mypage-news__body
+                  .mypage-news__text
+                    《まもなく終了！》今なら最大”P1500”もらえる！詳しくはこちらから♪
+                  .mypage-news__time
+                    %i.far.fa-clock
+                    %span
+                      22時間前
+                .mypage-news__click
+                  %i.fas.fa-angle-right.fa-2x.mypage-news__click--icon
+            %li.mypage-news__foot
+              = link_to(root_path, class: "mypage-news__foot--link") do
                 一覧をみる
           -# %ul.mypage__tab__list__todo
           -#   %li.mypage__item__notihng
           -#     現在、やることはありません   
-      %section.mypage__container__box__content__bottom
-        %h2.mypage__container__box__content__bottom__header
+      %section.mypage-purchased-items
+        %h2.mypage-purchased-items__header
           購入した商品
-        %ul.mypage__container__box__content__bottom__menu
-          %li.mypage__container__box__content__bottom__menu__left
-            %h3.mypage__container__box__content__bottom__menu__left__now-trade
-              %a.mypage__container__box__content__bottom__menu__left__now-trade__link{href:""}
-                取引中
-          %li.mypage__container__box__content__bottom__menu__right
-            %h3.mypage__container__box__content__bottom__menu__right__past-trade
-              %a.mypage__container__box__content__bottom__menu__right__past-trade__link{href:""}
-                過去の取引
-        .mypage__container__box__content__bottom__tag
-          %ul.mypage__container__box__content__bottom__tag__list
-            %li.mypage__container__box__content__bottom__tag__list__text
+        %ul.mypage-news__menu
+          %li.mypage-news__menu__left
+            = link_to(root_path, class: "mypage-news__menu__tabs") do
+              取引中
+          %li.mypage-news__menu__right
+            = link_to(root_path, class: "mypage-news__menu__tabs") do
+              過去の取引
+        .div
+          %ul
+            %li.mypage-purchased-items__text
               取引中の商品がありません
           -# %ul.mypage__tab__past
           -#   %li.mypage__item__nothing

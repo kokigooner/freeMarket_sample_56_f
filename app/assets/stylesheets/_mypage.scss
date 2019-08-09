@@ -1,285 +1,222 @@
-*{
-  text-decoration: none;
+$color-black: #333;
+$color-white: #fff;
+$color-gray: #888;
+$color-red: #ea352d;
+$color-light-gray: #eee;
+$color-light-gray2: #ccc;
+$color-hover-gray: #fafafa;
+
+.l-side-bar {
+  margin: 40px 40px 40px 0;
+  width: 280px;
 }
 
-.mypage__header{
-  width:100%;
-}
-
-.mypage__container{
-  width:100vw;
+.mypage-container {
   background-color: #f5f5f5;
-  &__box{
+  width: 100vw;
+
+  &__box {
     margin: 0 auto 0;
     width: 1020px;
     display: flex;
-    &__side-bar{
-      width: 280px;
-      margin: 40px 40px 40px 0;
+  }
+}
+
+.mypage-content {
+  margin-top: 40px;
+  width: 700px;
+
+  &__icon {
+    background-image: url('mypage-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 155px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+  }
+}
+
+.mypage-icon {
+  color: $color-black;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  &:hover {
+    opacity: .7;
+
+    h2 {
+      text-decoration: underline;
     }
-    &__content{
-      width: 700px;
-      margin-top:40px;
-      &__icon{
-        position: relative;
-        height: 155px;
-        padding: 20px;
-        background-image: url(image_path("mypage-bg.jpg"));
-        background-repeat: no-repeat;
-        background-size: cover;
-        text-align: center;
-        .mypage__icon__box{
-          display: block;
-          position: absolute;
-          top: 50%;
-          left: 0;
-          right: 0;
-          transform: translate(0, -50%);
-          color: #333;
-          figure{
-            overflow: hidden;
-            width: 60px;
-            height: 60px;
-            margin: 0 auto;
-            border-radius: 50%;
-          }
-          .mypage__user-name{
-            margin: 8px 0 0;
-            font-size: 14px;
-            color:black;
-            font-weight: 600;
-          }
-        }
-        .mypage__user__info{
-          margin: 8px 0 0;
-          display: flex;
-          justify-content: center;
-          &__value{
-            display: inline-block;
-            font-size: 14px;
-            color:black;
-            .mypage__value__num{
-              margin: 0 0 0 8px;
-              font-size: 16px;
-              font-weight: 600;
-            }
-          }
-          &__item{
-            display: inline-block;
-            font-size: 14px;
-            margin: 0 0 0 16px;
-            color:black;
-            .mypage__item__num{
-              font-size: 16px;
-              margin: 0 0 0 8px;
-              font-weight: 600;
-            }
-          }
-        }
-      }
-      &__upper{
-        margin: 0;
-        background: #fff;
-        &__menu{
-          border: 0;
-          background-color: #fff;
-          font-size: 0;
-          display:flex;
-          
-          &__left{
-            display: inline-block;
-            text-align: center;
-            vertical-align: top;
-            width: 50%;
-            height:70px;
-            line-height:70px;
-            border-top: solid 2px red;
-            box-sizing: border-box;
-            .mypage__user__news{
-              font-size: 22px;
-              color:black;
-              font-weight:bold;
-              &__link{
-                display: block;
-                color: #333;
-                font-size: 16px;
-                line-height: 70px;
-              }
-            }
-          }
-          &__right{
-            width: 50%;
-            display: block;
-            background-color: #eee;
-            line-height: 70px;
-            text-align: center;
-            height:70px;
-            .mypage__user__todo{
-              font-size: 22px;
-              color:black;
-              font-weight:bold;
-              &__link{
-                font-size: 16px;
-                color:black;
-                font-weight: bold;
-              }
-            }
-          }        
-        }
-        &__list{
-          background-repeat: no-repeat;
-          &__news{
-            display: block;
-            font-size:14px; 
-            background-color: #fff;           
-            &__flame{
-              border-bottom: 1px solid #eee;
-              height:81px;
-              box-sizing: border-box;
-              .mypage__news{
-                position: relative;
-                display: block;
-                padding: 16px;
-                color: #333;
-                min-height: 80px;
-                width:680px;
-                box-sizing: border-box;
-                .mypage__mercari__logo{
-                  position: relative;
-                  overflow: hidden;
-                  float: left;
-                  width: 48px;
-                  height: 48px;
-                  margin:0;
-                  &__url{
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    z-index: 1;
-                    width: 100%;
-                  }
-                }
-                .mypage__news__body{
-                  margin: 0 40px 0 68px;
-                  &__text{
-                    overflow: hidden;
-                    display: -webkit-box;
-                    max-height: 4.4em;
-                    -webkit-line-clamp: 3;
-                    -webkit-box-orient: vertical;
-                    text-overflow: ellipsis;
-                    line-height: 1.5;
-                    height:21px;
-                  }
-                  &__time{
-                    display: inline-block;
-                    color: #888;
-                    &__icon{
-                      margin: 0 8px 0 0;
-                      &__text{
-                        vertical-align: middle;
-                      }
-                    }
-                  }           
-                }
-                .mypage__click__icon{
-                  position: absolute;
-                  top: 50%;
-                  right: 16px;
-                }
-              }
-            }
-            .mypage__tab__list__btn{
-              padding:16px;
-              &__text{
-                display: block;
-                height: 56px;
-                margin: 0 auto;
-                background: #eee;
-                color: #333;
-                line-height: 56px;
-                text-align: center;
-                box-sizing: border-box;
-              }
-            }          
-          }
-        }       
-      }
-      &__bottom{
-        margin:40px 0 0;
-        background-color: #fff;
-        &__header{
-          padding: 0 4%;
-          background-color: #fafafa;
-          font-size: 16px;
-          line-height: 72px;
-          font-weight: bold;
-        }
-        &__menu{
-          border: 0;
-          background-color: #fff;
-          font-size: 0;
-          display:flex;
-          &__left{
-            display: inline-block;
-            text-align: center;
-            vertical-align: top;
-            width: 50%;
-            height:70px;
-            line-height:70px;
-            border-top: solid 2px red;
-            box-sizing: border-box;
-            &__now-trade{
-              font-size: 22px;
-              color:black;
-              font-weight:bold;
-              &__link{
-                display: block;
-                color: #333;
-                font-size: 16px;
-                line-height: 70px;
-              }
-            }
-          }
-          &__right{
-            width: 50%;
-            display: block;
-            background-color: #eee;
-            line-height: 70px;
-            text-align: center;
-            height:70px;
-            &__past-trade{
-              font-size: 22px;
-              color:black;
-              font-weight:bold;
-              &__link{
-                display: block;
-                color: #333;
-                font-size: 16px;
-                line-height: 70px;
-              }
-            }
-          }
-        }
-        &__tag{
-          list-style:none;
-          &__list{
-            
-            &__text{
-              padding: 160px 0 60px;
-              background: url(logo-gray-icon.svg);
-              background-repeat: no-repeat;
-              background-position: center 40px;
-              background-size: 78px 85px;
-              text-align: center;
-              font-size: 16px;
-              color: #ccc;
-            }
-          }
-        }
-      }
+  }
+
+  &__figure {
+    border-radius: 50%;
+    height: 60px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 60px;
+  }
+}
+
+.mypage-user {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 8px 0 0;
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0 0;
+  }
+
+  &__value {
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  &__review {
+    font-size: 14px;
+    margin: 0 0 0 8px;
+  }
+
+  &__products {
+    font-size: 14px;
+    margin: 0 0 0 16px;
+  }
+
+  &__num {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 0 8px;
+  }
+}
+
+.mypage-news {
+  background-color: $color-white;
+  display: block;
+  font-size: 14px;
+
+  &__menu {
+    background-color: $color-white;
+    border: 0;
+    display: flex;
+    font-size: 0;
+    text-align: center;
+
+    &__left {
+      border-top: solid 2px $color-red;
+      box-sizing: border-box;
+      display: block;
+      height: 70px;
+      line-height: 70px;
+      width: 50%;
     }
+
+    &__right {
+      background-color: $color-light-gray;
+      display: block;
+      height: 70px;
+      line-height: 70px;
+      width: 50%;
+    }
+
+    &__tabs {
+      color: $color-black;
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      height: 100%;
+      width: 100%;
+    }
+
+    &__tabs:hover {
+      opacity: .7;
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid $color-light-gray;
+    box-sizing: border-box;
+    color: $color-black;
+    display: flex;
+    min-height: 80px;
+    padding: 16px;
+
+    &:hover {
+      background-color: $color-hover-gray;
+    }
+  }
+
+  &__body {
+    margin-right: 40px;
+    width: 100%;
+  }
+
+  &__logo {
+    box-sizing: border-box;
+    height: 48px;
+    margin-right: 20px;
+    width: 48px;
+  }
+
+  &__time {
+    color: $color-gray;
+    padding-top: 5px;
+  }
+
+  &__click {
+    align-items: center;
+    display: flex;
+
+    &--icon {
+      color: $color-gray;
+    }
+  }
+
+  &__foot {
+    padding: 16px;
+
+    &--link {
+      background-color: $color-light-gray;
+      color: $color-black;
+      display: block;
+      height: 56px;
+      line-height: 56px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    &--link:hover {
+      background-color: $color-hover-gray;
+    }
+  }
+}
+
+.mypage-purchased-items {
+  background-color: $color-white;
+  margin: 40px 0 0;
+
+  &__header {
+    background-color: $color-hover-gray;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 72px;
+    padding: 0 4%;
+  }
+
+  &__text {
+    background: url('logo-gray-icon.svg');
+    background-position: center 40px;
+    background-repeat: no-repeat;
+    background-size: 78px 85px;
+    color: $color-light-gray2;
+    font-size: 16px;
+    padding: 160px 0 60px;
+    text-align: center;
   }
 }

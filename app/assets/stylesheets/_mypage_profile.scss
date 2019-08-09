@@ -1,91 +1,99 @@
-.mypage__profile__header{
-  width:100%
-}
+$color-bg-gray: #f5f5f5;
+$color-white: #fff;
+$color-light-gray: #ccc;
+$color-red: #ea352d;
 
 .mypage-profile {
   height: 100%;
   width: 100%;
-  background-color: #f5f5f5;
-  &__container{
-    margin: 0 auto;
-    width:1020px;
-    display: flex;
-    &__side-bar {
-      width: 280px;
-      margin: 40px 40px 40px 0;
-    }
-    &__content {
-      margin-top:40px;
-      width: 700px;
-      height: 568px;
-      background-color:#fff;
-      &__header{
-        height:50px;
-        padding: 12px 4%;
-        border-bottom: 1px solid #f5f5f5;
-        text-align: center;
-        font-size: 18px;
-        box-sizing: border-box;
-      } 
-      &__icon{
-        padding: 72px 16px 24px;
-        background-image: url(mypage-bg.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        text-align: center;
-        box-sizing: border-box;
-        &__picture{
-          display: inline-block;
-          overflow: hidden;
-          width: 60px;
-          height: 60px;
-          border-radius: 50%;
-          vertical-align: middle;
-        }
-        .input-default{
-          width: 220px;
-          margin: 0 0 0 8px;
-          vertical-align: middle;
-          height: 48px;
-          padding: 10px 16px 8px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          background: #fff;
-          line-height: 1.5;
-          font-size: 16px;
-        }
-      }
-      &__text{
-        padding: 40px 16px;
-        .textarea-default{
-          min-height: 216px;
-          display: block;
-          width: 100%;
-          max-width: 100%;
-          padding: 10px;
-          box-sizing: border-box;
-          border: 1px solid #ccc;
-          background: #fff;
-          font-size: 16px;
-          line-height: 1.5;
-        }
-        .btn-default.btn-red{
-          margin: 16px 0 0;
-          background: #ea352d;
-          border: 1px solid #ea352d;
-          color: #fff;
-          display: block;
-          width: 100%;
-          line-height: 48px;
-          font-size: 14px;
-          transition: all ease-out .3s;
-          cursor: pointer;
-          text-align: center;
-        }
-      }    
-    } 
+  background-color: $color-bg-gray;
+
+  &__l-side {
+    margin: 40px 40px 40px 0;
+    width: 280px;
   }
-}
-.mypage__profile__footer{
-  width:100%;
+
+  &__container {
+    margin: 0 auto;
+    width: 1020px;
+    display: flex;
+  }
+
+  &__main {
+    background-color: $color-white;
+    height: 568px;
+    margin-top: 40px;
+    width: 700px;
+  }
+
+  &__head {
+    border-bottom: 1px solid $color-bg-gray;
+    box-sizing: border-box;
+    font-size: 24px;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  &__icon {
+    background-image: url('mypage-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 72px 16px 24px;
+    text-align: center;
+  }
+
+  &__picture {
+    border-radius: 50%;
+    height: 60px;
+    vertical-align: middle;
+    width: 60px;
+  }
+
+  &__input {
+    background: $color-white;
+    border: 1px solid $color-light-gray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    height: 48px;
+    line-height: 1.5;
+    margin: 0 0 0 8px;
+    padding: 10px 16px 8px;
+    vertical-align: middle;
+    width: 220px;
+  }
+
+  &__text {
+    padding: 40px 16px;
+  }
+
+  &__textarea {
+    background: $color-white;
+    border: 1px solid $color-light-gray;
+    box-sizing: border-box;
+    display: block;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 100%;
+    min-height: 216px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  &__submit-btn {
+    background: $color-red;
+    border: 1px solid $color-red;
+    color: $color-white;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    line-height: 48px;
+    margin: 16px 0 0;
+    text-align: center;
+    transition: all ease-out .3s;
+    width: 100%;
+  }
 }
