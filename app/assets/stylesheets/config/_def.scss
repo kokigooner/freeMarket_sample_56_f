@@ -1,43 +1,47 @@
+:rgb(250, 250, 250);
+
 a {
   color: #0099e8;
   text-decoration: none;
 }
 
 body{
-  background: #f5f5f5;
+  background:$white;
   font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
   color: #333;
 }
 
 input {
-  background-color: white;
+  background-color: $white;
 }
 
 .input-default {
-  background: #fff;
-  border: 1px solid #ccc;
+  background:$white;
+  border: 1px solid $white;
   border-radius: 4px;
-  height: 48px;
-  padding: 10px 16px 8px;
   box-sizing: border-box;
   font-size: 16px;
+  height: 48px;
   line-height: 1.5;
+  padding: 10px 16px 8px;
 }
 
 .bold {
   font-weight: 600;
 }
+
 [data-toggle='open-app'] {
   display: none;
 }
+
 [data-client='visible'] {
   display: none;
 }
 
 [data-comment='body'] {
+  background: $white;
   margin: 16px 0 0;
   padding: 16px;
-  background: #eee;
 }
 
 table {
@@ -47,12 +51,12 @@ table {
 
 th {
   display: table-cell;
-  vertical-align: inherit;
   font-weight: bold;
+  vertical-align: inherit;
   text-align: -internal-center;
 }
 
-.clearfix:after {
+.clearfix::after {
   display: block;
   clear: both;
 }
