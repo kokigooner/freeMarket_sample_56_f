@@ -153,8 +153,8 @@
         %a
           = "#{"丸々"}"+"さんのその他の出品"
       %div.products-box-content.clearfix
-      - @test_model.each do |test|
-        %section.products-box
+      - @test_model.each.with_index do |test,i|
+        %section.products-box{"class":"products-id#{i+1}"}
           %figure.products-box-photo
             = image_tag "sample_item.jpg",width: "220" ,hight: "220"
           %div.products-box-body
