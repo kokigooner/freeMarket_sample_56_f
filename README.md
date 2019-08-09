@@ -30,7 +30,7 @@
 * has_many :comments
 * has_many :ratings
 * belongs_to :evalution
-* belongs_to :addresses
+* has_one :address
 
 ## adressesテーブル
 |Column|Type|Options|
@@ -40,7 +40,7 @@
 |address|string|null:false|
 |building|string||
 
-* has_many :users
+belongs_to :user
 
 ## productsテーブル
 
@@ -59,16 +59,15 @@
 |delivery_charge|string|null:false|
 |delivery_date|string|null:false|
 |delivery_way|string|null:false|
-|order_status_id|reference|foreign_key:true|
-|image_id|reference|foreign_key:true|
+|order_id|reference|foreign_key:true|
 |profit_id|reference|foreign_key:true|
 
 * has_many :images
 * has_many :communications
 * has_many :likes
 * has_many :ratings
+* has_one :profit
 * belongs_to :order
-* belongs_to :profit
 * belongs_to :user
 * belongs_to :first_category
 * belongs_to :second_category
@@ -201,6 +200,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |order_status|text||
+|product_id|reference|foreign_key:true|
 
 * has_many :products
 * has_many :communications
@@ -250,6 +250,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |brand|string|unique|
+|brand_categories|reference|foreign_key:true|
 
 * has_many :products
 * belongs_to :brands_category
@@ -258,7 +259,6 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|brand_id|reference|foreign_key:true|
 |first_category_id|reference|foreign_key:true|
 
 * has_many :brands
@@ -269,7 +269,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |size_category|string||
-|second_categories|reference|foreign_key:true|
 
 * has_many :sizes
 * has_many :second_categories
