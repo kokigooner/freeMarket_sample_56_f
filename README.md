@@ -29,7 +29,7 @@
 * has_many :payments
 * has_many :comments
 * has_many :ratings
-* belongs_to :evalution
+* has_many :evalution
 * has_one :address
 
 ## adressesテーブル
