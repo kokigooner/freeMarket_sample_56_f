@@ -1,35 +1,35 @@
-$white: rgb(250,250,250);
-$gray: rgb(170,170,170);
-$light-gray: rgb(204,204,204);
+$white:rgb(250,250,250);
+$gray:rgb(170,170,170);
+$light-gray:rgb(204,204,204);
 .message{
   &-content {
     padding: 24px;
     background: $white;
   }
   &-form {
-      p {
+    p {
       background: $white;
       font-size: 14px;
       padding: 8px;
-      }
-      .textarea-default {
-        background: $white;
-        border: 1px solid $light-gray;
-        box-sizing: border-box;
-        display: block;
-        font-size: 16px;
-        line-height: 1.5;
-        margin: 8px 0 0;
-        max-width: 100%;
-        min-height: 104px;
-        width: 100%;
-        padding: 10px;
-      }
-      .btn-gray {
-        background: $gray;
-        border: 1px solid $gray;
-        color: $white;
-      }
+    }
+    .textarea-default {
+      background: $white;
+      border: 1px solid $light-gray;
+      box-sizing: border-box;
+      display: block;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 8px 0 0;
+      max-width: 100%;
+      min-height: 104px;
+      width: 100%;
+      padding: 10px;
+    }
+    .btn-gray {
+      background: $gray;
+      border: 1px solid $gray;
+      color: $white;
+    }
   }
   &-submit {
     width: 100%;
