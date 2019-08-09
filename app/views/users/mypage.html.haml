@@ -1,14 +1,13 @@
-.mypage__header
-  = render 'shared/header'
-  = render 'shared/bread-crumbs'
-.mypage__container
-  .mypage__container__box
+-# = render 'shared/header'
+= render 'shared/bread-crumbs'
+.mypage-container
+  .mypage-container__box
     .l-side-bar
       = render 'shared/l-side'
-    .mypage__content
-      %section.mypage__content__icon
-        %a.mypage__icon{ href: "/" }
-          .mypage__icon__figure
+    .mypage-content
+      %section.mypage-content__icon
+        %a.mypage-icon{ href: "/" }
+          .mypage-icon__figure
             = image_tag 'member.png', height: '60px', width: '60px'
           %h2.mypage-user
             みね
