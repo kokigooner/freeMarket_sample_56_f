@@ -233,7 +233,7 @@
 * belongs_to :size_category
 * has_many :third_categories
 
-## thrid_categoriesテーブル
+## third_categoriesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
