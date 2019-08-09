@@ -253,15 +253,16 @@ belongs_to :user
 |brand_categories|reference|foreign_key:true|
 
 * has_many :products
-* belongs_to :brands_category
+* has_many :brands_category
 
 ## brands_categoriesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
+|brand_id|reference|foreign_key:true|
 |first_category_id|reference|foreign_key:true|
 
-* has_many :brands
+* belongs_to :brands
 * belongs_to :first_category
 
 ## size_categoriesテーブル
