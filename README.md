@@ -23,7 +23,7 @@
 * has_many :orders
 * has_many :profits
 * has_many :points
-* has_many :communications
+* has_many :product_purchase_messages
 * has_many :likes
 * has_many :points
 * has_many :payments
@@ -64,7 +64,7 @@ belongs_to :user
 |order_status|text||
 
 * has_many :images
-* has_many :communications
+* has_many :product_purchase_messages
 * has_many :likes
 * has_many :ratings
 * has_one :profit
@@ -181,7 +181,7 @@ belongs_to :user
 * belongs_to :product
 * belongs_to :user
 
-## communicationsテーブル
+## product_purchase_messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
