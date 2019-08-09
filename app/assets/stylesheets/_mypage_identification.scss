@@ -10,20 +10,23 @@ main {
   li {
     display: list-item;
     text-align: -webkit-match-parent;
-
-    a　{
-      color: $light-black;
-    }
   }
 
-  .mypage-nav-list-item {
+  .mypage-nav-list{
+    li{
+      a {
+        color: $light-black;
+      }
+    }
+  &-item {
     position: relative;
     display: block;
     max-height: 48px;
     padding: 16px;
     background: white;
     font-size: 14px;
-  }
+    }
+}
 
   .clearfix:after {
   content: '';
