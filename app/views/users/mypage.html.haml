@@ -1,4 +1,4 @@
-= render 'shared/header'
+-# = render 'shared/header'
 = render 'shared/bread-crumbs'
 .mypage-container
   .mypage-container__box
@@ -31,7 +31,7 @@
         %div
           %ul.mypage-news
             %li
-              %a.mypage-news__item{ href:"/" }
+              = link_to(root_path, class: "mypage-news__item") do
                 = image_tag 'mercari_items_logo.png', class: 'mypage-news__logo'
                 .mypage-news__body
                   .mypage-news__text
@@ -43,7 +43,7 @@
                 .mypage-news__click
                   %i.fas.fa-angle-right.fa-2x.mypage-news__click--icon
             %li
-              %a.mypage-news__item{ href:"/" }
+              = link_to(root_path, class: "mypage-news__item") do
                 = image_tag 'mercari_items_logo.png', class: 'mypage-news__logo'
                 .mypage-news__body
                   .mypage-news__text
