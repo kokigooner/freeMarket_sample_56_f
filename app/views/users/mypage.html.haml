@@ -1,4 +1,4 @@
-= render 'shared/header'
+-# = render 'shared/header'
 = render 'shared/bread-crumbs'
 .mypage-container
   .mypage-container__box
@@ -6,7 +6,7 @@
       = render 'shared/l-side'
     .mypage-content
       %section.mypage-content__icon
-        %a.mypage-icon{ href: "/" }
+        = link_to(root_path, class: "mypage-icon") do
           .mypage-icon__figure
             = image_tag 'member.png', height: '60px', width: '60px'
           %h2.mypage-user
@@ -23,10 +23,10 @@
       %section.mypage-news
         %ul.mypage-news__menu
           %li.mypage-news__menu__left
-            %a.mypage-news__menu__tabs{ href: "/" }
+            = link_to(root_path, class: "mypage-news__menu__tabs") do
               お知らせ
           %li.mypage-news__menu__right
-            %a.mypage-news__menu__tabs{ href:"/" }
+            = link_to(root_path, class: "mypage-news__menu__tabs") do
               やることリスト
         %div
           %ul.mypage-news
@@ -55,7 +55,7 @@
                 .mypage-news__click
                   %i.fas.fa-angle-right.fa-2x.mypage-news__click--icon
             %li.mypage-news__foot
-              %a.mypage-news__foot--link{ href:"/" }
+              = link_to(root_path, class: "mypage-news__foot--link") do
                 一覧をみる
           -# %ul.mypage__tab__list__todo
           -#   %li.mypage__item__notihng
@@ -65,10 +65,10 @@
           購入した商品
         %ul.mypage-news__menu
           %li.mypage-news__menu__left
-            %a.mypage-news__menu__tabs{ href: "/" }
+            = link_to(root_path, class: "mypage-news__menu__tabs") do
               取引中
           %li.mypage-news__menu__right
-            %a.mypage-news__menu__tabs{ href:"/" }
+            = link_to(root_path, class: "mypage-news__menu__tabs") do
               過去の取引
         .div
           %ul
