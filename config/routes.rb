@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get "/users/login" => "users#login"
 
 
-  get "/mypage/identification"=> "users#identification" 
-  get "/mypage/logout"=> "users#logout" 
+  get "/mypage/identification" => "users#identification" 
+  get "/mypage/logout" => "users#logout" 
 
 end
