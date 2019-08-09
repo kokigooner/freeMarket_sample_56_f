@@ -216,18 +216,6 @@
 }
 
 .products{
-  &-id3 {
-    margin-right: 0 !important;
-  }
-
-  &-id6 {
-    margin-right: 0 !important;
-  }
-
-  &-id4 {
-    margin-right: 20 !important;
-  }
-
   &-box {
       position: relative;
       float: left;
@@ -288,6 +276,18 @@
         }
       }
     }
+    &-id3 {
+      margin-right: 0 !important;
+    }
+  
+    &-id6 {
+      margin-right: 0 !important;
+    }
+  
+    &-id4 {
+      margin-right: 20 !important;
+    }
+    
     &-in-user-profile {
       width: 700px;
       margin: 0 auto;
