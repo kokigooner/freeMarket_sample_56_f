@@ -101,17 +101,19 @@
   &-social-link {
     display: inline-block;
     margin: 14px 0 0;
-    i{
+
+    i {
       display: inline-block;
       // font-family: 'icon-font';
-      font-style: normal;
-      font-weight: 400;
-      font-variant: normal;
-      text-transform: none;
-      margin: 16px 18px 0 0;
       font-size: 30px;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 400;
+      margin: 16px 18px 0 0;
+      text-transform: none;
     }
   }
+
   &-sell-btn {
     position: fixed;
     bottom: 32px;
@@ -152,9 +154,9 @@
     }
 }
 .global-footer {
-  padding: 0 20px 10px ;
   background: #212121;
   color: #fff;
+  padding: 0 20px 10px;
   nav {
     width: 1020px;
     margin: 0 auto;
