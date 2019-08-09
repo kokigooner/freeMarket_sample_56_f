@@ -3,6 +3,8 @@ $gray:rgb(170, 170, 170);
 $light-gray:rgb(204, 204, 204);
 $red: #ea352d;
 $black: (51, 51, 51);
+$light-black: #333;
+$white2: #fff;
 main {
   display: block;
 }
@@ -11,15 +13,22 @@ main {
     text-align: -webkit-match-parent;
   }
 
-  .mypage-nav-list-item {
+.mypage-nav-list {
+  li {
+    a {
+      color: $light-black;
+    }
+  }
+
+  &-item {
     position: relative;
     display: block;
     max-height: 48px;
     padding: 16px;
-    background: $white;
+    background: $white2;
     font-size: 14px;
-    color: $black;
-  }
+    }
+}
 
   .clearfix:after {
   content: '';
@@ -36,6 +45,7 @@ main {
     font-size: 12px;
     vertical-align: top;
   }
+
   &-group {
     margin: 40px 0 0;
     select {
@@ -47,7 +57,7 @@ main {
     }
 
     .input-default {
-      background: $white;
+      background: $white2;
       border: 1px solid $light-gray;
       border-radius: 4px;
       box-sizing: border-box;
@@ -59,6 +69,7 @@ main {
       width: 100%;
     }
   }
+
   &-arbitrary{
     background: $gray;
     margin: 0 0 0 8px;
@@ -84,6 +95,7 @@ option {
     background: $white;
     margin: 8px 0 0;
   }
+
   &-default {
     position: relative;
     z-index: 2;
