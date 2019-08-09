@@ -35,3 +35,78 @@
     font-size: 16px;
   }
 }
+
+.visible-sp {
+  display: none;
+}
+.bold {
+  font-weight: 600;
+}
+[data-toggle='open-app'] {
+  display: none;
+}
+[data-client='visible'] {
+  display: none;
+}
+.f14 {
+  font-size: 14px;
+}
+
+[data-comment='body'] {
+  margin: 16px 0 0;
+  padding: 16px;
+  background: #eee;
+}
+* {
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.search-container .items-box, .category-brand-list .items-box, .related-item-column .items-box {
+  width: calc(33.3333% - 2.666666px);
+  margin: 0 4px 4px 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.visible-sp {
+  display: none;
+}
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: -internal-center;
+}
+body {
+  position: relative;
+  min-height: 100%;
+  font-size: 14px;
+  line-height: 1;
+}
+.f14 {
+  font-size: 18px;
+}
+
+
+
+nav ol, nav ul {
+  list-style: none;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.btn-gray {
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+}
+.f18-24 {
+  font-size: 24px;
+}
+
