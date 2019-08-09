@@ -27,7 +27,7 @@ $color-hover-gray: #fafafa;
   width: 700px;
 
   &__icon {
-    background-image: url("mypage-bg.jpg");
+    background-image: url('mypage-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 155px;
@@ -47,7 +47,7 @@ $color-hover-gray: #fafafa;
   transform: translate(0, -50%);
 
   &:hover {
-    opacity: 0.7;
+    opacity: .7;
 
     h2 {
       text-decoration: underline;
@@ -135,7 +135,7 @@ $color-hover-gray: #fafafa;
     }
 
     &__tabs:hover {
-      opacity: 0.7;
+      opacity: .7;
     }
   }
 
@@ -210,7 +210,7 @@ $color-hover-gray: #fafafa;
   }
 
   &__text {
-    background: url("logo-gray-icon.svg");
+    background: url('logo-gray-icon.svg');
     background-position: center 40px;
     background-repeat: no-repeat;
     background-size: 78px 85px;

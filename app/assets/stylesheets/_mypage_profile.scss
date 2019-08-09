@@ -37,7 +37,7 @@ $color-red: #ea352d;
   }
 
   &__icon {
-    background-image: url("mypage-bg.jpg");
+    background-image: url('mypage-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
@@ -93,7 +93,7 @@ $color-red: #ea352d;
     line-height: 48px;
     margin: 16px 0 0;
     text-align: center;
-    transition: all ease-out 0.3s;
+    transition: all ease-out .3s;
     width: 100%;
   }
 }
