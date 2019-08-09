@@ -58,42 +58,48 @@
           padding: 3px;
         }
       }
+
       img {
         float: left;
       }
+
       h5 {
         color: rgb(27, 20, 20);
         font-size: 10px;
-        text-align: left;
         margin-top: 10px;
+        text-align: left;
       }
+
       .sell-box  {
-        height: 130px;
+        background-color: #ccc;
         border: dashed 1px;
         color: rgb(197, 197, 197);
-        background-color: #ccc;
+        height: 130px;
         h4 {
           color: rgb(27, 20, 20);
           font-size: 12px;
-          text-align: center;
           font-weight: bold;
+          text-align: center;
         }
+
         h5 {
           color: rgb(27, 20, 20);
           font-size: 10px;
-          text-align: center;
           padding: 10px 40px;
+          text-align: center;
         }
       }
+
       .sell-eroor-message {
         h5 {
-          color: red;
+          color: #ff0000;
           font-size: 12px;
           text-align: left;
           padding: 0px;
         }
       }
     }
+
     .sell-item-boxone {
       height: 300px;
       margin-top: 0px;
