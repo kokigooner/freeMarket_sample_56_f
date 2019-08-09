@@ -276,27 +276,26 @@
         }
       }
     }
-    &-id3 {
-      margin-right: 0 !important;
+  &-id3 {
+    margin-right: 0 ;
+  }
+  &-id6 {
+    margin-right: 0 ;
+  }
+  &-id4 {
+    margin-right: 20 ;
+  }
+  &-in-user-profile {
+    width: 700px;
+    margin: 0 auto;
+    .products-box-overflow:last-of-type{
+      margin-bottom: 40px;
     }
-  
-    &-id6 {
-      margin-right: 0 !important;
-    }
-  
-    &-id4 {
-      margin-right: 20 !important;
-    }
-    
-    &-in-user-profile {
-      width: 700px;
-      margin: 0 auto;
+    .related-product-column:last-of-type {
+      margin-bottom: 40px;
     }
   }
-.products-in-user-profile .products-box-overflow:last-of-type, .products-in-user-profile .related-product-column:last-of-type {
-    margin-bottom: 40px;
-  }
-
+}
 .related-product-column {
     margin-right: 20px;
   }
