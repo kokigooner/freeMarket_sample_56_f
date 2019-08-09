@@ -1,7 +1,8 @@
-$white:rgb(250,250,250);
-$gray:rgb(170,170,170);
-$light-gray:rgb(204,204,204);
+
 .message{
+  $white:rgb(250,250,250);
+  $gray:rgb(170,170,170);
+  $light-gray:rgb(204,204,204);
   &-content {
     padding: 24px;
     background: $white;
@@ -22,8 +23,8 @@ $light-gray:rgb(204,204,204);
       margin: 8px 0 0;
       max-width: 100%;
       min-height: 104px;
-      width: 100%;
       padding: 10px;
+      width: 100%;
     }
     .btn-gray {
       background: $gray;
