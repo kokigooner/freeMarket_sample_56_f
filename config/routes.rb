@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get "/users/signup/registration" => "users#registration"
   get "/users/signup/confirmation" => "users#confirmation"
   get "/users/signup/authentication" => "users#authentication" 
-  get "/users/syuppin" => "users#syuppin"
+  get "/users/sell" => "users#sell"
   get "/users/signup/address" => "users#address" 
   get "/users/signup/payment" => "users#payment" 
   get "/users/signup/complete" => "users#complete"

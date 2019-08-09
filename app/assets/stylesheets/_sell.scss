@@ -1,28 +1,28 @@
 
-.syuppin__wrapper{
+.sell__wrapper{
   width: 100%;
   box-sizing: border-box;
   background-color: whitesmoke;
-  header.syuppin__header{
+  header.sell__header{
     a {
       display: block;
     }
     .mercari__icon{width: 10%;} 
   }
   
-  .syuppin__item_clearfix{
+  .sell__item_clearfix{
     height: 100%;
     width: calc(100% - 140px);
     margin: auto;
     // margin-top: 40px;
     background-color: white;
     overflow: hidden;
-    .syuppin__info{
+    .sell__info{
       height: 80px;
       margin-top: 0px;
       padding: 30px 70px;
       border-bottom: 1px solid whitesmoke;
-      .syuppin__banner{
+      .sell__banner{
         h4{
           color: rgb(27, 20, 20);
           font-size: 15px;
@@ -31,7 +31,7 @@
         }
       }
     }
-    .syuppin__photo{
+    .sell__photo{
       height: 250px;
       margin-top: 20px;
       padding: 10px 30px;
@@ -61,7 +61,7 @@
         text-align: left;
         margin-top: 10px;
       }
-      .syuppin__box {
+      .sell__box {
         height: 130px;
         border: dashed 1px;
         color: rgb(197, 197, 197);
@@ -79,7 +79,7 @@
           padding: 10px 40px;
         }
       }
-      .syuppin__eroor_message{
+      .sell__eroor_message{
         h5{
           color: red;
           font-size: 12px;
@@ -88,12 +88,12 @@
         }
       }
     }
-    .syuppin__item_boxone{
+    .sell__item_boxone{
       height: 300px;
       margin-top: 0px;
       padding: 10px 30px;
       border-bottom: 1px solid whitesmoke;
-      .syuppin__item{
+      .sell__item{
         h4{
           color: rgb(27, 20, 20);
           font-size: 12px;
@@ -114,10 +114,11 @@
           float: left;
         }
       }
-      .syuppin__item_write{
+      .sell__item_write{
         height: 50px;
         border-radius: 10px;
         border: solid 1px rgb(196, 196, 196);
+        margin-top: 10px;
         h5{
           color: rgb(27, 20, 20);
           font-size: 10px;
@@ -125,7 +126,7 @@
           padding: 10px 40px;
         }
       }
-      .syuppin__eroor_message{
+      .sell__eroor_message{
         h5{
           color: red;
           font-size: 12px;
@@ -133,7 +134,7 @@
           padding: 0px;
         }
       }
-      .syuppin__item__description{
+      .sell__item__description{
         h4{
           color: rgb(27, 20, 20);
           font-size: 12px;
@@ -155,7 +156,8 @@
           float: left;
         }
       }
-      .syuppin__item__description_write{
+      .sell__item__description_write{
+        margin-top: 10px;
         height: 120px;
         border: solid 1px rgb(196, 196, 196);
         h5{
@@ -165,7 +167,7 @@
           padding: 10px 40px;
         }
       }
-      .syuppin__eroor_message{
+      .sell__eroor_message{
         h5{
           color: red;
           font-size: 12px;
@@ -174,7 +176,7 @@
         }
       }
     }
-    .syuppin__item_boxtwo{
+    .sell__item_boxtwo{
       height: 300px;
       margin-top: 0px;
       padding: 10px 30px;
@@ -186,8 +188,8 @@
         padding: 10px 10px;
         font-weight: bold;
       }
-      .syuppin__item_boxindex{
-        .syuppin__itemcat{
+      .sell__item_boxindex{
+        .sell__itemcat{
           h4{
             color: rgb(27, 20, 20);
             font-size: 12px;
@@ -206,12 +208,13 @@
             }
           }
         }
-        .syuppin__itemcatbox{
+        .sell__itemcatbox{
+          margin-top: 10px;
           height: 50px;
           border-radius: 10px;
           border: solid 1px rgb(196, 196, 196);
         }
-        .syuppin__eroor_message{
+        .sell__eroor_message{
           h5{
             color: red;
             font-size: 12px;
@@ -221,7 +224,7 @@
           }
         }
       }
-      .syuppin__itemstate{
+      .sell__itemstate{
         margin-top: 40px;
         h4{
           color: rgb(27, 20, 20);
@@ -243,12 +246,13 @@
           float: left;
         }
       }
-        .syuppin__itemstatebox{
+        .sell__itemstatebox{
+          margin-top: 10px;
           height: 50px;
           border-radius: 10px;
           border: solid 1px rgb(196, 196, 196); 
         }
-        .syuppin__eroor_message{
+        .sell__eroor_message{
           h5{
             color: red;
             font-size: 12px;
@@ -257,7 +261,7 @@
           }
         }
     }
-    .syuppin__delivery{
+    .sell__delivery{
       height: 500px;
       margin-top: 0px;
       padding: 10px 30px;
@@ -269,8 +273,8 @@
         padding: 40px 0px;
         font-weight: bold;
       }
-      .syuppin__delivery_boxindex{
-        .syuppin__delivery_charge{
+      .sell__delivery_boxindex{
+        .sell__delivery_charge{
           h4{
             color: rgb(27, 20, 20);
             font-size: 12px;
@@ -288,12 +292,13 @@
             }
           }
         }
-        .syuppin__delivery_chargebox{
+        .sell__delivery_chargebox{
+          margin-top: 10px;
           height: 50px;
           border-radius: 10px;
           border: solid 1px rgb(196, 196, 196); 
         }
-        .syuppin__eroor_message{
+        .sell__eroor_message{
           h5{
             color: red;
             font-size: 12px;
@@ -302,7 +307,7 @@
             font-weight: normal;
           }
         }
-        .syuppin__delivery_region{
+        .sell__delivery_region{
           h4{
             color: rgb(27, 20, 20);
             font-size: 12px;
@@ -321,12 +326,13 @@
             }
           }  
         }
-        .syuppin__delivery_regionbox{
+        .sell__delivery_regionbox{
+          margin-top: 10px;
           height: 50px;
           border-radius: 10px;
           border: solid 1px rgb(196, 196, 196); 
         }
-        .syuppin__eroor_message{
+        .sell__eroor_message{
           h5{
             color: red;
             font-size: 12px;
@@ -334,7 +340,7 @@
             padding: 0px;
           }
         }
-        .syuppin__delivery_days{
+        .sell__delivery_days{
           h4{
             color: rgb(27, 20, 20);
             font-size: 12px;
@@ -353,12 +359,13 @@
             }
           }
         }
-        .syuppin__delivery_daysbox{
+        .sell__delivery_daysbox{
+          margin-top: 10px;
           height: 50px;
           border-radius: 10px;
           border: solid 1px rgb(196, 196, 196); 
         }
-        .syuppin__eroor_message{
+        .sell__eroor_message{
           h5{
             color: red;
             font-size: 12px;
@@ -369,7 +376,7 @@
       }
     }
 
-    .syuppin__price{
+    .sell__price{
       height: 500px;
       margin-top: 0px;
       padding: 5px 30px;
@@ -381,9 +388,9 @@
         padding: 20px 0px;
         font-weight: bold;
       }
-      .syuppin__price_boxindex{
-        .syuppin__price_charge_clearfix{
-          .syuppin__price_charge_left{
+      .sell__price_boxindex{
+        .sell__price_charge_clearfix{
+          .sell__price_charge_left{
             height: 50px;
             float: left;
             margin-top: 0px;
@@ -405,21 +412,23 @@
               }
             }
           }
-          .syuppin__price_charge_right{
+          .sell__price_charge_right{
             height: 50px;
             float: right;
-            margin-top: 0px;
             width: 40%;
             border-radius: 10px;
             border: solid 1px rgb(196, 196, 196);
-            span{
-              color: rgb(27, 20, 20);
-              font-size: 12px;
-              text-align: left;
-            }
+              span{
+                color: rgb(27, 20, 20);
+                font-size: 15px;
+                text-align: left;
+                padding: 10px 10px 0 10px;
+                display: inline-block;
+                margin-top: 10px;
+              }
           }
         }
-        .syuppin__eroor_message{
+        .sell__eroor_message{
           h5{
             color: red;
             float: left;
@@ -429,39 +438,41 @@
             font-weight: normal;
           }
         }
-        .syuppin__price_chargebox{
+        .sell__price_chargebox{
           height: 100px;
           margin-top: 0px;
           border-bottom: 1px solid rgb(196, 196, 196); 
         }
       }
-      .syuppin__price_fee{
+      .sell__price_fee{
         h5{
-          color: rgb(27, 20, 20);
-          font-size: 12px;
+          color: black;
+          font-size: 15px;
           text-align: left;
-          font-weight: bold;
+          margin-top: 10px;
+          font-weight: normal;
         }
-        .syuppin__price_feebox{
+        .sell__price_feebox{
           height: 60px;
           border-bottom: 1px solid rgb(196, 196, 196);  
         }
       }
-      .syuppin__sales_profit{
+      .sell__sales_profit{
         h4{
           color: rgb(27, 20, 20);
-          font-size: 12px;
+          font-size: 15px;
           text-align: left;
           font-weight: bold;
+          margin-top: 10px;
         }
-        .syuppin__sales_profitbox{
+        .sell__sales_profitbox{
           height: 60px;
           border-bottom: 1px solid rgb(196, 196, 196);  
         }
       }
     }
 
-    .syuppin__tips{
+    .sell__tips{
       height: 100px;
       margin-top: 0px;
       padding: 10px 30px;
@@ -474,7 +485,7 @@
         }
       }
     }
-    .syuppin__btn{
+    .sell__btn{
       height: 40px;
       margin: auto;
       width: calc(100% - 200px);
@@ -487,7 +498,7 @@
         padding-top: 10px;
       }
     }
-    .syuppin__return_btn{
+    .sell__return_btn{
       height: 40px;
       width: calc(100% - 280px);
       background-color: grey;
@@ -502,8 +513,8 @@
       }
     }
   }
-  .syuppin__footer{
-    .syuppin__rules{
+  .sell__footer{
+    .sell__rules{
       margin-top: 35px;
       h6{
         color: rgb(27, 20, 20);
@@ -512,10 +523,10 @@
         margin-top: 10px;
       }
     }
-    .syuppin__footer_right_one{
+    .sell__footer_right_one{
       text-align: center;
     }
-    .syuppin__last_year{
+    .sell__last_year{
       h6{
         color: rgb(27, 20, 20);
         font-size: 10px;
