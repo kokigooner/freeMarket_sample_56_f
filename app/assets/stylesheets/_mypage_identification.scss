@@ -64,6 +64,7 @@ option {
     position: relative;
     background: #fff;
     margin: 8px 0 0;
+    
   }
   &-default {
     position: relative;
@@ -76,6 +77,14 @@ option {
     font-size: 16px;
     line-height: 1.5;
     cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: image-url("select-form-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-size: 15px 45px;
+    background-position: right 10px center;
+    background-color: $color-white;
   }
 }
 
