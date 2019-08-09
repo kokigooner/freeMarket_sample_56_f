@@ -84,7 +84,6 @@ $color-red: #ea352d;
   }
 
   &__submit-btn {
-    margin: 16px 0 0;
     background: $color-red;
     border: 1px solid $color-red;
     color: $color-white;
@@ -92,6 +91,7 @@ $color-red: #ea352d;
     display: block;
     font-size: 14px;
     line-height: 48px;
+    margin: 16px 0 0;
     text-align: center;
     transition: all ease-out 0.3s;
     width: 100%;
