@@ -4,6 +4,7 @@ $light-gray:rgb(204, 204, 204);
 $red: #ea352d;
 $black: (51, 51, 51);
 $light-black: #333333;
+$white2: #fff;
 main {
   display: block;
 }
@@ -24,7 +25,7 @@ main {
     display: block;
     max-height: 48px;
     padding: 16px;
-    background: #fff;
+    background: $white2;
     font-size: 14px;
     }
 }
@@ -56,7 +57,7 @@ main {
     }
 
     .input-default {
-      background: #fff;
+      background: $white2;
       border: 1px solid $light-gray;
       border-radius: 4px;
       box-sizing: border-box;
