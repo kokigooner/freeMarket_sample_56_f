@@ -12,18 +12,19 @@ main {
     text-align: -webkit-match-parent;
   }
 
-  .mypage-nav-list{
+  .mypage-nav-list {
     li{
-      a {
+      a{
         color: $light-black;
       }
     }
+
   &-item {
     position: relative;
     display: block;
     max-height: 48px;
     padding: 16px;
-    background: white;
+    background: #ffffff;
     font-size: 14px;
     }
 }
@@ -43,6 +44,7 @@ main {
     font-size: 12px;
     vertical-align: top;
   }
+
   &-group {
     margin: 40px 0 0;
     select {
@@ -54,7 +56,7 @@ main {
     }
 
     .input-default {
-      background: white;
+      background: #ffffff;
       border: 1px solid $light-gray;
       border-radius: 4px;
       box-sizing: border-box;
@@ -66,6 +68,7 @@ main {
       width: 100%;
     }
   }
+
   &-arbitrary{
     background: $gray;
     margin: 0 0 0 8px;
@@ -91,6 +94,7 @@ option {
     background: $white;
     margin: 8px 0 0;
   }
+
   &-default {
     position: relative;
     z-index: 2;
