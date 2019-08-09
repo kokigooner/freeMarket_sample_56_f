@@ -1,5 +1,5 @@
 .default-container 
-  = render  'shared/header'
+  = render 'shared/header'
   = render 'shared/bread-crumbs'
   %main.large-container.clearfix
     .large-content
@@ -7,5 +7,5 @@
         = form_tag('users_identification_path', method: :post,class: "large-single-inner" ) do |f|
           .large-single-content
             = submit_tag "ログアウト", {class: "btn-red btn-default"} 
-    = render  'shared/l-side'
-  = render  'shared/footer'
+    = render 'shared/l-side'
+  = render 'shared/footer'
