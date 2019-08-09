@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/users/mypage/card' => "users#card"
   get '/users/mypage/card/create' => "users#card_create"
   get "/users/mypage" => "users#mypage"
+  
   get "/users/signup" => "users#signup"
   get "/users/signup/registration" => "users#registration"
   get "/users/signup/confirmation" => "users#confirmation"
@@ -20,7 +21,7 @@ Rails.application.routes.draw do
   get "/users/login" => "users#login"
 
 
-  get "/mypage/identification/"=> "users#identification" 
-  get "/mypage/logout/"=> "users#logout" 
+  get "/mypage/identification"=> "users#identification" 
+  get "/mypage/logout"=> "users#logout" 
 
 end

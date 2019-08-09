@@ -1,20 +1,17 @@
-.mypage__profile__header
-  = render "shared/header"
-  = render "shared/bread-crumbs"
+= render "shared/header"
+= render "shared/bread-crumbs"
 
 .mypage-profile
   .mypage-profile__container
-    .mypage-profile__container__side-bar
-      = render  "shared/l-side"
-    .mypage-profile__container__content
-      .mypage-profile__container__content__header
+    .mypage-profile__l-side
+      = render "shared/l-side"
+    .mypage-profile__main
+      .mypage-profile__head
         プロフィール
-      .mypage-profile__container__content__icon
-        %figure.mypage-profile__container__content__icon__picture
-          %img.mypage-profile__container__content__icon__picture__url{height: "60", src: "//static.mercdn.net/images/member_photo_noimage_thumb.png", width: "60"}/
-        %input.input-default{name: "nickname", placeholder: "例)AYA☆セール中", type: "text", }/
-      .mypage-profile__container__content__text
-        %textarea.textarea-default{name: "introduction", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}     
-        %button.btn-default.btn-red{type: "submit"} 変更する
-  .mypage__profile__footer
-    = render "shared/footer"
+      .mypage-profile__icon
+        = image_tag 'member.png', height: '60px', width: '60px', class: "mypage-profile__picture"
+        %input.mypage-profile__input{name: "nickname", placeholder: "例) AYA☆セール中", type: "text", }/
+      .mypage-profile__text
+        %textarea.mypage-profile__textarea{name: "introduction", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}     
+        %button.mypage-profile__submit-btn{type: "submit"} 変更する
+= render "shared/footer"
