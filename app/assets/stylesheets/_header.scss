@@ -33,7 +33,6 @@
 
   &-user-nav {
     div {
-      top: -5px;
       display: inline-block;
       position: relative;
       text-align: center;
@@ -83,7 +82,6 @@
       }
       .large-right {
         float: right;
-        padding: 5px 0;
       }
     }
     &-parent {
@@ -131,7 +129,6 @@
       li {
         position: relative;
         display: inline-block;
-        padding: 0 7px;
         cursor: pointer;
         padding: 0 14px;
         a span {
@@ -148,8 +145,8 @@
     &-link {
       position: relative;
       display: block;
-      // height: 44px;
-      // line-height: 32px;
+      height: 44px;
+      line-height: 32px;
       font-size: 0;
       color: #333;
       
@@ -163,6 +160,7 @@
       height: 32px;
       width: 32px;
       border-radius: 50%;
+      
     }
   }
   &-form {

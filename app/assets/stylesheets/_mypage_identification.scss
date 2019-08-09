@@ -38,6 +38,19 @@ main {
       label {
       font-weight: 600;
     }
+    .input-default {
+      width: 100%;
+      margin: 8px 0 0;
+      height: 48px;
+      padding: 10px 16px 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: #fff;
+      line-height: 1.5;
+      font-size: 16px;
+      box-sizing: border-box
+    }
+    
   }
   &-arbitrary{
     background: #ccc;

@@ -12,3 +12,51 @@ body{
 input {
   background-color: white;
 }
+.input-default {
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+  box-sizing: border-box
+}
+
+.bold {
+  font-weight: 600;
+}
+[data-toggle='open-app'] {
+  display: none;
+}
+[data-client='visible'] {
+  display: none;
+}
+
+
+[data-comment='body'] {
+  margin: 16px 0 0;
+  padding: 16px;
+  background: #eee;
+}
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: -internal-center;
+}
+
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+

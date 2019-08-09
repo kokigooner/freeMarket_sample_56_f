@@ -19,7 +19,7 @@
           %tr
             %th 出品者
             %td
-              %a{href: "/"} JP
+              = link_to 'JP',"/" 
               %div
                 .product-user-ratings
                   %i.icon-good
@@ -36,16 +36,16 @@
           %tr
             %th カテゴリー
             %td
-              %a{href: "/"} 
-                %div 家電・スマホ・カメラ
-              %a{href: "/"} 
-                %div > PC/タブレット
-              %a{href: "/"}
-                %div > ノートPC
+              %div
+              = link_to '家電・スマホ・カメラ',"/" 
+              %div
+              = link_to '> PC/タブレット',"/" 
+              %div
+              = link_to '> ノートPC',"/" 
           %tr
             %th ブランド
             %td 
-              %a{href: "/"} アップル
+              = link_to 'アップル',"/" 
           %tr
             %th 商品の状態
             %td 未使用品に近い
@@ -58,7 +58,7 @@
           %tr
             %th 配送元地域
             %td 
-              %a{href: "/"} 鳥取県
+              = link_to '鳥取',"/" 
           %tr
             %th 発送日の目安
             %td 4~7日で発送
@@ -69,7 +69,7 @@
         (税込)
       %span.product-shipping-fee
         送料込み
-    %a.product-buy-btn.f18-24{"data-client": "#{'hidden'}"}
+    %a.product-buy-btn{"data-client": "#{'hidden'}"}
       購入画面に進む
     %a.product-btn-client
       %div{"data-client": "#{'visible'}"}
