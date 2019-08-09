@@ -61,6 +61,7 @@ belongs_to :user
 |delivery_way|string|null:false|
 |order_id|reference|foreign_key:true|
 |profit_id|reference|foreign_key:true|
+|order_status|text||
 
 * has_many :images
 * has_many :communications
@@ -194,16 +195,6 @@ belongs_to :user
 * belongs_to :product
 * belongs_to :user
 * belongs_to :order_status
-
-## order_statusesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|order_status|text||
-|product_id|reference|foreign_key:true|
-
-* has_many :products
-* has_many :communications
 
 ## imagesテーブル
 
