@@ -9,6 +9,9 @@ main {
   li {
     display: list-item;
     text-align: -webkit-match-parent;
+    a{
+      color:#333333;
+    }
   }
 
   .mypage-nav-list-item {
@@ -16,9 +19,8 @@ main {
     display: block;
     max-height: 48px;
     padding: 16px;
-    background: $white;
+    background: white;
     font-size: 14px;
-    color: $black;
   }
 
   .clearfix:after {
@@ -47,7 +49,7 @@ main {
     }
 
     .input-default {
-      background: $white;
+      background: white;
       border: 1px solid $light-gray;
       border-radius: 4px;
       box-sizing: border-box;
