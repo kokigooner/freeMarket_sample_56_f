@@ -3,14 +3,16 @@ $gray:rgb(170, 170, 170);
 $light-gray:rgb(204, 204, 204);
 $red: #ea352d;
 $black: (51, 51, 51);
+$light-black: #333333;
 main {
   display: block;
 }
   li {
     display: list-item;
     text-align: -webkit-match-parent;
-    a{
-      color:#333333;
+
+    a　{
+      color: $light-black;
     }
   }
 
