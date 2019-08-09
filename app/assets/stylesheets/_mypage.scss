@@ -1,6 +1,7 @@
 $color-black: #333;
 $color-white: #fff;
 $color-gray: #888;
+$color-red: #ea352d;
 $color-light-gray: #eee;
 $color-light-gray2: #ccc;
 $color-hover-gray: #fafafa;
@@ -108,7 +109,7 @@ $color-hover-gray: #fafafa;
     text-align: center;
 
     &__left {
-      border-top: solid 2px #ea352d;
+      border-top: solid 2px $color-red;
       box-sizing: border-box;
       display: block;
       height: 70px;

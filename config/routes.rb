@@ -20,7 +20,6 @@ Rails.application.routes.draw do
   get "/users/signup/complete" => "users#complete"
   get "/users/login" => "users#login"
 
-
   get "/mypage/identification" => "users#identification" 
   get "/mypage/logout" => "users#logout" 
 
