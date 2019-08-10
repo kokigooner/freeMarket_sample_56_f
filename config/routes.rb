@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "products#toppage"
   get '/products' => 'products#toppage'
-  get "/products/detail" => "products#products_detail" 
+  get "/products/:id/detail" => "products#products_detail" 
   get "/products/confirm" => "products#confirm"
 
   get '/users/mypage/profile' => 'users#profile'
