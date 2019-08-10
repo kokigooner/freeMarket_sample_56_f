@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
+
   def toppage
   end
 
@@ -19,4 +22,14 @@ class ProductsController < ApplicationController
   def confirm
   end
   
+  private
+
+  def task_params
+    params.require(:task).permit(:name,:description, images: [])
+  end
+
+  def set_task
+    @task = current_user.tasks.find(params[:id])
+  end
+
 end
