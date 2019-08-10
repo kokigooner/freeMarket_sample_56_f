@@ -217,14 +217,11 @@
 
 .products{
   &-box {
-      position: relative;
-      float: left;
-      width: 48%;
-      margin: 0 0 4% 4%;
-      background: #fff;
-      width: 220px;
-      margin: 0px 20px 20px 0px;
-      
+    position: relative;
+    float: left;
+    background: #fff;
+    width: 220px;
+    margin: 0 20px 20px 0;
       a {
         display: block;
         color: #333;
@@ -289,16 +286,21 @@
     margin-right: 20;
   }
   &-in-user-profile {
-    width: 700px;
     margin: 0 auto;
-    .products-box-overflow:last-of-type{
-      margin-bottom: 40px;
+    width: 700px;
+    .products-box-overflow{
+      :last-of-type{
+        margin-bottom: 40px;
+      }
     }
-    .related-product-column:last-of-type {
-      margin-bottom: 40px;
+    .related-product-column{
+      :last-of-type {
+        margin-bottom: 40px;
+      }
     }
   }
 }
+
 ratings:first-child {
     margin: 0;
   }
