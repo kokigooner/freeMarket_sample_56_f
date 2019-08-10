@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190810051916) do
+ActiveRecord::Schema.define(version: 20190810064918) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "postal_code",  null: false
-    t.string  "minicipality", null: false
-    t.string  "address",      null: false
+    t.integer "postal_code",      null: false
+    t.string  "minicipality",     null: false
+    t.string  "address",          null: false
     t.string  "building"
+    t.string  "family_name",      null: false
+    t.string  "first_name",       null: false
+    t.string  "family_name_kana", null: false
+    t.string  "first_name_kana",  null: false
+    t.integer "prefecture",       null: false
+    t.integer "phone_number"
   end
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -30,19 +36,6 @@ ActiveRecord::Schema.define(version: 20190810051916) do
     t.integer "cvc"
     t.integer "user_id"
     t.index ["user_id"], name: "index_payments_on_user_id", using: :btree
-  end
-
-  create_table "productions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "user_id"
-    t.string  "product_name",                  null: false
-    t.integer "price",                         null: false
-    t.text    "description",     limit: 65535, null: false
-    t.string  "condition",                     null: false
-    t.string  "delivery_charge",               null: false
-    t.string  "delivery_date",                 null: false
-    t.string  "delivery_way",                  null: false
-    t.string  "order_status"
-    t.index ["user_id"], name: "index_productions_on_user_id", using: :btree
   end
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -66,11 +59,19 @@ ActiveRecord::Schema.define(version: 20190810051916) do
     t.datetime "remember_created_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "nickname",                            null: false
+    t.string   "family_name",                         null: false
+    t.string   "first_name",                          null: false
+    t.string   "family_name_kana",                    null: false
+    t.string   "first_name_kana",                     null: false
+    t.integer  "birth_year",                          null: false
+    t.integer  "birth_month",                         null: false
+    t.integer  "birth_day",                           null: false
+    t.integer  "phone_number",                        null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
   add_foreign_key "payments", "users"
-  add_foreign_key "productions", "users"
   add_foreign_key "products", "users"
 end

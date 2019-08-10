@@ -3,10 +3,11 @@ class UsersController < ApplicationController
   def signup
   end
 
-  def login
+  def registration
+    
   end
 
-  def registration
+  def login
   end
 
   def confirmation
