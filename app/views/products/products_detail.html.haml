@@ -153,108 +153,40 @@
         %a
           = "#{"丸々"}"+"さんのその他の出品"
       %div.products-box-content.clearfix
-        %section.products-box
+      - @test_model.each.with_index do |test,i|
+        %section.products-box{"class":"products-id#{i+1}"}
           %figure.products-box-photo
             = image_tag "sample_item.jpg",width: "220" ,hight: "220"
           %div.products-box-body
             %h3.products-box-name.font-2
-              コーギー　ケルベロス隊
+              = "#{test[:name]}"
             %div.products-box-num
               %div.products-box-price.font-5
-                = "¥ "+"#{"4,800"}"
+                = "¥#{test[:price]}"
               %div.font-2
                 %i.icon-like-border
                   %i.far.fa-heart
                   %span
-                  = "#{"200"}"
-        %section.products-box
-          %figure.products-box-photo
-            = image_tag "sample_item.jpg",width: "220" ,hight: "220"
-          %div.products-box-body
-            %h3.products-box-name.font-2
-              コーギー　ケルベロス隊
-            %div.products-box-num
-              %div.products-box-price.font-5
-                = "¥ "+"#{"4,800"}"
-              %div.font-2
-                %i.icon-like-border
-                  %i.far.fa-heart
-                  %span
-                  = "#{"200"}"
-        %section.products-box
-          %figure.products-box-photo
-            = image_tag "sample_item.jpg",width: "220" ,hight: "220"
-          %div.products-box-body
-            %h3.products-box-name.font-2
-              コーギー　ケルベロス隊
-            %div.products-box-num
-              %div.products-box-price.font-5
-                = "¥ "+"#{"4,800"}"
-              %div.font-2
-                %i.icon-like-border
-                  %i.far.fa-heart
-                  %span
-                  = "#{"200"}"
+                  = "#{test[:like]}"
     %section.products-box-container.clearfix.related-product-column
       %h2.products-box-head
         %a
           = "#{"家畜"}"+"のその他の出品"
       %div.products-box-content.clearfix
-        %section.products-box
+      - @test_model.each.with_index do |test2,i|
+        %section.products-box{"class":"products-id#{i+1}"}
           %figure.products-box-photo
             = image_tag "sample_item.jpg",width: "220" ,hight: "220"
           %div.products-box-body
             %h3.products-box-name.font-2
-              コーギー　ケルベロス隊
+              = "#{test2[:name]}"
             %div.products-box-num
               %div.products-box-price.font-5
-                = "¥ "+"#{"4,800"}"
+                = "¥#{test2[:price]}"
               %div.font-2
                 %i.icon-like-border
                   %i.far.fa-heart
                   %span
-                  = "#{"200"}"
-        %section.products-box
-          %figure.products-box-photo
-            = image_tag "sample_item.jpg",width: "220" ,hight: "220"
-          %div.products-box-body
-            %h3.products-box-name.font-2
-              コーギー　ケルベロス隊
-            %div.products-box-num
-              %div.products-box-price.font-5
-                = "¥ "+"#{"4,800"}"
-              %div.font-2
-                %i.icon-like-border
-                  %i.far.fa-heart
-                  %span
-                  = "#{"200"}"
-        %section.products-box
-          %figure.products-box-photo
-            = image_tag "sample_item.jpg",width: "220" ,hight: "220"
-          %div.products-box-body
-            %h3.products-box-name.font-2
-              コーギー　ケルベロス隊
-            %div.products-box-num
-              %div.products-box-price.font-5
-                = "¥ "+"#{"4,800"}"
-              %div.font-2
-                %i.icon-like-border
-                  %i.far.fa-heart
-                  %span
-                  = "#{"200"}"
-        %section.products-box
-          %figure.products-box-photo
-            = image_tag "sample_item.jpg",width: "220" ,hight: "220"
-          %div.products-box-body
-            %h3.products-box-name.font-2
-              コーギー　ケルベロス隊
-            %div.products-box-num
-              %div.products-box-price.font-5
-                = "¥ "+"#{"4,800"}"
-              %div.font-2
-                %i.icon-like-border
-                  %i.far.fa-heart
-                  %span
-                  = "#{"200"}"
+                  = "#{test2[:like]}"
   = render 'shared/bread-crumbs'
   = render  'shared/footer'

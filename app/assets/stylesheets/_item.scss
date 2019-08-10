@@ -1,5 +1,6 @@
 .product{
   &-main{
+    $white:#fff;
     &-content {
       margin: 16px 0 0;
     }
@@ -147,7 +148,6 @@
         display: inline-block;
         margin: 1px 0 0 8px;
         font-size: 14px;
-        // font-size: 12px;
         vertical-align: middle;
       }
     }
@@ -216,12 +216,12 @@
 }
 
 .products{
-    &-box{
-      position: relative;
-      float: left;
-      width: 48%;
-      margin: 0 0 4% 4%;
-      background: #fff;
+  &-box {
+    background: #fff;
+    float: left;
+    margin: 0 20px 20px 0;
+    position: relative;
+    width: 220px;
       a {
         display: block;
         color: #333;
@@ -262,11 +262,9 @@
           height: 1.5em;
           background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0)), color-stop(72%, #fff));
           background: linear-gradient(to right, rgba(255,255,255,0), #fff 72%);
-      }
-   
+        }
       }
       &-num {
-
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -275,37 +273,28 @@
           font-size: 17px;
           font-weight: 600;
           color: #333;
+        }
       }
     }
-    }
-    &-in-user-profile {
-      width: 700px;
-      margin: 0 auto;
-    }
-  }
-  .products-in-user-profile .products-box-overflow:last-of-type, .products-in-user-profile .related-product-column:last-of-type {
-    margin-bottom: 40px;
-  }
-
-  .related-product-column .products-box:nth-child(4n) {
-    margin-right: 20px;
-  }
-  .related-product-column .products-box:nth-child(3n) {
+  &-id3 {
     margin-right: 0;
   }
-
-  .related-product-column .products-box {
-    width: 220px;
-    margin: 0 20px 20px 0;
-  }
-  
-  .related-product-column .products-box:nth-child(4n) {
-    margin-right: 20px;
-  }
-  .related-product-column .products-box:nth-child(3n) {
+  &-id6 {
     margin-right: 0;
   }
-  
-  ratings:first-child {
-    margin: 0;
+  &-id4 {
+    margin-right: 20;
   }
+  &-in-user-profile {
+    margin: 0 auto;
+    width: 700px;
+
+    .products-box-overflow:last-of-type {
+      margin-bottom: 40px;
+    }
+
+    .related-product-column:last-of-type {
+      margin-bottom: 40px;
+    }
+  }
+}
