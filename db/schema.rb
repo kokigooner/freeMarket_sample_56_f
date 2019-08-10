@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190810033415) do
+ActiveRecord::Schema.define(version: 20190810051916) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "postal_code",  null: false
@@ -45,6 +45,19 @@ ActiveRecord::Schema.define(version: 20190810033415) do
     t.index ["user_id"], name: "index_productions_on_user_id", using: :btree
   end
 
+  create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "user_id"
+    t.string  "product_name",                  null: false
+    t.integer "price",                         null: false
+    t.text    "description",     limit: 65535, null: false
+    t.string  "condition",                     null: false
+    t.string  "delivery_charge",               null: false
+    t.string  "delivery_date",                 null: false
+    t.string  "delivery_way",                  null: false
+    t.string  "order_status"
+    t.index ["user_id"], name: "index_products_on_user_id", using: :btree
+  end
+
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -59,4 +72,5 @@ ActiveRecord::Schema.define(version: 20190810033415) do
 
   add_foreign_key "payments", "users"
   add_foreign_key "productions", "users"
+  add_foreign_key "products", "users"
 end
