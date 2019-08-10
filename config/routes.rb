@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "products#toppage"
   get '/products' => 'products#toppage'
-  get "/products/detail" => "products#products_detail" 
+  get "/products/:id/detail" => "products#products_detail" 
   get "/products/confirm" => "products#confirm"
 
   get '/users/mypage/profile' => 'users#profile'

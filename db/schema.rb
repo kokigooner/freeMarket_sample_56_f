@@ -32,19 +32,6 @@ ActiveRecord::Schema.define(version: 20190810051916) do
     t.index ["user_id"], name: "index_payments_on_user_id", using: :btree
   end
 
-  create_table "productions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "user_id"
-    t.string  "product_name",                  null: false
-    t.integer "price",                         null: false
-    t.text    "description",     limit: 65535, null: false
-    t.string  "condition",                     null: false
-    t.string  "delivery_charge",               null: false
-    t.string  "delivery_date",                 null: false
-    t.string  "delivery_way",                  null: false
-    t.string  "order_status"
-    t.index ["user_id"], name: "index_productions_on_user_id", using: :btree
-  end
-
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "user_id"
     t.string  "product_name",                  null: false
@@ -71,6 +58,5 @@ ActiveRecord::Schema.define(version: 20190810051916) do
   end
 
   add_foreign_key "payments", "users"
-  add_foreign_key "productions", "users"
   add_foreign_key "products", "users"
 end
