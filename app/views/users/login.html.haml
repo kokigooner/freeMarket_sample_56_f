@@ -10,10 +10,8 @@
       %a(href="/" class="login__new-account__btn")
         新規会員登録
     .login__external-account
-      %a(href="/" class="login__external-account__btn login__external-account__btn--facebook")
-        Facebookでログイン
-      %a(href="/" class="login__external-account__btn login__external-account__btn--google")
-        Googleでログイン
+      = link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, class:"login__external-account__btn login__external-account__btn--facebook", method: :post 
+      = link_to 'Googleでログイン',user_google_oauth2_omniauth_authorize_path, class:"login__external-account__btn login__external-account__btn--google", method: :post
     .login__form
       = form_for :user do |f|
         = f.email_field :email, placeholder: "メールアドレス", class: "login__form__input"
