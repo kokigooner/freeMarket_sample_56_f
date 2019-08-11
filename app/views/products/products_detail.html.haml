@@ -10,6 +10,7 @@
               .owl-product.active{"style": "#{'width: 300px'}"} 
                 .owl-product-inner.is-higher-height
                   = image_tag 'macbookpro.jpeg', class: 'owl-lazy',width: "300" ,hight: "300"
+                  
           .owl-dots
             .owl-dot
               .owl-dot-inner
@@ -19,65 +20,69 @@
           %tr
             %th 出品者
             %td
-              = link_to 'JP',"/"
+              = link_to "#{@product.product_name}","/"
               %div
                 .product-user-ratings
                   %i.icon-good
                     %i.far.fa-smile-wink
-                  %span 87
+                  %span ??
                 .product-user-ratings
                   %i.icon-normal
                     %i.far.fa-meh
-                  %span 7
+                  %span ??
                 .product-user-ratings
                   %i.icon-bad
                     %i.far.fa-frown-open 
-                  %span 2
+                  %span 
           %tr
             %th カテゴリー
             %td
               %div
-              = link_to '家電・スマホ・カメラ',"/"
+              = link_to "未実装","/"
               %div
-              = link_to '> PC/タブレット',"/"
+              = link_to "> 未実装","/"
               %div
-              = link_to '> ノートPC',"/"
+              = link_to "> 未実装","/"
           %tr
             %th ブランド
             %td 
-              = link_to 'アップル',"/"
+              = link_to "未実装","/"
           %tr
             %th 商品の状態
-            %td 未使用品に近い
+            %td 
+              = @product.condition
           %tr
             %th 配送料の負担
-            %td 着払い(購入者負担)
+            %td 
+              = @product.delivery_charge
           %tr
             %th 配送の方法
-            %td 未定
+            %td 
+              = @product.delivery_way
           %tr
             %th 配送元地域
             %td 
-              = link_to '鳥取',"/"
+              = link_to "??????","/"
           %tr
             %th 発送日の目安
-            %td 4~7日で発送
+            %td
+              = @product.delivery_date
     %div.product-price-box.text-center
       %span.product-price.bold
-        ¥ 2,500
+        = @product.price
       %span.product-tax
         (税込)
       %span.product-shipping-fee
         送料込み
-    %a.product-buy-btn{"data-client":"#{'hidden'}"}
-      購入画面に進む
-    %a.product-btn-client
-      %div{"data-client": "#{'visible'}"}
-        購入画面に進む
+      =link_to "購入画面に進む",  products_path(@product.id),class:"product-buy-btn"
+    -# %a.product-btn-client
+    -#   %div{"data-client": "#{'visible'}"}
+    -#     購入画面に進む
+    -#     =link_to "購入画面に進む", myprofile_path(@product.id)
       -# %div.product-action-text{"data-toggle": "#{'open-app'}","data-url-scheme": "#{'mercari://'}","data-action": "#{'product/openDetail'}",'data-key': "#{'id=aaaaaaaa'}","data-paly-id": "#{"com.kouzoh.mercari"}","data-adjust-url": "http://app.adjust.io/xio2ii?campaign=iOS&adgroup=items.buy_button1aaaaaa"}
       -#   アプリで購入　　←※スマホ用
     %div.product-description.f14
-      =simple_format("うウェーーーい.ウェイウェイウェイウィ英ウェイウィ\n絵ウィ英ウィ絵ウ\nシヴァ（[ˈʃivə]; サンスクリット: शिव, Śiva、「吉祥者」の意）はヒンドゥー教の神（英語版）である。現代のヒンドゥー教では最も影響力を持つ3柱の主神の中の1人であり、特にシヴァ派では最高神に位置付けられている[1][2]。\nトリムルティ（ヒンドゥーの理論の1つ）ではシヴァは「破壊/再生」を司る様相であり、ブラフマー、ヴィシュヌとともに3柱の重要な神の中の1人として扱われている[3][4]。また、シヴァ派では世界の創造、維持、再生を司る最高神として位置づけられている[5][6][7]。デーヴィ（ヒンドゥーの女神）らを重視するシャクティ派では女神らが最高神として位置づけられている一方で、シヴァもヴィシュヌ、ブラフマーとともに崇拝の対象となっている。このシャクティ派では女神らがシヴァやそれぞれの神の根源であると考えられており、パールヴァティー（女神）がシヴァに対応する相互補完的なパートナーであるとされている[8][9]。スマールタ派のパンチャヤタナ・プージャ（英語版）（儀式）ではシヴァは礼拝の対象となる5柱の中の1人に数えられる[1]", class: 'product-description-inner')
+      =simple_format "#{@product.description}", class:'product-description-inner'
     %div.product-button-container.clearfix
       %div.product-button-left
         %button.product-button.product-button-like{"name": "like!","data-toggle": "like","data-id": "#{"xxxxxxxx"}","data-ga":"#{"element"}","dara-ga-category": "#{'LIKE'}"}
@@ -97,19 +102,15 @@
         %input{"type":"#{"hidden"}","name":"#{"__csrf_value"}","value":"#{""}"}
       %div.product-button-right
         %i.icon-lock
-          %span
-            あんしん・あんぜんへの取り込み
+          あんしん・あんぜんへの取り込み
   %div.product-detail-message
     %div.message-container
       %div.message-content
-        =form_for :user, html: { class: "message-form" } do |f|
-          %input{"type":"#{"hidden"}","name":"#{"__csrf_value"}","value":"#{""}"}
+        = form_for "",html: { class: "message-form" },local: true do |f|
           %p
             相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
-          %input{"type":"#{"hidden"}","name":"#{"product_id"}","value":"#{""}"}
-          %input{"type":"#{"hidden"}","name":"#{"redirect_url_key"}","value":"#{"product_detail"}"}
-          = text_field_tag "body", '', {class: "textarea-default"} 
-          = submit_tag "コメントする", {class: "message-submit btn-default btn-gray"} 
+          = f.text_area :message, class: 'textarea-default'
+          = f.submit "コメントする", {class: "message-submit btn-default btn-gray"} 
     %aside.modal{"data-modal": "delete-comment","data-close": "modal"} 
       %div.modal-inner.modal-banner
         %div.modal-body
@@ -156,7 +157,7 @@
       - @test_model.each.with_index do |test,i|
         %section.products-box{"class":"products-id#{i+1}"}
           %figure.products-box-photo
-            = image_tag "sample_item.jpg",width: "220" ,hight: "220"
+            = image_tag "test.image.to_s",width: "220" ,hight: "220"
           %div.products-box-body
             %h3.products-box-name.font-2
               = "#{test[:name]}"

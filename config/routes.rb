@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "products#toppage"
   get '/products' => 'products#toppage'
-  get "/products/detail" => "products#products_detail" 
+  get "/products/:id/detail" => "products#products_detail" 
   get "/products/confirm" => "products#confirm"
+  get "/products/sell" => "products#sell"
 
   get '/users/mypage/profile' => 'users#profile'
   get '/users/mypage/card' => "users#card"
@@ -17,7 +18,6 @@ Rails.application.routes.draw do
   get "/users/signup/registration" => "users#registration"
   get "/users/signup/confirmation" => "users#confirmation"
   get "/users/signup/authentication" => "users#authentication" 
-  get "/users/sell" => "users#sell"
   get "/users/signup/address" => "users#address" 
   get "/users/signup/payment" => "users#payment" 
   get "/users/signup/complete" => "users#complete"

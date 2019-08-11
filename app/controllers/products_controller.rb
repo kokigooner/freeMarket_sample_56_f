@@ -1,8 +1,14 @@
 class ProductsController < ApplicationController
+
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
+
   def toppage
   end
 
   def products_detail
+    @product   = Product.find(1)
+
+
     hash        = []
     test_model1 = {name:"コーギー1",price:"400",like:"10"}
     test_model2 = {name:"コーギー2",price:"400",like:"20"}
@@ -16,4 +22,14 @@ class ProductsController < ApplicationController
   def confirm
   end
   
+  private
+
+  def task_params
+    params.require(:task).permit(:name,:description, images: [])
+  end
+
+  def set_task
+    @task = current_user.tasks.find(params[:id])
+  end
+
 end

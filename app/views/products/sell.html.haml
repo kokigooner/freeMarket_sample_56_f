@@ -1,3 +1,4 @@
+%link{:href => "sell.js", :rel => "javascripts", :type => "text/js"}/
 .sell-wrapper
   .logo-space
     %a{ href: "" }
@@ -12,9 +13,12 @@
         出品画像
         %span 必須
       %h5 最大10枚までアップロードできます
-      .sell-box
+      -# 以下にドラドロ機能付け加える
+      .sellbox
         %h5 ドラッグアンドドロップ
         %h5 またはクリックしてファイルをアップロード
+        %input#fileInput{:accept => "image/*", :multiple => "multiple", :type => "file"}/
+        #output
       .sell-eroor-message
         %h5 画像がありません
     .sell-item-boxone
@@ -22,16 +26,17 @@
         %h4 
           商品名
           %span 必須
-      .sell-item-write
-        %h5 商品名（必須：最大40文字まで）
+          = form_for "",html:{ class: "sell-item-write"}  do |f|
+            = f.text_field "", class: "sell-item-write",placeholder: '商品名（必須：最大40文字まで)'
+           
       .sell-eroor-message
         %h5 入力してください
       .sell-item--description
         %h4 
           商品の説明
           %span 必須
-      .sell-item--description-write
-        %h5 商品の説明（必須：最大1,000文字まで）
+          = form_for "",html:{ class: "sell-item--description-write"}  do |f|
+            = f.text_area "", class: "sell-item--description-write",placeholder: '商品の説明（必須：最大1,000文字まで）', size: "100x50"
       .sell-eroor-message
         %h5 入力してください
     .sell-item-boxtwo
@@ -85,8 +90,8 @@
             %h4 
               価格
               %span 必須
-          .sell-price-charge-right
-            %span ¥
+              = form_for "",html:{ class: "sell-price-charge-right"}  do |f|
+                = f.text_field "", class: "sell-price-charge-right",placeholder: '¥'
         .sell-eroor-message
           %h5 300以上9999999以下で入力してください
         .sell-price-chargebox
@@ -120,7 +125,6 @@
       %h6 メルカリ利用規約
       %h6 特定商取引に関する表記
     .sell-footer-right-one
-      %img{ src:  "" }/
+      %img{ src:  " " }/
     .sell-last-year
       %h6 © 2019 Mercari
-
