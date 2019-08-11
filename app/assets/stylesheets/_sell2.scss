@@ -11,15 +11,15 @@ $color-red: rgb(230, 33, 33);
 
   .logo-space {
     a {
-    display: block;
+      display: block;
     }
 
     .mercari-icon {
-    width: 10%;
+      width: 10%;
     }
   }
 
-  .sell-item-clearfix {
+    .sell-item-clearfix {
     background-color: $color-white;
     height: 100%;
     margin: auto;
@@ -31,6 +31,7 @@ $color-red: rgb(230, 33, 33);
   height: 80px;
   margin-top: 0;
   padding: 30px 70px;
+
   .sell-banner {
   h4 {
   color: $color-black;
