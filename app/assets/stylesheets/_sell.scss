@@ -1,6 +1,6 @@
 
 .sell-wrapper {
-  background-color: #ccc;
+  background-color: #F5F5F5;
   box-sizing: border-box;
   width: 100%;
 
@@ -17,7 +17,8 @@
     height: 100%;
     margin: auto;
     overflow: hidden;
-    width: calc(100% - 140px);
+    // width: calc(100% - 200px);
+    width: 700px;
 
     .sell-info {
       border-bottom: 1px solid #ccc;
@@ -73,7 +74,7 @@
       // ドラドロ機能付け加える
       .sellbox  {
         overflow: hidden;
-        background-color: #ccc;
+        background-color: #F5F5F5;
         border: dashed 1px;
         color: rgb(197, 197, 197);
         height: 130px;
