@@ -234,8 +234,8 @@ $color-red: rgb(230, 33, 33);
       h5 {
       color: $color-black;
       font-size: 10px;
-      text-align: center;
       padding: 10px 40px;
+      text-align: center;
       }
       }
       .sell-eroor-message {
@@ -248,19 +248,22 @@ $color-red: rgb(230, 33, 33);
       }
       }
   }
+
     .sell-item-boxtwo {
-    height: 300px;
-    margin-top: 0;
-    padding: 10px 30px;
-    border-bottom: 1px solid $color-light-gray;
-    h5 {
+      border-bottom: 1px solid $color-light-gray;
+      height: 300px;
+      margin-top: 0;
+      padding: 10px 30px;
+
+      h5 {
       color: $color-light-gray;
       font-size: 15px;
-      text-align: left;
-      padding: 10px 10px;
       font-weight: bold;
-    }
-    .sell-item-boxindex {
+      padding: 10px;
+      text-align: left;
+      }
+
+      .sell-item-boxindex {
       .sell-itemcat {
       h4 {
       color: $color-black;
@@ -342,19 +345,19 @@ $color-red: rgb(230, 33, 33);
       padding: 0;
       }
       }
-    }
-    .sell-delivery {
-    border-bottom: 1px solid $color-light-gray;
-    height: 570px;
-    margin-top: 0;
-    padding: 10px 30px;
-    h5 {
+      }
+      .sell-delivery {
+      border-bottom: 1px solid $color-light-gray;
+      height: 570px;
+      margin-top: 0;
+      padding: 10px 30px;
+      h5 {
       color: $color-light-gray;
       font-size: 15px;
       text-align: left;
       padding: 40px 0px;
       font-weight: bold;
-    }
+      }
       .sell-delivery-boxindex {
       .sell-delivery-charge {
       h4 {
@@ -515,22 +518,22 @@ $color-red: rgb(230, 33, 33);
       padding: 0;
       }
       }
-    }
-  }
+      }
+      }
 
-  .sell-price {
-    height: 500px;
-    margin-top: 0;
-    padding: 5px 30px;
-    border-bottom: 1px solid $color-light-gray;
-    h5 {
-    color: $color-light-gray;
-    font-size: 14px;
-    text-align: left;
-    padding: 20px 0px;
-    font-weight: bold;
-    }
-    .sell-price-boxindex {
+      .sell-price {
+      height: 500px;
+      margin-top: 0;
+      padding: 5px 30px;
+      border-bottom: 1px solid $color-light-gray;
+      h5 {
+      color: $color-light-gray;
+      font-size: 14px;
+      text-align: left;
+      padding: 20px 0px;
+      font-weight: bold;
+      }
+      .sell-price-boxindex {
       .sell-price-charge-clearfix {
       .sell-price-charge-left {
       height: 50px;
@@ -616,9 +619,9 @@ $color-red: rgb(230, 33, 33);
       border-bottom: 1px solid $color-light-gray;
       }
       }
-    }
+      }
 
-    .sell-tips {
+      .sell-tips {
       height: 100px;
       margin-top: 0;
       padding: 10px 30px;
@@ -630,8 +633,8 @@ $color-red: rgb(230, 33, 33);
         color: rgb(39, 197, 250);
       }
       }
-    }
-    .sell-btn {
+      }
+      .sell-btn {
       height: 40px;
       margin: auto;
       width: calc(100% - 200px);
@@ -643,8 +646,8 @@ $color-red: rgb(230, 33, 33);
       text-align: center;
       padding-top: 10px;
       }
-    }
-    .sell-return-btn {
+      }
+      .sell-return-btn {
       height: 40px;
       width: calc(100% - 280px);
       background-color: grey;
@@ -657,27 +660,27 @@ $color-red: rgb(230, 33, 33);
       text-align: center;
       padding-top: 10px;
       }
-    }
-  }
-  .sell-footer {
-    .sell-rules {
-    margin-top: 35px;
-    h6 {
+      }
+      }
+      .sell-footer {
+      .sell-rules {
+      margin-top: 35px;
+      h6 {
       color: $color-black;
       font-size: 10px;
       text-align: center;
       margin-top: 10px;
-    }
-    }
-    .sell-footer-right-one {
+      }
+      }
+      .sell-footer-right-one {
       text-align: center;
-    }
-    .sell-last-year {
+      }
+      .sell-last-year {
       h6 {
       color: $color-black;
       font-size: 10px;
       text-align: center;
       }
-    }
-  }
+      }
+      s}
 }
