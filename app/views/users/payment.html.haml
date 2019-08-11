@@ -1,7 +1,7 @@
 .registration-container
   %header.registration-header
     %h1
-      %a(href="/" class="registration-header__logo")
+      =link_to(root_path, class: "registration-header__logo") do
         = image_tag 'mercari_logo_horizontal', class: 'registration-header__logo__img'
     %nav.registration-header__progress-bar
       %ol
@@ -60,5 +60,6 @@
           %div.signup-payment__security-code
             %span ?
             カード裏面の番号とは？
-          = f.submit class: "signup__form__btn signup__form__btn--mail registration__form__next-btn", value: "次へ進む"
+          =link_to '次へ進む', users_signup_path, method: :post, class: 'signup__form__btn signup__form__btn--mail registration__form__next-btn", value'
+          -# = f.submit class: "signup__form__btn signup__form__btn--mail registration__form__next-btn", value: "次へ進む"
   = render partial: "users/signup-footer"
