@@ -66,11 +66,10 @@ gem 'fog-aws'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
-gem 'omniauth'
+gem 'omniauth-rails_csrf_protection'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
-gem 'omniauth-rails_csrf_protection'
-gem 'dotenv-rails'
+
 
 group :production do
   gem 'unicorn', '5.4.1'

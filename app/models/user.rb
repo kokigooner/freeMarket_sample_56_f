@@ -18,7 +18,7 @@ class User < ApplicationRecord
       uid: auth.uid,
       provider: auth.provider
       )
-    end
+   end
     sns
     @user
   end
