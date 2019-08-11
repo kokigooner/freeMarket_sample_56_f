@@ -58,7 +58,7 @@ class UsersController < ApplicationController
     session[:building] = address_params[:building]
     session[:phone_number] = address_params[:phone_number]
 
-    @user.address = Address.new(
+    address = Address.new(
       family_name: session[:family_name],
       first_name: session[:first_name],
       family_name_kana: session[:family_name_kana],
@@ -68,10 +68,9 @@ class UsersController < ApplicationController
       minicipality: session[:minicipality],
       address: session[:address],
       building: session[:building],
-      phone_number: session[:phone_number],
-      user_id: @user.id
+      phone_number: session[:phone_number]
     )
-    render :address if @user.address.invalid?
+    render :address if address.invalid?
   end
 
   def create
