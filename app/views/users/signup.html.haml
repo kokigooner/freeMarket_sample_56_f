@@ -6,16 +6,16 @@
         %h2 新規会員登録
       .signup__form
         .signup__form__btns
-          %a{href: "/users/signup/registration", class: "signup__form__btn signup__form__btn--mail"}
+          = link_to( users_signup_registration_path, class: "signup__form__btn signup__form__btn--mail") do
             %i.far.fa-envelope.fa-lg.signup__form__mail
             %span.signup__form__mail--text
-              メールアドレスで登録する
-          %a{href: "/", class: "signup__form__btn signup__form__btn--facebook"}
+            メールアドレスで登録する
+          = link_to user_facebook_omniauth_authorize_path, class: "signup__form__btn signup__form__btn--facebook", method: :post do
             %i.fab.fa-facebook-square.fa-2x.signup__form__facebook
-            %span.signup__form__facebook--text
-              Facebookで登録する
-          %a{href: "/", class: "signup__form__btn signup__form__btn--google"}
+            %span.signup__form__facebook--text 
+            Facebookで登録する   
+          = link_to user_google_oauth2_omniauth_authorize_path, class: "signup__form__btn signup__form__btn--google", method: :post do
             %i.fab.fa-google.signup__form__google.fa-lg
             %span.signup__form__google--text
-              Googleで登録する
+            Googleで登録する
   = render partial: "users/signup-footer"
