@@ -268,10 +268,15 @@
           }
         }
         .sell-itemcatbox {
-          margin-top: 10px;
-          height: 50px;
-          border-radius: 6px;;
-          border: solid 1px rgb(196, 196, 196);
+          select {
+            height: 50px;
+            border-radius: 6px;
+            border: solid 1px rgb(196, 196, 196);
+            margin: 10px 0 0 0px;
+            width: 100%;
+            background-color: #fff;
+            font-weight: normal;
+          }
         }
         .sell-eroor-message {
           h5 {
@@ -306,10 +311,15 @@
         }
       }
         .sell-itemstatebox {
-          margin-top: 10px;
-          height: 50px;
-          border-radius: 6px;;
-          border: solid 1px rgb(196, 196, 196);
+          select {
+            height: 50px;
+            border-radius: 6px;
+            border: solid 1px rgb(196, 196, 196);
+            margin: 10px 0 0 0px;
+            width: 100%;
+            background-color: #fff;
+            font-weight: normal;
+          }
         }
         .sell-eroor-message {
           h5 {
@@ -321,7 +331,7 @@
         }
     }
     .sell-delivery {
-      height: 500px;
+      height: 570px;
       margin-top: 0px;
       padding: 10px 30px;
       border-bottom: 1px solid #ccc;
@@ -352,10 +362,54 @@
           }
         }
         .sell-delivery-chargebox {
-          margin-top: 10px;
-          height: 50px;
-          border-radius: 6px;;
-          border: solid 1px rgb(196, 196, 196);
+          select {
+            height: 50px;
+            border-radius: 6px;
+            border: solid 1px rgb(196, 196, 196);
+            margin: 10px 0 0 0px;
+            width: 100%;
+            background-color: #fff;
+            font-weight: normal;
+          }
+        }
+        .sell-eroor-message {
+          h5 {
+            color: red;
+            font-size: 12px;
+            text-align: left;
+            padding: 0px;
+            font-weight: normal;
+          }
+        }
+        .sell-delivery-method {
+          margin-top: 30px;
+          h4 {
+            color: rgb(27, 20, 20);
+            font-size: 12px;
+            text-align: left;
+            font-weight: bold;
+            span {
+              height: 20px;
+              border-radius: 6px;
+              font-size: 11px;
+              text-align: center;
+              font-weight: bold;
+              padding: 3px;
+              color: #fff;
+              background-color: rgb(230, 33, 33);
+            }
+          }
+        }
+        .sell-delivery-methodbox {
+          select {
+            height: 50px;
+            border-radius: 6px;
+            border: solid 1px rgb(196, 196, 196);
+            margin: 10px 0 0 0px;
+            width: 100%;
+            background-color: #fff;
+            font-weight: normal;
+          }
         }
         .sell-eroor-message {
           h5 {
@@ -367,6 +421,7 @@
           }
         }
         .sell-delivery-region {
+          margin-top: 30px;
           h4 {
             color: rgb(27, 20, 20);
             font-size: 12px;
@@ -386,10 +441,15 @@
           }
         }
         .sell-delivery-regionbox {
-          margin-top: 10px;
-          height: 50px;
-          border-radius: 6px;;
-          border: solid 1px rgb(196, 196, 196);
+          select {
+            height: 50px;
+            border-radius: 6px;
+            border: solid 1px rgb(196, 196, 196);
+            margin: 10px 0 0 0px;
+            width: 100%;
+            background-color: #fff;
+            font-weight: normal;
+          }
         }
         .sell-eroor-message {
           h5 {
@@ -400,6 +460,7 @@
           }
         }
         .sell-delivery-days {
+          margin-top: 30px;
           h4 {
             color: rgb(27, 20, 20);
             font-size: 12px;
@@ -419,10 +480,15 @@
           }
         }
         .sell-delivery-daysbox {
-          margin-top: 10px;
-          height: 50px;
-          border-radius: 6px;;
-          border: solid 1px rgb(196, 196, 196);
+          select {
+            height: 50px;
+            border-radius: 6px;
+            border: solid 1px rgb(196, 196, 196);
+            margin: 10px 0 0 0px;
+            width: 100%;
+            background-color: #fff;
+            font-weight: normal;
+          }
         }
         .sell-eroor-message {
           h5 {
