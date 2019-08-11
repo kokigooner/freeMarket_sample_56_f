@@ -1,6 +1,6 @@
 
 .sell-wrapper {
-  background-color: #F5F5F5;
+  background-color: ＃f5f5f5;
   box-sizing: border-box;
   width: 100%;
 
@@ -74,7 +74,7 @@
       // ドラドロ機能付け加える
       .sellbox  {
         overflow: hidden;
-        background-color: #F5F5F5;
+        background-color: ＃f5f5f5;
         border: dashed 1px;
         color: rgb(197, 197, 197);
         height: 130px;
@@ -140,84 +140,92 @@
       margin-top: 0px;
       padding: 10px 30px;
       border-bottom: 1px solid #ccc;
+
         .sell-item {
           h4 {
             color: rgb(27, 20, 20);
             font-size: 12px;
-            text-align: left;
             font-weight: bold;
             margin: 0 0 0 10px;
+            text-align: left;
+
             span {
-              height: 20px;
-              border-radius: 6px;
-              font-size: 11px;
-              text-align: center;
-              font-weight: bold;
-              padding: 3px;
-              color: #fff;
-              margin: 0 0 0 0;
               background-color: rgb(230, 33, 33);
+              border-radius: 6px;
+              color: #fff;
+              font-size: 11px;
+              font-weight: bold;
+              height: 20px;
+              margin: 0;
+              padding: 3px;
+              text-align: center;
             }
           }
+
           img {
             float: left;
           }
         }
         input.sell-item-write {
           height: 50px;
-          border-radius: 6px;;
+          border-radius: 6px;
           border: solid 1px rgb(196, 196, 196);
           margin: 10px 0 0 10px;
           width: calc(100% - 20px);
           background-color: #fff;
           font-weight: normal;
+
           h5 {
             color: rgb(27, 20, 20);
             font-size: 10px;
-            text-align: center;
-            padding: 10px 40px;
             font-weight: normal;
+            padding: 10px 40px;
+            text-align: center;
           }
         }
         .sell-eroor-message {
           h5 {
-            margin: 2px 0 0 10px;
             color: red;
             font-size: 12px;
+            margin: 2px 0 0 10px;
+            padding: 0;
             text-align: left;
-            padding: 0px;
           }
         }
 
         .sell-item--description {
           margin: 10px;
+
           h4 {
             color: rgb(27, 20, 20);
             font-size: 12px;
-            text-align: left;
             font-weight: bold;
             margin-top: 30px;
+            text-align: left;
+
             span {
-              height: 20px;
+              background-color: rgb(230, 33, 33);
               border-radius: 6px;
+              color: #fff;
               font-size: 11px;
               text-align: center;
               font-weight: bold;
+              height: 20px;
               padding: 3px;
-              color: #fff;
-              background-color: rgb(230, 33, 33);
             }
           }
+
           img {
             float: left;
           }
         }
         .sell-item--description-write {
-          margin-top: 10px;
-          height: 120px;
           border: solid 1px rgb(196, 196, 196);
-          width: calc(100% - 5px);
           font-weight: normal;
+          height: 120px;
+          margin-top: 10px;
+          width: calc(100% - 5px);
+
           h5 {
             color: rgb(27, 20, 20);
             font-size: 10px;
@@ -229,8 +237,8 @@
         h5 {
           color: red;
           font-size: 12px;
-          text-align: left;
           padding: 0px;
+          text-align: left;
           float: left;
         }
       }
@@ -269,13 +277,13 @@
         }
         .sell-itemcatbox {
           select {
-            height: 50px;
-            border-radius: 6px;
+            background-color: #fff;
             border: solid 1px rgb(196, 196, 196);
+            border-radius: 6px;
+            font-weight: normal;
+            height: 50px;
             margin: 10px 0 0 0px;
             width: 100%;
-            background-color: #fff;
-            font-weight: normal;
           }
         }
         .sell-eroor-message {
@@ -283,7 +291,7 @@
             color: red;
             font-size: 12px;
             text-align: left;
-            padding: 0px;
+            padding: 0;
             font-weight: normal;
           }
         }
@@ -312,13 +320,13 @@
       }
         .sell-itemstatebox {
           select {
-            height: 50px;
-            border-radius: 6px;
+            background-color: #fff;
             border: solid 1px rgb(196, 196, 196);
+            border-radius: 6px;
+            font-weight: normal;
+            height: 50px;
             margin: 10px 0 0 0px;
             width: 100%;
-            background-color: #fff;
-            font-weight: normal;
           }
         }
         .sell-eroor-message {
@@ -331,10 +339,10 @@
         }
     }
     .sell-delivery {
-      height: 570px;
-      margin-top: 0px;
-      padding: 10px 30px;
       border-bottom: 1px solid #ccc;
+      height: 570px;
+      margin-top: 0;
+      padding: 10px 30px;
       h5 {
         color: rgb(177, 176, 176);
         font-size: 15px;
@@ -366,23 +374,26 @@
             height: 50px;
             border-radius: 6px;
             border: solid 1px rgb(196, 196, 196);
-            margin: 10px 0 0 0px;
+            margin: 10px 0 0 0;
             width: 100%;
             background-color: #fff;
             font-weight: normal;
           }
         }
+
         .sell-eroor-message {
           h5 {
             color: red;
             font-size: 12px;
             text-align: left;
-            padding: 0px;
+            padding: 0;
             font-weight: normal;
           }
         }
+
         .sell-delivery-method {
           margin-top: 30px;
+
           h4 {
             color: rgb(27, 20, 20);
             font-size: 12px;
