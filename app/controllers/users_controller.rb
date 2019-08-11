@@ -87,7 +87,7 @@ class UsersController < ApplicationController
       birth_month: session[:birth_month],
       birth_day: session[:birth_day]
     )
-    @user.address = Address.new(
+    @address = @user.address.new(
       family_name: session[:family_name],
       first_name: session[:first_name],
       family_name_kana: session[:family_name_kana],
@@ -98,9 +98,8 @@ class UsersController < ApplicationController
       address: session[:address],
       building: session[:building],
       phone_number: session[:phone_number],
-      user_id: @user.id
     )
-    if @user.save && @user.address.save
+    if @user.save && @address.save
       session[:id] = @user.id
       redirect_to users_signup_complete_path
     else

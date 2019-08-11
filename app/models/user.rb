@@ -10,7 +10,9 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true
   VALID_EMAIL_REGIX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
-  validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGIX }
+  validates :email, presence: true
+  validates :email, uniqueness: true
+  validates :email, format: { with: VALID_EMAIL_REGIX }
   validates :password, presence: true
   validates :password, length: { 
     minimum: 7, 
@@ -18,7 +20,7 @@ class User < ApplicationRecord
     message: "パスワードは7文字以上128文字以下で入力してください"
   }
   validates :password, format: {
-     with: /\A(?=.*?[a-zA-Z])(?=.*?\d)\z/, 
+     with: /\A(?=.*?[a-zA-Z])(?=.*?\d)[a-zA-Z\d]{7,128}\z/, 
      message: "英字と数字両方を含むパスワードを設定してください"
   }
   validates :password, confirmation: true
@@ -27,15 +29,15 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :family_name_kana, presence: true, format: { 
     with: /\A[\p{katakana}ー－]+\z/, 
-    message: "姓カナ はカナ文字を入力してください" 
+    message: "姓カナはカナ文字を入力してください" 
   }
   validates :first_name_kana, presence: true, format: { 
     with: /\A[\p{katakana}ー－]+\z/, 
-    message: "名カナ はカナ文字を入力してください" 
+    message: "名カナはカナ文字を入力してください" 
   }
-  validates :birth_year, presence: true, inclusion: { in: 1900..2019 }
-  validates :birth_month, presence: true, inclusion: { in: 1..12 }
-  validates :birth_day, presence: true, inclusion: { in: 1..31 }
+  validates :birth_year, presence: true
+  validates :birth_month, presence: true
+  validates :birth_day, presence: true
 
   def self.find_for_oauth(auth)
     sns = SnsCredential.where(uid: auth.uid, provider: auth.provider).first
