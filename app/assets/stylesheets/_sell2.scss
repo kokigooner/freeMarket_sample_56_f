@@ -3,24 +3,29 @@ $color-white: #fff;
 $color-light-gray: #ccc;
 $color-black: #333;
 $color-red: rgb(230, 33, 33);
+
 .sell-wrapper {
   background-color: $color-bg-gray;
   box-sizing: border-box;
   width: 100%;
+
   .logo-space {
-  a {
-  display: block;
+    a {
+    display: block;
+    }
+
+    .mercari-icon {
+    width: 10%;
+    }
   }
-  .mercari-icon {
-  width: 10%;
-  }
-  }
+
   .sell-item-clearfix {
-  background-color: $color-white;
-  height: 100%;
-  margin: auto;
-  overflow: hidden;
-  width: 700px;
+    background-color: $color-white;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+    width: 700px;
+
   .sell-info {
   border-bottom: 1px solid $color-light-gray;
   height: 80px;
@@ -35,6 +40,7 @@ $color-red: rgb(230, 33, 33);
   }
   }
   }
+
   .sell-photo {
   border-bottom: 1px solid $color-light-gray;
   height: 250px;
@@ -45,38 +51,44 @@ $color-red: rgb(230, 33, 33);
   font-size: 12px;
   font-weight: bold;
   text-align: left;
+
   span {
   background-color: $color-red;
   border-radius: 6px;
   color: $color-white;
   font-size: 11px;
-  text-align: center;
   font-weight: bold;
   height: 20px;
   padding: 3px;
+  text-align: center;
   }
   }
+
   img {
   float: left;
   }
+
   h5 {
   color: $color-black;
   font-size: 10px;
   margin-top: 10px;
   text-align: left;
-  } 
+  }
+
   .sellbox {
   overflow: hidden;
   background-color: ＃f5f5f5;
   border: dashed 1px;
   color: rgb(197, 197, 197);
   height: 130px;
+
   h4 {
   color: $color-black;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
   }
+
   h5 {
   color: $color-black;
   font-size: 10px;
@@ -84,35 +96,41 @@ $color-red: rgb(230, 33, 33);
   text-align: center;
   }
   }
+
   .sellbox.dragover,
   .sellbox:active {
   background-color: #cfc;
   border: dashed 1px;
   color: #9c9;
   height: 130px;
+
   h4 {
   color: $color-black;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
   }
+
   h5 {
   color: $color-black;
   font-size: 10px;
   padding: 10px 40px;
   text-align: center;
   }
+
   .output img {
   display: block;
   margin: 15px auto;
   }
   }
+
   .fileInput {
   background-color: #f0f;
   border: dashed 1px;
   color: $color-light-gray;
   height: 130px;
   }
+
   .sell-eroor-message {
   h5 {
   color: $color-red;
@@ -122,11 +140,13 @@ $color-red: rgb(230, 33, 33);
   }
   }
   }
+
   .sell-item-boxone {
   height: 300px;
   margin-top: 0;
   padding: 10px 30px;
   border-bottom: 1px solid $color-light-gray;
+
   .sell-item {
   h4 {
   color: $color-black;
@@ -146,10 +166,12 @@ $color-red: rgb(230, 33, 33);
   text-align: center;
   }
   }
+
   img {
   float: left;
   }
   }
+
   input.sell-item-write {
   height: 50px;
   border-radius: 6px;
@@ -158,6 +180,7 @@ $color-red: rgb(230, 33, 33);
   width: calc(100% - 20px);
   background-color: $color-white;
   font-weight: normal;
+
   h5 {
   color: $color-black;
   font-size: 10px;
@@ -166,6 +189,7 @@ $color-red: rgb(230, 33, 33);
   text-align: center;
   }
   }
+
   .sell-eroor-message {
   h5 {
   color: $color-red;
@@ -175,8 +199,10 @@ $color-red: rgb(230, 33, 33);
   text-align: left;
   }
   }
+
   .sell-item--description {
   margin: 10px;
+
   h4 {
   color: $color-black;
   font-size: 12px;
@@ -194,16 +220,19 @@ $color-red: rgb(230, 33, 33);
   padding: 3px;
   }
   }
+
   img {
   float: left;
   }
   }
+
   .sell-item--description-write {
   border: solid 1px $color-light-gray;
   font-weight: normal;
   height: 120px;
   margin-top: 10px;
   width: calc(100% - 5px);
+
   h5 {
   color: $color-black;
   font-size: 10px;
@@ -211,6 +240,7 @@ $color-red: rgb(230, 33, 33);
   text-align: center;
   }
   }
+
   .sell-eroor-message {
   h5 {
   color: $color-red;
@@ -221,11 +251,13 @@ $color-red: rgb(230, 33, 33);
   }
   }
   }
+
   .sell-item-boxtwo {
   border-bottom: 1px solid $color-light-gray;
   height: 300px;
   margin-top: 0;
   padding: 10px 30px;
+
   h5 {
   color: $color-light-gray;
   font-size: 15px;
@@ -233,6 +265,7 @@ $color-red: rgb(230, 33, 33);
   padding: 10px;
   text-align: left;
   }
+
   .sell-item-boxindex {
   .sell-itemcat {
   h4 {
@@ -253,6 +286,7 @@ $color-red: rgb(230, 33, 33);
   }
   }
   }
+
   .sell-itemcatbox {
   select {
   background-color: $color-white;
@@ -264,6 +298,7 @@ $color-red: rgb(230, 33, 33);
   width: 100%;
   }
   }
+
   .sell-eroor-message {
   h5 {
   color: $color-red;
@@ -274,6 +309,7 @@ $color-red: rgb(230, 33, 33);
   }
   }
   }
+
   .sell-itemstate {
   margin-top: 40px;
   h4 {
@@ -292,10 +328,12 @@ $color-red: rgb(230, 33, 33);
   background-color: $color-red;
   }
   }
+
   img {
   float: left;
   }
   }
+
   .sell-itemstatebox {
   select {
   background-color: $color-white;
@@ -307,6 +345,7 @@ $color-red: rgb(230, 33, 33);
   width: 100%;
   }
   }
+
   .sell-eroor-message {
   h5 {
   color: $color-red;
@@ -316,6 +355,7 @@ $color-red: rgb(230, 33, 33);
   }
   }
   }
+
   .sell-delivery {
   border-bottom: 1px solid $color-light-gray;
   height: 570px;
@@ -347,6 +387,7 @@ $color-red: rgb(230, 33, 33);
   }
   }
   }
+
   .sell-delivery-chargebox {
   select {
   height: 50px;
@@ -358,6 +399,7 @@ $color-red: rgb(230, 33, 33);
   font-weight: normal;
   }
   }
+
   .sell-eroor-message {
   h5 {
   color: $color-red;
@@ -367,6 +409,7 @@ $color-red: rgb(230, 33, 33);
   text-align: left;
   }
   }
+
   .sell-delivery-method {
   margin-top: 30px;
   h4 {
@@ -386,6 +429,7 @@ $color-red: rgb(230, 33, 33);
   }
   }
   }
+
   .sell-delivery-methodbox {
   select {
   height: 50px;
@@ -397,6 +441,7 @@ $color-red: rgb(230, 33, 33);
   font-weight: normal;
   }
   }
+
   .sell-eroor-message {
   h5 {
   color: $color-red;
@@ -406,6 +451,7 @@ $color-red: rgb(230, 33, 33);
   font-weight: normal;
   }
   }
+
   .sell-delivery-region {
   margin-top: 30px;
   h4 {
@@ -426,6 +472,7 @@ $color-red: rgb(230, 33, 33);
   }
   }
   }
+
   .sell-delivery-regionbox {
   select {
   height: 50px;
@@ -445,6 +492,7 @@ $color-red: rgb(230, 33, 33);
   padding: 0;
   }
   }
+
   .sell-delivery-days {
   margin-top: 30px;
   h4 {
@@ -465,6 +513,7 @@ $color-red: rgb(230, 33, 33);
   }
   }
   }
+
   .sell-delivery-daysbox {
   select {
   height: 50px;
@@ -476,6 +525,7 @@ $color-red: rgb(230, 33, 33);
   font-weight: normal;
   }
   }
+
   .sell-eroor-message {
   h5 {
   color: $color-red;
@@ -486,6 +536,7 @@ $color-red: rgb(230, 33, 33);
   }
   }
   }
+
   .sell-price {
   height: 500px;
   margin-top: 0;
@@ -522,6 +573,7 @@ $color-red: rgb(230, 33, 33);
   }
   }
   }
+
   input.sell-price-charge-right {
   height: 50px;
   float: right;
@@ -541,6 +593,7 @@ $color-red: rgb(230, 33, 33);
   }
   }
   }
+
   .sell-eroor-message {
   h5 {
   color: $color-red;
@@ -584,6 +637,7 @@ $color-red: rgb(230, 33, 33);
   }
   }
   }
+
   .sell-tips {
   height: 100px;
   margin-top: 0;
@@ -597,6 +651,7 @@ $color-red: rgb(230, 33, 33);
   }
   }
   }
+
   .sell-btn {
   height: 40px;
   margin: auto;
@@ -610,6 +665,7 @@ $color-red: rgb(230, 33, 33);
   padding-top: 10px;
   }
   }
+
   .sell-return-btn {
   height: 40px;
   width: calc(100% - 280px);
@@ -625,6 +681,7 @@ $color-red: rgb(230, 33, 33);
   }
   }
   }
+
   .sell-footer {
   .sell-rules {
   margin-top: 35px;
@@ -635,6 +692,7 @@ $color-red: rgb(230, 33, 33);
   margin-top: 10px;
   }
   }
+
   .sell-footer-right-one {
   text-align: center;
   }
