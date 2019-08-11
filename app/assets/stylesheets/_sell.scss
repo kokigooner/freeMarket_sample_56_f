@@ -49,7 +49,7 @@
 
         span {
           background-color: rgb(230, 33, 33);
-          border-radius: 2px;
+          border-radius: 6px;
           color: #fff;
           font-size: 11px;
           text-align: center;
@@ -148,7 +148,7 @@
             margin: 0 0 0 10px;
             span {
               height: 20px;
-              border-radius: 2px;
+              border-radius: 6px;
               font-size: 11px;
               text-align: center;
               font-weight: bold;
@@ -164,10 +164,10 @@
         }
         input.sell-item-write {
           height: 50px;
-          border-radius: 10px;
+          border-radius: 6px;;
           border: solid 1px rgb(196, 196, 196);
           margin: 10px 0 0 10px;
-          width: calc(100% - 80px);
+          width: calc(100% - 20px);
           background-color: #fff;
           font-weight: normal;
           h5 {
@@ -198,7 +198,7 @@
             margin-top: 30px;
             span {
               height: 20px;
-              border-radius: 2px;
+              border-radius: 6px;
               font-size: 11px;
               text-align: center;
               font-weight: bold;
@@ -215,7 +215,7 @@
           margin-top: 10px;
           height: 120px;
           border: solid 1px rgb(196, 196, 196);
-          width: calc(100% - 80px);
+          width: calc(100% - 5px);
           font-weight: normal;
           h5 {
             color: rgb(27, 20, 20);
@@ -256,7 +256,7 @@
             margin-top: 10px;
             span {
               height: 20px;
-              border-radius: 2px;
+              border-radius: 6px;
               font-size: 11px;
               text-align: center;
               font-weight: bold;
@@ -269,7 +269,7 @@
         .sell-itemcatbox {
           margin-top: 10px;
           height: 50px;
-          border-radius: 10px;
+          border-radius: 6px;;
           border: solid 1px rgb(196, 196, 196);
         }
         .sell-eroor-message {
@@ -291,7 +291,7 @@
           font-weight: bold;
           span {
             height: 20px;
-            border-radius: 2px;
+            border-radius: 6px;
             font-size: 11px;
             text-align: center;
             font-weight: bold;
@@ -307,7 +307,7 @@
         .sell-itemstatebox {
           margin-top: 10px;
           height: 50px;
-          border-radius: 10px;
+          border-radius: 6px;;
           border: solid 1px rgb(196, 196, 196);
         }
         .sell-eroor-message {
@@ -340,7 +340,7 @@
             font-weight: bold;
             span {
               height: 20px;
-              border-radius: 2px;
+              border-radius: 6px;
               font-size: 11px;
               text-align: center;
               font-weight: bold;
@@ -353,7 +353,7 @@
         .sell-delivery-chargebox {
           margin-top: 10px;
           height: 50px;
-          border-radius: 10px;
+          border-radius: 6px;;
           border: solid 1px rgb(196, 196, 196);
         }
         .sell-eroor-message {
@@ -374,7 +374,7 @@
             margin-top: 20px;
             span {
               height: 20px;
-              border-radius: 2px;
+              border-radius: 6px;
               font-size: 11px;
               text-align: center;
               font-weight: bold;
@@ -387,7 +387,7 @@
         .sell-delivery-regionbox {
           margin-top: 10px;
           height: 50px;
-          border-radius: 10px;
+          border-radius: 6px;;
           border: solid 1px rgb(196, 196, 196);
         }
         .sell-eroor-message {
@@ -407,7 +407,7 @@
             margin-top: 20px;
             span {
               height: 20px;
-              border-radius: 2px;
+              border-radius: 6px;
               font-size: 11px;
               text-align: center;
               font-weight: bold;
@@ -420,7 +420,7 @@
         .sell-delivery-daysbox {
           margin-top: 10px;
           height: 50px;
-          border-radius: 10px;
+          border-radius: 6px;;
           border: solid 1px rgb(196, 196, 196);
         }
         .sell-eroor-message {
@@ -452,7 +452,7 @@
             height: 50px;
             float: left;
             margin-top: 0px;
-            width: 90%;
+            width: 100%;
             h4 {
               color: rgb(27, 20, 20);
               font-size: 12px;
@@ -460,7 +460,7 @@
               font-weight: bold;
               span {
                 height: 20px;
-                border-radius: 2px;
+                border-radius: 6px;
                 font-size: 11px;
                 text-align: center;
                 font-weight: bold;
@@ -475,7 +475,8 @@
             float: right;
             margin: left;
             width: 40%;
-            border-radius: 10px;
+            border-radius: 6px;
+            background-color: #fff;
             border: solid 1px rgb(196, 196, 196);
             font-weight: normal;
               span {

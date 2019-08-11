@@ -88,8 +88,7 @@
               %h4 
                 価格
                 %span 必須
-                = form_for "",html:{ class: "sell-price-charge-right"}  do |f|
-                  = f.text_field "", class: "sell-price-charge-right",placeholder: '¥'
+              = f.text_field "", class: "sell-price-charge-right",placeholder: '¥'
           .sell-eroor-message
             %h5 300以上9999999以下で入力してください
           .sell-price-chargebox
