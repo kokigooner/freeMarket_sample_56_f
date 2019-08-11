@@ -4,7 +4,7 @@
     .logo-space
       = link_to 
       .mercari--icon
-      %img{ src:  "" }/
+      = image_tag '', class: ''
     .sell-item-clearfix
       .sell-info
         .sell-banner
@@ -14,11 +14,10 @@
           出品画像
           %span 必須
         %h5 最大10枚までアップロードできます
-        -# 以下にドラドロ機能付け加える
         .sellbox
           %h5 ドラッグアンドドロップ
           %h5 またはクリックしてファイルをアップロード
-          %input#fileInput{:accept => "image/*", :multiple => "multiple", :type => "file"}/
+          %input#fileInput{accept:  "image/*", multiple: "multiple", type: "file"}/
           #output
         .sell-eroor-message
           %h5 画像がありません
@@ -56,7 +55,7 @@
             %h5 選択してください
       .sell-delivery
         %h5 配送について
-        %img{ src:  "" }/
+        = image_tag '', class: ''
         .sell-delivery-boxindex
           .sell-delivery-charge
             %h4 
@@ -81,7 +80,7 @@
             %h5 選択してください
       .sell-price
         %h5 販売価格(300〜9,999,999)
-        %img{ src:  "" }/
+        = image_tag '', class: ''
         .sell-price-boxindex
           .sell-price-charge-clearfix
             .sell-price-charge-left
