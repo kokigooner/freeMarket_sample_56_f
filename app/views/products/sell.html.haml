@@ -2,7 +2,7 @@
 .sell-wrapper
   = form_for "",html:{ class: "sell"}  do |f|
     .logo-space
-      %a{ href: "" }
+      = link_to 
       .mercari--icon
       %img{ src:  "" }/
     .sell-item-clearfix
@@ -122,6 +122,6 @@
         %h6 メルカリ利用規約
         %h6 特定商取引に関する表記
       .sell-footer-right-one
-        %img{ src:  " " }/
+        = image_tag '', class: ''
       .sell-last-year
         %h6 © 2019 Mercari
