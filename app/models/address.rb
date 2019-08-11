@@ -5,11 +5,11 @@ class Address < ApplicationRecord
   validates :first_name, presence: true
   validates :family_name_kana, presence: true, format: {
     with: /\A[\p{katakana}ー－]+\z/,
-    message: "姓カナ はカナ文字を入力してください" 
+    message: "姓カナはカナ文字を入力してください" 
   }
   validates :first_name_kana, presence: true, format: {
     with: /\A[\p{katakana}ー－]+\z/,
-    message: "名カナ はカナ文字を入力してください"
+    message: "名カナはカナ文字を入力してください"
   }
   validates :postal_code, presence: true, format: {
     with: /\A\d{3}-\d{4}\z/,
