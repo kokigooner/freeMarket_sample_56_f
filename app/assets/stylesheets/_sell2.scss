@@ -46,95 +46,15 @@ $color-red: rgb(230, 33, 33);
       @import "./sellbox-2";
     }
 
-    .sell-item-boxtwo {
-      border-bottom: 1px solid $color-light-gray;
-      height: 300px;
-      margin-top: 0;
-      padding: 10px 30px;
+    @import "./sellitembox-2";
 
-      h5 {
-        color: $color-light-gray;
-        font-size: 15px;
-        font-weight: bold;
-        padding: 10px;
-        text-align: left;
-      }
+    @import "./selldelivery";
 
-      @import "./sellbox-3";
-    }
+    @import "./sellprice";
 
-    .sell-delivery {
-      border-bottom: 1px solid $color-light-gray;
-      height: 570px;
-      margin-top: 0;
-      padding: 10px 30px;
-      h5 {
-        color: $color-light-gray;
-        font-size: 15px;
-        text-align: left;
-        padding: 40px 0px;
-        font-weight: bold;
-      }
-      @import "./sellbox-4";
-    }
+    @import "./selltips";
 
-    .sell-price {
-      height: 500px;
-      margin-top: 0;
-      padding: 5px 30px;
-      border-bottom: 1px solid $color-light-gray;
-      h5 {
-        color: $color-light-gray;
-        font-size: 14px;
-        text-align: left;
-        padding: 20px 0px;
-        font-weight: bold;
-      }
-      @import "./sellbox-5";
-    }
-
-    .sell-tips {
-      height: 100px;
-      margin-top: 0;
-      padding: 10px 30px;
-      h5 {
-        color: $color-black;
-        font-size: 13px;
-        text-align: left;
-        span {
-          color: rgb(39, 197, 250);
-        }
-      }
-    }
-
-    .sell-btn {
-      height: 40px;
-      margin: auto;
-      width: calc(100% - 200px);
-      margin-top: 30px;
-      background-color: rgb(245, 53, 53);
-      h5 {
-        color: $color-white;
-        font-size: 15px;
-        text-align: center;
-        padding-top: 10px;
-      }
-    }
-
-    .sell-return-btn {
-      height: 40px;
-      width: calc(100% - 280px);
-      background-color: grey;
-      margin: auto;
-      margin-top: 10px;
-      margin-bottom: 40px;
-      h5 {
-        color: $color-white;
-        font-size: 15px;
-        text-align: center;
-        padding-top: 10px;
-      }
-    }
+    @import "./sellbtn";
   }
 
   .sell-footer {

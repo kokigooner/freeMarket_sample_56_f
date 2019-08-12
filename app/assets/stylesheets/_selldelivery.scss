@@ -1,0 +1,14 @@
+.sell-delivery {
+  border-bottom: 1px solid $color-light-gray;
+  height: 570px;
+  margin-top: 0;
+  padding: 10px 30px;
+  h5 {
+    color: $color-light-gray;
+    font-size: 15px;
+    text-align: left;
+    padding: 40px 0px;
+    font-weight: bold;
+  }
+  @import "./sellbox-4";
+}
