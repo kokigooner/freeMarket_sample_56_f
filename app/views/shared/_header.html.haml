@@ -63,113 +63,124 @@
               -#         シュプリーム
 
       %div.large-right
-        %ul.mpcheader-user-nav
-          %li.liked-items-link
-            %a.mpcheader-menu-link{"data-id": "#{"mpcheader-user-nav"}"}
-              .mpcheader-menu-icon
-                %i.far.fa-heart
-              %span
-                良いね！一覧
-              %ul.mpcheader-user-box.mpcheader-notification-box.mypage-item-list
-          %li
-            %a.mpcheader-menu-link
-              .mpcheader-menu-icon
-                %i.far.fa-bell
-              %span
-                お知らせ
-              %ul.mpcheader-user-box.mpcheader-notification-box.mypage-item-list
-          %li
-            %a.mpcheader-menu-link
-              .mpcheader-menu-icon
-                %i.fas.fa-check
-              %span
-                やることリスト
-              %ul.mpcheader-user-box.mpcheader-notification-box.mypage-item-list
-          %li
-            %a(href="/users/mypage" class="mpcheader-menu-link")
-              %div
-                = image_tag "member.png", class: "mpcheader-menu-mypage-img"
-              %span
-                マイページ
-            -# %div.mpcheader-user-box.mpcheader-mypage-box
-              %div.mpcheader-mypage-state.text-center
-                %figure
-                  %div
-                    = image_tag "member.png"
-                  %figcaption
-                    =  @test_model[:name]
-                %ul.mpcheader-mypage-review-listing
+        - if user_signed_in?
+          %ul.mpcheader-user-nav
+            %li.liked-items-link
+              %a.mpcheader-menu-link{"data-id": "#{"mpcheader-user-nav"}"}
+                .mpcheader-menu-icon
+                  %i.far.fa-heart
+                %span
+                  良いね！一覧
+                %ul.mpcheader-user-box.mpcheader-notification-box.mypage-item-list
+            %li
+              %a.mpcheader-menu-link
+                .mpcheader-menu-icon
+                  %i.far.fa-bell
+                %span
+                  お知らせ
+                %ul.mpcheader-user-box.mpcheader-notification-box.mypage-item-list
+            %li
+              %a.mpcheader-menu-link
+                .mpcheader-menu-icon
+                  %i.fas.fa-check
+                %span
+                  やることリスト
+                %ul.mpcheader-user-box.mpcheader-notification-box.mypage-item-list
+            %li
+              = link_to "/users/mypage/#{current_user.id}",class:"mpcheader-menu-link" do
+                %div
+                  = image_tag "member.png", class: "mpcheader-menu-mypage-img"
+                %span
+                  マイページ
+              -# %div.mpcheader-user-box.mpcheader-mypage-box
+                %div.mpcheader-mypage-state.text-center
+                  %figure
+                    %div
+                      = image_tag "member.png"
+                    %figcaption
+                      =  @test_model[:name]
+                  %ul.mpcheader-mypage-review-listing
+                    %li
+                      %a.mpcheader-link
+                        = "評価:"+"#{0}"
+                    %li
+                      %a.mpcheader-link
+                        = "出品集:"+"#{0}"
+                  %ul.mpcheader-mypage-sales-point
+                    %li
+                      %a.mpcheader-link.clearfix
+                        %div.large-left
+                          売上金
+                        %div.right
+                        =  "¥ "+"#{0}"
+                        %i.icon-arrow-right
+                          >
+                    %li
+                      %a.mpcheader-link.clearfix
+                        %div.large-left
+                          ポイント
+                        %div.right
+                        ="P "+ "#{0}"
+                        %i.icon-arrow-right
+                          >
+                %ul.mypage-nav-list
                   %li
-                    %a.mpcheader-link
-                      = "評価:"+"#{0}"
-                  %li
-                    %a.mpcheader-link
-                      = "出品集:"+"#{0}"
-                %ul.mpcheader-mypage-sales-point
-                  %li
-                    %a.mpcheader-link.clearfix
-                      %div.large-left
-                        売上金
-                      %div.right
-                      =  "¥ "+"#{0}"
+                    %a.mypage-nav-list-item
+                      マイページ
                       %i.icon-arrow-right
                         >
                   %li
-                    %a.mpcheader-link.clearfix
-                      %div.large-left
-                        ポイント
-                      %div.right
-                      ="P "+ "#{0}"
+                    %a.mypage-nav-list-item
+                      お知らせ
                       %i.icon-arrow-right
                         >
-              %ul.mypage-nav-list
-                %li
-                  %a.mypage-nav-list-item
-                    マイページ
-                    %i.icon-arrow-right
-                      >
-                %li
-                  %a.mypage-nav-list-item
-                    お知らせ
-                    %i.icon-arrow-right
-                      >
-                %li
-                  %a.mypage-nav-list-item
-                    やることリスト
-                    %i.icon-arrow-right
-                      >
-                %li
-                  %a.mypage-nav-list-item
-                    いいね一覧
-                    %i.icon-arrow-right
-                      >
-                %li
-                  %a.mypage-nav-list-item
-                    出品する
-                    %i.icon-arrow-right
-                      >
-                %li
-                  %a.mypage-nav-list-item
-                    出品した商品・出品中
-                    %i.icon-arrow-right
-                      >
-                %li
-                  %a.mypage-nav-list-item
-                    出品した商品・取引中
-                    %i.icon-arrow-right
-                      >
-                %li
-                  %a.mypage-nav-list-item
-                    出品した商品・売却済み
-                    %i.icon-arrow-right
-                      >
-                %li
-                  %a.mypage-nav-list-item
-                    購入した商品・取引中
-                    %i.icon-arrow-right
-                      >
-                %li
-                  %a.mypage-nav-list-item
-                    購入した商品・過去の取引
-                    %i.icon-arrow-right
-                      >
+                  %li
+                    %a.mypage-nav-list-item
+                      やることリスト
+                      %i.icon-arrow-right
+                        >
+                  %li
+                    %a.mypage-nav-list-item
+                      いいね一覧
+                      %i.icon-arrow-right
+                        >
+                  %li
+                    %a.mypage-nav-list-item
+                      出品する
+                      %i.icon-arrow-right
+                        >
+                  %li
+                    %a.mypage-nav-list-item
+                      出品した商品・出品中
+                      %i.icon-arrow-right
+                        >
+                  %li
+                    %a.mypage-nav-list-item
+                      出品した商品・取引中
+                      %i.icon-arrow-right
+                        >
+                  %li
+                    %a.mypage-nav-list-item
+                      出品した商品・売却済み
+                      %i.icon-arrow-right
+                        >
+                  %li
+                    %a.mypage-nav-list-item
+                      購入した商品・取引中
+                      %i.icon-arrow-right
+                        >
+                  %li
+                    %a.mypage-nav-list-item
+                      購入した商品・過去の取引
+                      %i.icon-arrow-right
+                        >
+        - else
+          %ul.mpcheader-user-nav
+            %li.liked-items-link
+              %a.mpcheader-menu-link{"data-id": "#{"mpcheader-user-nav"}"}
+                .mpcheader-menu-icon
+                  = link_to "新規登録",new_user_registration_path 
+            %li
+              %a.mpcheader-menu-link
+                .mpcheader-menu-icon
+                  = link_to "ログイン画面",  new_user_session_path 

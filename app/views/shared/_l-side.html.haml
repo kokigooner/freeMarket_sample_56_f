@@ -2,7 +2,7 @@
   %nav.mypage-nav
     %ul.mypage-nav-list
       %li
-        %a(href="/users/mypage" class="mypage-nav-list-item")
+        = link_to "/users/mypage/#{current_user.id}",class:"mypage-nav-list-item" do
           マイページ
           %i.icon-arrow-right
             >
@@ -88,7 +88,7 @@
       設定
     %ul.mypage-nav-list
       %li
-        %a(href="/users/mypage/profile" class="mypage-nav-list-item")
+        = link_to "/users/mypage/profile",class:"mypage-nav-list-item" do
           プロフィール
           %i.icon-arrow-right
             >
@@ -98,7 +98,7 @@
           %i.icon-arrow-right
             >
       %li
-        %a(href="/users/mypage/card" class="mypage-nav-list-item")
+        = link_to "/users/mypage/card",class:"mypage-nav-list-item" do
           お支払い方法
           %i.icon-arrow-right
             >
@@ -108,7 +108,7 @@
           %i.icon-arrow-right
             >
       %li
-        %a(href="/mypage/identification" class="mypage-nav-list-item")
+        = link_to "/mypage/identification",class:"mypage-nav-list-item" do
           本人情報
           %i.icon-arrow-right
             >
