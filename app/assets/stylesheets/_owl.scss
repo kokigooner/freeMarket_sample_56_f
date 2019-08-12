@@ -1,4 +1,5 @@
 .owl{
+  $white: #fafafa;
 
   &-carousel {
     float: left;
@@ -46,7 +47,7 @@
     position: relative;
   }
   &-dots {
-    background: #fafafa;
+    background: $white;
     font-size: 0;
     line-height: 0;
     .active {
@@ -68,8 +69,8 @@
       height: auto;
       margin-bottom: auto;
       margin-top: auto;
-      overflow:hidden;
-      position:relative;
+      overflow: hidden;
+      position: relative;
       width: auto;
     }
   }
