@@ -219,22 +219,21 @@
     display: inline-block;
   }
 
-  ul {
-    overflow: visible;
+  .breadcrumbs {
+
     width: 1020px;
     margin: 0 auto;
     padding: 16px 0;
     white-space: normal;
-      li {
-    display: inline-block;
     font-size: 14px;
     line-height: 1.2;
-      a:last-child{
+      
+
+      span:last-child{
         font-weight: bold;
       }
       a{
         color: black;
       }
-  }
   }
 }

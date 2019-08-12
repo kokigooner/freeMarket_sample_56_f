@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+  before_action :set_user, only: [:mypage, :edit, :update, :destroy]
   def signup
   end
 
@@ -24,13 +24,14 @@ class UsersController < ApplicationController
   def complete
   end
 
-  def profile    
+  def profile
   end
 
   def sell
   end
 
   def mypage
+
   end
 
   def card
@@ -45,5 +46,11 @@ class UsersController < ApplicationController
 
   def logout
   end
+
+  def set_user
+    @user = User.find(params[:id])
+  end
+
+
 
 end
