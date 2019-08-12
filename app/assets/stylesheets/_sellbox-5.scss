@@ -1,0 +1,87 @@
+.sell-price-boxindex {
+  .sell-price-charge-clearfix {
+    .sell-price-charge-left {
+      height: 50px;
+      float: left;
+      margin-top: 0;
+      width: 100%;
+      h4 {
+        color: $color-black;
+        font-size: 12px;
+        text-align: left;
+        font-weight: bold;
+        span {
+          height: 20px;
+          border-radius: 6px;
+          font-size: 11px;
+          text-align: center;
+          font-weight: bold;
+          padding: 3px;
+          color: $color-white;
+          background-color: $color-red;
+        }
+      }
+    }
+
+    input.sell-price-charge-right {
+      height: 50px;
+      float: right;
+      margin: left;
+      width: 40%;
+      border-radius: 6px;
+      background-color: $color-white;
+      border: solid 1px $color-light-gray;
+      font-weight: normal;
+      span {
+        color: $color-black;
+        font-size: 15px;
+        text-align: left;
+        padding: 10px 10px 0 10px;
+        display: inline-block;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .sell-eroor-message {
+    h5 {
+      color: $color-red;
+      float: left;
+      font-size: 12px;
+      text-align: left;
+      padding: 0;
+      font-weight: normal;
+    }
+  }
+  .sell-price-chargebox {
+    height: 100px;
+    margin-top: 0;
+    border-bottom: 1px solid $color-light-gray;
+  }
+}
+.sell-price-fee {
+  h5 {
+    color: black;
+    font-size: 15px;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: normal;
+  }
+  .sell-price-feebox {
+    height: 60px;
+    border-bottom: 1px solid $color-light-gray;
+  }
+}
+.sell-sales-profit {
+  h4 {
+    color: $color-black;
+    font-size: 15px;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .sell-sales-profitbox {
+    height: 60px;
+    border-bottom: 1px solid $color-light-gray;
+  }
+}

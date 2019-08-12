@@ -1,0 +1,167 @@
+.sell-delivery-boxindex {
+  .sell-delivery-charge {
+    h4 {
+      color: $color-black;
+      font-size: 12px;
+      text-align: left;
+      font-weight: bold;
+      span {
+        height: 20px;
+        border-radius: 6px;
+        font-size: 11px;
+        text-align: center;
+        font-weight: bold;
+        padding: 3px;
+        color: $color-white;
+        background-color: $color-red;
+      }
+    }
+  }
+
+  .sell-delivery-chargebox {
+    select {
+      height: 50px;
+      border-radius: 6px;
+      border: solid 1px $color-light-gray;
+      margin: 10px 0 0;
+      width: 100%;
+      background-color: $color-white;
+      font-weight: normal;
+    }
+  }
+
+  .sell-eroor-message {
+    h5 {
+      color: $color-red;
+      font-size: 12px;
+      font-weight: normal;
+      padding: 0;
+      text-align: left;
+    }
+  }
+
+  .sell-delivery-method {
+    margin-top: 30px;
+    h4 {
+      color: $color-black;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: left;
+      span {
+        height: 20px;
+        border-radius: 6px;
+        font-size: 11px;
+        text-align: center;
+        font-weight: bold;
+        padding: 3px;
+        color: $color-white;
+        background-color: $color-red;
+      }
+    }
+  }
+
+  .sell-delivery-methodbox {
+    select {
+      height: 50px;
+      border-radius: 6px;
+      border: solid 1px $color-light-gray;
+      margin: 10px 0 0;
+      width: 100%;
+      background-color: $color-white;
+      font-weight: normal;
+    }
+  }
+
+  .sell-eroor-message {
+    h5 {
+      color: $color-red;
+      font-size: 12px;
+      text-align: left;
+      padding: 0;
+      font-weight: normal;
+    }
+  }
+
+  .sell-delivery-region {
+    margin-top: 30px;
+    h4 {
+      color: $color-black;
+      font-size: 12px;
+      text-align: left;
+      font-weight: bold;
+      margin-top: 20px;
+      span {
+        height: 20px;
+        border-radius: 6px;
+        font-size: 11px;
+        text-align: center;
+        font-weight: bold;
+        padding: 3px;
+        color: $color-white;
+        background-color: $color-red;
+      }
+    }
+  }
+
+  .sell-delivery-regionbox {
+    select {
+      height: 50px;
+      border-radius: 6px;
+      border: solid 1px $color-light-gray;
+      margin: 10px 0 0 0px;
+      width: 100%;
+      background-color: $color-white;
+      font-weight: normal;
+    }
+  }
+  .sell-eroor-message {
+    h5 {
+      color: $color-red;
+      font-size: 12px;
+      text-align: left;
+      padding: 0;
+    }
+  }
+
+  .sell-delivery-days {
+    margin-top: 30px;
+    h4 {
+      color: $color-black;
+      font-size: 12px;
+      text-align: left;
+      font-weight: bold;
+      margin-top: 20px;
+      span {
+        height: 20px;
+        border-radius: 6px;
+        font-size: 11px;
+        text-align: center;
+        font-weight: bold;
+        padding: 3px;
+        color: $color-white;
+        background-color: $color-red;
+      }
+    }
+  }
+
+  .sell-delivery-daysbox {
+    select {
+      height: 50px;
+      border-radius: 6px;
+      border: solid 1px $color-light-gray;
+      margin: 10px 0 0 0px;
+      width: 100%;
+      background-color: $color-white;
+      font-weight: normal;
+    }
+  }
+
+  .sell-eroor-message {
+    h5 {
+      color: $color-red;
+      font-size: 12px;
+      text-align: left;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.sellbox {
+  overflow: hidden;
+  background-color: ＃f5f5f5;
+  border: dashed 1px;
+  color: rgb(197, 197, 197);
+  height: 130px;
+
+  h4 {
+    color: $color-black;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  h5 {
+    color: $color-black;
+    font-size: 10px;
+    padding: 10px 40px;
+    text-align: center;
+  }
+}
+
+.sellbox.dragover,
+.sellbox:active {
+  background-color: #cfc;
+  border: dashed 1px;
+  color: #9c9;
+  height: 130px;
+
+  h4 {
+    color: $color-black;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  h5 {
+    color: $color-black;
+    font-size: 10px;
+    padding: 10px 40px;
+    text-align: center;
+  }
+
+  .output img {
+    display: block;
+    margin: 15px auto;
+  }
+}
+
+.fileInput {
+  background-color: #f0f;
+  border: dashed 1px;
+  color: $color-light-gray;
+  height: 130px;
+}
+
+.sell-eroor-message {
+  h5 {
+    color: $color-red;
+    font-size: 12px;
+    text-align: left;
+    padding: 0;
+  }
+}
