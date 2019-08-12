@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190810104547) do
+ActiveRecord::Schema.define(version: 20190810051916) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "postal_code",  null: false
@@ -20,9 +20,7 @@ ActiveRecord::Schema.define(version: 20190810104547) do
   end
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text    "image",      limit: 65535, null: false
-    t.integer "product_id"
-    t.index ["product_id"], name: "index_images_on_product_id", using: :btree
+    t.text "image", limit: 65535, null: false
   end
 
   create_table "payments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -68,7 +66,6 @@ ActiveRecord::Schema.define(version: 20190810104547) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "images", "products"
   add_foreign_key "payments", "users"
   add_foreign_key "products", "users"
   add_foreign_key "sns_credentials", "users"
