@@ -1,28 +1,30 @@
 .sell-btn {
+  background-color: $color-red;
   height: 40px;
   margin: auto;
-  width: calc(100% - 200px);
   margin-top: 30px;
-  background-color: rgb(245, 53, 53);
+  width: calc(100% - 200px);
+
   h5 {
     color: $color-white;
     font-size: 15px;
-    text-align: center;
     padding-top: 10px;
+    text-align: center;
   }
 }
 
 .sell-return-btn {
+  background-color: $color-light-gray;
   height: 40px;
-  width: calc(100% - 280px);
-  background-color: grey;
   margin: auto;
-  margin-top: 10px;
   margin-bottom: 40px;
+  margin-top: 10px;
+  width: calc(100% - 280px);
+
   h5 {
     color: $color-white;
     font-size: 15px;
-    text-align: center;
     padding-top: 10px;
+    text-align: center;
   }
 }
