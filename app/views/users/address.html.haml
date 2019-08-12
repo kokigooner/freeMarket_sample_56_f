@@ -46,7 +46,7 @@
           .registration__form__group
             = f.label :postal_code, "郵便番号"
             %span.registration__form--require 必須
-            = f.text_field :postal_code, class: "registration__form__input", placeholder: "例) 123-4567", maxlength: "8", pattern: "\d{3}-\d{4}"
+            = f.text_field :postal_code, class: "registration__form__input", placeholder: "例) 123-4567", maxlength: "8"
           .registration__form__group
             = f.label :prefecture, "都道府県"
             %span.registration__form--require 必須

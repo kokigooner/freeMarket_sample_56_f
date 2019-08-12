@@ -34,8 +34,9 @@
       =form_for :user, html: { class: "registration__form" } do |f|
         .registration__form__content
           .registration__form__group
-            = f.label :phone_number, "携帯電話の番号"
-            = f.phone_field :phone_number, class: "registration__form__input", placeholder: "携帯電話の番号を入力"
+            = f.label "携帯電話の番号"
+            %input(type="tel" class="registration__form__input" placeholder="携帯電話の番号を入力")
+            -# = f.phone_field :phone_number, class: "registration__form__input", placeholder: "携帯電話の番号を入力"
           %p.registration__form__text
             本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
           =link_to('SMSを送信する', users_signup_authentication_path, class: "signup__form__btn signup__form__btn--mail registration__form__next-btn")
