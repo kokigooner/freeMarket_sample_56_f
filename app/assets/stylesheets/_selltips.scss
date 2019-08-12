@@ -2,12 +2,14 @@
   height: 100px;
   margin-top: 0;
   padding: 10px 30px;
+
   h5 {
     color: $color-black;
     font-size: 13px;
     text-align: left;
+
     span {
-      color: rgb(39, 197, 250);
+      color: $color-light-blue;
     }
   }
 }
