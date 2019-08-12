@@ -3,18 +3,19 @@
     h4 {
       color: $color-black;
       font-size: 12px;
-      text-align: left;
       font-weight: bold;
       margin-top: 10px;
+      text-align: left;
+
       span {
-        height: 20px;
-        border-radius: 6px;
-        font-size: 11px;
-        text-align: center;
-        font-weight: bold;
-        padding: 3px;
-        color: $color-white;
         background-color: $color-red;
+        border-radius: 6px;
+        color: $color-white;
+        font-size: 11px;
+        font-weight: bold;
+        height: 20px;
+        padding: 3px;
+        text-align: center;
       }
     }
   }
@@ -26,7 +27,7 @@
       border-radius: 6px;
       font-weight: normal;
       height: 50px;
-      margin: 10px 0 0 0px;
+      margin: 10px 0 0 0;
       width: 100%;
     }
   }
@@ -35,29 +36,31 @@
     h5 {
       color: $color-red;
       font-size: 12px;
-      text-align: left;
-      padding: 0;
       font-weight: normal;
+      padding: 0;
+      text-align: left;
     }
   }
 }
 
 .sell-itemstate {
   margin-top: 40px;
+
   h4 {
     color: $color-black;
     font-size: 12px;
-    text-align: left;
     font-weight: bold;
+    text-align: left;
+
     span {
-      height: 20px;
-      border-radius: 6px;
-      font-size: 11px;
-      text-align: center;
-      font-weight: bold;
-      padding: 3px;
-      color: $color-white;
       background-color: $color-red;
+      border-radius: 6px;
+      color: $color-white;
+      font-size: 11px;
+      font-weight: bold;
+      height: 20px;
+      padding: 3px;
+      text-align: center;
     }
   }
 
@@ -73,7 +76,7 @@
     border-radius: 6px;
     font-weight: normal;
     height: 50px;
-    margin: 10px 0 0 0px;
+    margin: 10px 0 0 0;
     width: 100%;
   }
 }
@@ -82,7 +85,7 @@
   h5 {
     color: $color-red;
     font-size: 12px;
-    text-align: left;
     padding: 0;
+    text-align: left;
   }
 }
