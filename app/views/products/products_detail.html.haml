@@ -9,12 +9,12 @@
             .owl-stage{"style": "#{'left: 0px width: 900px'}"}  
               .owl-product.active{"style": "#{'width: 300px'}"} 
                 .owl-product-inner.is-higher-height
-                  = image_tag 'macbookpro.jpeg', class: 'owl-lazy',width: "300" ,hight: "300"
-                  
+                  = image_tag "#{@product.images.find(1)[:image]}", class: 'owl-lazy',width: "300" ,hight: "300"
           .owl-dots
-            .owl-dot
-              .owl-dot-inner
-                = image_tag 'macbookpro.jpeg', class: 'owl-lazy',width: "60" ,hight: "60"
+            - @product.images.each do |thumbnail|
+              .owl-dot
+                .owl-dot-inner
+                  = image_tag "#{thumbnail.image}", class: 'owl-lazy',width: "60" ,hight: "60"
       %table.product-detail-table
         %tbody
           %tr
@@ -33,7 +33,7 @@
                 .product-user-ratings
                   %i.icon-bad
                     %i.far.fa-frown-open 
-                  %span 
+                  %span ??
           %tr
             %th カテゴリー
             %td
@@ -69,12 +69,16 @@
               = @product.delivery_date
     %div.product-price-box.text-center
       %span.product-price.bold
-        = @product.price
+        = "¥#{@product.price}"
       %span.product-tax
         (税込)
       %span.product-shipping-fee
         送料込み
-      =link_to "購入画面に進む",  products_path(@product.id),class:"product-buy-btn"
+      - if user_signed_in?
+        - unless current_user.id == @product.user_id
+          = link_to "購入画面に進む",  destroy_user_session_path,class: "product-buy-btn", method: :delete
+      - else
+        = link_to "購入画面に進む",  destroy_user_session_path,class: "product-buy-btn", method: :delete
     -# %a.product-btn-client
     -#   %div{"data-client": "#{'visible'}"}
     -#     購入画面に進む
@@ -157,7 +161,7 @@
       - @test_model.each.with_index do |test,i|
         %section.products-box{"class":"products-id#{i+1}"}
           %figure.products-box-photo
-            = image_tag "test.image.to_s",width: "220" ,hight: "220"
+            = image_tag "sample_item.jpg",width: "220" ,hight: "220"
           %div.products-box-body
             %h3.products-box-name.font-2
               = "#{test[:name]}"
