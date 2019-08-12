@@ -1,6 +1,15 @@
 $color-bg-gray: #f5f5f5;
 $color-white: #fff;
-$color-red: #ea362e; 
+$color-red: #ea362e;
+
+.has-error-text {
+  color: $color-red;
+  line-height: 1.5;
+  font-size: 14px;
+  li {
+    margin-top: 8px;
+  }
+}
 
 .registration-container {
   background-color: $color-bg-gray;

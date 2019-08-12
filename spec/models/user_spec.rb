@@ -27,7 +27,7 @@ RSpec.describe User, type: :model do
   it "is invalid with an invalid email" do
     user = FactoryBot.build(:user, email: "plainaddress")
     user.valid?
-    expect(user.errors[:email]).to include("is invalid")
+    expect(user.errors[:email]).to include("フォーマットが不適切です")
   end
 
   it "is invalid without a password" do

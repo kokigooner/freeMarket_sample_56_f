@@ -68,5 +68,5 @@
             = f.label :phone_number, "電話"
             %span.registration__form--require.signup-address__tag--optional 任意
             = f.phone_field :phone_number, class: "registration__form__input", placeholder: "例) 09012345678"
-          = f.submit class: "signup__form__btn signup__form__btn--mail registration__form__next-btn", value: "次へ進む"
+          = f.submit class: "signup__form__btn signup__form__btn--mail registration__form__next-btn", value: "次へ進む", data: { disable_with: "次へ進む" }
   = render partial: "users/signup-footer"

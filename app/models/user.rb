@@ -12,7 +12,10 @@ class User < ApplicationRecord
   VALID_EMAIL_REGIX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   validates :email, presence: true
   validates :email, uniqueness: true
-  validates :email, format: { with: VALID_EMAIL_REGIX }
+  validates :email, format: {
+    with: VALID_EMAIL_REGIX,
+    message: "フォーマットが不適切です"
+  }
   validates :password, presence: true
   validates :password, length: { 
     minimum: 7, 
