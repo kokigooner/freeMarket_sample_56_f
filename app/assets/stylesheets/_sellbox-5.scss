@@ -1,17 +1,18 @@
 .sell-price-boxindex {
   .sell-price-charge-clearfix {
     .sell-price-charge-left {
-      height: 50px;
       float: left;
+      height: 50px;
       margin-top: 0;
       width: 100%;
+
       h4 {
         color: $color-black;
         font-size: 12px;
         font-weight: bold;
         margin-top: 30px;
         text-align: left;
-    
+
         span {
           background-color: $color-red;
           border-radius: 6px;
@@ -34,13 +35,14 @@
       background-color: $color-white;
       border: solid 1px $color-light-gray;
       font-weight: normal;
+
       span {
         color: $color-black;
-        font-size: 15px;
-        text-align: left;
-        padding: 10px 10px 0 10px;
         display: inline-block;
+        font-size: 15px;
         margin-top: 10px;
+        padding: 10px 10px 0;
+        text-align: left;
       }
     }
   }
@@ -50,37 +52,41 @@
       color: $color-red;
       float: left;
       font-size: 12px;
-      text-align: left;
-      padding: 0;
       font-weight: normal;
+      padding: 0;
+      text-align: left;
     }
   }
+
   .sell-price-chargebox {
+    border-bottom: 1px solid $color-light-gray;
     height: 100px;
     margin-top: 0;
-    border-bottom: 1px solid $color-light-gray;
   }
 }
+
 .sell-price-fee {
   h5 {
-    color: black;
+    color: $color-black;
     font-size: 15px;
-    text-align: left;
-    margin-top: 10px;
     font-weight: normal;
+    margin-top: 10px;
+    text-align: left;
   }
+
   .sell-price-feebox {
-    height: 60px;
     border-bottom: 1px solid $color-light-gray;
+    height: 60px;
   }
 }
+
 .sell-sales-profit {
   h4 {
     color: $color-black;
     font-size: 15px;
-    text-align: left;
     font-weight: bold;
     margin-top: 10px;
+    text-align: left;
   }
   .sell-sales-profitbox {
     height: 60px;
