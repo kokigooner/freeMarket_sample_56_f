@@ -21,16 +21,6 @@
 }
 
 .sellbox.dragover,
-
-.sell-eroor-message {
-  h5 {
-    color: $color-red;
-    font-size: 12px;
-    padding: 0;
-    text-align: left;
-  }
-}
-
 .sellbox:active {
   background-color: $color-light-green;
   border: dashed 1px;
