@@ -15,15 +15,6 @@
     }
   }
 
-  .sell-eroor-message {
-    h5 {
-      color: $color-red;
-      font-size: 12px;
-      font-weight: normal;
-      padding: 0;
-      text-align: left;
-    }
-  }
 
   .sell-delivery-method {
     margin-top: 30px;
@@ -40,17 +31,6 @@
       height: 50px;
       margin: 10px 0 0;
       width: 100%;
-    }
-  }
-
-  .sell-eroor-message {
-
-    h5 {
-      color: $color-red;
-      font-size: 12px;
-      font-weight: normal;
-      padding: 0;
-      text-align: left;
     }
   }
 
@@ -71,16 +51,6 @@
     }
   }
 
-  .sell-eroor-message {
-
-    h5 {
-      color: $color-red;
-      font-size: 12px;
-      padding: 0;
-      text-align: left;
-    }
-  }
-
   .sell-delivery-days {
     margin-top: 30px;
 
@@ -96,16 +66,6 @@
       height: 50px;
       margin: 10px 0 0;
       width: 100%;
-    }
-  }
-
-  .sell-eroor-message {
-
-    h5 {
-      color: $color-red;
-      font-size: 12px;
-      padding: 0;
-      text-align: left;
     }
   }
 }

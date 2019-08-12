@@ -3,17 +3,6 @@
     @import "./sellpricecharge";
   }
 
-  .sell-eroor-message {
-    h5 {
-      color: $color-red;
-      float: left;
-      font-size: 12px;
-      font-weight: normal;
-      padding: 0;
-      text-align: left;
-    }
-  }
-
   .sell-price-chargebox {
     border-bottom: 1px solid $color-light-gray;
     height: 100px;
