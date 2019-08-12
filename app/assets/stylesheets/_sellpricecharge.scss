@@ -24,7 +24,7 @@
   }
 }
 
-input.sell-price-charge-right {
+.sell-price-charge-right {
   background-color: $color-white;
   border: solid 1px $color-light-gray;
   border-radius: 6px;
@@ -34,12 +34,4 @@ input.sell-price-charge-right {
   margin: left;
   width: 40%;
 
-  span {
-    color: $color-black;
-    display: inline-block;
-    font-size: 15px;
-    margin-top: 10px;
-    padding: 10px 10px 0;
-    text-align: left;
-  }
 }
