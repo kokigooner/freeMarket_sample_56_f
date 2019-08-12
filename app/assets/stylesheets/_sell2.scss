@@ -32,53 +32,10 @@ $color-red: rgb(230, 33, 33);
       margin-top: 0;
       padding: 30px 70px;
 
-      .sell-banner {
-        h4 {
-          color: $color-black;
-          font-size: 15px;
-          font-weight: bold;
-          text-align: center;
-        }
-      }
+      @import "./sellbanner";
     }
 
-    .sell-photo {
-      border-bottom: 1px solid $color-light-gray;
-      height: 250px;
-      margin-top: 20px;
-      padding: 10px 30px;
-
-      h4 {
-        color: $color-black;
-        font-size: 12px;
-        font-weight: bold;
-        text-align: left;
-
-        span {
-          background-color: $color-red;
-          border-radius: 6px;
-          color: $color-white;
-          font-size: 11px;
-          font-weight: bold;
-          height: 20px;
-          padding: 3px;
-          text-align: center;
-        }
-      }
-
-      img {
-        float: left;
-      }
-
-      h5 {
-        color: $color-black;
-        font-size: 10px;
-        margin-top: 10px;
-        text-align: left;
-      }
-
-      @import "./sellbox-1";
-    }
+    @import "./sellphoto";
 
     .sell-item-boxone {
       height: 300px;
@@ -181,25 +138,6 @@ $color-red: rgb(230, 33, 33);
   }
 
   .sell-footer {
-    .sell-rules {
-      margin-top: 35px;
-      h6 {
-        color: $color-black;
-        font-size: 10px;
-        text-align: center;
-        margin-top: 10px;
-      }
-    }
-
-    .sell-footer-right-one {
-      text-align: center;
-    }
-    .sell-last-year {
-      h6 {
-        color: $color-black;
-        font-size: 10px;
-        text-align: center;
-      }
-    }
+    
   }
 }
