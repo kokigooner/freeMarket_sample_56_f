@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :has_user_params?, only: [:authentication, :address, :payment]
+
   def signup
   end
 
@@ -106,6 +108,10 @@ class UsersController < ApplicationController
       :building,
       :phone_number
     )
+  end
+
+  def has_user_params?
+    redirect_to users_signup_path unless session[:user_params]
   end
 
 end

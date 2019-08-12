@@ -16,10 +16,10 @@ Rails.application.routes.draw do
   get "/users/signup" => "users#signup"
   post "/users/signup" => "users#create"
   get "/users/signup/registration" => "users#registration"
-  get "/users/signup/confirmation" => "users#confirmation"
+  post "/users/signup/confirmation" => "users#confirmation"
   get "/users/signup/authentication" => "users#authentication"
   get "/users/signup/address" => "users#address"
-  get "/users/signup/payment" => "users#payment"
+  post "/users/signup/payment" => "users#payment"
   get "/users/signup/complete" => "users#complete"
 
   get "/users/sell" => "users#sell"

@@ -31,7 +31,7 @@
   %main.registration-main
     .registration-main__container
       %h2.registration-main__text 会員情報入力
-      =form_for @user, url: users_signup_confirmation_path, method: :get do |f|
+      =form_for @user, url: users_signup_confirmation_path, method: :post do |f|
         .registration__form__content
           .registration__form__group
             = f.label :nickname, "ニックネーム"
