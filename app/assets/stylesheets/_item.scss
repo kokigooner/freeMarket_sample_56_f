@@ -43,14 +43,6 @@
       width: auto;
       margin: 0 auto;
     }
-    &-name {
-      font-size: 24px;
-      text-align: center;
-      word-wrap: break-word;
-      line-height: 1.4;
-
-      
-    }
   }
   &-user-ratings{
     display: inline-block;
@@ -74,8 +66,14 @@
     span{
       vertical-align: middle;
     }
+    
   }
-
+  &-name {
+    font-size: 24px;
+    text-align: center;
+    word-wrap: break-word;
+    line-height: 1.4;
+  }
   &-shipping{
     &-fee {
     display: inline-block;
