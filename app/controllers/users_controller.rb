@@ -33,6 +33,10 @@ class UsersController < ApplicationController
   def mypage
 
   end
+  
+  def mypage_task
+    
+  end
 
   def card
   end
