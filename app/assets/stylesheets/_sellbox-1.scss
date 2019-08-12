@@ -1,0 +1,55 @@
+.sellbox {
+  background-color: $color-bg-gray;
+  border: dashed 1px;
+  color: $color-light-gray;
+  height: 130px;
+  overflow: hidden;
+
+  h4 {
+    color: $color-black;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  h5 {
+    color: $color-black;
+    font-size: 10px;
+    padding: 10px 40px;
+    text-align: center;
+  }
+}
+
+.sellbox.dragover,
+.sellbox:active {
+  background-color: $color-light-green;
+  border: dashed 1px;
+  color: $color-light-green;
+  height: 130px;
+
+  h4 {
+    color: $color-black;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  h5 {
+    color: $color-black;
+    font-size: 10px;
+    padding: 10px 40px;
+    text-align: center;
+  }
+
+  .output img {
+    display: block;
+    margin: 15px auto;
+  }
+}
+
+.fileinput {
+  background-color: $color-red;
+  border: dashed 1px;
+  color: $color-light-gray;
+  height: 130px;
+}

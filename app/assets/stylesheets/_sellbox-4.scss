@@ -1,0 +1,71 @@
+.sell-delivery-boxindex {
+  .sell-delivery-charge {
+    @import "./atnbtn";
+  }
+
+  .sell-delivery-chargebox {
+    select {
+      background-color: $color-white;
+      border: solid 1px $color-light-gray;
+      border-radius: 6px;
+      font-weight: normal;
+      height: 50px;
+      margin: 10px 0 0;
+      width: 100%;
+    }
+  }
+
+
+  .sell-delivery-method {
+    margin-top: 30px;
+
+    @import "./atnbtn";
+  }
+
+  .sell-delivery-methodbox {
+    select {
+      background-color: $color-white;
+      border: solid 1px $color-light-gray;
+      border-radius: 6px;
+      font-weight: normal;
+      height: 50px;
+      margin: 10px 0 0;
+      width: 100%;
+    }
+  }
+
+  .sell-delivery-region {
+    margin-top: 30px;
+    @import "./atnbtn";
+  }
+
+  .sell-delivery-regionbox {
+    select {
+      background-color: $color-white;
+      border: solid 1px $color-light-gray;
+      border-radius: 6px;
+      font-weight: normal;
+      height: 50px;
+      margin: 10px 0 0;
+      width: 100%;
+    }
+  }
+
+  .sell-delivery-days {
+    margin-top: 30px;
+
+    @import "./atnbtn";
+  }
+
+  .sell-delivery-daysbox {
+    select {
+      background-color: $color-white;
+      border: solid 1px $color-light-gray;
+      border-radius: 6px;
+      font-weight: normal;
+      height: 50px;
+      margin: 10px 0 0;
+      width: 100%;
+    }
+  }
+}
