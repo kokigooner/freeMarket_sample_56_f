@@ -76,9 +76,9 @@
         送料込み
       - if user_signed_in?
         - unless current_user.id == @product.user_id
-          =link_to "購入画面に進む",  destroy_user_session_path,class: "product-buy-btn", method: :delete
+          = link_to "購入画面に進む",  destroy_user_session_path,class: "product-buy-btn", method: :delete
       - else 
-        =link_to "購入画面に進む",  destroy_user_session_path,class: "product-buy-btn", method: :delete
+        = link_to "購入画面に進む",  destroy_user_session_path,class: "product-buy-btn", method: :delete
     -# %a.product-btn-client
     -#   %div{"data-client": "#{'visible'}"}
     -#     購入画面に進む
