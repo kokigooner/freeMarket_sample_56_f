@@ -3,6 +3,7 @@ $color-white: #fff;
 $color-light-gray: #ccc;
 $color-black: #333;
 $color-red: rgb(230, 33, 33);
+$color-light-green: #cfc;
 
 .sell-wrapper {
   background-color: $color-bg-gray;
@@ -38,10 +39,10 @@ $color-red: rgb(230, 33, 33);
     @import "./sellphoto";
 
     .sell-item-boxone {
+      border-bottom: 1px solid $color-light-gray;
       height: 300px;
       margin-top: 0;
       padding: 10px 30px;
-      border-bottom: 1px solid $color-light-gray;
 
       @import "./sellbox-2";
     }
@@ -58,6 +59,6 @@ $color-red: rgb(230, 33, 33);
   }
 
   .sell-footer {
-    
+    @import "./sellfooter";
   }
 }
