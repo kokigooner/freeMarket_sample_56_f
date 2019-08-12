@@ -6,7 +6,7 @@
       font-weight: bold;
       margin-top: 30px;
       text-align: left;
-  
+
       span {
         background-color: $color-red;
         border-radius: 6px;
@@ -44,13 +44,14 @@
 
   .sell-delivery-method {
     margin-top: 30px;
+
     h4 {
       color: $color-black;
       font-size: 12px;
       font-weight: bold;
       margin-top: 30px;
       text-align: left;
-  
+
       span {
         background-color: $color-red;
         border-radius: 6px;
@@ -66,13 +67,13 @@
 
   .sell-delivery-methodbox {
     select {
-      height: 50px;
-      border-radius: 6px;
+      background-color: $color-white;
       border: solid 1px $color-light-gray;
+      border-radius: 6px;
+      font-weight: normal;
+      height: 50px;
       margin: 10px 0 0;
       width: 100%;
-      background-color: $color-white;
-      font-weight: normal;
     }
   }
 
@@ -80,9 +81,9 @@
     h5 {
       color: $color-red;
       font-size: 12px;
-      text-align: left;
-      padding: 0;
       font-weight: normal;
+      padding: 0;
+      text-align: left;
     }
   }
 
@@ -94,7 +95,7 @@
       font-weight: bold;
       margin-top: 30px;
       text-align: left;
-  
+
       span {
         background-color: $color-red;
         border-radius: 6px;
@@ -110,33 +111,35 @@
 
   .sell-delivery-regionbox {
     select {
-      height: 50px;
-      border-radius: 6px;
-      border: solid 1px $color-light-gray;
-      margin: 10px 0 0 0px;
-      width: 100%;
       background-color: $color-white;
+      border: solid 1px $color-light-gray;
+      border-radius: 6px;
       font-weight: normal;
+      height: 50px;
+      margin: 10px 0 0;
+      width: 100%;
     }
   }
+
   .sell-eroor-message {
     h5 {
       color: $color-red;
       font-size: 12px;
-      text-align: left;
       padding: 0;
+      text-align: left;
     }
   }
 
   .sell-delivery-days {
     margin-top: 30px;
+
     h4 {
       color: $color-black;
       font-size: 12px;
       font-weight: bold;
       margin-top: 30px;
       text-align: left;
-  
+
       span {
         background-color: $color-red;
         border-radius: 6px;
@@ -152,13 +155,13 @@
 
   .sell-delivery-daysbox {
     select {
-      height: 50px;
-      border-radius: 6px;
-      border: solid 1px $color-light-gray;
-      margin: 10px 0 0 0px;
-      width: 100%;
       background-color: $color-white;
+      border: solid 1px $color-light-gray;
+      border-radius: 6px;
       font-weight: normal;
+      height: 50px;
+      margin: 10px 0 0;
+      width: 100%;
     }
   }
 
