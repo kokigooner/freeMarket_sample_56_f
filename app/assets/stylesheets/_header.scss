@@ -208,6 +208,7 @@
 
 
 .bread-crumbs {
+  $black: #000;
   position: relative;
   border-top: 1px solid #eee;
   background: #f5f5f5;
@@ -219,19 +220,18 @@
   }
 
   .breadcrumbs {
-
     width: 1020px;
     margin: 0 auto;
     padding: 16px 0;
     white-space: normal;
     font-size: 14px;
     line-height: 1.2;
-      
     span:last-child {
       font-weight: bold;
     }
+
     a{
-      color: black;
+      color: $black;
     }
   }
 }
