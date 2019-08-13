@@ -31,6 +31,8 @@
 * has_many :ratings
 * has_many :evalution, dependent: :destroy
 * has_one :address
+* has_one :sns_credential
+
 
 ## adressesテーブル
 |Column|Type|Options|
@@ -45,6 +47,15 @@
 |address|string|null:false|
 |building|string||
 |phone_number|integer||
+
+belongs_to :user
+
+## sns_credentialsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|provider|integer|null:false|
+|uid|string|null:false|
+|user|string|null:false|
 
 belongs_to :user
 
