@@ -69,7 +69,9 @@ gem 'devise'
 gem 'omniauth-rails_csrf_protection'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
-
+gem 'gretel'
+gem 'dotenv-rails'
+gem 'owlcarousel-rails'
 
 group :production do
   gem 'unicorn', '5.4.1'
