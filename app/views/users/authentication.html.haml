@@ -31,7 +31,8 @@
   %main.registration-main
     .registration-main__container
       %h2.registration-main__text 電話番号認証
-      = form_for :user, html: { class: "registration__form registration__form--border" } do |f|
+      = form_for :user,
+        html: { class: "registration__form registration__form--border" } do |f|
         .registration__form__content
           .registration__form__group
             = f.label :phone_number, "認証番号"
