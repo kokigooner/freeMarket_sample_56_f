@@ -43,31 +43,31 @@
             = f.text_field :nickname,
               class: "registration__form__input",
               placeholder: "例) メルカリ太郎"
-            = render partial: 'error_messages',
-              locals: { errors: @user.errors.full_messages_for(:nickname) }
+            = render 'error_messages',
+              errors: @user.errors.full_messages_for(:nickname)
           .registration__form__group
             = f.label :email, "メールアドレス"
             %span.registration__form--require 必須
             = f.email_field :email,
               class: "registration__form__input",
               placeholder: "PC・携帯どちらでも可"
-            = render partial: 'error_messages',
-              locals: { errors: @user.errors.full_messages_for(:email) }
+            = render 'error_messages',
+              errors: @user.errors.full_messages_for(:email)
           .registration__form__group
             = f.label :password, "パスワード"
             %span.registration__form--require 必須
             = f.password_field :password,
               class: "registration__form__input",
               placeholder: "7文字以上"
-            = render partial: 'error_messages',
-              locals: { errors: @user.errors.full_messages_for(:password) }
+            = render 'error_messages',
+              errors: @user.errors.full_messages_for(:password)
           .registration__form__group
             = f.label :password_confirmation, "パスワード (確認)"
             %span.registration__form--require 必須
             = f.password_field :password_confirmation,
               class: "registration__form__input", placeholder: "7文字以上"
-            = render partial: 'error_messages',
-              locals: { errors: @user.errors.full_messages_for(:password_confirmation) }
+            = render 'error_messages',
+              errors: @user.errors.full_messages_for(:password_confirmation)
           .registration__form__group
             %h3 本人確認
             %p.registration__form__text
@@ -82,10 +82,10 @@
             = f.text_field :first_name,
               class: "registration__form__input-half",
               placeholder: "例) 彩"
-            = render partial: 'error_messages',
-              locals: { errors: @user.errors.full_messages_for(:family_name) }
-            = render partial: 'error_messages',
-              locals: { errors: @user.errors.full_messages_for(:first_name) }
+            = render 'error_messages',
+              errors: @user.errors.full_messages_for(:family_name)
+            = render 'error_messages',
+              errors: @user.errors.full_messages_for(:first_name)
           .registration__form__group
             %div
               = f.label "お名前カナ(全角)"
@@ -96,10 +96,10 @@
             = f.text_field :first_name_kana,
               class: "registration__form__input-half",
               placeholder: "例) アヤ"
-            = render partial: 'error_messages',
-              locals: { errors: @user.errors.full_messages_for(:family_name_kana) }
-            = render partial: 'error_messages',
-              locals: { errors: @user.errors.full_messages_for(:first_name_kana) }
+            = render 'error_messages',
+              errors: @user.errors.full_messages_for(:family_name_kana)
+            = render 'error_messages',
+              errors: @user.errors.full_messages_for(:first_name_kana)
           .registration__form__group
             %div
               = f.label "生年月日"
@@ -118,12 +118,12 @@
                   (1..31),
                   include_blank: '--'
                 %span 日
-                = render partial: 'error_messages',
-                  locals: { errors: @user.errors.full_messages_for(:birth_year) }
-                = render partial: 'error_messages',
-                  locals: { errors: @user.errors.full_messages_for(:birth_month) }
-                = render partial: 'error_messages',
-                  locals: { errors: @user.errors.full_messages_for(:birth_day) }
+                = render 'error_messages',
+                  errors: @user.errors.full_messages_for(:birth_year)
+                = render 'error_messages',
+                  errors: @user.errors.full_messages_for(:birth_month)
+                = render 'error_messages',
+                  errors: @user.errors.full_messages_for(:birth_day)
             %p.registration__form__text
               ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
           = image_tag 'recaptcha.jpeg', class: 'registration__form__recaptcha-icon'
