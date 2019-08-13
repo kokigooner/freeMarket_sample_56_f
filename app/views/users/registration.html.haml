@@ -42,7 +42,8 @@
             %span.registration__form--require 必須
             = f.text_field :nickname,
               class: "registration__form__input",
-              placeholder: "例) メルカリ太郎"
+              placeholder: "例) メルカリ太郎",
+              value: @nickname
             = render 'error_messages',
               errors: @user.errors.full_messages_for(:nickname)
           .registration__form__group
@@ -50,7 +51,8 @@
             %span.registration__form--require 必須
             = f.email_field :email,
               class: "registration__form__input",
-              placeholder: "PC・携帯どちらでも可"
+              placeholder: "PC・携帯どちらでも可",
+              value: @email
             = render 'error_messages',
               errors: @user.errors.full_messages_for(:email)
           .registration__form__group
