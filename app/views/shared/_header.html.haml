@@ -66,7 +66,7 @@
         - if user_signed_in?
           %ul.mpcheader-user-nav
             %li.liked-items-link
-              %a.mpcheader-menu-link {"data-id": "mpcheader-user-nav"}
+              %a.mpcheader-menu-link{ "data-id": "mpcheader-user-nav"}
                 .mpcheader-menu-icon
                   %i.far.fa-heart
                 %span
@@ -177,7 +177,7 @@
         - else
           %ul.mpcheader-user-nav
             %li.liked-items-link
-              %a.mpcheader-menu-link {"data-id": "mpcheader-user-nav"}
+              %a.mpcheader-menu-link{ "data-id": "mpcheader-user-nav"}
                 = link_to "新規登録",new_user_registration_path
             %li
               %a.mpcheader-menu-link
