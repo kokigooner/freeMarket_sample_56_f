@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/users/mypage/card' => "users#card"
   get '/users/mypage/card/create' => "users#card_create"
   get "/users/mypage/:id" => "users#mypage"
-  get "/users/mypage/:id/tasktask" => "users#mytask"
+  get "/users/mypage/:id/myitems" => "users#myitems"
   get "/mypage/identification" => "users#identification" 
   get "/mypage/logout" => "users#logout"
   

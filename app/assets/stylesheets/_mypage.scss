@@ -220,3 +220,78 @@ $color-hover-gray: #fafafa;
     text-align: center;
   }
 }
+
+.mypage-purchased-myitems {
+  background-color: $color-white;
+
+  &__header {
+    background-color: $color-hover-gray;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 72px;
+    padding: 0 4%;
+  }
+
+  &__text {
+    background: url('logo-gray-icon.svg');
+    background-position: center 40px;
+    background-repeat: no-repeat;
+    background-size: 78px 85px;
+    color: $color-light-gray2;
+    font-size: 16px;
+    padding: 160px 0 60px;
+    text-align: center;
+  }
+}
+
+.mypage-items {
+  background-color: $color-white;
+  display: block;
+  font-size: 14px;
+
+  &__menu {
+    background-color: $color-white;
+    border: 0;
+    display: flex;
+    font-size: 0;
+    text-align: center;
+
+    &__left {
+      border-top: solid 2px $color-red;
+      box-sizing: border-box;
+      display: block;
+      height: 70px;
+      line-height: 70px;
+      width: 50%;
+    }
+
+    &__right {
+      background-color: $color-light-gray;
+      display: block;
+      height: 70px;
+      line-height: 70px;
+      width: 50%;
+    }
+
+    &__center {
+      background-color: $color-light-gray;
+      display: block;
+      height: 70px;
+      line-height: 70px;
+      width: 50%;
+    }
+
+    &__tabs {
+      color: $color-black;
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      height: 100%;
+      width: 100%;
+    }
+
+    &__tabs:hover {
+      opacity: .7;
+    }
+  }
+}

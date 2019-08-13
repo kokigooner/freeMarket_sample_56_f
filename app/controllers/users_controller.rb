@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:mypage, :edit, :update, :destroy]
+  before_action :set_user, only: [:mypage,:myitems, :edit, :update, :destroy]
   
   def signup
   end
@@ -35,8 +35,8 @@ class UsersController < ApplicationController
 
   end
   
-  def mypage_task
-    
+  def myitems
+    @myprodacts = User.products.All
   end
 
   def card
