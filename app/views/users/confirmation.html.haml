@@ -31,7 +31,8 @@
   %main.registration-main
     .registration-main__container
       %h2.registration-main__text 電話番号の確認
-      =form_for :confirmation, html: { class: "registration__form" } do |f|
+      = form_for :confirmation,
+        html: { class: "registration__form" } do |f|
         .registration__form__content
           .registration__form__group
             = f.label "携帯電話の番号"
