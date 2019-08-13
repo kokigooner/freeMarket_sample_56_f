@@ -66,7 +66,7 @@
         - if user_signed_in?
           %ul.mpcheader-user-nav
             %li.liked-items-link
-              %a.mpcheader-menu-link{ "data-id": "#{ "mpcheader-user-nav" }" }
+              %a.mpcheader-menu-link{ "data-id": "mpcheader-user-nav" }
                 .mpcheader-menu-icon
                   %i.far.fa-heart
                 %span
@@ -176,9 +176,9 @@
                         >
         - else
           %ul.mpcheader-user-btn
-            %li.mpcheader-user-btn-signin
-              %a.mpcheader-user-btn-signin-red{ "data-id": "#{ "mpcheader-user-nav" }" }
+            %li.mpcheader-user-signin
+              %a.mpcheader-user-signin-red{ "data-id": "mpcheader-user-nav" }
                 = link_to "新規会員登録",users_signup_path
-            %li.mpcheader-user-btn-login
-              %a.mpcheader-user-btn-login-blue
+            %li.mpcheader-user-login
+              %a.mpcheader-user-login-blue
                 = link_to "ログイン",  users_login_path

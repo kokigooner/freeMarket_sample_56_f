@@ -136,33 +136,33 @@ $white:  #fff;
     }
     &-btn {
       display: flex;
+    }
 
-      &-signin {
-        background-color: $red;
-        border: 1px solid $red;
-        border-radius: 4px;
-        display: block;
-        line-height: 30px;
-        list-style: none;
-        text-align: center;
-        width: 106px;
+    &-signin {
+      background-color: $red;
+      border: 1px solid $red;
+      border-radius: 4px;
+      display: block;
+      line-height: 30px;
+      list-style: none;
+      text-align: center;
+      width: 106px;
 
-        a {
-          color: $white;
-        }
+      a {
+        color: $white;
       }
-
-      &-login {
-        background-color: $white;
-        border: 1px solid $color;
-        border-radius: 4px;
-        display: block;
-        line-height: 30px;
-        list-style: none;
-        margin: 0 0 0 8px; 
-        text-align: center;
-        width: 78px;
-      }
+    }
+      
+    &-login {
+      background-color: $white;
+      border: 1px solid $color;
+      border-radius: 4px;
+      display: block;
+      line-height: 30px;
+      list-style: none;
+      margin: 0 0 0 8px;
+      text-align: center;
+      width: 78px;
     }
   }
 
