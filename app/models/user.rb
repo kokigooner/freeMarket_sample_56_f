@@ -13,18 +13,16 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :email, uniqueness: true
   validates :email, format: {
-    with: VALID_EMAIL_REGIX,
-    message: "フォーマットが不適切です"
+    with: VALID_EMAIL_REGIX
   }
   validates :password, presence: true
   validates :password, length: { 
     minimum: 7, 
-    maximum: 128, 
-    message: "パスワードは7文字以上128文字以下で入力してください"
+    maximum: 128
   }
   validates :password, format: {
      with: /\A(?=.*?[a-zA-Z])(?=.*?\d)[a-zA-Z\d]{7,128}\z/, 
-     message: "英字と数字両方を含むパスワードを設定してください"
+     message: "には英字と数字の両方を含めてください"
   }
   validates :password, confirmation: true
   validates :password_confirmation, presence: true
@@ -32,11 +30,11 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :family_name_kana, presence: true, format: { 
     with: /\A[\p{katakana}ー－]+\z/, 
-    message: "姓カナはカナ文字を入力してください" 
+    message: "はカナ文字を入力してください" 
   }
   validates :first_name_kana, presence: true, format: { 
     with: /\A[\p{katakana}ー－]+\z/, 
-    message: "名カナはカナ文字を入力してください" 
+    message: "はカナ文字を入力してください" 
   }
   validates :birth_year, presence: true
   validates :birth_month, presence: true
