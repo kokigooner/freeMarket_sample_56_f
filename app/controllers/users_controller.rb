@@ -108,7 +108,7 @@ class UsersController < ApplicationController
       :family_name_kana,
       :first_name_kana,
       :postal_code,
-      :prefecture,
+      :prefecture_id,
       :minicipality,
       :address,
       :building,

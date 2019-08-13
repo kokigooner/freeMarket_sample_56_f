@@ -5,7 +5,7 @@ FactoryBot.define do
     family_name_kana { "メルカリ" }
     first_name_kana { "タロウ" }
     postal_code { "123-4567" }
-    prefecture { 1 }
+    prefecture_id { 1 }
     minicipality { "東京都渋谷区" }
     address { "渋谷町 1-1-1" }
     building { "渋谷ビル" }

@@ -58,9 +58,9 @@ RSpec.describe Address, type: :model do
   end
 
   it "is invalid without a prefecture" do
-    address = FactoryBot.build(:address, user: @user, prefecture: nil)
+    address = FactoryBot.build(:address, user: @user, prefecture_id: nil)
     address.valid?
-    expect(address.errors[:prefecture]).to include("を入力してください")
+    expect(address.errors[:prefecture_id]).to include("を入力してください")
   end
 
   it "is invalid without a minicipality" do

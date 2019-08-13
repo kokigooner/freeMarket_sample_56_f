@@ -76,14 +76,12 @@
             = render 'error_messages',
               errors: @address.errors.full_messages_for(:postal_code)
           .registration__form__group
-            = f.label :prefecture, "都道府県"
+            = f.label :prefecture_id, "都道府県"
             %span.registration__form--require 必須
             .registration__form__select.registration__form__select--wide
-              = f.select :prefecture,
-                Address.prefectures.keys,
-                class: "registration__form__input"
+              = f.collection_select :prefecture_id, Prefecture.all, :id, :name
               = render 'error_messages',
-                errors: @address.errors.full_messages_for(:prefecture)
+                errors: @address.errors.full_messages_for(:prefecture_id)
           .registration__form__group
             = f.label :minicipality, "市区町村"
             %span.registration__form--require 必須

@@ -74,6 +74,7 @@ gem 'gretel'
 gem 'dotenv-rails'
 gem 'rails-i18n', '~> 5.1'
 gem 'owlcarousel-rails'
+gem 'active_hash'
 
 group :production do
   gem 'unicorn', '5.4.1'

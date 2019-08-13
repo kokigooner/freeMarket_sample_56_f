@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get "/mypage/identification", to: "users#identification" 
   get "/mypage/logout", to: "users#logout"
   
+  get "/users/signup", to: "users#signup"
   post "/users/signup", to: "users#create"
   get "/users/signup/registration", to: "users#registration"
   post "/users/signup/confirmation", to: "users#confirmation"
