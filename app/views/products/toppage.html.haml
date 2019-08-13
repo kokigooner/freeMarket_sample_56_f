@@ -12,58 +12,26 @@
     .top-page__categoritwo
       %h5 レディース新着アイテム
       .top-page__item_clearfix
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox  
-              .top-page__itemname
-                %h6 ハンドバッグ
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 ¥1000
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>3
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox 
-              .top-page__itemname
-                %h6 
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox 
-              .top-page__itemname
-                %h6 
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox 
-              .top-page__itemname
-                %h6 
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>
+        - @productimage.zip(@products) do |image, product|
+          .top-page__item
+            %a{ href:  "" }
+              .top-page__itemimg
+                // = image_tag "mercarisampleitem1.jpg",width: "220" ,hight: "220"
+                = image.image
+              .top-page__itemnamebox  
+                .top-page__itemname
+                  %h6
+                    = product.product_name
+                    -# = @products.product_name
+                .top-page__itempricebox
+                  .top-page__itemprice 
+                    %h5
+                      = "¥#{product.price}"
+                  .top-page__iconlike
+                    = image_tag "sample_heart.png",width: "25" ,hight: "25"
+                    %i.icon-arrow-right
+                    %span<>3
+
     .top-page__categorisee
       %h6 全ての商品をみる
     .top-page__categorithree
