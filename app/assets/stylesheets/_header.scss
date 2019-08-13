@@ -1,3 +1,7 @@
+$color:#0099e8;
+$red:#ea352d;
+$white:  #fff;
+
 .mpcheader { 
   position: relative;
   z-index: 1001;
@@ -130,31 +134,34 @@
         padding-left: 0;
       }
     }
-    &-btn{
+    &-btn {
       display: flex;
-      &-signin{
+
+      &-signin {
+        background-color: $red;
+        border: 1px solid $red;
+        border-radius: 4px;
         display: block;
-        list-style: none;
-        width:106px;
-        border-radius: 4px;
-        border: 1px solid #ea352d;
-        background-color: #ea352d;
         line-height: 30px;
-        text-align: center; 
-        a{
-          color: #fff;
-        }  
-      }      
-      &-login{
         list-style: none;
-        display:block;
-        border: 1px solid #0099e8;
-        background-color:#fff;
-        border-radius: 4px;
-        margin: 0 0 0 8px;
-        line-height: 30px;
         text-align: center;
-        width:78px;
+        width: 106px;
+
+        a {
+          color: $white;
+        }
+      }
+
+      &-login {
+        background-color: $white;
+        border: 1px solid $color;
+        border-radius: 4px;
+        display: block;
+        line-height: 30px;
+        list-style: none;
+        margin: 0 0 0 8px; 
+        text-align: center;
+        width: 78px;
       }
     }
   }
@@ -254,7 +261,8 @@
     margin: 0 auto;
     padding: 16px 0;
     white-space: normal;
-    li {  
+
+    li {
     display: inline-block;
     font-size: 14px;
     line-height: 1.2;
