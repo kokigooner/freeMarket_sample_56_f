@@ -1,8 +1,10 @@
 .registration-container
   %header.registration-header
     %h1
-      =link_to(root_path, class: "registration-header__logo") do
-        = image_tag 'mercari_logo_horizontal', class: 'registration-header__logo__img'
+      = link_to(root_path,
+                class: "registration-header__logo") do
+        = image_tag 'mercari_logo_horizontal',
+          class: 'registration-header__logo__img'
     %nav.registration-header__progress-bar
       %ol
         %li.registration-header--active
@@ -31,24 +33,34 @@
   %main.registration-main
     .registration-main__container
       %h2.registration-main__text 会員情報入力
-      =form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = form_for(resource,
+                as: resource_name,
+                url: registration_path(resource_name)) do |f|
         .registration__form__content
           .registration__form__group
             = f.label :nickname, "ニックネーム"
             %span.registration__form--require 必須
-            = f.text_field :nickname, class: "registration__form__input", placeholder: "例) メルカリ太郎" 
+            = f.text_field :nickname,
+              class: "registration__form__input",
+              placeholder: "例) メルカリ太郎"
           .registration__form__group
             = f.label :email, "メールアドレス"
             %span.registration__form--require 必須
-            = f.email_field :email, class: "registration__form__input", placeholder: "PC・携帯どちらでも可"
+            = f.email_field :email,
+              class: "registration__form__input",
+              placeholder: "PC・携帯どちらでも可"
           .registration__form__group
             = f.label :password, "パスワード"
             %span.registration__form--require 必須
-            = f.password_field :password, class: "registration__form__input", placeholder: "7文字以上"
+            = f.password_field :password,
+              class: "registration__form__input",
+              placeholder: "7文字以上"
           .registration__form__group
             = f.label :password_conformation, "パスワード (確認)"
             %span.registration__form--require 必須
-            = f.password_field :password_conformation, class: "registration__form__input", placeholder: "7文字以上"
+            = f.password_field :password_conformation,
+              class: "registration__form__input",
+              placeholder: "7文字以上"
           .registration__form__group
             %h3 本人確認
             %p.registration__form__text
@@ -57,34 +69,52 @@
             %div
               = f.label "お名前(全角)"
               %span.registration__form--require 必須
-            = f.text_field :family_name, class: "registration__form__input registration__form__input--half registration__form__input--half--left", placeholder: "例) 山田"
-            = f.text_field :first_name, class: "registration__form__input registration__form__input--half", placeholder: "例) 彩"
+            = f.text_field :family_name,
+              class: "registration__form__input registration__form__input--half registration__form__input--half--left",
+              placeholder: "例) 山田"
+            = f.text_field :first_name,
+              class: "registration__form__input registration__form__input--half",
+              placeholder: "例) 彩"
           .registration__form__group
             %div
               = f.label "お名前カナ(全角)"
               %span.registration__form--require 必須
-            = f.text_field :family_name_kana, class: "registration__form__input registration__form__input--half registration__form__input--half--left", placeholder: "例) ヤマダ"
-            = f.text_field :first_name_kana, class: "registration__form__input registration__form__input--half", placeholder: "例) アヤ" 
+            = f.text_field :family_name_kana,
+              class: "registration__form__input registration__form__input--half registration__form__input--half--left",
+              placeholder: "例) ヤマダ"
+            = f.text_field :first_name_kana,
+              class: "registration__form__input registration__form__input--half",
+              placeholder: "例) アヤ" 
           .registration__form__group
             %div
               = f.label "生年月日"
               %span.registration__form--require 必須
             .registration__form__birthday-wrapper
               .registration__form__select
-                = f.select :birth_year, (1900..2019).to_a.reverse, include_blank: '--'
+                = f.select :birth_year,
+                  (1900..2019).to_a.reverse,
+                  include_blank: '--'
                 %span 年
-                = f.select :birth_month, (1..12), include_blank: '--'
+                = f.select :birth_month,
+                  (1..12),
+                  include_blank: '--'
                 %span 月
-                = f.select :birth_day, (1..31), include_blank: '--'
+                = f.select :birth_day,
+                  (1..31),
+                  include_blank: '--'
                 %span 日
           %p.registration__form__caution-text
             ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
-          = image_tag 'recaptcha.jpeg', class: 'registration__form__recaptcha-icon'
+          = image_tag 'recaptcha.jpeg',
+            class: 'registration__form__recaptcha-icon'
           %p.registration__form__text.registration__form__text--center
             「次へ進む」のボタンを押すことにより、
-            %a(href="/")>利用規約
+            %span<>
+              = link_to('利用規約', '/')
             に同意したものとみなします
-          = f.submit class: "signup__form__btn signup__form__btn--mail registration__form__next-btn", value: "次へ進む"
+          = f.submit class: "signup__form__btn signup__form__btn--mail registration__form__next-btn",
+            value: "次へ進む",
+            data: { disable_with: "次へ進む" }
           .registration__form__about-text
-            %a(href="/") 本人情報の登録について＞
+            = link_to('本人情報の登録について＞', '/')
   = render partial: "users/signup-footer"

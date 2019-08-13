@@ -4,8 +4,9 @@ $color-red: #ea362e;
 
 .has-error-text {
   color: $color-red;
-  line-height: 1.5;
   font-size: 14px;
+  line-height: 1.5;
+  
   li {
     margin-top: 8px;
   }

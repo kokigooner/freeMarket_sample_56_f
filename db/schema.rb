@@ -28,7 +28,9 @@ ActiveRecord::Schema.define(version: 20190811082126) do
   end
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text "image", limit: 65535, null: false
+    t.text    "image",      limit: 65535, null: false
+    t.integer "product_id"
+    t.index ["product_id"], name: "index_images_on_product_id", using: :btree
   end
 
   create_table "payments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -83,6 +85,7 @@ ActiveRecord::Schema.define(version: 20190811082126) do
   end
 
   add_foreign_key "addresses", "users"
+  add_foreign_key "images", "products"
   add_foreign_key "payments", "users"
   add_foreign_key "products", "users"
   add_foreign_key "sns_credentials", "users"

@@ -1,7 +1,7 @@
 .registration-container
   %header.registration-header
     %h1
-      =link_to(root_path, class: "registration-header__logo") do
+      = link_to(root_path, class: "registration-header__logo") do
         = image_tag 'mercari_logo_horizontal', class: 'registration-header__logo__img'
     %nav.registration-header__progress-bar
       %ol
@@ -31,7 +31,7 @@
   %main.registration-main
     .registration-main__container
       %h2.registration-main__text 支払い方法
-      =form_for :credit_card, html: { class: "registration__form" } do |f|
+      = form_for :credit_card, html: { class: "registration__form" } do |f|
         .registration__form__content
           .registration__form__group
             = f.label :card_number, "カード番号"
@@ -60,6 +60,10 @@
           %div.signup-payment__security-code
             %span ?
             カード裏面の番号とは？
-          =link_to '次へ進む', users_signup_path, method: :post, class: 'signup__form__btn signup__form__btn--mail registration__form__next-btn", value'
-          -# = f.submit class: "signup__form__btn signup__form__btn--mail registration__form__next-btn", value: "次へ進む"
+          = link_to '次へ進む',
+            users_signup_path,
+            method: :post,
+            class: 'signup__form__btn signup__form__btn--mail registration__form__next-btn"
+          -# = f.submit class: "signup__form__btn signup__form__btn--mail registration__form__next-btn",
+          -#   value: "次へ進む"
   = render partial: "users/signup-footer"
