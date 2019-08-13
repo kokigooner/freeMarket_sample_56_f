@@ -1,5 +1,6 @@
 $color-bg-gray: #f5f5f5;
 $color-white: #fff;
+$color-light-gray: #ccc;
 $color-red: #ea362e;
 
 .has-error-text {
@@ -158,35 +159,35 @@ $color-red: #ea362e;
       width: 100%;
       padding: 10px 16px 8px;
       border-radius: 4px;
-      border: 1px solid #ccc;
-      background: #fff;
+      border: 1px solid $color-light-gray;
+      background: $color-white;
       line-height: 1.5;
       font-size: 16px;
       box-sizing: border-box;
     }
 
     &__input-half {
-      box-sizing: border-box;
-      height: 48px;
-      padding: 10px 16px 8px;
+      background: $color-white;
+      border: 1px solid $color-light-gray;
       border-radius: 4px;
-      border: 1px solid #ccc;
-      background: #fff;
-      line-height: 1.5;
+      box-sizing: border-box;
       font-size: 16px;
+      height: 48px;
+      line-height: 1.5;
+      padding: 10px 16px 8px;
       width: 165.5px;
     }
 
     &__input-half-left {
-      box-sizing: border-box;
-      height: 48px;
-      padding: 10px 16px 8px;
-      margin: 8px 7px 0 0;
+      background: $color-white;
+      border: 1px solid $color-light-gray;
       border-radius: 4px;
-      border: 1px solid #ccc;
-      background: #fff;
-      line-height: 1.5;
+      box-sizing: border-box;
       font-size: 16px;
+      height: 48px;
+      line-height: 1.5;
+      margin: 8px 7px 0 0;
+      padding: 10px 16px 8px;
       width: 165.5px;
     }
 
@@ -259,14 +260,20 @@ $color-red: #ea362e;
       }
     }
     &__next-btn {
-      text-decoration: none;
-      border-radius: 0;
-      margin: 24px 0 0 0;
+      background-color: $color-red;
       border: none;
+      border-radius: 0;
+      box-sizing: border-box;
+      color: $color-white;
       cursor: pointer;
-      &:hover {
-        opacity: inherit;
-      }
+      display: block;
+      font-size: 14px;
+      height: 50px;
+      line-height: 50px;
+      margin: 24px 0 0 0;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
     }
     &__about-text {
       padding: 24px 0 0 0;

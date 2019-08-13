@@ -118,18 +118,21 @@
                   (1..31),
                   include_blank: '--'
                 %span 日
-                - if @user.errors[:birth_year].any? || @user.errors[:birth_month].any? || @user.errors[:birth_day].any?
-                  %ul.has-error-text
-                    %li 生年月日を入力してください
-          %p.registration__form__caution-text
-            ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+                = render partial: 'error_messages',
+                  locals: { errors: @user.errors.full_messages_for(:birth_year) }
+                = render partial: 'error_messages',
+                  locals: { errors: @user.errors.full_messages_for(:birth_month) }
+                = render partial: 'error_messages',
+                  locals: { errors: @user.errors.full_messages_for(:birth_day) }
+            %p.registration__form__text
+              ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
           = image_tag 'recaptcha.jpeg', class: 'registration__form__recaptcha-icon'
           %p.registration__form__text.registration__form__text--center
             「次へ進む」のボタンを押すことにより、
             %span<>
               = link_to('利用規約', '/')
             に同意したものとみなします
-          = f.submit class: "signup__form__btn signup__form__btn--mail registration__form__next-btn",
+          = f.submit class: "registration__form__next-btn",
             value: "次へ進む",
             data: { disable_with: "次へ進む" }
           .registration__form__about-text

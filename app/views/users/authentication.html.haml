@@ -40,7 +40,7 @@
             SMSで届いた認証番号を入力してください
           = link_to('認証して完了',
             users_signup_address_path,
-            class: "signup__form__btn signup__form__btn--mail registration__form__next-btn")
+            class: "registration__form__next-btn")
       .registration__form.registration__form--border
         .registration__form__content
           %h3 30秒たっても認証番号が届かない方へ
@@ -48,7 +48,7 @@
             電話で認証番号を聞くこともできます。
           = link_to('電話で認証番号を聞く (通話無料)',
             root_path,
-            class: "signup__form__btn signup__form__btn--mail registration__form__next-btn")
+            class: "registration__form__next-btn")
       .registration__form.registration__form--border
         .registration__form__content
           %h3 認証番号を再送することもできます。もう一度電話番号を入力してください。

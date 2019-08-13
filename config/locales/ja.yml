@@ -25,6 +25,9 @@ ja:
         first_name: 名
         family_name_kana: 姓カナ
         first_name_kana: 名カナ
+        birth_year: 誕生年
+        birth_month: 誕生月
+        birth_day: 誕生日
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
