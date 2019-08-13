@@ -177,8 +177,6 @@
         - else
           %ul.mpcheader-user-btn
             %li.mpcheader-user-signin
-              %a.mpcheader-user-signin-red{ "data-id": "mpcheader-user-nav" }
-                = link_to "新規会員登録",users_signup_path
+              = link_to "新規会員登録",users_signup_path, class: "mpcheader-user-red"
             %li.mpcheader-user-login
-              %a.mpcheader-user-login-blue
-                = link_to "ログイン",  users_login_path
+              = link_to "ログイン",  users_login_path
