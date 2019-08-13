@@ -16,15 +16,14 @@
           .top-page__item
             %a{ href:  "" }
               .top-page__itemimg
-                // = image_tag "mercarisampleitem1.jpg",width: "220" ,hight: "220"
                 = image.image
-              .top-page__itemnamebox  
+              .top-page__itemnamebox
                 .top-page__itemname
                   %h6
                     = product.product_name
                     -# = @products.product_name
                 .top-page__itempricebox
-                  .top-page__itemprice 
+                  .top-page__itemprice
                     %h5
                       = "¥#{product.price}"
                   .top-page__iconlike
