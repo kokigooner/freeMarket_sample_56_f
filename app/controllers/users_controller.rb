@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:mypage, :edit, :update, :destroy]
+  
   def signup
   end
 
