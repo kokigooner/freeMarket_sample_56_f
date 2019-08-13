@@ -161,7 +161,7 @@
       - @test_model.each.with_index do |test,i|
         %section.products-box{"class":"products-id#{i+1}"}
           %figure.products-box-photo
-            = image_tag "sample_item.jpg",width: "220" ,hight: "220"
+            = image_tag "test.image.to_s",width: "220" ,hight: "220"
           %div.products-box-body
             %h3.products-box-name.font-2
               = "#{test[:name]}"

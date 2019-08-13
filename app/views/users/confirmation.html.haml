@@ -1,7 +1,7 @@
 .registration-container
   %header.registration-header
     %h1
-      %a(href="/" class="registration-header__logo")
+      = link_to(root_path, class: "registration-header__logo") do
         = image_tag 'mercari_logo_horizontal', class: 'registration-header__logo__img'
     %nav.registration-header__progress-bar
       %ol
@@ -31,16 +31,21 @@
   %main.registration-main
     .registration-main__container
       %h2.registration-main__text 電話番号の確認
-      =form_for :user, html: { class: "registration__form" } do |f|
+      = form_for :confirmation,
+        html: { class: "registration__form" } do |f|
         .registration__form__content
           .registration__form__group
-            = f.label :phone_number, "携帯電話の番号"
-            = f.phone_field :phone_number, class: "registration__form__input", placeholder: "携帯電話の番号を入力"
+            = f.label "携帯電話の番号"
+            = f.phone_field :phone_number,
+              class: "registration__form__input",
+              placeholder: "携帯電話の番号を入力"
           %p.registration__form__text
             本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
-          = f.submit class: "signup__form__btn signup__form__btn--mail registration__form__next-btn", value: "SMSを送信する"
+          = link_to('SMSを送信する',
+            users_signup_authentication_path,
+            class: "registration__form__next-btn")
           %p.registration__form__text
             ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
           .registration__form__about-text
-            %a(href="/") 電話番号の確認が必要な理由＞
+            = link_to('電話番号の確認が必要な理由＞', root_path)
   = render partial: "users/signup-footer"
