@@ -163,13 +163,33 @@ $color-red: #ea362e;
       line-height: 1.5;
       font-size: 16px;
       box-sizing: border-box;
-      &--half {
-        width: 165.5px;
-        &--left {
-          margin: 8px 7px 0 0;
-        }
-      }
     }
+
+    &__input-half {
+      box-sizing: border-box;
+      height: 48px;
+      padding: 10px 16px 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: #fff;
+      line-height: 1.5;
+      font-size: 16px;
+      width: 165.5px;
+    }
+
+    &__input-half-left {
+      box-sizing: border-box;
+      height: 48px;
+      padding: 10px 16px 8px;
+      margin: 8px 7px 0 0;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: #fff;
+      line-height: 1.5;
+      font-size: 16px;
+      width: 165.5px;
+    }
+
     &__select {
       & span {
         font-size: 14px;
