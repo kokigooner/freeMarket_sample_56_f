@@ -226,11 +226,12 @@
     white-space: normal;
     font-size: 14px;
     line-height: 1.2;
+    
     span:last-child {
       font-weight: bold;
     }
 
-    a{
+    a {
       color: $black;
     }
   }
