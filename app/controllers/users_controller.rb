@@ -48,13 +48,13 @@ class UsersController < ApplicationController
     @address = Address.new(session[:address_params].merge(user: @user))
 
     if session[:provider]
-      @user.sns_credentials.create(
+      @user.sns_credentials.new(
         provider: session[:provider],
         uid: session[:uid]
       )
     end
 
-    if @user.save && @address.save  
+    if @user.save && @address.save
       reset_session
       sign_in(@user)
       redirect_to users_signup_complete_path
