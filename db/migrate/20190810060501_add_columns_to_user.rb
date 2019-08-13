@@ -8,6 +8,5 @@ class AddColumnsToUser < ActiveRecord::Migration[5.0]
     add_column :users, :birth_year, :integer, null: false
     add_column :users, :birth_month, :integer, null: false
     add_column :users, :birth_day, :integer, null: false
-    add_column :users, :phone_number, :integer, null: false, unique: true
   end
 end
