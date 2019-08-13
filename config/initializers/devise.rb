@@ -265,7 +265,8 @@ Devise.setup do |config|
                                Rails.application.secrets[:FACEBOOK_SECRET]
   
     config.omniauth :google_oauth2, Rails.application.secrets[:GOOGLE_ID],
-                                    Rails.application.secrets[:GOOGLE_SECRET]
+                                    Rails.application.secrets[:GOOGLE_SECRET],
+                                    skip_jwt: true
   end
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
