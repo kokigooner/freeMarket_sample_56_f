@@ -88,7 +88,7 @@
       設定
     %ul.mypage-nav-list
       %li
-        = link_to "/users/mypage/profile",class:"mypage-nav-list-item" do
+        = link_to users_mypage_profile_path(@group),class:"mypage-nav-list-item" do
           プロフィール
           %i.icon-arrow-right
             >
@@ -98,7 +98,7 @@
           %i.icon-arrow-right
             >
       %li
-        = link_to "/users/mypage/card",class:"mypage-nav-list-item" do
+        = link_to users_mypage_card_path(@group),class:"mypage-nav-list-item" do
           お支払い方法
           %i.icon-arrow-right
             >
@@ -108,7 +108,7 @@
           %i.icon-arrow-right
             >
       %li
-        = link_to "/mypage/identification",class:"mypage-nav-list-item" do
+        = link_to mypage_identification_path(@group),class:"mypage-nav-list-item" do
           本人情報
           %i.icon-arrow-right
             >
