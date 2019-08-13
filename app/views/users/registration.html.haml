@@ -1,8 +1,9 @@
 .registration-container
   %header.registration-header
     %h1
-      %a(href="/" class="registration-header__logo")
-        = image_tag 'mercari_logo_horizontal', class: 'registration-header__logo__img'
+      = link_to(root_path, class: "registration-header__logo") do
+        = image_tag 'mercari_logo_horizontal',
+          class: 'registration-header__logo__img'
     %nav.registration-header__progress-bar
       %ol
         %li.registration-header--active
@@ -31,61 +32,109 @@
   %main.registration-main
     .registration-main__container
       %h2.registration-main__text 会員情報入力
-      =form_for :user, html: { class: "registration__form" } do |f|
+      = form_for @user,
+        url: users_signup_confirmation_path,
+        method: :post,
+        html: { class: "registration__form" } do |f|
         .registration__form__content
           .registration__form__group
             = f.label :nickname, "ニックネーム"
             %span.registration__form--require 必須
-            = f.text_field :nickname, class: "registration__form__input", placeholder: "例) メルカリ太郎" 
+            = f.text_field :nickname,
+              class: "registration__form__input",
+              placeholder: "例) メルカリ太郎"
+            = render 'error_messages',
+              errors: @user.errors.full_messages_for(:nickname)
           .registration__form__group
             = f.label :email, "メールアドレス"
             %span.registration__form--require 必須
-            = f.text_field :email, class: "registration__form__input", placeholder: "PC・携帯どちらでも可"
+            = f.email_field :email,
+              class: "registration__form__input",
+              placeholder: "PC・携帯どちらでも可"
+            = render 'error_messages',
+              errors: @user.errors.full_messages_for(:email)
           .registration__form__group
             = f.label :password, "パスワード"
             %span.registration__form--require 必須
-            = f.text_field :password, class: "registration__form__input", placeholder: "6文字以上"
+            = f.password_field :password,
+              class: "registration__form__input",
+              placeholder: "7文字以上"
+            = render 'error_messages',
+              errors: @user.errors.full_messages_for(:password)
           .registration__form__group
-            = f.label :password_conformation, "パスワード (確認)"
+            = f.label :password_confirmation, "パスワード (確認)"
             %span.registration__form--require 必須
-            = f.text_field :password_conformation, class: "registration__form__input", placeholder: "6文字以上"
+            = f.password_field :password_confirmation,
+              class: "registration__form__input", placeholder: "7文字以上"
+            = render 'error_messages',
+              errors: @user.errors.full_messages_for(:password_confirmation)
           .registration__form__group
             %h3 本人確認
             %p.registration__form__text
               安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
           .registration__form__group
             %div
-              = f.label :name, "お名前(全角)"
+              = f.label "お名前(全角)"
               %span.registration__form--require 必須
-            = f.text_field :name, class: "registration__form__input registration__form__input--half registration__form__input--half--left", placeholder: "例) 山田"
-            = f.text_field :name, class: "registration__form__input registration__form__input--half", placeholder: "例) 彩"
+            = f.text_field :family_name,
+              class: "registration__form__input-half-left",
+              placeholder: "例) 山田"
+            = f.text_field :first_name,
+              class: "registration__form__input-half",
+              placeholder: "例) 彩"
+            = render 'error_messages',
+              errors: @user.errors.full_messages_for(:family_name)
+            = render 'error_messages',
+              errors: @user.errors.full_messages_for(:first_name)
           .registration__form__group
             %div
-              = f.label :name, "お名前カナ(全角)"
+              = f.label "お名前カナ(全角)"
               %span.registration__form--require 必須
-            = f.text_field :name, class: "registration__form__input registration__form__input--half registration__form__input--half--left", placeholder: "例) ヤマダ"
-            = f.text_field :name, class: "registration__form__input registration__form__input--half", placeholder: "例) アヤ" 
+            = f.text_field :family_name_kana,
+              class: "registration__form__input-half-left",
+              placeholder: "例) ヤマダ"
+            = f.text_field :first_name_kana,
+              class: "registration__form__input-half",
+              placeholder: "例) アヤ"
+            = render 'error_messages',
+              errors: @user.errors.full_messages_for(:family_name_kana)
+            = render 'error_messages',
+              errors: @user.errors.full_messages_for(:first_name_kana)
           .registration__form__group
             %div
-              %label(for="name") 生年月日
+              = f.label "生年月日"
               %span.registration__form--require 必須
             .registration__form__birthday-wrapper
               .registration__form__select
-                = f.date_select :birthday, start_year: 2019, end_year: 1900, use_month_numbers: true, prompt: "--"
-                %span.registration__form__select--year
-                  年
-                %span.registration__form__select--month
-                  月
-                %span.registration__form__select--day
-                  日
-          %p.registration__form__caution-text
-            ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+                = f.select :birth_year,
+                  (1900..2019).to_a.reverse,
+                  include_blank: '--'
+                %span 年
+                = f.select :birth_month,
+                  (1..12),
+                  include_blank: '--'
+                %span 月
+                = f.select :birth_day,
+                  (1..31),
+                  include_blank: '--'
+                %span 日
+                = render 'error_messages',
+                  errors: @user.errors.full_messages_for(:birth_year)
+                = render 'error_messages',
+                  errors: @user.errors.full_messages_for(:birth_month)
+                = render 'error_messages',
+                  errors: @user.errors.full_messages_for(:birth_day)
+            %p.registration__form__text
+              ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
           = image_tag 'recaptcha.jpeg', class: 'registration__form__recaptcha-icon'
           %p.registration__form__text.registration__form__text--center
             「次へ進む」のボタンを押すことにより、
-            %a(href="/")>利用規約
+            %span<>
+              = link_to('利用規約', '/')
             に同意したものとみなします
-          = f.submit class: "signup__form__btn signup__form__btn--mail registration__form__next-btn", value: "次へ進む"
+          = f.submit class: "registration__form__next-btn",
+            value: "次へ進む",
+            data: { disable_with: "次へ進む" }
           .registration__form__about-text
-            %a(href="/") 本人情報の登録について＞
+            = link_to('本人情報の登録について＞', '/')
   = render partial: "users/signup-footer"

@@ -1,7 +1,7 @@
 .registration-container
   %header.registration-header
     %h1
-      %a(href="/" class="registration-header__logo")
+      = link_to(root_path, class: "registration-header__logo") do
         = image_tag 'mercari_logo_horizontal', class: 'registration-header__logo__img'
     %nav.registration-header__progress-bar
       %ol
@@ -31,28 +31,33 @@
   %main.registration-main
     .registration-main__container
       %h2.registration-main__text 電話番号認証
-      =form_for :user, html: { class: "registration__form registration__form--border" } do |f|
+      = form_for :user,
+        html: { class: "registration__form registration__form--border" } do |f|
         .registration__form__content
           .registration__form__group
             = f.label :phone_number, "認証番号"
             = f.text_field :phone_number, class: "registration__form__input", placeholder: "認証番号を入力"
           %p.registration__form__text
             SMSで届いた認証番号を入力してください
-          = f.submit class: "signup__form__btn signup__form__btn--mail registration__form__next-btn", value: "認証して完了"
+          = link_to('認証して完了',
+            users_signup_address_path,
+            class: "registration__form__next-btn")
       .registration__form.registration__form--border
         .registration__form__content
           %h3 30秒たっても認証番号が届かない方へ
           %p.registration__form__text
             電話で認証番号を聞くこともできます。
-          %a(href="/" class="signup__form__btn signup__form__btn--mail registration__form__next-btn")
-            電話で認証番号を聞く (通話無料)
+          = link_to('電話で認証番号を聞く (通話無料)',
+            root_path,
+            class: "registration__form__next-btn")
       .registration__form.registration__form--border
         .registration__form__content
           %h3 認証番号を再送することもできます。もう一度電話番号を入力してください。
           .registration__form__text
-            %a(href="/") 電話番号を再度入力する
+            = link_to("電話番号を再度入力する", root_path)
             %p.registration__form__text
               ※SMSが届かない場合は
-              %a(href="/")>SMS受信設定
+              %span<>
+                = link_to("SMS受信設定", root_path)
               を確認して、もう一度電話番号を入力してください。
   = render partial: "users/signup-footer"

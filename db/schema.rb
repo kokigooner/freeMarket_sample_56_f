@@ -10,17 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190810051916) do
+ActiveRecord::Schema.define(version: 20190812082325) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "postal_code",  null: false
-    t.string  "minicipality", null: false
-    t.string  "address",      null: false
+    t.string  "postal_code",      null: false
+    t.string  "minicipality",     null: false
+    t.string  "address",          null: false
     t.string  "building"
+    t.string  "family_name",      null: false
+    t.string  "first_name",       null: false
+    t.string  "family_name_kana", null: false
+    t.string  "first_name_kana",  null: false
+    t.integer "prefecture_id",    null: false
+    t.string  "phone_number"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_addresses_on_user_id", using: :btree
+  end
+
+  create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "brand", null: false
+  end
+
+  create_table "brands_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "first_category_id"
+    t.integer "brand_id"
+    t.index ["brand_id"], name: "index_brands_categories_on_brand_id", using: :btree
+    t.index ["first_category_id"], name: "index_brands_categories_on_first_category_id", using: :btree
+  end
+
+  create_table "first_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "first_category", null: false
   end
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text "image", limit: 65535, null: false
+    t.text    "image",      limit: 65535, null: false
+    t.integer "product_id"
+    t.index ["product_id"], name: "index_images_on_product_id", using: :btree
   end
 
   create_table "payments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -45,6 +70,22 @@ ActiveRecord::Schema.define(version: 20190810051916) do
     t.index ["user_id"], name: "index_products_on_user_id", using: :btree
   end
 
+  create_table "second_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string  "second_category",   null: false
+    t.integer "first_category_id"
+    t.index ["first_category_id"], name: "index_second_categories_on_first_category_id", using: :btree
+  end
+
+  create_table "size_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "size_category", null: false
+  end
+
+  create_table "sizes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "size_category_id"
+    t.string  "size",             null: false
+    t.index ["size_category_id"], name: "index_sizes_on_size_category_id", using: :btree
+  end
+
   create_table "sns_credentials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "provider"
     t.string   "uid"
@@ -52,6 +93,12 @@ ActiveRecord::Schema.define(version: 20190810051916) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_sns_credentials_on_user_id", using: :btree
+  end
+
+  create_table "third_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string  "third_category",     null: false
+    t.integer "second_category_id"
+    t.index ["second_category_id"], name: "index_third_categories_on_second_category_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -62,11 +109,26 @@ ActiveRecord::Schema.define(version: 20190810051916) do
     t.datetime "remember_created_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "nickname",                            null: false
+    t.string   "family_name",                         null: false
+    t.string   "first_name",                          null: false
+    t.string   "family_name_kana",                    null: false
+    t.string   "first_name_kana",                     null: false
+    t.integer  "birth_year",                          null: false
+    t.integer  "birth_month",                         null: false
+    t.integer  "birth_day",                           null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "addresses", "users"
+  add_foreign_key "brands_categories", "brands"
+  add_foreign_key "brands_categories", "first_categories"
+  add_foreign_key "images", "products"
   add_foreign_key "payments", "users"
   add_foreign_key "products", "users"
+  add_foreign_key "second_categories", "first_categories"
+  add_foreign_key "sizes", "size_categories"
   add_foreign_key "sns_credentials", "users"
+  add_foreign_key "third_categories", "second_categories"
 end

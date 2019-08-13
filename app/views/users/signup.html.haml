@@ -6,7 +6,8 @@
         %h2 新規会員登録
       .signup__form
         .signup__form__btns
-          = link_to( users_signup_registration_path, class: "signup__form__btn signup__form__btn--mail") do
+          = link_to(users_signup_registration_path,
+            class: "signup__form__btn signup__form__btn--mail") do
             %i.far.fa-envelope.fa-lg.signup__form__mail
             %span.signup__form__mail--text
             メールアドレスで登録する

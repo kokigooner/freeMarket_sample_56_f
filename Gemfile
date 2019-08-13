@@ -38,6 +38,7 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'pry-rails'
   gem 'capistrano'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
@@ -66,10 +67,14 @@ gem 'fog-aws'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
-gem 'omniauth-rails_csrf_protection'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
-
+gem 'omniauth-rails_csrf_protection'
+gem 'gretel'
+gem 'dotenv-rails'
+gem 'rails-i18n', '~> 5.1'
+gem 'owlcarousel-rails'
+gem 'active_hash'
 
 group :production do
   gem 'unicorn', '5.4.1'
