@@ -8,7 +8,6 @@ class ProductsController < ApplicationController
   def products_detail
 
 
-
     hash        = []
     test_model1 = {name:"コーギー1",price:"400",like:"10"}
     test_model2 = {name:"コーギー2",price:"400",like:"20"}

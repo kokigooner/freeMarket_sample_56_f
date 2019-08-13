@@ -13,10 +13,18 @@
 ActiveRecord::Schema.define(version: 20190812082325) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "postal_code",  null: false
-    t.string  "minicipality", null: false
-    t.string  "address",      null: false
+    t.string  "postal_code",      null: false
+    t.string  "minicipality",     null: false
+    t.string  "address",          null: false
     t.string  "building"
+    t.string  "family_name",      null: false
+    t.string  "first_name",       null: false
+    t.string  "family_name_kana", null: false
+    t.string  "first_name_kana",  null: false
+    t.integer "prefecture_id",    null: false
+    t.string  "phone_number"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_addresses_on_user_id", using: :btree
   end
 
   create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -101,10 +109,19 @@ ActiveRecord::Schema.define(version: 20190812082325) do
     t.datetime "remember_created_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "nickname",                            null: false
+    t.string   "family_name",                         null: false
+    t.string   "first_name",                          null: false
+    t.string   "family_name_kana",                    null: false
+    t.string   "first_name_kana",                     null: false
+    t.integer  "birth_year",                          null: false
+    t.integer  "birth_month",                         null: false
+    t.integer  "birth_day",                           null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "addresses", "users"
   add_foreign_key "brands_categories", "brands"
   add_foreign_key "brands_categories", "first_categories"
   add_foreign_key "images", "products"

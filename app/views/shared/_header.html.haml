@@ -175,10 +175,8 @@
                       %i.icon-arrow-right
                         >
         - else
-          %ul.mpcheader-user-nav
-            %li.liked-items-link
-              %a.mpcheader-menu-link{ "data-id": "mpcheader-user-nav" }
-                = link_to "新規登録",new_user_registration_path
-            %li
-              %a.mpcheader-menu-link
-                = link_to "ログイン画面",new_user_session_path
+          %ul.mpcheader-user-btn
+            %li.mpcheader-user-signin
+              = link_to "新規会員登録",users_signup_path, class: "mpcheader-user-red"
+            %li.mpcheader-user-login
+              = link_to "ログイン",  users_login_path
