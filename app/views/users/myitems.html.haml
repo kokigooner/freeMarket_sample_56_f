@@ -22,7 +22,7 @@
         - if current_user.products.present?
           - current_user.products.each do |product|
             .mypage-tab-content
-              = link_to(class: "mypage-item-link") do
+              = link_to users_mypage_myitem_path(product.id),class: "mypage-item-link" do
                 .lazyloaded
                   = image_tag "#{product.images.first.image}", class: ''
                 .mypage-item-body 

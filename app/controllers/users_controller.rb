@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:mypage,:myitems,:identification, :edit, :update, :destroy]
+  before_action :set_product, only: [:destroy]
   before_action :has_user_params?, only: [:authentication, :address, :payment]
 
   
@@ -65,11 +65,17 @@ class UsersController < ApplicationController
   end
 
   def mypage
-
+    
   end
   
   def myitems
-    
+  end
+
+  def myitemdetail
+    if current_user.id == Product.find(params[:id]).user_id
+    else 
+      redirect_to users_mypage_path
+    end
   end
 
   def card
@@ -82,6 +88,10 @@ class UsersController < ApplicationController
   end
 
   def logout
+  end
+
+  def delete
+    @product.destoroy
   end
 
   private
@@ -120,8 +130,8 @@ class UsersController < ApplicationController
     redirect_to users_signup_path unless session[:user_params]
   end
 
-  def set_user
-    @user = User.find(current_user.id)
+  def set_product
+    @product = current_user.product.find(params[:id])
   end
 
 end

@@ -6,9 +6,11 @@ class ProductsController < ApplicationController
   end
 
   def products_detail
-
-
-    hash        = []
+    
+    @next = Product.find_by_id("#{params[:id].to_i + 1}")
+    @previous = Product.find_by_id("#{params[:id].to_i - 1}")
+    @product_user = @product.user
+    hash = []
     test_model1 = {name:"コーギー1",price:"400",like:"10"}
     test_model2 = {name:"コーギー2",price:"400",like:"20"}
     test_model3 = {name:"コーギー3",price:"300",like:"30"}
@@ -27,6 +29,7 @@ class ProductsController < ApplicationController
 
   def set_product
     @product = Product.find(params[:id])
+    @productsall = Product.all
   end
 
 end

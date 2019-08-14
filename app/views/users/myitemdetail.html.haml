@@ -9,9 +9,9 @@
             .owl-stage{"style": "#{'left: 0px width: 900px'}"}  
               .owl-product.active{"style": "#{'width: 300px'}"} 
                 .owl-product-inner.is-higher-height
-                  = image_tag "#{@product.images.find(1)[:image]}", class: 'owl-lazy',width: "300" ,hight: "300"
+                  -# = image_tag "#{@product.images.find(1)[:image]}", class: 'owl-lazy',width: "300" ,hight: "300"
           .owl-dots
-            - @product.images.each do |thumbnail|
+            -# - @product.images.each do |thumbnail|
               .owl-dot
                 .owl-dot-inner
                   = image_tag "#{thumbnail.image}", class: 'owl-lazy',width: "60" ,hight: "60"
@@ -20,7 +20,7 @@
           %tr
             %th 出品者
             %td
-              = link_to "#{@product.product_name}",
+              -# = link_to "#{@product.product_name}"
               %div
                 .product-user-ratings
                   %i.icon-good
@@ -50,34 +50,34 @@
           %tr
             %th 商品の状態
             %td 
-              = @product.condition
+              -# = @product.condition
           %tr
             %th 配送料の負担
             %td 
-              = @product.delivery_charge
+              -# = @product.delivery_charge
           %tr
             %th 配送の方法
             %td 
-              = @product.delivery_way
+              -# = @product.delivery_way
           %tr
             %th 配送元地域
             %td 
-              = link_to "??????","/"
+              -# = link_to "??????","/"
           %tr
             %th 発送日の目安
             %td
-              = @product.delivery_date
+              -# = @product.delivery_date
     %div.product-price-box.text-center
       %span.product-price.bold
-        = "¥#{@product.price}"
+        -# = "¥#{@product.price}"
       %span.product-tax
         (税込)
       %span.product-shipping-fee
         送料込み
-      - if user_signed_in?
+      -# - if user_signed_in?
         - unless current_user.id == @product.user_id
           = link_to "購入画面に進む",  destroy_user_session_path,class: "product-buy-btn", method: :delete
-      - else 
+      -# - else 
         = link_to "購入画面に進む",  destroy_user_session_path,class: "product-buy-btn", method: :delete
     -# %a.product-btn-client
     -#   %div{"data-client": "#{'visible'}"}
@@ -86,7 +86,7 @@
       -# %div.product-action-text{"data-toggle": "#{'open-app'}","data-url-scheme": "#{'mercari://'}","data-action": "#{'product/openDetail'}",'data-key': "#{'id=aaaaaaaa'}","data-paly-id": "#{"com.kouzoh.mercari"}","data-adjust-url": "http://app.adjust.io/xio2ii?campaign=iOS&adgroup=items.buy_button1aaaaaa"}
       -#   アプリで購入　　←※スマホ用
     %div.product-description.f14
-      =simple_format "#{@product.description}", class:'product-description-inner'
+      -# =simple_format "#{@product.description}", class:'product-description-inner'
     %div.product-button-container.clearfix
       %div.product-button-left
         %button.product-button.product-button-like{"name": "like!","data-toggle": "like","data-id": "#{"xxxxxxxx"}","data-ga":"#{"element"}","dara-ga-category": "#{'LIKE'}"}

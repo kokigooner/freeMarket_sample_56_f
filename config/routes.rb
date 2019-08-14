@@ -4,16 +4,17 @@ Rails.application.routes.draw do
   root to: "products#toppage"
 
   get '/products', to: 'products#toppage'
-  get "/products/:id", to: "products#products_detail" 
+  get "/products/:id", to: "products#products_detail" ,as: :products_detail
   get "/products/confirm", to: "products#confirm"
   get "/products/sell", to: "products#sell"
-  get "/users/mypage/:id", to: "users#myitemdetail"
+
 
   get '/users/mypage/profile', to: 'users#profile'
   get '/users/mypage/card', to: "users#card"
   get '/users/mypage/card/create', to: "users#card_create"
   get "/users/mypage", to: "users#mypage"
   get "/users/mypage/myitems", to: "users#myitems"
+  get "/users/mypage/myitem/:id", to: "users#myitemdetail",as: :users_mypage_myitem
 
   get "/mypage/identification", to: "users#identification" 
   get "/mypage/logout", to: "users#logout"
