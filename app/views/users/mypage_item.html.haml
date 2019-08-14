@@ -6,8 +6,8 @@
       .product-photo
         .owl-carousel.owl-loaded.owl-drag
           .owl-stage-outer
-            .owl-stage{ "style": "#{ 'left: 0px width: 900px' }" }
-              .owl-product.active{ "style": "#{ 'width: 300px' }" }
+            .owl-stage
+              .owl-product.active
                 .owl-product-inner.is-higher-height
                   -# = image_tag "#{@product.images.find(1)[:image]}",
                     class: 'owl-lazy',width: "300" ,hight: "300"
