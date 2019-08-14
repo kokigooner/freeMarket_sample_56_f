@@ -75,33 +75,16 @@
         (税込)
       %span.product-shipping-fee
         送料込み
-      - if user_signed_in?
-        - unless current_user.id == @product.user_id
-          = link_to "購入画面に進む",  destroy_user_session_path,class: "product-buy-btn", method: :delete
-      - else 
-        = link_to "購入画面に進む",  destroy_user_session_path,class: "product-buy-btn", method: :delete
     %div.product-description.f14
       =simple_format "#{@product.description}", class:'product-description-inner'
-    %div.product-button-container.clearfix
-      %div.product-button-left
-        %button.product-button.product-button-like{"name": "like!","data-toggle": "like","data-id": "#{"xxxxxxxx"}","data-ga":"#{"element"}","dara-ga-category": "#{'LIKE'}"}
-          %i.icon-like-border
-            = image_tag "sample_heart.png",width: "15" ,hight: "15"
-            %span
-              良いね！
-            %span.fade-in-down{"data-num":"#{"like"}"}
-              0
-        %button.product-button.product-button-report.clearfix{"data-modal":"#{"report-product"}","data-open":"#{"modal"}"}
-          %i.icon-flag
-            = image_tag "sample_flag.png",width: "15" ,hight: "15"
-            %span
-              不適切な商品の報告
-        %input{"type":"#{"hidden"}","name":"#{"like_add_url"}","value":"#{""}"}
-        %input{"type":"#{"hidden"}","name":"#{"like_del_url"}","value":"#{""}"}
-        %input{"type":"#{"hidden"}","name":"#{"__csrf_value"}","value":"#{""}"}
-      %div.product-button-right
-        %i.icon-lock
-          あんしん・あんぜんへの取り込み
+  .products-detail-btn
+    .products-detail-btn-style.edit
+      = link_to "商品の編集", root_path
+    .or or
+    .products-detail-btn-style.gray
+      = link_to "出品を一旦停止する", root_path
+    .products-detail-btn-style.gray
+      = link_to "この商品を削除する", users_mypage_myitem_path, method: :delete
   %div.product-detail-message
     %div.message-container
       %div.message-content
@@ -110,8 +93,5 @@
             相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
           = f.text_area :message, class: 'textarea-default'
           = f.submit "コメントする", {class: "message-submit btn-default btn-gray"} 
-
-
-
   = render 'shared/bread-crumbs'
   = render  'shared/footer'

@@ -19,9 +19,8 @@ class ProductsController < ApplicationController
 
   def delete
     @product = Product.find(params[:id])
-    binding.pry
     @product.destroy
-    redirects_to root_path
+    redirect_to root_path
   end
   
   private
