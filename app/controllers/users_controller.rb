@@ -86,6 +86,7 @@ class UsersController < ApplicationController
 
   def myitemdetail
     if current_user.id == Product.find(params[:id]).user_id
+      @product = Product.find(params[:id])
     else 
       redirect_to users_mypage_path
     end
