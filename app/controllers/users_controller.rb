@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:mypage,:myitems, :edit, :update, :destroy]
+  before_action :set_user, only: [:mypage,:myitems,:identification, :edit, :update, :destroy]
   before_action :has_user_params?, only: [:authentication, :address, :payment]
 
   
@@ -69,7 +69,7 @@ class UsersController < ApplicationController
   end
   
   def myitems
-    @myprodacts = User.products.All
+    
   end
 
   def card
@@ -79,7 +79,6 @@ class UsersController < ApplicationController
   end
 
   def identification
-    @test_model = { name: "山田太郎", kana_name: "ヤマダ タロウ", birthday: "2000年01日01日" }
   end
 
   def logout
@@ -122,7 +121,7 @@ class UsersController < ApplicationController
   end
 
   def set_user
-    @user = User.find(params[:id])
+    @user = User.find(current_user.id)
   end
 
 end

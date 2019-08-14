@@ -1,5 +1,5 @@
 = render 'shared/header'
-- breadcrumb :user, @user
+- breadcrumb :myitems, @user
 = render 'shared/bread-crumbs'
 .mypage-container
   .mypage-container__box
@@ -19,13 +19,30 @@
           %li.mypage-items__menu__right
             = link_to(root_path, class: "mypage-items__menu__tabs") do
               売却済
-        .div
+        - if current_user.products.present?
+          - current_user.products.each do |product|
+            .mypage-tab-content
+              = link_to(class: "mypage-item-link") do
+                .lazyloaded
+                  = image_tag "#{product.images.first.image}", class: ''
+                .mypage-item-body 
+                  .product-title
+                    = product.product_name
+                  .product-icons
+                    %i.far.fa-heart
+                      %span
+                        0
+                    %i.far.fa-comment
+                      %span
+                        0
+                    .mypage-item-status-blue
+                      出品中
+                .icon-arrow-right
+                  >
+        - else
           %ul
-          - if current_user.product
             %li.mypage-purchased-myitems__text
               取引中の商品がありません
-          -# %ul.mypage__tab__past
-          -#   %li.mypage__item__nothing
-          -#     過去に取引した商品はありません
+
 .mypage__footer
   = render 'shared/footer'

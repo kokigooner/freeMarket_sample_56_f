@@ -244,54 +244,119 @@ $color-hover-gray: #fafafa;
   }
 }
 
-.mypage-items {
+.mypage-items__menu {
   background-color: $color-white;
+  border: 0;
+  display: flex;
+  font-size: 0;
+  text-align: center;
+
+  &__left {
+    border-top: solid 2px $color-red;
+    box-sizing: border-box;
+    display: block;
+    height: 70px;
+    line-height: 70px;
+    width: 50%;
+  }
+
+  &__right {
+    background-color: $color-light-gray;
+    display: block;
+    height: 70px;
+    line-height: 70px;
+    width: 50%;
+  }
+
+  &__center {
+    background-color: $color-light-gray;
+    display: block;
+    height: 70px;
+    line-height: 70px;
+    width: 50%;
+  }
+
+  &__tabs {
+    color: $color-black;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__tabs:hover {
+    opacity: .7;
+  }
+
+}
+.mypage-tab-content{
   display: block;
-  font-size: 14px;
+  height: 80px;
+  padding: 16px;
+  color: #333;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
 
-  &__menu {
-    background-color: $color-white;
-    border: 0;
-    display: flex;
-    font-size: 0;
-    text-align: center;
-
-    &__left {
-      border-top: solid 2px $color-red;
-      box-sizing: border-box;
-      display: block;
-      height: 70px;
-      line-height: 70px;
-      width: 50%;
+  .lazyloaded {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 48px;
+    height: 48px;
+    img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
     }
+}
 
-    &__right {
-      background-color: $color-light-gray;
+  .mypage-item-body{
+    margin: 0 0 0 20px;
+    float: left;
+    .product {
+      &-title {
+      overflow: hidden;
       display: block;
-      height: 70px;
-      line-height: 70px;
-      width: 50%;
-    }
+      display: -webkit-box;
+      max-height: 4.4em;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      line-height: 1.5;
+      color: #333;
+      font-size: 14px;
+      }
 
-    &__center {
-      background-color: $color-light-gray;
-      display: block;
-      height: 70px;
-      line-height: 70px;
-      width: 50%;
-    }
+      &-icons {
+        vertical-align: middle;
+        color: #ccc;
+        span{
+          font-size: 16px;
+          color: #888;
+        }
 
-    &__tabs {
-      color: $color-black;
-      display: block;
-      font-size: 16px;
-      font-weight: bold;
-      height: 100%;
-      width: 100%;
-    }
+      .mypage-item-status-blue{
+        display: inline-block;
+        margin: 8px 0 0 0;
+        padding: 5px 6px;
+        border-radius: 2px;
+        font-size: 12px;
+        color: #fff;
+        background-color: #0099e8;
+        font-weight: 600;
 
-    &__tabs:hover {
-      opacity: .7;
+        }
+      }
     }
   }
+  .icon-arrow-right {
+    color: #888;
+    float: right;
+    margin: 14px 0 0 0;
+}
 }

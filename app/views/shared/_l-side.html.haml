@@ -2,7 +2,7 @@
   %nav.mypage-nav
     %ul.mypage-nav-list
       %li
-        = link_to "/users/mypage/#{current_user.id}",class:"mypage-nav-list-item" do
+        = link_to users_mypage_path,class:"mypage-nav-list-item" do
           マイページ
           %i.icon-arrow-right
             >
@@ -27,7 +27,7 @@
           %i.icon-arrow-right
             >
       %li
-        %a.mypage-nav-list-item
+        = link_to users_mypage_myitems_path,class:"mypage-nav-list-item" do
           出品した商品・出品中
           %i.icon-arrow-right
             >

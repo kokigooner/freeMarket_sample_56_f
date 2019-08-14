@@ -23,3 +23,7 @@ crumb :profile do |user|
   parent :user, user
 end
 
+crumb :myitems do |user|
+  link "出品した商品・出品中", "/users/mypage/#{current_user.id}/myitems"
+  parent :user, user
+end

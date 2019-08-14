@@ -51,6 +51,9 @@ main {
     select {
       width: 100%;
     }
+    span{
+      display: inline-block; ;
+    }
 
       label {
       font-weight: 600;
