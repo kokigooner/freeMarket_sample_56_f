@@ -1,9 +1,12 @@
 $color-black: #333;
 $color-blue: #0099e8;
 $color-light-gray: #f5f5f5;
+$color-dark-gray: #979797;
 $color-gray: #eee;
 $color-red: #ea352d;
 $color-white: #fff;
+$color-fb: #385185;
+
 
 .login-header {
   align-items: center;
@@ -61,12 +64,12 @@ $color-white: #fff;
     }
 
     &__btn-fb {
-      background-color: #385185;
+      background-color: $color-fb;
       color: $color-white;
     }
 
     &__btn-google {
-      border: #979797 solid 1px;
+      border: $color-dark-gray solid 1px;
       color: $color-black;
       margin-top: 16px;
     }
