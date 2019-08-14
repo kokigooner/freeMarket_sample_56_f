@@ -14,11 +14,11 @@
     .login__sns
       = link_to 'Facebookでログイン',
         user_facebook_omniauth_authorize_path,
-        class: "login__sns__btn login__sns__btn--fb",
-        method: :post 
+        class: "login__sns__btn login__sns__btn-fb",
+        method: :post
       = link_to 'Googleでログイン',
         user_google_oauth2_omniauth_authorize_path,
-        class: "login__sns__btn login__sns__btn--google",
+        class: "login__sns__btn login__sns__btn-google",
         method: :post
     .login__form
       = form_for @user, url: session_path(@user) do |f|

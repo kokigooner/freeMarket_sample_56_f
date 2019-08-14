@@ -1,6 +1,7 @@
 $color-black: #333;
 $color-blue: #0099e8;
 $color-light-gray: #f5f5f5;
+$color-gray: #eee;
 $color-red: #ea352d;
 $color-white: #fff;
 
@@ -30,7 +31,7 @@ $color-white: #fff;
 
 .login {
   &__new-account {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid $color-gray;
     font-size: 14px;
     padding: 40px 64px;
     text-align: center;
@@ -57,17 +58,17 @@ $color-white: #fff;
       line-height: 48px;
       text-align: center;
       width: 100%;
+    }
 
-      &--fb {
-        background-color: #385185;
-        color: $color-white;
-      }
+    &__btn-fb {
+      background-color: #385185;
+      color: $color-white;
+    }
 
-      &--google {
-        border: #979797 solid 1px;
-        color: $color-black;
-        margin-top: 16px;
-      }
+    &__btn-google {
+      border: #979797 solid 1px;
+      color: $color-black;
+      margin-top: 16px;
     }
   }
   &__form {
