@@ -67,6 +67,7 @@ class UsersController < ApplicationController
   end
 
   def login
+    @user = User.new
   end
 
   def profile
