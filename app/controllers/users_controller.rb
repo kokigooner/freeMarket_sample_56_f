@@ -92,6 +92,9 @@ class UsersController < ApplicationController
     end
   end
 
+  def mypage_item
+  end
+
   def card
   end
 
@@ -147,5 +150,6 @@ class UsersController < ApplicationController
   def set_product
     @product = current_user.product.find(params[:id])
   end
+
 
 end

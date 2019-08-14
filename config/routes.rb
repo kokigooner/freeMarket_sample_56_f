@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   get "/users/signup/address", to: "users#address"
   post "/users/signup/payment", to: "users#payment"
   get "/users/signup/complete", to: "users#complete"
+  get "/users/mypage/item", to: "users#mypage_item"
 
   get "/users/sell", to: "users#sell"
   get "/users/login", to: "users#login"
