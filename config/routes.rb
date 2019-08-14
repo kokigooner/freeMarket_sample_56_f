@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get '/products', to: 'products#toppage'
   get "/products/confirm", to: "products#confirm"
   get "/products/sell", to: "products#sell"
-  get "/products/:id", to: "products#products_detail" 
+  get "/products/:id", to: "products#products_detail"
+  delete "/products/delete", to: "products#delete" 
 
   get '/users/mypage/profile', to: 'users#profile'
   get '/users/mypage/card', to: "users#card"

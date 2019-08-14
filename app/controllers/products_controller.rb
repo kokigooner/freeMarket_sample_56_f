@@ -23,6 +23,13 @@ class ProductsController < ApplicationController
 
   def confirm
   end
+
+  def delete
+    @product = Product.find(params[:id])
+    binding.pry
+    @product.destroy
+    redirects_to root_path
+  end
   
   private
 
@@ -31,5 +38,7 @@ class ProductsController < ApplicationController
   def set_product
     @product = Product.find(params[:id])
   end
+
+  
 
 end
