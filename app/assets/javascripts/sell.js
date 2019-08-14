@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var
     sellbox = document.getElementById('sellbox'),
     output = document.getElementById('output'),
-    fileInput = document.getElementById('output'),
+    fileInput = document.getElementById('fileinput'),
     maxSize = 20 * 1024 * 1024;
 
   function organizeFiles(files) {
