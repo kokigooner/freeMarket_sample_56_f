@@ -86,7 +86,7 @@
     .products-detail-btn-style.gray
       = link_to "出品を一旦停止する", root_path
     .products-detail-btn-style.gray
-      = link_to "この商品を削除する", root_path
+      = link_to "この商品を削除する", products_delete_path, method: :delete
   .product-detail-message
     .message-container
       .message-content
