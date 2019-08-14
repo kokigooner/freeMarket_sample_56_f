@@ -1,29 +1,35 @@
 $red:#ea352d;
 $gray: #aaa;
+$white: #fff;
+
 .products-detail-btn {
-  background-color: white;
+  background-color : $white;
   margin: 24px auto;
+  padding: 8px 16px;
   width: 665px;
-  padding: 8px 16px 8px 16px;
+
   &-style {
-    margin: 16px 0 16px 0;
     height: 50px;
+    line-height: 50px;
+    margin: 16px 0;
     text-align: center;
-    line-height: 50px;    
+
     a {
-      color:white;
+      color: $white;
     }
   }
-  .edit{
+
+  .edit {
     background-color: $red;
     border: 1px solid $red;
   }
-  
-  .or{
-  margin: 24px auto;
-  text-align: center;
+
+  .or {
+    margin: 24px auto;
+    text-align: center;
   }
-  .gray{
+
+  .gray {
     background-color: $gray;
     border: 1px solid $gray;
   }

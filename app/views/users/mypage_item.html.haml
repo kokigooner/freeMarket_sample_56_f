@@ -1,4 +1,4 @@
-.default-container 
+.default-container
   = render  'shared/header'
   %section.product-box-container.large-single-container
     %h1.product-name MacBook エアー
@@ -6,22 +6,23 @@
       .product-photo
         .owl-carousel.owl-loaded.owl-drag
           .owl-stage-outer
-            .owl-stage{"style": "#{'left: 0px width: 900px'}"}  
-              .owl-product.active{"style": "#{'width: 300px'}"} 
+            .owl-stage{ "style": "#{ 'left: 0px width: 900px' }" }
+              .owl-product.active{ "style": "#{ 'width: 300px' }" }
                 .owl-product-inner.is-higher-height
                   -# = image_tag "#{@product.images.find(1)[:image]}", class: 'owl-lazy',width: "300" ,hight: "300"
           .owl-dots
             -# - @product.images.each do |thumbnail|
               .owl-dot
                 .owl-dot-inner
-                  = image_tag "#{thumbnail.image}", class: 'owl-lazy',width: "60" ,hight: "60"
+                  = image_tag "#{thumbnail.image}",
+                  class: 'owl-lazy',width: "60" ,hight: "60"
       %table.product-detail-table
         %tbody
           %tr
             %th 出品者
             %td
               -# = link_to "#{@product.product_name}"
-              %div
+              
                 .product-user-ratings
                   %i.icon-good
                     %i.far.fa-smile-wink
@@ -32,24 +33,24 @@
                   %span ??
                 .product-user-ratings
                   %i.icon-bad
-                    %i.far.fa-frown-open 
+                    %i.far.fa-frown-open
                   %span ??
           %tr
             %th カテゴリー
             %td
-              %div
+              
               = link_to "未実装","/"
-              %div
+              
               = link_to "> 未実装","/"
-              %div
+              
               = link_to "> 未実装","/"
           %tr
             %th ブランド
-            %td 
+            %td
               = link_to "未実装","/"
           %tr
             %th 商品の状態
-            %td 
+            %td
               -# = @product.condition
           %tr
             %th 配送料の負担
@@ -61,38 +62,38 @@
               -# = @product.delivery_way
           %tr
             %th 配送元地域
-            %td 
+            %td
               -# = link_to "??????","/"
           %tr
             %th 発送日の目安
             %td
               -# = @product.delivery_date
-    %div.product-price-box.text-center
+    .product-price-box.text-center
       %span.product-price.bold
         -# = "¥#{@product.price}"
       %span.product-tax
         (税込)
       %span.product-shipping-fee
         送料込み
-    %div.products-discripution 
+    .products-discripution 
       %p.products-discripution-inner
         ssssssssssssssss
-  %div.products-detail-btn
-    %div.products-detail-btn-style.edit
+  .products-detail-btn
+    .products-detail-btn-style.edit
       = link_to "商品の編集", root_path
-    %div.or or
-    %div.products-detail-btn-style.gray
+    .or or
+    .products-detail-btn-style.gray
       = link_to "出品を一旦停止する", root_path
-    %div.products-detail-btn-style.gray
+    .products-detail-btn-style.gray
       = link_to "この商品を削除する", root_path
-  %div.product-detail-message
-    %div.message-container
-      %div.message-content
+  .product-detail-message
+    .message-container
+      .message-content
         = form_for "",html: { class: "message-form" },local: true do |f|
           %p
             相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
           = f.text_area :message, class: 'textarea-default'
-          = f.submit "コメントする", {class: "message-submit btn-default btn-gray"} 
+          = f.submit "コメントする", {class: "message-submit btn-default btn-gray"}
 
 
   = render 'shared/bread-crumbs'
