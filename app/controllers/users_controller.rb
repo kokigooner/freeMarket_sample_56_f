@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :has_user_params?, only: [:authentication, :address, :payment]
-  before_action :set_user, only: [:mypage, :edit, :update, :destroy]
+
   
   def signup
   end
@@ -84,6 +84,9 @@ class UsersController < ApplicationController
     
   end
 
+  def mypage_item
+  end
+
   def card
   end
 
@@ -133,8 +136,5 @@ class UsersController < ApplicationController
     redirect_to users_signup_path unless session[:user_params]
   end
 
-  def set_user
-    @user = User.find(params[:id])
-  end
 
 end

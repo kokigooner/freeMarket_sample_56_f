@@ -10,8 +10,7 @@ Rails.application.routes.draw do
   get '/users/mypage/profile', to: 'users#profile'
   get '/users/mypage/card', to: "users#card"
   get '/users/mypage/card/create', to: "users#card_create"
-  get "/users/mypage/:id", to: "users#mypage"
-  get "/users/mypage/:id/tasktask", to: "users#mytask"
+  get "/users/mypage", to: "users#mypage"
   
   get "/mypage/identification", to: "users#identification" 
   get "/mypage/logout", to: "users#logout"
@@ -24,6 +23,7 @@ Rails.application.routes.draw do
   get "/users/signup/address", to: "users#address"
   post "/users/signup/payment", to: "users#payment"
   get "/users/signup/complete", to: "users#complete"
+  get "/users/mypage/item", to: "users#mypage_item"
 
   get "/users/sell", to: "users#sell"
   get "/users/login", to: "users#login"
