@@ -1,23 +1,38 @@
 %header.login-header
   %h1.login-header__head
-    %a(href="/")
-      = image_tag 'mercari_logo_horizontal.png', class: 'login-header__logo'
+    = link_to root_path do
+      = image_tag 'mercari_logo_horizontal.png',
+        class: 'login-header__logo'
 %main.login-main
   .login-panel
     .login__new-account
       %p
         アカウントをお持ちでない方はこちら
-      %a(href="/" class="login__new-account__btn")
-        新規会員登録
-    .login__external-account
-      = link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, class:"login__external-account__btn login__external-account__btn--facebook", method: :post 
-      = link_to 'Googleでログイン',user_google_oauth2_omniauth_authorize_path, class:"login__external-account__btn login__external-account__btn--google", method: :post
+      = link_to '新規会員登録',
+        users_signup_registration_path,
+        class: "login__new-account__btn"
+    .login__sns
+      = link_to 'Facebookでログイン',
+        user_facebook_omniauth_authorize_path,
+        class: "login__sns__btn login__sns__btn--fb",
+        method: :post 
+      = link_to 'Googleでログイン',
+        user_google_oauth2_omniauth_authorize_path,
+        class: "login__sns__btn login__sns__btn--google",
+        method: :post
     .login__form
-      = form_for :user do |f|
-        = f.email_field :email, placeholder: "メールアドレス", class: "login__form__input"
-        = f.password_field :password, placeholder: "パスワード", class: "login__form__input"
-        = image_tag 'recaptcha.jpeg', class: 'login__form__recaptcha-img'
-        = f.submit class: "login__form__submit-btn", value: "ログイン"
-      %a(href="/" class="login__form__forgot-pass-text")
-        パスワードをお忘れの方
+      = form_for @user, url: session_path(@user) do |f|
+        = f.email_field :email,
+          placeholder: "メールアドレス",
+          class: "login__form__input"
+        = f.password_field :password,
+          placeholder: "パスワード",
+          class: "login__form__input"
+        = image_tag 'recaptcha.jpeg',
+          class: 'login__form__recaptcha-img'
+        = f.submit class: "login__form__submit-btn",
+          value: "ログイン"
+      = link_to 'パスワードをお忘れの方',
+        new_user_password_path,
+        class: "login__form__forgot-pass-text"
 = render partial: "users/signup-footer"
