@@ -8,6 +8,10 @@ class UsersController < ApplicationController
 
   def registration
     @user = User.new
+    @nickname = session[:nickname]
+    @email = session[:email]
+    session.delete(:nickname)
+    session.delete(:email)
   end
 
   def confirmation
@@ -43,7 +47,15 @@ class UsersController < ApplicationController
   def create
     @user = User.new(session[:user_params])
     @address = Address.new(session[:address_params].merge(user: @user))
-    if @user.save && @address.save  
+
+    if session[:provider]
+      @user.sns_credentials.new(
+        provider: session[:provider],
+        uid: session[:uid]
+      )
+    end
+
+    if @user.save && @address.save
       reset_session
       sign_in(@user)
       redirect_to users_signup_complete_path
@@ -56,6 +68,7 @@ class UsersController < ApplicationController
   end
 
   def login
+    @user = User.new
   end
 
   def profile

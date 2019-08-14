@@ -3,6 +3,9 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:products_detail, :edit, :update, :destroy]
 
   def toppage
+    @products   = Product.order(id: "DESC").limit(4)
+
+    @productimage   = Image.order(id: "DESC").limit(4)
   end
 
   def products_detail
