@@ -7,15 +7,15 @@ Rails.application.routes.draw do
   get "/products/:id", to: "products#products_detail" ,as: :products_detail
   get "/products/confirm", to: "products#confirm"
   get "/products/sell", to: "products#sell"
-
-
+  get "/products/:id", to: "products#products_detail"
+  
   get '/users/mypage/profile', to: 'users#profile'
   get '/users/mypage/card', to: "users#card"
   get '/users/mypage/card/create', to: "users#card_create"
   get "/users/mypage", to: "users#mypage"
   get "/users/mypage/myitems", to: "users#myitems"
   get "/users/mypage/myitem/:id", to: "users#myitemdetail",as: :users_mypage_myitem
-
+  delete "/products/delete", to: "products#delete" 
   get "/mypage/identification", to: "users#identification" 
   get "/mypage/logout", to: "users#logout"
   
