@@ -332,13 +332,15 @@ $color-hover-gray: #fafafa;
       font-size: 14px;
       }
     .product-icons {
-        vertical-align: middle;
-        color: #ccc;
-        span{
-          font-size: 16px;
+      color: #ccc;
+      vertical-align: middle;
+
+        span {
           color: #888;
+          font-size: 16px;
         }
-      .mypage-item-status-blue{
+
+      .mypage-item-status-blue {
         display: inline-block;
         margin: 8px 0 0 0;
         padding: 5px 6px;
@@ -350,6 +352,7 @@ $color-hover-gray: #fafafa;
       }
     }
   }
+
   .icon-arrow-right {
     color: #888;
     float: right;
