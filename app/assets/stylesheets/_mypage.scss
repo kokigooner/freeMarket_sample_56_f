@@ -288,15 +288,15 @@ $color-hover-gray: #fafafa;
   &-tabs:hover {
     opacity: .7;
   }
-
 }
-.mypage-tab-content{
+
+.mypage-tab-content {
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box;
+  color: #333;
   display: block;
   height: 80px;
   padding: 16px;
-  color: #333;
-  box-sizing: border-box;
-  border-bottom: 1px solid #eee;
 
   .lazyloaded {
     float: left;
@@ -314,13 +314,12 @@ $color-hover-gray: #fafafa;
       width: 100%;
       z-index: 1;
     }
-}
+  }
 
-  .mypage-item-body{
+  .mypage-item-body {
     float: left;
     margin: 0 0 0 20px;
-    .product {
-      &-title {
+    .product-title {
       overflow: hidden;
       display: block;
       display: -webkit-box;
@@ -332,7 +331,7 @@ $color-hover-gray: #fafafa;
       color: #333;
       font-size: 14px;
       }
-      &-icons {
+    .product-icons {
         vertical-align: middle;
         color: #ccc;
         span{
@@ -348,7 +347,6 @@ $color-hover-gray: #fafafa;
         color: #fff;
         background-color: #0099e8;
         font-weight: 600;
-        }
       }
     }
   }
