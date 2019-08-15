@@ -10,6 +10,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.string :delivery_date, null: false
       t.string :delivery_way, null: false
       t.string :order_status
+      t.timestamps
     end
   end
 end

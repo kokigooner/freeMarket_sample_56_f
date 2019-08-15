@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190810051916) do
+ActiveRecord::Schema.define(version: 20190813031042) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "postal_code",  null: false
@@ -19,29 +19,32 @@ ActiveRecord::Schema.define(version: 20190810051916) do
     t.string  "building"
   end
 
-  create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text "image", limit: 65535, null: false
+  create_table "first_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "first_category", null: false
   end
 
-  create_table "payments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "card_nubmer"
-    t.integer "varid_year"
-    t.integer "varid_month"
-    t.integer "cvc"
-    t.integer "user_id"
-    t.index ["user_id"], name: "index_payments_on_user_id", using: :btree
+  create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "product_image", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "product_id"
+    t.index ["product_id"], name: "index_images_on_product_id", using: :btree
   end
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "user_id"
-    t.string  "product_name",                  null: false
-    t.integer "price",                         null: false
-    t.text    "description",     limit: 65535, null: false
-    t.string  "condition",                     null: false
-    t.string  "delivery_charge",               null: false
-    t.string  "delivery_date",                 null: false
-    t.string  "delivery_way",                  null: false
-    t.string  "order_status"
+    t.integer  "user_id"
+    t.string   "product_name",                    null: false
+    t.integer  "price",                           null: false
+    t.text     "description",       limit: 65535, null: false
+    t.string   "condition",                       null: false
+    t.string   "delivery_charge",                 null: false
+    t.string   "delivery_date",                   null: false
+    t.string   "delivery_way",                    null: false
+    t.string   "order_status"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.integer  "first_category_id"
+    t.index ["first_category_id"], name: "index_products_on_first_category_id", using: :btree
     t.index ["user_id"], name: "index_products_on_user_id", using: :btree
   end
 
@@ -66,7 +69,8 @@ ActiveRecord::Schema.define(version: 20190810051916) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "payments", "users"
+  add_foreign_key "images", "products"
+  add_foreign_key "products", "first_categories"
   add_foreign_key "products", "users"
   add_foreign_key "sns_credentials", "users"
 end
