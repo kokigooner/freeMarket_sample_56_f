@@ -42,8 +42,8 @@
       }
 
     &-stage-outer {
-      position: relative;
       overflow: hidden;
+      position: relative;
     }
 
     &-stage {
@@ -56,8 +56,8 @@
       line-height: 0;
 
       .active {
-        opacity: 1;
         cursor: default;
+        opacity: 1;
       }
     }
 
