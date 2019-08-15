@@ -125,15 +125,13 @@ belongs_to :user
 
 * belongs_to :user
 
-## paymentsテーブル
+## cardsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|card_number|integer||
-|varid_year|integer||
-|varid_month|integer||
-|cvc|integer||
-|users_id|reference|foreign_key:true|
+|user_id|reference|foreign_key:true|
+|customer_id|string|null:false|
+|card_id|string|null:false|
 
 * belongs_to :user
 

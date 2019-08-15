@@ -36,6 +36,7 @@ class UsersController < ApplicationController
   def payment
     @user = User.new(session[:user_params])
     @address = Address.new(address_params.merge(user: @user))
+    
     if @address.valid?
       session[:address_params] = address_params
     else
