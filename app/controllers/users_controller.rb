@@ -38,28 +38,9 @@ class UsersController < ApplicationController
     @address = Address.new(address_params.merge(user: @user))
     if @address.valid?
       session[:address_params] = address_params
+      redirect_to new_card_path
     else
       render :address
-    end
-  end
-
-  def create
-    @user = User.new(session[:user_params])
-    @address = Address.new(session[:address_params].merge(user: @user))
-
-    if session[:provider]
-      @user.sns_credentials.new(
-        provider: session[:provider],
-        uid: session[:uid]
-      )
-    end
-
-    if @user.save && @address.save
-      reset_session
-      sign_in(@user)
-      redirect_to users_signup_complete_path
-    else
-      render :payment
     end
   end
 

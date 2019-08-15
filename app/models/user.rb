@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: %i[facebook google_oauth2]
 
   has_many :sns_credentials, dependent: :destroy
+  has_many :cards, dependent: :destroy
   has_one :address
 
   validates :nickname, presence: true

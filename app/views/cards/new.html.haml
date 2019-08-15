@@ -2,7 +2,8 @@
   %header.registration-header
     %h1
       = link_to(root_path, class: "registration-header__logo") do
-        = image_tag 'mercari_logo_horizontal', class: 'registration-header__logo__img'
+        = image_tag 'mercari_logo_horizontal',
+          class: 'registration-header__logo__img'
     %nav.registration-header__progress-bar
       %ol
         %li
@@ -31,35 +32,51 @@
   %main.registration-main
     .registration-main__container
       %h2.registration-main__text 支払い方法
-      = form_for :credit_card, html: { class: "registration__form" } do |f|
+      = form_tag(cards_path,
+        method: :post,
+        class: "registration__form",
+        id: "payment_form") do
         .registration__form__content
           .registration__form__group
-            = f.label :card_number, "カード番号"
+            %label カード番号
             %span.registration__form--require 必須
-            = f.text_field :card_number, class: "registration__form__input", placeholder: "半角数字のみ"
+            = text_field_tag(:card_number,
+                              nil,
+                              maxlength: "16",
+                              class: "registration__form__input",
+                              placeholder: "半角数字のみ")
           .signup-payment__card-list
-            = image_tag 'visa.svg', class: "signup-payment__card"
-            = image_tag 'master-card.svg', class: "signup-payment__card"
-            = image_tag 'saison-card.svg', class: "signup-payment__card"
-            = image_tag 'jcb.svg', class: "signup-payment__card"
-            = image_tag 'american_express.svg', class: "signup-payment__card"
-            = image_tag 'dinersclub.svg', class: "signup-payment__card"
-            = image_tag 'discover.svg', class: "signup-payment__card"
+            = image_tag 'visa.svg'
+            = image_tag 'master-card.svg'
+            = image_tag 'saison-card.svg'
+            = image_tag 'jcb.svg'
+            = image_tag 'american_express.svg'
+            = image_tag 'dinersclub.svg'
+            = image_tag 'discover.svg'
           .registration__form__group
             %div
-              = f.label :expiration_month, "有効期限"
+              %label 有効期限
               %span.registration__form--require 必須
-            = f.select :expiration_month, ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"], {}, { class: "registration__form__input signup-payment__input--half" }
+            = select_tag(:exp_month,
+              options_for_exp_month,
+              class: "registration__form__input signup-payment__input--half")
             %span.signup-payment__form__text 月
-            = f.select :expiration_year, ["19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29"], {}, { class: "registration__form__input signup-payment__input--half" }
+            = select_tag(:exp_year,
+              options_for_exp_year,
+              class: "registration__form__input signup-payment__input--half")
             %span.signup-payment__form__text 年
           .registration__form__group
-            = f.label :card_number, "セキュリティコード"
+            %label セキュリティコード
             %span.registration__form--require 必須
-            = f.text_field :card_number, class: "registration__form__input", placeholder: "カード背面4桁もしくは3桁の番号"
-          %div.signup-payment__security-code
+            = text_field_tag(:cvc,
+                              nil,
+                              class: "registration__form__input",
+                              maxlength: "4",
+                              placeholder: "カード背面4桁もしくは3桁の番号")
+          .signup-payment__security-code
             %span ?
             カード裏面の番号とは？
-          = link_to '次へ進む', users_signup_path, method: :post,
-            class: "registration__form__next-btn"
+          = submit_tag("次へ進む",
+            class: "registration__form__next-btn",
+            id: "card_submit")
   = render partial: "users/signup-footer"
