@@ -110,14 +110,14 @@
 
   &-btn{
     &-client {
+      background: #ea352d;
       color: #fff;
       display: block;
-      width: 100%;
-      margin: 24px 0;
-      background: #ea352d;
-      line-height: 60px;
-      text-align: center;
       font-weight: 600;
+      line-height: 60px;
+      margin: 24px 0;
+      width: 100%;
+      text-align: center;
     }
   }
   &-buy-btn {
@@ -139,11 +139,10 @@
 
     &-right {
       float: right;
-       color: #0099e8;
+      color: #0099e8;
       margin: 8px 0 0;
-
-
       }
+
     &-left {
       float: left;
       }
