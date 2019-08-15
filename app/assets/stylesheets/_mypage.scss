@@ -291,7 +291,7 @@ $color-hover-gray: #fafafa;
 }
 
 .mypage-tab-content {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $color-light-gray;
   box-sizing: border-box;
   color: #333;
   display: block;
@@ -333,7 +333,7 @@ $color-hover-gray: #fafafa;
       }
 
     .product-icons {
-      color: #ccc;
+      color: $color-light-gray2;
       vertical-align: middle;
 
         span {
