@@ -1,4 +1,5 @@
 .product {
+  $white2:#fafafa;
   &-main {
     $white:#fff;
     &-content {
@@ -97,7 +98,7 @@
     min-width: 300px;
     max-width: 300px;
     min-height: 250px;
-    background-color: #fafafa;
+    background-color:  $white2;
   }
 
   &-price {
@@ -228,7 +229,7 @@
         width: 39%;
         text-align: left;
         font-weight: 400;
-        background: #fafafa;
+        background:  $white2;
       }
 
       td{
