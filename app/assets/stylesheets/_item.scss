@@ -113,7 +113,7 @@
 
   &-btn{
     &-client {
-      background: #ea352d;
+      background: $red2;
       color: $white;
       display: block;
       font-weight: 600;
@@ -123,9 +123,9 @@
       width: 100%;
     }
   }
-  
+
   &-buy-btn {
-    background: #ea352d;
+    background: $red2;
     color: $white;
     display: block;
     font-size: 24px;
