@@ -5,6 +5,7 @@ $color-red: #ea352d;
 $color-light-gray: #eee;
 $color-light-gray2: #ccc;
 $color-hover-gray: #fafafa;
+$mypage-blue: #0099e8;
 
 .l-side-bar {
   margin: 40px 40px 40px 0;
@@ -293,7 +294,7 @@ $color-hover-gray: #fafafa;
 .mypage-tab-content {
   border-bottom: 1px solid $color-light-gray;
   box-sizing: border-box;
-  color: #333;
+  color: $color-black;
   display: block;
   height: 80px;
   padding: 16px;
@@ -322,7 +323,7 @@ $color-hover-gray: #fafafa;
 
     .product-title {
       -webkit-box-orient: vertical;
-      color: #333;
+      color: $color-black;
       display: -webkit-box;
       font-size: 14px;
       overflow: hidden;
@@ -336,26 +337,26 @@ $color-hover-gray: #fafafa;
       color: $color-light-gray2;
       vertical-align: middle;
 
-        span {
-        color: #888;
-        font-size: 16px;
-        }
+      span {
+      color: $color-gray;
+      font-size: 16px;
+      }
 
       .mypage-item-status-blue {
+        background-color: $mypage-blue;
+        border-radius: 2px;
+        color: $color-white;
         display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
         margin: 8px 0 0 ;
         padding: 5px 6px;
-        border-radius: 2px;
-        font-size: 12px;
-        color: #fff;
-        background-color: #0099e8;
-        font-weight: 600;
       }
     }
   }
 
   .icon-arrow-right {
-    color: #888;
+    color: $color-gray;
     float: right;
     margin: 14px 0 0 ;
   }
