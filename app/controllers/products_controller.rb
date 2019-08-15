@@ -1,34 +1,24 @@
 class ProductsController < ApplicationController
 
-  before_action :set_product, only: [:products_detail, :edit, :update, :destroy]
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   def toppage
     @products   = Product.order(id: "DESC").limit(4)
-
     @productimage   = Image.order(id: "DESC").limit(4)
   end
 
-  def products_detail
-
-
-    hash        = []
-    test_model1 = {name:"コーギー1",price:"400",like:"10"}
-    test_model2 = {name:"コーギー2",price:"400",like:"20"}
-    test_model3 = {name:"コーギー3",price:"300",like:"30"}
-    test_model4 = {name:"コーギー4",price:"400",like:"40"}
-    test_model5 = {name:"コーギー3",price:"300",like:"30"}
-    test_model6 = {name:"コーギー4",price:"400",like:"40"}
-    @test_model = hash.push(test_model1,test_model2,test_model3,test_model4,test_model5,test_model6)
+  def show
+    @next = Product.where('id > ?',"#{params[:id]}").first
+    @previous = Product.where('id < ?',"#{params[:id]}").last
+    @product_user = @product.user
   end
 
   def confirm
   end
 
-  def delete
-    @product = Product.find(params[:id])
-    binding.pry
+  def destroy
     @product.destroy
-    redirects_to root_path
+    redirect_to root_path
   end
   
   private
@@ -37,6 +27,7 @@ class ProductsController < ApplicationController
 
   def set_product
     @product = Product.find(params[:id])
+    @productsall = Product.all
   end
 
   

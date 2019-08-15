@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190812082325) do
+ActiveRecord::Schema.define(version: 20190815011601) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string  "postal_code",      null: false
@@ -38,6 +38,15 @@ ActiveRecord::Schema.define(version: 20190812082325) do
     t.index ["first_category_id"], name: "index_brands_categories_on_first_category_id", using: :btree
   end
 
+  create_table "cards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id",    null: false
+    t.string   "customer",   null: false
+    t.string   "card",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_cards_on_user_id", using: :btree
+  end
+
   create_table "first_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "first_category", null: false
   end
@@ -46,15 +55,6 @@ ActiveRecord::Schema.define(version: 20190812082325) do
     t.text    "image",      limit: 65535, null: false
     t.integer "product_id"
     t.index ["product_id"], name: "index_images_on_product_id", using: :btree
-  end
-
-  create_table "payments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "card_nubmer"
-    t.integer "varid_year"
-    t.integer "varid_month"
-    t.integer "cvc"
-    t.integer "user_id"
-    t.index ["user_id"], name: "index_payments_on_user_id", using: :btree
   end
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -124,8 +124,8 @@ ActiveRecord::Schema.define(version: 20190812082325) do
   add_foreign_key "addresses", "users"
   add_foreign_key "brands_categories", "brands"
   add_foreign_key "brands_categories", "first_categories"
+  add_foreign_key "cards", "users"
   add_foreign_key "images", "products"
-  add_foreign_key "payments", "users"
   add_foreign_key "products", "users"
   add_foreign_key "second_categories", "first_categories"
   add_foreign_key "sizes", "size_categories"

@@ -16,23 +16,24 @@
             %label
               お名前
             %p
-              =  @test_model[:name]
+              =  "#{@user.address.family_name}"+" "+"#{@user.address.first_name}"
           %div.form-group
             %label
               お名前カナ
             %p
-              =  @test_model[:kana_name]
+              =  "#{@user.address.family_name_kana}"+" "+"#{@user.address.first_name_kana}"
           %div.form-group
             %label
               生年月日
             %p
-              =  @test_model[:birthday]
+              = "#{@user.birth_year}"+"年"+"#{@user.birth_month}"+"月"+"#{@user.birth_day}"+"日"
           %div.form-group
             %label 
               郵便番号
             %span.form-arbitrary
               任意
-            = text_field_tag "zip_code", '', {class: "input-default",placeholder: '111-0000'} 
+            = text_field_tag "zip_code"
+            ,"#{@user.address.postal_code}", {class: "input-default",placeholder: '111-0000'}
           %div.form-group
             %label 
               都道府県
@@ -45,19 +46,19 @@
               市町村
             %span.form-arbitrary
               任意
-            = text_field_tag "city", '', {class: "input-default",placeholder: '例）横浜市緑区'} 
+            = text_field_tag "city", "#{@user.address.minicipality}", {class: "input-default",placeholder: '例）横浜市緑区'}
           %div.form-group
             %label 
               番地
             %span.form-arbitrary
               任意
-            = text_field_tag "address1", '', {class: "input-default",placeholder: '例）青山1-1-1'} 
+            = text_field_tag "address1", "#{@user.address.address}", {class: "input-default",placeholder: '例）青山1-1-1'}
           %div.form-group
             %label 
               建物名
             %span.form-arbitrary
               任意
-            = text_field_tag "address2", '', {class: "input-default",placeholder: '例）柳ビル'} 
+            = text_field_tag "address2", "#{@user.address.building}", {class: "input-default",placeholder: '例）柳ビル'}
           %div.form-group
             = submit_tag "登録", {class: "btn-red btn-default"} 
           %div.form-group.text_right

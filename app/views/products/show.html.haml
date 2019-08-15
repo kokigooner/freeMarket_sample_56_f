@@ -1,7 +1,8 @@
 .default-container 
   = render  'shared/header'
   %section.product-box-container.large-single-container
-    %h1.product-name MacBook エアー
+    %h1.product-name
+      = @product.product_name
     .product-main-content.clearfix
       .product-photo
         .owl-carousel.owl-loaded.owl-drag
@@ -9,7 +10,7 @@
             .owl-stage{"style": "#{'left: 0px width: 900px'}"}  
               .owl-product.active{"style": "#{'width: 300px'}"} 
                 .owl-product-inner.is-higher-height
-                  = image_tag "#{@product.images.find(1)[:image]}", class: 'owl-lazy',width: "300" ,hight: "300"
+                  = image_tag "#{@product.images.first[:image]}", class: 'owl-lazy',width: "300" ,hight: "300"
           .owl-dots
             - @product.images.each do |thumbnail|
               .owl-dot
@@ -23,15 +24,15 @@
               = link_to "#{@product.product_name}","/"
               %div
                 .product-user-ratings
-                  %i.icon-good
+                  %i.icon-good.icon-size
                     %i.far.fa-smile-wink
                   %span ??
                 .product-user-ratings
-                  %i.icon-normal
+                  %i.icon-normal.icon-size
                     %i.far.fa-meh
                   %span ??
                 .product-user-ratings
-                  %i.icon-bad
+                  %i.icon-bad.icon-size
                     %i.far.fa-frown-open 
                   %span ??
           %tr
@@ -67,7 +68,7 @@
             %th 発送日の目安
             %td
               = @product.delivery_date
-    %div.product-price-box.text-center
+    .product-price-box.text-center
       %span.product-price.bold
         = "¥#{@product.price}"
       %span.product-tax
@@ -83,12 +84,12 @@
     -#   %div{"data-client": "#{'visible'}"}
     -#     購入画面に進む
     -#     =link_to "購入画面に進む", myprofile_path(@product.id)
-      -# %div.product-action-text{"data-toggle": "#{'open-app'}","data-url-scheme": "#{'mercari://'}","data-action": "#{'product/openDetail'}",'data-key': "#{'id=aaaaaaaa'}","data-paly-id": "#{"com.kouzoh.mercari"}","data-adjust-url": "http://app.adjust.io/xio2ii?campaign=iOS&adgroup=items.buy_button1aaaaaa"}
+      -# .product-action-text{"data-toggle": "#{'open-app'}","data-url-scheme": "#{'mercari://'}","data-action": "#{'product/openDetail'}",'data-key': "#{'id=aaaaaaaa'}","data-paly-id": "#{"com.kouzoh.mercari"}","data-adjust-url": "http://app.adjust.io/xio2ii?campaign=iOS&adgroup=items.buy_button1aaaaaa"}
       -#   アプリで購入　　←※スマホ用
-    %div.product-description.f14
-      =simple_format "#{@product.description}", class:'product-description-inner'
-    %div.product-button-container.clearfix
-      %div.product-button-left
+    .product-description.f14
+      = simple_format "#{@product.description}", class:'product-description-inner'
+    .product-button-container.clearfix
+      .product-button-left
         %button.product-button.product-button-like{"name": "like!","data-toggle": "like","data-id": "#{"xxxxxxxx"}","data-ga":"#{"element"}","dara-ga-category": "#{'LIKE'}"}
           %i.icon-like-border
             = image_tag "sample_heart.png",width: "15" ,hight: "15"
@@ -104,44 +105,35 @@
         %input{"type":"#{"hidden"}","name":"#{"like_add_url"}","value":"#{""}"}
         %input{"type":"#{"hidden"}","name":"#{"like_del_url"}","value":"#{""}"}
         %input{"type":"#{"hidden"}","name":"#{"__csrf_value"}","value":"#{""}"}
-      %div.product-button-right
+      .product-button-right
         %i.icon-lock
           あんしん・あんぜんへの取り込み
-  %div.product-detail-message
-    %div.message-container
-      %div.message-content
+  .product-detail-message
+    .message-container
+      .message-content
         = form_for "",html: { class: "message-form" },local: true do |f|
           %p
             相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
           = f.text_area :message, class: 'textarea-default'
           = f.submit "コメントする", {class: "message-submit btn-default btn-gray"} 
-    %aside.modal{"data-modal": "delete-comment","data-close": "modal"} 
-      %div.modal-inner.modal-banner
-        %div.modal-body
-          %div.modal-head.bold
-          %div{"data-comment": "body"}
-            本当にこのコメントを削除してよろしいですか？
-        =form_for :user do |f|
-          %div.clearfix
-            %div.modal-btn.modal-btn-cancel{"data-close": "modal"}
-              キャンセル
-            = submit_tag "削除する", {class: "modal-btn modal-btn-submit"} 
-          %input{"type":"#{"hidden"}","name":"#{"product_id"}","value":"#{""}"}
-          %input{"type":"#{"hidden"}","name":"#{"comment_id"}","value":"#{""}"}
-          %input{"type":"#{"hidden"}","name":"#{"redirect_url_key"}","value":"#{"product_detail"}"}
-          %input{"type":"#{"hidden"}","name":"#{"__csrf_value"}","value":"#{""}"}
   %ul.navigation-product-link-prev-next.clearfix
     %li.navigation-product-link-prev
       %a
         %i.icon-arrow-left
-        MITSUBISHI ビデオデッキ HV-S200
+          - if @previous.present?
+            = link_to show_path(@previous) do
+              <
+              = @previous.product_name
     %li.navigation-product-link-next
       %a
         %i.icon-arrow-left
-        MITSUBISHI ビデオデッキ HV-S200
-  %div.product-social-media-box
-    %div.text-center
-      %div.fb-save.fb_iframe_widget{"data-uri":"#{""}","fb-xfbml-state":"#{""}","fb-iframe-plugin-query":"#{""}"}
+          - if @next.present?
+            = link_to show_path(@next) do
+              = @next.product_name
+              >
+  .product-social-media-box
+    .text-center
+      .fb-save.fb_iframe_widget{"data-uri":"#{""}","fb-xfbml-state":"#{""}","fb-iframe-plugin-query":"#{""}"}
     %ul.social-media-box
       %li
         %a
@@ -152,46 +144,48 @@
       %li
         %a
           = image_tag "pin_r.jpg",width: "44" ,hight: "44"
-  %div.products-in-user-profile
+  .products-in-user-profile
     %section.products-box-container.clearfix.related-product-column.products-in-user-profile
       %h2.products-box-head
         %a
-          = "#{"丸々"}"+"さんのその他の出品"
-      %div.products-box-content.clearfix
-      - @test_model.each.with_index do |test,i|
+          = "#{@product_user.nickname}"+"さんのその他の出品"
+      .products-box-content.clearfix
+      - @product_user.products.last(6).each.with_index do |pro,i|
         %section.products-box{"class":"products-id#{i+1}"}
-          %figure.products-box-photo
-            = image_tag "test.image.to_s",width: "220" ,hight: "220"
-          %div.products-box-body
-            %h3.products-box-name.font-2
-              = "#{test[:name]}"
-            %div.products-box-num
-              %div.products-box-price.font-5
-                = "¥#{test[:price]}"
-              %div.font-2
-                %i.icon-like-border
-                  %i.far.fa-heart
-                  %span
-                  = "#{test[:like]}"
+          = link_to show_path(pro) do
+            %figure.products-box-photo
+              = image_tag "#{pro.images.first.image}",width: "220" ,hight: "220"
+            .products-box-body
+              %h3.products-box-name.font-2
+                = pro.product_name
+              .products-box-num
+                .products-box-price.font-5
+                  = "¥#{pro.price}"
+                .font-2
+                  %i.icon-like-border
+                    %i.far.fa-heart
+                    %span
+                    = "#{"1"}"
     %section.products-box-container.clearfix.related-product-column
       %h2.products-box-head
         %a
-          = "#{"家畜"}"+"のその他の出品"
-      %div.products-box-content.clearfix
-      - @test_model.each.with_index do |test2,i|
+          = "#{@product_user.nickname}"+"のその他の出品"
+      .products-box-content.clearfix
+      - @product_user.products.last(6).each.with_index do |pro,i|
         %section.products-box{"class":"products-id#{i+1}"}
-          %figure.products-box-photo
-            = image_tag "sample_item.jpg",width: "220" ,hight: "220"
-          %div.products-box-body
-            %h3.products-box-name.font-2
-              = "#{test2[:name]}"
-            %div.products-box-num
-              %div.products-box-price.font-5
-                = "¥#{test2[:price]}"
-              %div.font-2
-                %i.icon-like-border
-                  %i.far.fa-heart
-                  %span
-                  = "#{test2[:like]}"
+          = link_to show_path(pro) do
+            %figure.products-box-photo
+              = image_tag "#{pro.images.first.image}",width: "220" ,hight: "220"
+            .products-box-body
+              %h3.products-box-name.font-2
+                = pro.product_name
+              .products-box-num
+                .products-box-price.font-5
+                  = "¥#{pro.price}"
+                .font-2
+                  %i.icon-like-border
+                    %i.far.fa-heart
+                    %span
+                    = "#{"1"}"
   = render 'shared/bread-crumbs'
   = render  'shared/footer'
