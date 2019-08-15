@@ -6,7 +6,11 @@ class CardsController < ApplicationController
 
   def create
     Payjp.api_key = Rails.application.secrets.payjp_secret_key
-    customer = Payjp::Customer.create(card: params["payjpToken"])
+    if params["payjpToken"].blank?
+      render :new
+    else
+      customer = Payjp::Customer.create(card: params["payjpToken"])
+    end
 
     @user = User.new(session[:user_params])
     @address = Address.new(session[:address_params].merge(user: @user))
