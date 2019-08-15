@@ -1,7 +1,9 @@
 .product {
   $white2:#fafafa;
+  $red2: #ea352d;
   &-main {
     $white:#fff;
+
     &-content {
       margin: 16px 0 0;
     }
@@ -98,7 +100,7 @@
     min-width: 300px;
     max-width: 300px;
     min-height: 250px;
-    background-color:  $white2;
+    background-color: $white2;
   }
 
   &-price {
