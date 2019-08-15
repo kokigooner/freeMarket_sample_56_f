@@ -52,7 +52,7 @@
               = link_to "未実装","/"
           %tr
             %th 商品の状態
-            %td 
+            %td
               = @product.condition
           %tr
             %th 配送料の負担
@@ -60,24 +60,24 @@
               = @product.delivery_charge
           %tr
             %th 配送の方法
-            %td 
+            %td
               = @product.delivery_way
           %tr
             %th 配送元地域
-            %td 
+            %td
               = link_to "??????","/"
           %tr
             %th 発送日の目安
             %td
               = @product.delivery_date
-    %div.product-price-box.text-center
+    .product-price-box.text-center
       %span.product-price.bold
         = "¥#{@product.price}"
       %span.product-tax
         (税込)
       %span.product-shipping-fee
         送料込み
-    %div.product-description.f14
+    .product-description.f14
       =simple_format "#{@product.description}", class:'product-description-inner'
   .products-detail-btn
     .products-detail-btn-style.edit
@@ -87,9 +87,9 @@
       = link_to "出品を一旦停止する", root_path
     .products-detail-btn-style.gray
       = link_to "この商品を削除する", users_mypage_myitem_path, method: :delete
-  %div.product-detail-message
-    %div.message-container
-      %div.message-content
+  .product-detail-message
+    .message-container
+      .message-content
         = form_for "",html: { class: "message-form" },local: true do |f|
           %p
             相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
