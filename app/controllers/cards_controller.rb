@@ -8,7 +8,13 @@ class CardsController < ApplicationController
   end
 
   def show
-    @cards = current_user.cards
+    Payjp.api_key = Rails.application.secrets.payjp_secret_key
+    @cards = Array.new
+    users_cards = current_user.cards
+    users_cards.each do |card|
+      customer = Payjp::Customer.retrieve(card.customer)
+      @cards << customer.cards.retrieve(card.card)
+    end
   end
 
   def create
@@ -57,6 +63,10 @@ class CardsController < ApplicationController
     else
       render :add
     end
+  end
+
+  def destroy
+
   end
 
 end

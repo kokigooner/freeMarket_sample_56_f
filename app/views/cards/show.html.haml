@@ -11,18 +11,23 @@
         %p.mypage-card__inner__text
           クレジットカード一覧
         %ul.mypage-card__cards
-          %li.mypage-card__card
-            = image_tag 'visa.svg',
-            class: 'mypage-card__card__icon'
-            .mypage-card__card__payment-num
-              ************1111
-            .mypage-card__card__payment-expire-date
-              05 / 05
-            .mypage-card__card__payment-remove-btn
-              削除する
-        = link_to "クレジットカードを追加する",
-          add_cards_path,
-          class: "mypage-card__btn"
+          - if @cards.length != 0
+            - @cards.each do |card|
+              %li.mypage-card__card
+                = render "cards", brand: card["brand"]
+                .mypage-card__card__payment-num
+                  ************
+                  %span<>
+                    = card["last4"]
+                .mypage-card__card__payment-expire-date
+                  = sprintf("%02d", card["exp_month"]) 
+                  = card["exp_year"] % 100
+                .mypage-card__card__payment-remove-btn
+                  削除する
+          - else
+            = link_to "クレジットカードを追加する",
+              add_cards_path,
+              class: "mypage-card__btn"
         = link_to "支払い方法について＞",
           root_path,
           class: "mypage-card__link"

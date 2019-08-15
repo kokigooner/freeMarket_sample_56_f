@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get "/users/signup/complete", to: "users#complete"
   get "/users/mypage/item", to: "users#mypage_item"
 
-  resources :cards, only: [:show, :new, :create] do
+  resources :cards, only: [:show, :new, :create, :destroy] do
     collection do
       get 'add'
     end
