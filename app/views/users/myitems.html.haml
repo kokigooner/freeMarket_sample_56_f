@@ -9,15 +9,15 @@
       %section.mypage-purchased-myitems
         %h2.mypage-purchased-myitems__header
           出品した商品
-        %ul.mypage-items__menu
-          %li.mypage-items__menu__left
-            = link_to(root_path, class: "mypage-items__menu__tabs") do
+        %ul.mypage-items-menu
+          %li.mypage-items-menu-left
+            = link_to(root_path, class: "mypage-items-menu-tabs") do
               出品中
-          %li.mypage-items__menu__center
-            = link_to(root_path, class: "mypage-items__menu__tabs") do
+          %li.mypage-items-menu-center
+            = link_to(root_path, class: "mypage-items-menu-tabs") do
               取引中
-          %li.mypage-items__menu__right
-            = link_to(root_path, class: "mypage-items__menu__tabs") do
+          %li.mypage-items-menu-right
+            = link_to(root_path, class: "mypage-items-menu-tabs") do
               売却済
         - if current_user.products.present?
           - current_user.products.each do |product|
