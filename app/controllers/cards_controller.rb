@@ -5,7 +5,7 @@ class CardsController < ApplicationController
   end
 
   def create
-    Payjp.api_key = "sk_test_75a3bf2aaa150915275ad5cd"
+    Payjp.api_key = Rails.application.secrets.payjp_secret_key
     
     if params["payjpToken"].blank?
       render :new
