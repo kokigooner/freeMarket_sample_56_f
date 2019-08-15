@@ -55,8 +55,8 @@
       background: $white;
       font-size: 0;
       line-height: 0;
-
-      .active {
+    }
+    &-dos .active {
         cursor: default;
         opacity: 1;
       }
