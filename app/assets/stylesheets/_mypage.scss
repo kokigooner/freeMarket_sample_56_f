@@ -7,6 +7,7 @@ $color-light-gray2: #ccc;
 $color-hover-gray: #fafafa;
 $mypage-blue: #0099e8;
 $mypage-white: #f5f5f5;
+
 .l-side-bar {
   margin: 40px 40px 40px 0;
   width: 280px;
@@ -338,8 +339,8 @@ $mypage-white: #f5f5f5;
       vertical-align: middle;
 
       span {
-      color: $color-gray;
-      font-size: 16px;
+        color: $color-gray;
+        font-size: 16px;
       }
 
       .mypage-item-status-blue {

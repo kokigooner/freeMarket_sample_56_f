@@ -1,7 +1,7 @@
 .default-container 
   = render  'shared/header'
   %section.product-box-container.large-single-container
-    %h1.product-name 
+    %h1.product-name
       = @product.product_name
     .product-main-content.clearfix
       .product-photo
@@ -68,7 +68,7 @@
             %th 発送日の目安
             %td
               = @product.delivery_date
-    %div.product-price-box.text-center
+    .product-price-box.text-center
       %span.product-price.bold
         = "¥#{@product.price}"
       %span.product-tax
@@ -84,12 +84,12 @@
     -#   %div{"data-client": "#{'visible'}"}
     -#     購入画面に進む
     -#     =link_to "購入画面に進む", myprofile_path(@product.id)
-      -# %div.product-action-text{"data-toggle": "#{'open-app'}","data-url-scheme": "#{'mercari://'}","data-action": "#{'product/openDetail'}",'data-key': "#{'id=aaaaaaaa'}","data-paly-id": "#{"com.kouzoh.mercari"}","data-adjust-url": "http://app.adjust.io/xio2ii?campaign=iOS&adgroup=items.buy_button1aaaaaa"}
+      -# .product-action-text{"data-toggle": "#{'open-app'}","data-url-scheme": "#{'mercari://'}","data-action": "#{'product/openDetail'}",'data-key': "#{'id=aaaaaaaa'}","data-paly-id": "#{"com.kouzoh.mercari"}","data-adjust-url": "http://app.adjust.io/xio2ii?campaign=iOS&adgroup=items.buy_button1aaaaaa"}
       -#   アプリで購入　　←※スマホ用
-    %div.product-description.f14
+    .product-description.f14
       =simple_format "#{@product.description}", class:'product-description-inner'
-    %div.product-button-container.clearfix
-      %div.product-button-left
+    .product-button-container.clearfix
+      .product-button-left
         %button.product-button.product-button-like{"name": "like!","data-toggle": "like","data-id": "#{"xxxxxxxx"}","data-ga":"#{"element"}","dara-ga-category": "#{'LIKE'}"}
           %i.icon-like-border
             = image_tag "sample_heart.png",width: "15" ,hight: "15"
@@ -105,12 +105,12 @@
         %input{"type":"#{"hidden"}","name":"#{"like_add_url"}","value":"#{""}"}
         %input{"type":"#{"hidden"}","name":"#{"like_del_url"}","value":"#{""}"}
         %input{"type":"#{"hidden"}","name":"#{"__csrf_value"}","value":"#{""}"}
-      %div.product-button-right
+      .product-button-right
         %i.icon-lock
           あんしん・あんぜんへの取り込み
-  %div.product-detail-message
-    %div.message-container
-      %div.message-content
+  .product-detail-message
+    .message-container
+      .message-content
         = form_for "",html: { class: "message-form" },local: true do |f|
           %p
             相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
@@ -131,9 +131,9 @@
             = link_to products_detail_path(@next.id) do
               = @next.product_name
               >
-  %div.product-social-media-box
-    %div.text-center
-      %div.fb-save.fb_iframe_widget{"data-uri":"#{""}","fb-xfbml-state":"#{""}","fb-iframe-plugin-query":"#{""}"}
+  .product-social-media-box
+    .text-center
+      .fb-save.fb_iframe_widget{"data-uri":"#{""}","fb-xfbml-state":"#{""}","fb-iframe-plugin-query":"#{""}"}
     %ul.social-media-box
       %li
         %a
@@ -144,24 +144,24 @@
       %li
         %a
           = image_tag "pin_r.jpg",width: "44" ,hight: "44"
-  %div.products-in-user-profile
+  .products-in-user-profile
     %section.products-box-container.clearfix.related-product-column.products-in-user-profile
       %h2.products-box-head
         %a
           = "#{@product_user.nickname}"+"さんのその他の出品"
-      %div.products-box-content.clearfix
+      .products-box-content.clearfix
       - @product_user.products.last(6).each.with_index do |pro,i|
         %section.products-box{"class":"products-id#{i+1}"}
           = link_to products_detail_path(pro.id) do
             %figure.products-box-photo
               = image_tag "#{pro.images.first.image}",width: "220" ,hight: "220"
-            %div.products-box-body
+            .products-box-body
               %h3.products-box-name.font-2
                 = pro.product_name
-              %div.products-box-num
-                %div.products-box-price.font-5
+              .products-box-num
+                .products-box-price.font-5
                   = "¥#{pro.price}"
-                %div.font-2
+                .font-2
                   %i.icon-like-border
                     %i.far.fa-heart
                     %span
@@ -170,19 +170,19 @@
       %h2.products-box-head
         %a
           = "#{@product_user.nickname}"+"のその他の出品"
-      %div.products-box-content.clearfix
+      .products-box-content.clearfix
       - @product_user.products.last(6).each.with_index do |pro,i|
         %section.products-box{"class":"products-id#{i+1}"}
           = link_to products_detail_path(pro.id) do
             %figure.products-box-photo
               = image_tag "#{pro.images.first.image}",width: "220" ,hight: "220"
-            %div.products-box-body
+            .products-box-body
               %h3.products-box-name.font-2
                 = pro.product_name
-              %div.products-box-num
-                %div.products-box-price.font-5
+              .products-box-num
+                .products-box-price.font-5
                   = "¥#{pro.price}"
-                %div.font-2
+                .font-2
                   %i.icon-like-border
                     %i.far.fa-heart
                     %span
