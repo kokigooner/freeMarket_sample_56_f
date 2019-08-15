@@ -1,24 +1,22 @@
 class ProductsController < ApplicationController
 
-  before_action :set_product, only: [:products_detail, :edit, :update, :destroy]
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   def toppage
     @products   = Product.order(id: "DESC").limit(4)
     @productimage   = Image.order(id: "DESC").limit(4)
   end
 
-  def products_detail
-    
-    @next = Product.find_by_id("#{params[:id].to_i + 1}")
-    @previous = Product.find_by_id("#{params[:id].to_i - 1}")
+  def show
+    @next = Product.where('id > ?',"#{params[:id]}").first
+    @previous = Product.where('id < ?',"#{params[:id]}").last
     @product_user = @product.user
   end
 
   def confirm
   end
 
-  def delete
-    @product = Product.find(params[:id])
+  def destroy
     @product.destroy
     redirect_to root_path
   end

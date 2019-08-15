@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: "products#toppage"
 
   get '/products', to: 'products#toppage'
-  get "/products/:id", to: "products#products_detail" ,as: :products_detail
+  get "/products/:id", to: "products#show" ,as: :show
   get "/products/confirm", to: "products#confirm"
   get "/products/sell", to: "products#sell"
   

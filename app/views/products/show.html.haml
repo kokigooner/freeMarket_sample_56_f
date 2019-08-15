@@ -121,14 +121,14 @@
       %a
         %i.icon-arrow-left
           - if @previous.present?
-            = link_to products_detail_path(@previous.id) do
+            = link_to show_path(@previous) do
               <
               = @previous.product_name
     %li.navigation-product-link-next
       %a
         %i.icon-arrow-left
           - if @next.present?
-            = link_to products_detail_path(@next.id) do
+            = link_to show_path(@next) do
               = @next.product_name
               >
   .product-social-media-box
@@ -152,7 +152,7 @@
       .products-box-content.clearfix
       - @product_user.products.last(6).each.with_index do |pro,i|
         %section.products-box{"class":"products-id#{i+1}"}
-          = link_to products_detail_path(pro.id) do
+          = link_to show_path(pro) do
             %figure.products-box-photo
               = image_tag "#{pro.images.first.image}",width: "220" ,hight: "220"
             .products-box-body
@@ -173,7 +173,7 @@
       .products-box-content.clearfix
       - @product_user.products.last(6).each.with_index do |pro,i|
         %section.products-box{"class":"products-id#{i+1}"}
-          = link_to products_detail_path(pro.id) do
+          = link_to show_path(pro) do
             %figure.products-box-photo
               = image_tag "#{pro.images.first.image}",width: "220" ,hight: "220"
             .products-box-body
