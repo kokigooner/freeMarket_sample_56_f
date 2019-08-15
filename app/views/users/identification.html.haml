@@ -32,7 +32,8 @@
               郵便番号
             %span.form-arbitrary
               任意
-            = text_field_tag "zip_code", "#{@user.address.postal_code}", {class: "input-default",placeholder: '111-0000'} 
+            = text_field_tag "zip_code"
+            ,"#{@user.address.postal_code}", {class: "input-default",placeholder: '111-0000'}
           %div.form-group
             %label 
               都道府県
@@ -45,19 +46,19 @@
               市町村
             %span.form-arbitrary
               任意
-            = text_field_tag "city", "#{@user.address.minicipality}", {class: "input-default",placeholder: '例）横浜市緑区'} 
+            = text_field_tag "city", "#{@user.address.minicipality}", {class: "input-default",placeholder: '例）横浜市緑区'}
           %div.form-group
             %label 
               番地
             %span.form-arbitrary
               任意
-            = text_field_tag "address1", "#{@user.address.address}", {class: "input-default",placeholder: '例）青山1-1-1'} 
+            = text_field_tag "address1", "#{@user.address.address}", {class: "input-default",placeholder: '例）青山1-1-1'}
           %div.form-group
             %label 
               建物名
             %span.form-arbitrary
               任意
-            = text_field_tag "address2", "#{@user.address.building}", {class: "input-default",placeholder: '例）柳ビル'} 
+            = text_field_tag "address2", "#{@user.address.building}", {class: "input-default",placeholder: '例）柳ビル'}
           %div.form-group
             = submit_tag "登録", {class: "btn-red btn-default"} 
           %div.form-group.text_right
