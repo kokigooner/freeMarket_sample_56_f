@@ -4,6 +4,10 @@ class CardsController < ApplicationController
   def new
   end
 
+  def show
+    @cards = current_user.cards
+  end
+
   def create
     Payjp.api_key = Rails.application.secrets.payjp_secret_key
 
@@ -27,7 +31,7 @@ class CardsController < ApplicationController
         uid: session[:uid]
       )
     end
-
+  
     if @user.save && @address.save && @card.save
       reset_session
       sign_in(@user)
@@ -35,6 +39,6 @@ class CardsController < ApplicationController
     else
       render :new
     end
-  end
 
+  end
 end
