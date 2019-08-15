@@ -85,7 +85,7 @@
     .or or
     .products-detail-btn-style.gray
       = link_to "出品を一旦停止する", root_path
-    .products-detail-btn-style.gray
+    .products-detail-btn-style.gray.btn
       = link_to "この商品を削除する", products_delete_path, method: :delete
   .product-detail-message
     .message-container
@@ -95,6 +95,17 @@
             相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
           = f.text_area :message, class: 'textarea-default'
           = f.submit "コメントする", {class: "message-submit btn-default btn-gray"}
+      %aside.modal
+        %p.modal-title
+          確認
+          %br/削除すると二度と復活できません。
+          %br/削除する代わりに停止することもできます。
+          %br/本当に削除しますか？
+        .modal-box-right.btn-cancel
+          削除
+        .modal-box-left.btn-delete
+          キャンセル
+
 
 
   = render 'shared/bread-crumbs'
