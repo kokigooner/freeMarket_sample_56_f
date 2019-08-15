@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :set_product, only: [:destroy]
   before_action :has_user_params?, only: [:authentication, :address, :payment]
 
   
@@ -58,11 +59,23 @@ class UsersController < ApplicationController
   end
 
   def mypage
-
+    
   end
   
-  def mypage_task
-    
+  def myitems
+  end
+
+  def myitemdetail
+    product_id = Product.find_by_id(params[:id])
+    if product_id.present?
+      if current_user.id == product_id.user_id
+        @product = current_user.products.find_by_id(params[:id])
+      else 
+        redirect_to users_mypage_path
+      end
+    else
+      redirect_to users_mypage_path
+    end
   end
 
   def mypage_item
@@ -75,10 +88,13 @@ class UsersController < ApplicationController
   end
 
   def identification
-    @test_model = { name: "山田太郎", kana_name: "ヤマダ タロウ", birthday: "2000年01日01日" }
   end
 
   def logout
+  end
+
+  def delete
+    @product.destoroy
   end
 
   private
@@ -115,6 +131,10 @@ class UsersController < ApplicationController
 
   def has_user_params?
     redirect_to users_signup_path unless session[:user_params]
+  end
+
+  def set_product
+    @product = current_user.product.find(params[:id])
   end
 
 
