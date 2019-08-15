@@ -337,13 +337,13 @@ $color-hover-gray: #fafafa;
       vertical-align: middle;
 
         span {
-          color: #888;
-          font-size: 16px;
+        color: #888;
+        font-size: 16px;
         }
 
       .mypage-item-status-blue {
         display: inline-block;
-        margin: 8px 0 0 0;
+        margin: 8px 0 0 ;
         padding: 5px 6px;
         border-radius: 2px;
         font-size: 12px;
@@ -357,6 +357,6 @@ $color-hover-gray: #fafafa;
   .icon-arrow-right {
     color: #888;
     float: right;
-    margin: 14px 0 0 0;
+    margin: 14px 0 0 ;
   }
 }
