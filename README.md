@@ -25,7 +25,7 @@
 * has_many :product_purchase_messages
 * has_many :likes
 * has_many :points, dependent: :destroy
-* has_many :payments, dependent: :destroy
+* has_many :cards, dependent: :destroy
 * has_many :comments
 * has_many :ratings
 * has_many :evalution, dependent: :destroy

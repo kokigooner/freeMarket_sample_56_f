@@ -32,7 +32,7 @@
   %main.registration-main
     .registration-main__container
       %h2.registration-main__text 支払い方法
-      = form_tag(users_signup_payment_path,
+      = form_tag(cards_path,
         method: :post,
         class: "registration__form",
         id: "payment_form") do
@@ -40,13 +40,11 @@
           .registration__form__group
             %label カード番号
             %span.registration__form--require 必須
-
-            %input{ type: "text",
-                    name: "card_number",
-                    id: "card_number",
-                    maxlength: "16",
-                    class: "registration__form__input",
-                    placeholder: "半角数字のみ" }
+            = text_field_tag(:card_number,
+                              nil,
+                              maxlength: "16",
+                              class: "registration__form__input",
+                              placeholder: "半角数字のみ")
           .signup-payment__card-list
             = image_tag 'visa.svg'
             = image_tag 'master-card.svg'
@@ -92,10 +90,10 @@
             %label セキュリティコード
             %span.registration__form--require 必須
             = text_field_tag(:cvc,
-              nil,
-              class: "registration__form__input",
-              maxlength: "4",
-              placeholder: "カード背面4桁もしくは3桁の番号")
+                              nil,
+                              class: "registration__form__input",
+                              maxlength: "4",
+                              placeholder: "カード背面4桁もしくは3桁の番号")
           %div.signup-payment__security-code
             %span ?
             カード裏面の番号とは？
