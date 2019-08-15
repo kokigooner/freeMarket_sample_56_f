@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get "/products/sell", to: "products#sell"
   
   get '/users/mypage/profile', to: 'users#profile'
-  get '/users/mypage/card/create', to: "users#card_create"
   get "/users/mypage", to: "users#mypage"
   get "/users/mypage/myitems", to: "users#myitems"
   get "/users/mypage/myitem/:id", to: "users#myitemdetail",as: :users_mypage_myitem
@@ -25,7 +24,12 @@ Rails.application.routes.draw do
   get "/users/signup/complete", to: "users#complete"
   get "/users/mypage/item", to: "users#mypage_item"
 
-  resources :cards, only: [:show, :new, :create]
+  resources :cards, only: [:show, :new, :create] do
+    collection do
+      get 'add'
+    end
+  end
+
   resources :users, only: [:new, :create]
 
   get "/users/sell", to: "users#sell"
