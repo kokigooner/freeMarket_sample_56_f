@@ -27,7 +27,7 @@
     float: left;
     width: 48%;
     margin: 0 0 4% 4%;
-    background: #fff;
+    background: $white;
     &-container {
       padding: 24px 40px 40px;
       box-sizing:border-box;
@@ -111,7 +111,7 @@
   &-btn{
     &-client {
       background: #ea352d;
-      color: #fff;
+      color: $white;
       display: block;
       font-weight: 600;
       line-height: 60px;
@@ -123,7 +123,7 @@
   
   &-buy-btn {
     background: #ea352d;
-    color: #fff;
+    color: $white;
     display: block;
     font-size: 24px;
     font-weight: 600;
@@ -236,7 +236,7 @@
         border-collapse: collapse;
         border: 1px solid #f5f5f5;
         width: 61%;
-        background: #fff;
+        background: $white;
       }
 
       a:first-child {
@@ -248,7 +248,7 @@
 
 .products{
   &-box {
-    background: #fff;
+    background: $white;
     float: left;
     margin: 0 20px 20px 0;
     position: relative;
