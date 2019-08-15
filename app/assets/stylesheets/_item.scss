@@ -251,8 +251,9 @@
 }
 
 .products{
+ $white3: #fff;
   &-box {
-    background: #ffffff;
+    background: $white3;
     float: left;
     margin: 0 20px 20px 0;
     position: relative;
@@ -295,8 +296,8 @@
           right: 0;
           width: 50%;
           height: 1.5em;
-          background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0)), color-stop(72%, #fff));
-          background: linear-gradient(to right, rgba(255,255,255,0), #fff 72%);
+          background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0)), color-stop(72%, $white3));
+          background: linear-gradient(to right, rgba(255,255,255,0), $white3 72%);
         }
       }
       &-num {
