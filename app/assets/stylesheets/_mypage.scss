@@ -319,18 +319,19 @@ $color-hover-gray: #fafafa;
   .mypage-item-body {
     float: left;
     margin: 0 0 0 20px;
+
     .product-title {
-      overflow: hidden;
-      display: block;
-      display: -webkit-box;
-      max-height: 4.4em;
-      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
-      text-overflow: ellipsis;
-      line-height: 1.5;
       color: #333;
+      display: -webkit-box;
       font-size: 14px;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+      line-height: 1.5;
+      max-height: 4.4em;
+      text-overflow: ellipsis;
       }
+
     .product-icons {
       color: #ccc;
       vertical-align: middle;
