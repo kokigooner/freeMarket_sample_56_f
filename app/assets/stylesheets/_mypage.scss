@@ -299,25 +299,26 @@ $color-hover-gray: #fafafa;
   border-bottom: 1px solid #eee;
 
   .lazyloaded {
-    position: relative;
-    overflow: hidden;
     float: left;
-    width: 48px;
     height: 48px;
-    img{
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 48px;
+
+    img {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 1;
     }
 }
 
   .mypage-item-body{
-    margin: 0 0 0 20px;
     float: left;
+    margin: 0 0 0 20px;
     .product {
       &-title {
       overflow: hidden;
@@ -331,7 +332,6 @@ $color-hover-gray: #fafafa;
       color: #333;
       font-size: 14px;
       }
-
       &-icons {
         vertical-align: middle;
         color: #ccc;
@@ -339,7 +339,6 @@ $color-hover-gray: #fafafa;
           font-size: 16px;
           color: #888;
         }
-
       .mypage-item-status-blue{
         display: inline-block;
         margin: 8px 0 0 0;
@@ -349,7 +348,6 @@ $color-hover-gray: #fafafa;
         color: #fff;
         background-color: #0099e8;
         font-weight: 600;
-
         }
       }
     }
@@ -358,5 +356,5 @@ $color-hover-gray: #fafafa;
     color: #888;
     float: right;
     margin: 14px 0 0 0;
-}
+  }
 }
