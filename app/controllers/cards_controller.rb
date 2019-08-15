@@ -16,8 +16,8 @@ class CardsController < ApplicationController
     @user = User.new(session[:user_params])
     @address = Address.new(session[:address_params].merge(user: @user))
     @card = Card.new(
-      customer_id: @customer.id,
-      card_id: @customer.default_card,
+      customer: @customer.id,
+      card: @customer.default_card,
       user: @user
       )
 

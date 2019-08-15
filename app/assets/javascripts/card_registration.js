@@ -25,7 +25,7 @@ $(function () {
         form.get(0).submit();
       } else {
         alert(response.error.message);
-      };
+      }
     });
 
   });

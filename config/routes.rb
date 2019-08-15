@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   post "/users/signup/payment", to: "users#payment"
   get "/users/signup/complete", to: "users#complete"
 
-  resources :cards
+  resources :cards, only: [:new, :create]
 
   get "/users/sell", to: "users#sell"
   get "/users/login", to: "users#login"
