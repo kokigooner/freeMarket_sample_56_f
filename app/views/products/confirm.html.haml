@@ -43,13 +43,9 @@
               %span<>〒
               = @address.postal_code
               %br
-              = @address.prefecture.name
-              = @address.minicipality
-              = @address.address
-              = @address.building
+              = user_address(@address)
               %br
-              = @address.family_name
-              = @address.first_name
+              = user_name(@address)
             .products-confirm__user-info__link
               = link_to("変更する＞",
                 root_path,
