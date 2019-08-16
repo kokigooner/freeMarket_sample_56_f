@@ -61,11 +61,10 @@ main {
     width: 100%;
   }
   &__drop__box {
-    width: 600px;
+    width: 150px;
     margin: 0;
     height: 190px;
     flex: 1;
-    background: $filefield;
     position: relative;
     text-align: center;
     cursor: pointer;
@@ -74,7 +73,7 @@ main {
       background: $filefield;
       border: 1px dashed $formborder;
       height: 190px;
-      width: 600px;
+      width: 145px;
       .uploadimg{
         padding-top: 25px;
         height: 100px;
@@ -124,7 +123,6 @@ main {
   padding: 40px;
   border-top: 1px solid $bordercolor;
 }
-
 .form__group {
   margin: 40px 0 0;
   &:first-child {

@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
 
   def new
     @product = current_user.products.new
-    @product.images.build
+    4.times{@product.images.build}
   end
 
   def create
@@ -41,7 +41,7 @@ class ProductsController < ApplicationController
   private
   def product_params
     params.require(:product).permit(:product_name, :description, :first_category_id, :condition, :delivery_charge, :delivery_way, :delivery_date,:price,
-      :order_status, images_attributes: [:product_image, :_destroy, :id])   
+      :order_status, images_attributes: [ :product_image, :_destroy, :id ])   
   end
 
   def task_params
