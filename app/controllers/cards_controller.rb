@@ -1,5 +1,6 @@
 class CardsController < ApplicationController
   require "payjp"
+  Payjp.api_key = Rails.application.secrets.payjp_secret_key
   
   def new
   end
@@ -8,7 +9,6 @@ class CardsController < ApplicationController
   end
 
   def show
-    Payjp.api_key = Rails.application.secrets.payjp_secret_key
     @cards = Array.new
     users_cards = current_user.cards
     users_cards.each do |card|
@@ -22,32 +22,33 @@ class CardsController < ApplicationController
       user_signed_in? ? (render :add) : (render :new)
     end
 
-    Payjp.api_key = Rails.application.secrets.payjp_secret_key
     customer = Payjp::Customer.create(card: params["payjpToken"])
 
-    recreate(customer) if user_signed_in?
-
-    @user = User.new(session[:user_params])
-    @address = Address.new(session[:address_params].merge(user: @user))
-    @card = Card.new(
-      customer: customer.id,
-      card: customer.default_card,
-      user: @user
-      )
-
-    if session[:provider]
-      @user.sns_credentials.new(
-        provider: session[:provider],
-        uid: session[:uid]
-      )
-    end
-
-    if @user.save && @address.save && @card.save
-      reset_session
-      sign_in(@user)
-      redirect_to users_signup_complete_path
+    if user_signed_in?
+      recreate(customer)
     else
-      render :new
+      @user = User.new(session[:user_params])
+      @address = Address.new(session[:address_params].merge(user: @user))
+      @card = Card.new(
+        customer: customer.id,
+        card: customer.default_card,
+        user: @user
+        )
+
+      if session[:provider]
+        @user.sns_credentials.new(
+          provider: session[:provider],
+          uid: session[:uid]
+        )
+      end
+
+      if @user.save && @address.save && @card.save
+        reset_session
+        sign_in(@user)
+        redirect_to users_signup_complete_path
+      else
+        render :new
+      end
     end
   end
 
@@ -66,7 +67,14 @@ class CardsController < ApplicationController
   end
 
   def destroy
-
+    card = Card.find_by(user_id: params[:id])
+    customer = Payjp::Customer.retrieve(card.customer)
+    card_payjp = customer.cards.retrieve(card.card)
+    response = card_payjp.delete
+    if response["deleted"]
+      card.destroy
+      redirect_to card_path(current_user)
+    end
   end
 
 end
