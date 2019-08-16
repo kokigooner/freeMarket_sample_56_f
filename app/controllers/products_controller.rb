@@ -14,6 +14,14 @@ class ProductsController < ApplicationController
   end
 
   def confirm
+    @product = Product.find(params[:id])
+    @address = current_user.address
+    @cards = Array.new
+    users_cards = current_user.cards
+    users_cards.each do |card|
+      customer = Payjp::Customer.retrieve(card.customer)
+      @cards << customer.cards.retrieve(card.card)
+    end
   end
 
   def destroy

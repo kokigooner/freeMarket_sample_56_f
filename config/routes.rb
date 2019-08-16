@@ -4,9 +4,13 @@ Rails.application.routes.draw do
   root to: "products#toppage"
 
   get '/products', to: 'products#toppage'
-  get "/products/:id", to: "products#show" ,as: :show
-  get "/products/confirm", to: "products#confirm"
   get "/products/sell", to: "products#sell"
+
+  resources :products, only: [:show] do
+    member do
+      get 'confirm'
+    end
+  end
   
   get '/users/mypage/profile', to: 'users#profile'
   get "/users/mypage", to: "users#mypage"
