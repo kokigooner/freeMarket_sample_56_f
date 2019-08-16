@@ -1,3 +1,6 @@
+$gray: #ccc;
+$overlaycolor: rgba(0, 0, 0, .8);
+
 .product {
   $white2:#fafafa;
   $red2: #ea352d;
@@ -335,49 +338,53 @@
     }
   }
 }
-.modal{
-  display:none;
+.modal {
   background: $white;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  z-index: 2;
-  max-width: none;
-  width: 600px;
-  margin: 20px auto;
+  display: none;
   height: 300px;
-  &-body{
-    padding: 32px 2.5%;
-    line-height: 1.5;
-    height:108px;
+  margin: 20px auto;
+  max-width: none;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 600px;
+  z-index: 2;
+
+  &-body {
     padding: 64px;
+    line-height: 1.5;
+    height: 108px;
   }
-  &-title{
+
+  &-title {
     font-size: 16px;
     font-weight: 600;
   }
-  &-menus{
+
+  &-menus {
     display: flex;
     height: 64px;
-    &-btn{
-      border-top: 1px solid #ccc;
-      width: 50%;
-      text-align: center;
+
+    &-btn {
+      border-top: 1px solid $gray;
       line-height: 64px;
+      text-align: center;
+      width: 50%;
     }
-    .delete{
-      border-left: 1px solid #ccc;
-      color: #0099e8;  
+
+    .delete {
+      border-left: 1px solid $gray;
     }
   }
 }
+
 .overlay {
+  background: $overlaycolor;
   display: none;
+  height: 100%;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
-  z-index: 1;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
 }
