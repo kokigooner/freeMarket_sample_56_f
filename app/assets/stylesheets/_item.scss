@@ -335,3 +335,49 @@
     }
   }
 }
+.modal{
+  display:none;
+  background: $white;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  z-index: 2;
+  max-width: none;
+  width: 600px;
+  margin: 20px auto;
+  height: 300px;
+  &-body{
+    padding: 32px 2.5%;
+    line-height: 1.5;
+    height:108px;
+    padding: 64px;
+  }
+  &-title{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &-menus{
+    display: flex;
+    height: 64px;
+    &-btn{
+      border-top: 1px solid #ccc;
+      width: 50%;
+      text-align: center;
+      line-height: 64px;
+    }
+    .delete{
+      border-left: 1px solid #ccc;
+      color: #0099e8;  
+    }
+  }
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}

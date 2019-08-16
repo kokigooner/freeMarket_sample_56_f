@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get "/users/mypage", to: "users#mypage"
   get "/users/mypage/myitems", to: "users#myitems"
   get "/users/mypage/myitem/:id", to: "users#myitemdetail",as: :users_mypage_myitem
-  delete "/users/mypage/myitem/:id", to: "products#delete"
+  delete "/users/mypage/myitem/:id", to: "products#destroy"
   get "/mypage/identification", to: "users#identification" 
   get "/mypage/logout", to: "users#logout"
   
