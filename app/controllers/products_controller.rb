@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   require 'payjp'
 
-  before_action :set_product, only: [:show, :edit, :update, :destroy, :purchase]
+  before_action :set_product, only: [:show, :edit, :update, :destroy, :purchase, :confirm]
 
   def toppage
     @products   = Product.order(id: "DESC").limit(4)
@@ -16,7 +16,6 @@ class ProductsController < ApplicationController
 
   def confirm
     Payjp.api_key = ENV['PAYJP_SECRET_KEY']
-    @product = Product.find(params[:id])
     @address = current_user.address
     @cards = Array.new
     users_cards = current_user.cards
