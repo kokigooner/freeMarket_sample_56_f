@@ -98,9 +98,7 @@ class UsersController < ApplicationController
   end
 
   def updata_address
-
-     address = current_user.address 
-    if address.update_attributes(update_address_params)
+    if current_user.address.update_attributes(update_address_params)
       redirect_to mypage_identification_path
     else
       redirect_to mypage_identification_path
