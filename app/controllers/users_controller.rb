@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
+
   before_action :set_product, only: [:destroy]
   before_action :has_user_params?, only: [:authentication, :address, :payment]
 
-  
-  def signup
+  def new
   end
 
   def registration

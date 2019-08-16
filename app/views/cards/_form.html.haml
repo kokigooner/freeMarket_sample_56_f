@@ -1,0 +1,47 @@
+= form_tag(cards_path,
+  method: :post,
+  class: "registration__form",
+  id: "payment_form") do
+  .registration__form__content
+    .registration__form__group
+      %label カード番号
+      %span.registration__form--require 必須
+      = text_field_tag(:card_number,
+                        nil,
+                        maxlength: "16",
+                        class: "registration__form__input",
+                        placeholder: "半角数字のみ")
+    .signup-payment__card-list
+      = image_tag 'visa.svg'
+      = image_tag 'master-card.svg'
+      = image_tag 'saison-card.svg'
+      = image_tag 'jcb.svg'
+      = image_tag 'american_express.svg'
+      = image_tag 'dinersclub.svg'
+      = image_tag 'discover.svg'
+    .registration__form__group
+      %div
+        %label 有効期限
+        %span.registration__form--require 必須
+      = select_tag(:exp_month,
+        options_for_exp_month,
+        class: "registration__form__input signup-payment__input--half")
+      %span.signup-payment__form__text 月
+      = select_tag(:exp_year,
+        options_for_exp_year,
+        class: "registration__form__input signup-payment__input--half")
+      %span.signup-payment__form__text 年
+    .registration__form__group
+      %label セキュリティコード
+      %span.registration__form--require 必須
+      = text_field_tag(:cvc,
+                        nil,
+                        class: "registration__form__input",
+                        maxlength: "4",
+                        placeholder: "カード背面4桁もしくは3桁の番号")
+    .signup-payment__security-code
+      %span ?
+      カード裏面の番号とは？
+    = submit_tag(submit,
+      class: "registration__form__next-btn",
+      id: "card_submit")

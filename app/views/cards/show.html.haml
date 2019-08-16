@@ -1,0 +1,37 @@
+.mypage-card
+  = render partial: 'shared/header'
+  - breadcrumb :mypage_card
+  = render partial: 'shared/bread-crumbs'
+  .mypage-card__main__container
+    = render partial: 'shared/l-side'
+    .mypage-card__container
+      %h2.mypage-card__head
+        支払い方法
+      .mypage-card__inner
+        %p.mypage-card__inner__text
+          クレジットカード一覧
+        %ul.mypage-card__cards
+          - if @cards.length != 0
+            - @cards.each do |card|
+              %li.mypage-card__card
+                = render "cards", brand: card["brand"]
+                .mypage-card__card__payment-num
+                  ************
+                  %span<>
+                    = card["last4"]
+                .mypage-card__card__payment-expire-date
+                  = sprintf("%02d", card["exp_month"])
+                  = card["exp_year"] % 100
+                = link_to "削除する",
+                  card_path,
+                  method: :delete,
+                  class: "mypage-card__card__payment-remove-btn"
+          - else
+            = link_to "クレジットカードを追加する",
+              add_cards_path,
+              class: "mypage-card__btn"
+        = link_to "支払い方法について＞",
+          root_path,
+          class: "mypage-card__link"
+.mypage__footer
+  = render 'shared/footer'
