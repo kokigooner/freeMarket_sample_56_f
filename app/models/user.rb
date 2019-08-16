@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: %i[facebook google_oauth2]
 
   has_many :sns_credentials, dependent: :destroy
+  has_many :cards, dependent: :destroy
   has_one :address
 
   validates :nickname, presence: true
@@ -40,6 +41,7 @@ class User < ApplicationRecord
   validates :birth_month, presence: true
   validates :birth_day, presence: true
   has_many :sns_credentials, dependent: :destroy
+  has_many :products
 
   def self.find_for_oauth(auth)
     sns = SnsCredential.where(uid: auth.uid, provider: auth.provider).first

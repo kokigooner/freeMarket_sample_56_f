@@ -87,7 +87,7 @@
                   やることリスト
                 %ul.mpcheader-user-box.mpcheader-notification-box.mypage-item-list
             %li
-              = link_to "/users/mypage/#{current_user.id}",class:"mpcheader-menu-link" do
+              = link_to "/users/mypage",class:"mpcheader-menu-link" do
                 %div
                   = image_tag "member.png", class: "mpcheader-menu-mypage-img"
                 %span
@@ -177,6 +177,6 @@
         - else
           %ul.mpcheader-user-btn
             %li.mpcheader-user-signin
-              = link_to "新規会員登録",users_signup_path, class: "mpcheader-user-red"
+              = link_to "新規会員登録", new_user_path, class: "mpcheader-user-red"
             %li.mpcheader-user-login
               = link_to "ログイン",  users_login_path

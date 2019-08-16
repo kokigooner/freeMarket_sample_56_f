@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
+
+  before_action :set_product, only: [:destroy]
   before_action :has_user_params?, only: [:authentication, :address, :payment]
-  before_action :set_user, only: [:mypage, :edit, :update, :destroy]
-  
-  def signup
+
+  def new
   end
 
   def registration
@@ -38,28 +39,9 @@ class UsersController < ApplicationController
     @address = Address.new(address_params.merge(user: @user))
     if @address.valid?
       session[:address_params] = address_params
+      redirect_to new_card_path
     else
       render :address
-    end
-  end
-
-  def create
-    @user = User.new(session[:user_params])
-    @address = Address.new(session[:address_params].merge(user: @user))
-
-    if session[:provider]
-      @user.sns_credentials.new(
-        provider: session[:provider],
-        uid: session[:uid]
-      )
-    end
-
-    if @user.save && @address.save
-      reset_session
-      sign_in(@user)
-      redirect_to users_signup_complete_path
-    else
-      render :payment
     end
   end
 
@@ -77,11 +59,26 @@ class UsersController < ApplicationController
   end
 
   def mypage
-
+    
   end
   
-  def mypage_task
-    
+  def myitems
+  end
+
+  def myitemdetail
+    product_id = Product.find_by_id(params[:id])
+    if product_id.present?
+      if current_user.id == product_id.user_id
+        @product = current_user.products.find_by_id(params[:id])
+      else 
+        redirect_to users_mypage_path
+      end
+    else
+      redirect_to users_mypage_path
+    end
+  end
+
+  def mypage_item
   end
 
   def card
@@ -91,10 +88,13 @@ class UsersController < ApplicationController
   end
 
   def identification
-    @test_model = { name: "山田太郎", kana_name: "ヤマダ タロウ", birthday: "2000年01日01日" }
   end
 
   def logout
+  end
+
+  def delete
+    @product.destoroy
   end
 
   private
@@ -133,8 +133,9 @@ class UsersController < ApplicationController
     redirect_to users_signup_path unless session[:user_params]
   end
 
-  def set_user
-    @user = User.find(params[:id])
+  def set_product
+    @product = current_user.product.find(params[:id])
   end
+
 
 end

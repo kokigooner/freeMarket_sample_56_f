@@ -1,0 +1,37 @@
+.registration-container
+  %header.registration-header
+    %h1
+      = link_to(root_path, class: "registration-header__logo") do
+        = image_tag 'mercari_logo_horizontal',
+          class: 'registration-header__logo__img'
+    %nav.registration-header__progress-bar
+      %ol
+        %li
+          会員情報
+          .progress__status.progress__status--active
+          .progress__bar.progress__bar--after.progress__bar--active
+        %li
+          電話番号認証
+          .progress__bar.progress__bar--before.progress__bar--active
+          .progress__status.progress__status--active
+          .progress__bar.progress__bar--after.progress__bar--active
+        %li
+          お届け先住所入力
+          .progress__bar.progress__bar--before.progress__bar--active
+          .progress__status.progress__status--active
+          .progress__bar.progress__bar--after.progress__bar--active
+        %li.registration-header--active
+          支払い方法
+          .progress__bar.progress__bar--before.progress__bar--active
+          .progress__status.progress__status--active
+          .progress__bar.progress__bar--after
+        %li
+          完了
+          .progress__bar.progress__bar--before
+          .progress__status
+  %main.registration-main
+    .registration-main__container
+      %h2.registration-main__text 支払い方法
+      = render "cards/form",
+        submit: "次へ進む"
+  = render partial: "users/signup-footer"

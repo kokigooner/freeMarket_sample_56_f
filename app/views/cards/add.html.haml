@@ -1,0 +1,13 @@
+.mypage-card
+  = render partial: "shared/header"
+  = render partial: 'shared/bread-crumbs'
+  .mypage-card__main__container
+    = render partial: 'shared/l-side'
+    .mypage-card__container
+      .registration-main__container
+        %h2.mypage-card-create__head
+          クレジットカード情報入力
+      = render "cards/form",
+        submit: "追加する"
+.mypage__footer
+  = render 'shared/footer'

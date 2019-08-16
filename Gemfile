@@ -24,7 +24,7 @@ gem 'coffee-rails', '~> 4.2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+# gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -75,6 +75,7 @@ gem 'dotenv-rails'
 gem 'rails-i18n', '~> 5.1'
 gem 'owlcarousel-rails'
 gem 'active_hash'
+gem 'payjp'
 
 group :production do
   gem 'unicorn', '5.4.1'

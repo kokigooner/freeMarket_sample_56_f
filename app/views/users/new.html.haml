@@ -11,11 +11,15 @@
             %i.far.fa-envelope.fa-lg.signup__form__mail
             %span.signup__form__mail--text
             メールアドレスで登録する
-          = link_to user_facebook_omniauth_authorize_path, class: "signup__form__btn signup__form__btn--facebook", method: :post do
+          = link_to(user_facebook_omniauth_authorize_path,
+            class: "signup__form__btn signup__form__btn--facebook",
+            method: :post) do
             %i.fab.fa-facebook-square.fa-2x.signup__form__facebook
             %span.signup__form__facebook--text
             Facebookで登録する
-          = link_to user_google_oauth2_omniauth_authorize_path, class: "signup__form__btn signup__form__btn--google", method: :post do
+          = link_to(user_google_oauth2_omniauth_authorize_path,
+            class: "signup__form__btn signup__form__btn--google",
+            method: :post) do
             %i.fab.fa-google.signup__form__google.fa-lg
             %span.signup__form__google--text
             Googleで登録する
