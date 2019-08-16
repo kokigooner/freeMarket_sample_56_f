@@ -97,6 +97,16 @@ class UsersController < ApplicationController
     @product.destoroy
   end
 
+  def updata_address
+
+     address = current_user.address 
+    if address.update_attributes(update_address_params)
+      redirect_to mypage_identification_path
+    else
+      redirect_to mypage_identification_path
+    end
+  end
+
   private
   def user_params
   params.require(:user).permit(
@@ -135,6 +145,16 @@ class UsersController < ApplicationController
 
   def set_product
     @product = current_user.product.find(params[:id])
+  end
+
+  def update_address_params
+    params.require(:address).permit(
+      :postal_code,
+      :prefecture_id,
+      :minicipality,
+      :address,
+      :building,
+    )
   end
 
 

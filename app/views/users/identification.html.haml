@@ -6,7 +6,8 @@
     %div.large-content
       %section.large-chapter-container.mypage-identification
         %h2.large-chapter-head 本人情報の登録
-        = form_tag('users_identification_path', method: :post,class: "large-single-inner" ) do |f|
+        =form_for :address, url: mypage_identification_path ,html: { class: "large-single-inner" }  do |f|
+        
           %div
             = simple_format "お客さまの本人情報をご登録ください。\n登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。"
             %p.text-right
@@ -16,51 +17,50 @@
             %label
               お名前
             %p
-              =  "#{@user.address.family_name}"+" "+"#{@user.address.first_name}"
+              =  "#{current_user.address.family_name}"+" "+"#{current_user.address.first_name}"
           %div.form-group
             %label
               お名前カナ
             %p
-              =  "#{@user.address.family_name_kana}"+" "+"#{@user.address.first_name_kana}"
+              =  "#{current_user.address.family_name_kana}"+" "+"#{current_user.address.first_name_kana}"
           %div.form-group
             %label
               生年月日
             %p
-              = "#{@user.birth_year}"+"年"+"#{@user.birth_month}"+"月"+"#{@user.birth_day}"+"日"
+              = "#{current_user.birth_year}"+"/"+"#{current_user.birth_month}"+"/"+"#{current_user.birth_day}"
           %div.form-group
             %label 
               郵便番号
             %span.form-arbitrary
               任意
-            = text_field_tag "zip_code"
-            ,"#{@user.address.postal_code}", {class: "input-default",placeholder: '111-0000'}
+            = f.text_field "postal_code", {class: "input-default",placeholder: '111-0000',value:"#{current_user.address.postal_code}"}
           %div.form-group
             %label 
               都道府県
             %span.form-arbitrary
               任意
             %div.select-wrap
-              = select_tag 'name', options_for_select({北海道:1,青森県:2,岩手県:3,宮城県:4,秋田県:5,山形県:6,福島県:7,茨城県:8,栃木県:9,群馬県:10,埼玉県:11,千葉県:12,東京都:13,神奈川県:14,新潟県:15,富山県:16,石川県:17,福井県:18,山梨県:19,長野県:20,岐阜県:21,静岡県:22,愛知県:23,三重県:24,滋賀県:25,京都府:26,大阪府:27,兵庫県:28,奈良県:29,和歌山県:30,鳥取県:31,島根県:32,岡山県:33,広島県:34,山口県:35,徳島県:36,香川県:37,愛媛県:38,高知県:39,福岡県:40,佐賀県:41,長崎県:42,熊本県:43,大分県:44,宮崎県:45,鹿児島県:46,沖縄県:47}), class:'select-default',prompt: "--"
+              = f.collection_select :prefecture_id, Prefecture.all, :id, :name , { include_blank: true, selected: current_user.address.prefecture_id}, { class: 'select-default' }
           %div.form-group
             %label 
               市町村
             %span.form-arbitrary
               任意
-            = text_field_tag "city", "#{@user.address.minicipality}", {class: "input-default",placeholder: '例）横浜市緑区'}
+            = f.text_field "minicipality",  {class: "input-default",placeholder: '例）横浜市緑区',value:"#{current_user.address.minicipality}",}
           %div.form-group
             %label 
               番地
             %span.form-arbitrary
               任意
-            = text_field_tag "address1", "#{@user.address.address}", {class: "input-default",placeholder: '例）青山1-1-1'}
+            = f.text_field "address", {class: "input-default",placeholder: '例）青山1-1-1',value: "#{current_user.address.address}"}
           %div.form-group
             %label 
               建物名
             %span.form-arbitrary
               任意
-            = text_field_tag "address2", "#{@user.address.building}", {class: "input-default",placeholder: '例）柳ビル'}
+            = f.text_field "building", {class: "input-default",placeholder: '例）柳ビル',value:"#{current_user.address.building}"}
           %div.form-group
-            = submit_tag "登録", {class: "btn-red btn-default"} 
+            = f.submit "登録", {class: "btn-red btn-default"} 
           %div.form-group.text_right
             %p.mypage-identification
               .text-right

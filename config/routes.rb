@@ -4,10 +4,11 @@ Rails.application.routes.draw do
   root to: "products#toppage"
 
   get '/products', to: 'products#toppage'
-  get "/products/:id", to: "products#show" ,as: :show
   get "/products/confirm", to: "products#confirm"
   get "/products/sell", to: "products#sell"
-  
+
+  resources :products, only: [:show]
+ 
   get '/users/mypage/profile', to: 'users#profile'
   get '/users/mypage/card', to: "users#card"
   get '/users/mypage/card/create', to: "users#card_create"
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
   get "/users/mypage/myitem/:id", to: "users#myitemdetail",as: :users_mypage_myitem
   delete "/users/mypage/myitem/:id", to: "products#delete"
   get "/mypage/identification", to: "users#identification" 
+  post "/mypage/identification", to: "users#updata_address" 
   get "/mypage/logout", to: "users#logout"
   
   get "/users/signup", to: "users#signup"

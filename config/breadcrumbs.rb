@@ -3,7 +3,7 @@ crumb :root do
 end
 
 crumb :user do |user|
-  link 'マイページ',"/users/mypage/#{current_user.id}"
+  link 'マイページ',"/users/mypage"
 end
 
 
