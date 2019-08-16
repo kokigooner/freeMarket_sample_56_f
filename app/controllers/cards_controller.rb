@@ -1,18 +1,57 @@
 class CardsController < ApplicationController
+  before_action :confirm_user, only: [:add, :show, :remake, :destroy]
+
   require "payjp"
+  Payjp.api_key = Rails.application.secrets.payjp_secret_key
   
   def new
   end
 
-  def create
-    Payjp.api_key = Rails.application.secrets.payjp_secret_key
+  def add
+  end
 
-    if params["payjpToken"].blank?
-      render :new
+  def show
+    @cards = Array.new
+    users_cards = current_user.cards
+    users_cards.each do |card|
+      customer = Payjp::Customer.retrieve(card.customer)
+      @cards << customer.cards.retrieve(card.card)
     end
-    
+  end
+
+  def create
+    if params["payjpToken"].blank?
+      user_signed_in? ? (render :add) : (render :new)
+    end
+
     customer = Payjp::Customer.create(card: params["payjpToken"])
 
+    if user_signed_in?
+      recreate(customer)
+    else
+      create_new(customer)
+    end
+  end
+
+  def make(customer)
+
+  end
+
+  def recreate(customer)
+    card = Card.new(
+      customer: customer.id,
+      card: customer.default_card,
+      user: current_user
+    )
+
+    if card.save
+      redirect_to card_path(current_user)
+    else
+      render :add
+    end
+  end
+
+  def create_new(customer)
     @user = User.new(session[:user_params])
     @address = Address.new(session[:address_params].merge(user: @user))
     @card = Card.new(
@@ -35,6 +74,22 @@ class CardsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    card = Card.find_by(user_id: params[:id])
+    customer = Payjp::Customer.retrieve(card.customer)
+    card_payjp = customer.cards.retrieve(card.card)
+    response = card_payjp.delete
+    if response["deleted"]
+      card.destroy
+      redirect_to card_path(current_user)
+    end
+  end
+
+  private
+  def confirm_user
+    redirect_to users_login_path unless user_signed_in?
   end
 
 end
