@@ -23,7 +23,7 @@ main {
   &-item {
     position: relative;
     display: block;
-    max-height: 48px;
+    height: 16px;
     padding: 16px;
     background: $white2;
     font-size: 14px;
@@ -48,6 +48,7 @@ main {
 
   &-group {
     margin: 40px 0 0;
+    font-size: 14px;
     select {
       width: 100%;
     }

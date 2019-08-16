@@ -1,12 +1,15 @@
 .top-page__header
   =render 'shared/header'
 .top-page__wrapper
+  .top-page-banner
+    .owl-example.owl-stage-outer.owl-loaded.owl-drag
+      .box
+        = image_tag "main_bg_pc.jpg"
+      .boy
+        = image_tag "banner-camp.jpg"
+      .cat
+        = image_tag "banner-summer-fes.jpg"
   .top-page__pickupone
-    .top-page__categori
-      %a.top-page__banner
-      %h4 キャンプ用品大特集！！
-      .top-page__bannerimg
-        %img{ src: "" }/
     .top-page__pickupcat
       %h4 ピックアップカテゴリー
     .top-page__categoritwo
@@ -20,7 +23,7 @@
               .top-page__itemname
                 %h6
                   = product.product_name
-                  -# = @products.product_name
+
               .top-page__itempricebox
                 .top-page__itemprice
                   %h5

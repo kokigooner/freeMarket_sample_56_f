@@ -55,5 +55,4 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @productsall = Product.all
   end
-
 end
