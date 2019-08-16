@@ -6,7 +6,7 @@
     %div.large-content
       %section.large-chapter-container.mypage-identification
         %h2.large-chapter-head 本人情報の登録
-        =form_for :address, url: mypage_identification_path, html: { class: "large-single-inner" }  do |f|
+        =form_for :address , url: mypage_identification_path, html: { class: "large-single-inner" }  do |f|
           %div
             = simple_format "お客さまの本人情報をご登録ください。\n登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。"
             %p.text-right
