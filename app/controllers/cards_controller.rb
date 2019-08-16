@@ -1,4 +1,6 @@
 class CardsController < ApplicationController
+  before_action :confirm_user, only: [:add, :show, :recreate, :destroy]
+
   require "payjp"
   Payjp.api_key = Rails.application.secrets.payjp_secret_key
   
@@ -75,6 +77,11 @@ class CardsController < ApplicationController
       card.destroy
       redirect_to card_path(current_user)
     end
+  end
+
+  private
+  def confirm_user
+    redirect_to users_login_path unless user_signed_in?
   end
 
 end
