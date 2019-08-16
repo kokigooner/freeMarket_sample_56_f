@@ -4,33 +4,34 @@
   box-sizing: border-box;
   background-color: whitesmoke;
 
-  .top-page__banner {
-    .owl-nav{
+  .top-page-banner {
+    .owl-nav {
       color: transparent;
       width: 1000px;
     }
-    .owl-prev{
+
+    .owl-prev {
       left: 5px;
-    
     }
-    .owl-next{
+
+    .owl-next {
       right: 5px;
     }
 
   .slide-banner.owl-carousel.owl-loaded.owl-drag{
 
-  .owl-stage-outer{
+  .owl-stage-outer {
 
       width: 100%;
 
     }
   }
   }
-  .owl-nav.disabled{
+  .owl-nav.disabled {
 
     color: transparent;
 
-    .owl-prev{
+    .owl-prev {
       height: 0;
       width: 0;
       left: 1px;
@@ -77,7 +78,7 @@
     text-align: center;
     background: rgba(255,255,255,0);
     }
-    
+
   .owl-dot {
     position: relative;
     background: white !important;
