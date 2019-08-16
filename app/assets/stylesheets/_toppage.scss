@@ -144,6 +144,7 @@ $color-black: #333;
           .top-page__itemimg{
             height: 200px;
             width: 220px;
+            overflow: hidden;
           }
           .top-page__itemnamebox{
             height: 100px;
@@ -359,11 +360,11 @@ $color-black: #333;
       }
     }
     div.top-page__categorisee {
-      width: calc(100% - 50px);
+      width: calc(100% - 180px);
       box-sizing: border-box;
       height: 30px;
       margin-top: 0px;
-      padding: 0 40px;
+      padding: 0 60px;
       text-align: right;
       box-sizing: border-box;
       h6 {
@@ -616,11 +617,11 @@ $color-black: #333;
       }
     }
     div.top-page__categorisee {
-      width: calc(100% - 50px);
+      width: calc(100% - 180px);
       box-sizing: border-box;
       height: 30px;
       margin-top: 0px;
-      padding: 0 40px;
+      padding: 0 60px;
       text-align: right;
       box-sizing: border-box;
       h6 {
@@ -873,11 +874,11 @@ $color-black: #333;
       }
     }
     div.top-page__categorisee {
-      width: calc(100% - 50px);
+      width: calc(100% - 180px);
       box-sizing: border-box;
       height: 30px;
       margin-top: 0px;
-      padding: 0 40px;
+      padding: 0 60px;
       text-align: right;
       box-sizing: border-box;
       h6 {
@@ -1130,11 +1131,11 @@ $color-black: #333;
       }
     }
     div.top-page__categorisee {
-      width: calc(100% - 50px);
+      width: calc(100% - 180px);
       box-sizing: border-box;
       height: 30px;
       margin-top: 0px;
-      padding: 0 40px;
+      padding: 0 60px;
       text-align: right;
       box-sizing: border-box;
       h6 {
@@ -1400,11 +1401,11 @@ $color-black: #333;
       }
     }
     div.top-page__categorisee {
-      width: calc(100% - 50px);
+      width: calc(100% - 180px);
       box-sizing: border-box;
       height: 30px;
       margin-top: 0px;
-      padding: 0 40px;
+      padding: 0 60px;
       box-sizing: border-box;
       text-align: right;
       h6 {
@@ -1657,12 +1658,12 @@ $color-black: #333;
       }
     }
     div.top-page__categorisee {
-      width: calc(100% - 50px);
+      width: calc(100% - 180px);
       box-sizing: border-box;
       height: 30px;
       margin-top: 0px;
       box-sizing: border-box;
-      padding: 0 40px;
+      padding: 0 60px;
       text-align: right;
       h6 {
         color: rgb(0, 172, 252);
@@ -1914,11 +1915,11 @@ $color-black: #333;
       }
     }
     div.top-page__categorisee {
-      width: calc(100% - 50px);
+      width: calc(100% - 180px);
       box-sizing: border-box;
       height: 30px;
       margin-top: 0px;
-      padding: 0 40px;
+      padding: 0 60px;
       box-sizing: border-box;
       text-align: right;
       h6 {
@@ -2171,11 +2172,11 @@ $color-black: #333;
       }
     }
     div.top-page__categorisee {
-      width: calc(100% - 50px);
+      width: calc(100% - 180px);
       box-sizing: border-box;
       height: 30px;
       margin-top: 0px;
-      padding: 0 40px;
+      padding: 0 60px;
       box-sizing: border-box;
       text-align: right;
       h6 {
