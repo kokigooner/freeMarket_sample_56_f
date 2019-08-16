@@ -23,54 +23,54 @@ $color-black: #333;
 
     .slide-banner.owl-carousel.owl-loaded.owl-drag {
 
-    .owl-stage-outer {
-        width: 100%;
-      }
-    }
-    }
-
-    .owl-nav.disabled {
-
-      color: transparent;
-
-      .owl-prev {
-        background-color: $color-none;
-        height: 0;
-        left: 1px;
-        position: absolute;
-        top: 30%;
-        width: 0;
-
-        span {
-          background-image: url('yajirusirightt.png');
-          cursor: pointer;
-          height: 100px;
-          left: 0;
-          position: absolute;
-          top: 0;
-          width: 50px;
+      .owl-stage-outer {
+          width: 100%;
         }
       }
+    }
 
-      .owl-next {
-        background-color: $color-none;
-        float: right;
-        height: 0;
-        position: absolute;
-        top: 30%;
-        width: 0;
+  .owl-nav.disabled {
 
-        span {
-        background-image: url('yajirusileft.png');
+    color: transparent;
+
+    .owl-prev {
+      background-color: $color-none;
+      height: 0;
+      left: 1px;
+      position: absolute;
+      top: 30%;
+      width: 0;
+
+      span {
+        background-image: url('yajirusirightt.png');
         cursor: pointer;
         height: 100px;
+        left: 0;
         position: absolute;
-        right: 0;
         top: 0;
-        width: 100px;
-        }
+        width: 50px;
       }
     }
+
+    .owl-next {
+      background-color: $color-none;
+      float: right;
+      height: 0;
+      position: absolute;
+      top: 30%;
+      width: 0;
+
+      span {
+      background-image: url('yajirusileft.png');
+      cursor: pointer;
+      height: 100px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100px;
+      }
+    }
+  }
 
 
   .owl-dots {
@@ -92,8 +92,8 @@ $color-black: #333;
     width: 12px;
 
     &.active {
-    background: $color-black;
-    opacity: 1;
+      background: $color-black;
+      opacity: 1;
     }
     }
       }
