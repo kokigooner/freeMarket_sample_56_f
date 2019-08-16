@@ -33,10 +33,6 @@ class CardsController < ApplicationController
     end
   end
 
-  def make(customer)
-
-  end
-
   def recreate(customer)
     card = Card.new(
       customer: customer.id,
