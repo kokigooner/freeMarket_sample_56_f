@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   require 'payjp'
 
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_product, only: [:show, :edit, :update, :destroy, :purchase]
 
   def toppage
     @products   = Product.order(id: "DESC").limit(4)
@@ -27,7 +27,6 @@ class ProductsController < ApplicationController
   end
 
   def purchase
-    @product = Product.find(params[:id])
     cards = current_user.cards
     card = cards[0]
 
@@ -53,6 +52,5 @@ class ProductsController < ApplicationController
   private
   def set_product
     @product = Product.find(params[:id])
-    @productsall = Product.all
   end
 end
