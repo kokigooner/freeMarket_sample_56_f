@@ -31,8 +31,10 @@
           - if @address.blank? || @cards.blank?
             .products-confirm__error-message
               配送先と支払い方法の入力を完了してください。
-          .products-confirm__purchase-btn
-            購入する
+          = link_to("購入する",
+            purchase_product_path,
+            method: :post,
+            class: "products-confirm__purchase-btn")
         .products-confirm__user-info
           .products-confirm__main--inner
             %h3.products-confirm__user-info__address--head

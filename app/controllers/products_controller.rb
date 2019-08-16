@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  require 'payjp'
 
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
@@ -14,6 +15,7 @@ class ProductsController < ApplicationController
   end
 
   def confirm
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
     @product = Product.find(params[:id])
     @address = current_user.address
     @cards = Array.new
@@ -24,20 +26,34 @@ class ProductsController < ApplicationController
     end
   end
 
+  def purchase
+    @product = Product.find(params[:id])
+    cards = current_user.cards
+    card = cards[0]
+
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
+    charge = Payjp::Charge.create(
+      amount: @product.price,
+      customer: card.customer,
+      currency: 'jpy'
+    )
+
+    if charge["captured"]
+      redirect_to root_path
+    else
+      render :confirm
+    end
+  end
+
   def destroy
     @product.destroy
     redirect_to root_path
   end
   
   private
-
-
-
   def set_product
     @product = Product.find(params[:id])
     @productsall = Product.all
   end
-
-  
 
 end
