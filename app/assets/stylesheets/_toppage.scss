@@ -1,3 +1,4 @@
+$color-none: rgba(255,255,255,0);
 
 .top-page__wrapper{
   width: 100%;
@@ -21,84 +22,82 @@
   .slide-banner.owl-carousel.owl-loaded.owl-drag{
 
   .owl-stage-outer {
-
       width: 100%;
-
     }
   }
   }
+
   .owl-nav.disabled {
 
     color: transparent;
 
     .owl-prev {
+      background-color: $color-none;
       height: 0;
-      width: 0;
       left: 1px;
+      position: absolute;
       top: 30%;
-      position: absolute;
-      background: rgba(255,255,255,0);
+      width: 0;
       span {
-      height: 100px;
-      width: 50px;
-        background-image: url('yajirusirightt.png');
-
-      top:0;
-      left:0;
+      background-image: url('yajirusirightt.png');
       cursor: pointer;
+      height: 100px;
+      left: 0;
       position: absolute;
+      top: 0;
+      width: 50px;
       }
     }
+
     .owl-next {
-      height: 0;
-      width: 0;
+      background-color: $color-none;
       float: right;
-      top: 30%;
+      height: 0;
       position: absolute;
-      background: rgba(255,255,255,0);
+      top: 30%;
+      width: 0;
+
       span {
       background-image: url('yajirusileft.png');
-
-      right: 60px;
       cursor: pointer;
       height: 100px;
-      width: 100px;
       position: absolute;
-      top:0;
-      right:0;
+      right: 0;
+      top: 0;
+      width: 100px;
       }
     }
   }
 
 
   .owl-dots {
-    position: absolute;
-    width: 100%;
+    background-color: $color-none;
     bottom: 10px;
+    position: absolute;
     text-align: center;
-    background: rgba(255,255,255,0);
+    width: 100%;
     }
 
   .owl-dot {
-    position: relative;
     background: white !important;
-    opacity: 0.4;
     border-radius: 50%;
     height: 12px;
+    margin-right: 15px;
+    min-height: 12px;
+    opacity: .4;
+    position: relative;
     width: 12px;
 
-    min-height: 12px;
-    margin-right: 15px;
     &.active {
+    background: rgba(0, 0, 0, .5) !important;
     opacity: 1;
-    background: rgba(0,0,0,0.5) !important;
     }
     }
-
       }
+
   div.top-page__pickupone {
-    width: 100%;
     box-sizing: border-box;
+    width: 100%;
     div.top-page__pickupcat {
       width: 100%;
       height: 50px;
