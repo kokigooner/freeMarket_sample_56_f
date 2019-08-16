@@ -20,7 +20,7 @@
                   %span<>
                     = card["last4"]
                 .mypage-card__card__payment-expire-date
-                  = sprintf("%02d", card["exp_month"]) 
+                  = sprintf("%02d", card["exp_month"])
                   = card["exp_year"] % 100
                 = link_to "削除する",
                   card_path,

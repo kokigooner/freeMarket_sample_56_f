@@ -30,7 +30,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new]
 
   get "/users/sell", to: "users#sell"
   get "/users/login", to: "users#login"
