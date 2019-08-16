@@ -10,7 +10,6 @@ $color-black: #333;
   .top-page-banner {
     .owl-nav {
       color: transparent;
-      width: 1000px;
     }
 
     .owl-prev {
@@ -38,11 +37,11 @@ $color-black: #333;
       height: 0;
       left: 1px;
       position: absolute;
-      top: 30%;
+      top: 40%;
       width: 0;
 
       span {
-        background-image: url('yajirusirightt.png');
+        background-image: url('carousel-prev.png');
         cursor: pointer;
         height: 100px;
         left: 0;
@@ -57,15 +56,15 @@ $color-black: #333;
       float: right;
       height: 0;
       position: absolute;
-      top: 30%;
+      top: 40%;
       width: 0;
 
       span {
-        background-image: url('yajirusileft.png');
+        background-image: url('carousel-next.png');
         cursor: pointer;
         height: 100px;
         position: absolute;
-        right: 0;
+        right: -70px;
         top: 0;
         width: 100px;
       }
