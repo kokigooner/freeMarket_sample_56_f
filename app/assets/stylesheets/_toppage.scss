@@ -1,4 +1,6 @@
-$color-none: rgba(255,255,255,0);
+$color-none: rgba(255, 255, 255, 0);
+$color-white: #fff;
+$color-black: #333;
 
 .top-page__wrapper{
   width: 100%;
@@ -19,55 +21,56 @@ $color-none: rgba(255,255,255,0);
       right: 5px;
     }
 
-  .slide-banner.owl-carousel.owl-loaded.owl-drag{
+    .slide-banner.owl-carousel.owl-loaded.owl-drag {
 
-  .owl-stage-outer {
-      width: 100%;
-    }
-  }
-  }
-
-  .owl-nav.disabled {
-
-    color: transparent;
-
-    .owl-prev {
-      background-color: $color-none;
-      height: 0;
-      left: 1px;
-      position: absolute;
-      top: 30%;
-      width: 0;
-      span {
-      background-image: url('yajirusirightt.png');
-      cursor: pointer;
-      height: 100px;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 50px;
+    .owl-stage-outer {
+        width: 100%;
       }
     }
+    }
 
-    .owl-next {
-      background-color: $color-none;
-      float: right;
-      height: 0;
-      position: absolute;
-      top: 30%;
-      width: 0;
+    .owl-nav.disabled {
 
-      span {
-      background-image: url('yajirusileft.png');
-      cursor: pointer;
-      height: 100px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 100px;
+      color: transparent;
+
+      .owl-prev {
+        background-color: $color-none;
+        height: 0;
+        left: 1px;
+        position: absolute;
+        top: 30%;
+        width: 0;
+
+        span {
+          background-image: url('yajirusirightt.png');
+          cursor: pointer;
+          height: 100px;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 50px;
+        }
+      }
+
+      .owl-next {
+        background-color: $color-none;
+        float: right;
+        height: 0;
+        position: absolute;
+        top: 30%;
+        width: 0;
+
+        span {
+        background-image: url('yajirusileft.png');
+        cursor: pointer;
+        height: 100px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100px;
+        }
       }
     }
-  }
 
 
   .owl-dots {
@@ -79,7 +82,7 @@ $color-none: rgba(255,255,255,0);
     }
 
   .owl-dot {
-    background: white !important;
+    background: $color-white;
     border-radius: 50%;
     height: 12px;
     margin-right: 15px;
@@ -89,7 +92,7 @@ $color-none: rgba(255,255,255,0);
     width: 12px;
 
     &.active {
-    background: rgba(0, 0, 0, .5) !important;
+    background: $color-black;
     opacity: 1;
     }
     }
