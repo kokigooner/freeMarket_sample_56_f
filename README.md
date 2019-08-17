@@ -130,8 +130,8 @@ belongs_to :user
 |Column|Type|Options|
 |------|----|-------|
 |user_id|reference|foreign_key:true|
-|customer_id|string|null:false|
-|card_id|string|null:false|
+|customer|string|null:false|
+|card|string|null:false|
 
 * belongs_to :user
 
