@@ -15,15 +15,14 @@
     .top-page__categoritwo
       %h5 レディース新着アイテム
       .top-page__item_clearfix
-        - @productimage.zip(@products) do |image, product|
+        - @products.each do |product|
           .top-page__item
             .top-page__itemimg
-              = image_tag image.image
+              = link_to image_tag("#{product.images.first.image}"),product_path(product)
             .top-page__itemnamebox
               .top-page__itemname
                 %h6
                   = product.product_name
-
               .top-page__itempricebox
                 .top-page__itemprice
                   %h5
