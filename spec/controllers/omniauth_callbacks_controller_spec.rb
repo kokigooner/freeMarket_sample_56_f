@@ -1,3 +1,4 @@
+# 使用する可能性がるので一応コメントアウトで残しておきます
 # require 'rails_helper'
 
 #   before do 

@@ -1,3 +1,4 @@
+# 使用する可能性があるので湖面タウトで残しておきます。
 # module OmniauthMocks
 #   def facebook_mock
 #     Omniauth.config.mock_auth[:facebook] = OmniAuth: :AuthHash.new({
