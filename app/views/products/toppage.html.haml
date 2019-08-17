@@ -37,272 +37,112 @@
     .top-page__categorithree
       %h5 メンズ新着アイテム
       .top-page__item_clearfix
-        .top-page__item
-          %a{ href:  "" }
+        - @products.each do |product|
+          .top-page__item
             .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox  
+              = link_to image_tag("#{product.images.first.image}"),product_path(product)
+            .top-page__itemnamebox
               .top-page__itemname
-                %h6 ハンドバッグ
+                %h6
+                  = product.product_name
               .top-page__itempricebox
                 .top-page__itemprice
-                  %h5 ¥1000
+                  %h5
+                    = "¥#{product.price}"
                 .top-page__iconlike
+                  = image_tag "sample_heart.png",width: "25" ,hight: "25"
                   %i.icon-arrow-right
                   %span<>3
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox 
-              .top-page__itemname
-                %h6 
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox 
-              .top-page__itemname
-                %h6 
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemname
-              %h6 
-            .top-page__itempricebox
-              .top-page__itemprice
-                %h5 
-              .top-page__iconlike
-                %i.icon-arrow-right
-                %span<>
+
     .top-page__categorisee
       %h6 全ての商品をみる
     .top-page__categorifour
       %h5 ベビー・キッズ新着アイテム
       .top-page__item_clearfix
-        .top-page__item
-          %a{ href:  "" }
+        - @products.each do |product|
+          .top-page__item
             .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox  
+              = link_to image_tag("#{product.images.first.image}"),product_path(product)
+            .top-page__itemnamebox
               .top-page__itemname
-                %h6 ハンドバッグ
+                %h6
+                  = product.product_name
               .top-page__itempricebox
                 .top-page__itemprice
-                  %h5 ¥1000
+                  %h5
+                    = "¥#{product.price}"
                 .top-page__iconlike
+                  = image_tag "sample_heart.png",width: "25" ,hight: "25"
                   %i.icon-arrow-right
                   %span<>3
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox 
-              .top-page__itemname
-                %h6 
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox 
-              .top-page__itemname
-                %h6 
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemname
-              %h6 
-            .top-page__itempricebox
-              .top-page__itemprice
-                %h5 
-              .top-page__iconlike
-                %i.icon-arrow-right
-                %span<>
+
     .top-page__categorisee
       %h6 全ての商品をみる
     .top-page__categorifive
       %h5 コスメ・美容新着アイテム
       .top-page__item_clearfix
-        .top-page__item
-          %a{ href:  "" }
+        - @products.each do |product|
+          .top-page__item
             .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox  
+              = link_to image_tag("#{product.images.first.image}"),product_path(product)
+            .top-page__itemnamebox
               .top-page__itemname
-                %h6 ハンドバッグ
+                %h6
+                  = product.product_name
               .top-page__itempricebox
                 .top-page__itemprice
-                  %h5 ¥1000
+                  %h5
+                    = "¥#{product.price}"
                 .top-page__iconlike
+                  = image_tag "sample_heart.png",width: "25" ,hight: "25"
                   %i.icon-arrow-right
                   %span<>3
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox 
-              .top-page__itemname
-                %h6 
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox 
-              .top-page__itemname
-                %h6 
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemname
-              %h6 
-            .top-page__itempricebox
-              .top-page__itemprice
-                %h5 
-              .top-page__iconlike
-                %i.icon-arrow-right
-                %span<>
+
     .top-page__categorisee
       %h6 全ての商品をみる
     .top-page__pickupcattwo
-      %h4 ピックアップブランド
+      %h4.top-page__pickupcattwo_title ピックアップブランド
     .top-page__categorisix
       %h5 シャネル新着アイテム
       .top-page__item_clearfix
-        .top-page__item
-          %a{ href:  "" }
+        - @products.each do |product|
+          .top-page__item
             .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox  
+              = link_to image_tag("#{product.images.first.image}"),product_path(product)
+            .top-page__itemnamebox
               .top-page__itemname
-                %h6 ハンドバッグ
+                %h6
+                  = product.product_name
               .top-page__itempricebox
                 .top-page__itemprice
-                  %h5 ¥1000
+                  %h5
+                    = "¥#{product.price}"
                 .top-page__iconlike
+                  = image_tag "sample_heart.png",width: "25" ,hight: "25"
                   %i.icon-arrow-right
                   %span<>3
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox 
-              .top-page__itemname
-                %h6 
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox 
-              .top-page__itemname
-                %h6 
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemname
-              %h6 
-            .top-page__itempricebox
-              .top-page__itemprice
-                %h5 
-              .top-page__iconlike
-                %i.icon-arrow-right
-                %span<>
+
     .top-page__categorisee
       %h6 全ての商品をみる
     .top-page__categoriseven
       %h5 ルイ ヴィトン新着アイテム
       .top-page__item_clearfix
-        .top-page__item
-          %a{ href:  "" }
+        - @products.each do |product|
+          .top-page__item
             .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox  
+              = link_to image_tag("#{product.images.first.image}"),product_path(product)
+            .top-page__itemnamebox
               .top-page__itemname
-                %h6 ハンドバッグ
+                %h6
+                  = product.product_name
               .top-page__itempricebox
                 .top-page__itemprice
-                  %h5 ¥1000
+                  %h5
+                    = "¥#{product.price}"
                 .top-page__iconlike
+                  = image_tag "sample_heart.png",width: "25" ,hight: "25"
                   %i.icon-arrow-right
                   %span<>3
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox 
-              .top-page__itemname
-                %h6 
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox 
-              .top-page__itemname
-                %h6 
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>
-        .top-page__item
           %a{ href:  "" }
             .top-page__itemimg
               %img{ src: "" }/
@@ -319,120 +159,47 @@
     .top-page__categorieight
       %h5 シュプリーム新着アイテム
       .top-page__item_clearfix
-        .top-page__item
-          %a{ href:  "" }
+        - @products.each do |product|
+          .top-page__item
             .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox  
+              = link_to image_tag("#{product.images.first.image}"),product_path(product)
+            .top-page__itemnamebox
               .top-page__itemname
-                %h6 ハンドバッグ
+                %h6
+                  = product.product_name
               .top-page__itempricebox
                 .top-page__itemprice
-                  %h5 ¥1000
+                  %h5
+                    = "¥#{product.price}"
                 .top-page__iconlike
+                  = image_tag "sample_heart.png",width: "25" ,hight: "25"
                   %i.icon-arrow-right
                   %span<>3
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox 
-              .top-page__itemname
-                %h6 
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox 
-              .top-page__itemname
-                %h6 
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemname
-              %h6 
-            .top-page__itempricebox
-              .top-page__itemprice
-                %h5 
-              .top-page__iconlike
-                %i.icon-arrow-right
-                %span<>
+
     .top-page__categorisee
       %h6 全ての商品をみる
     .top-page__categorinine
       %h5 ナイキ 新着アイテム
       .top-page__item_clearfix
-        .top-page__item
-          %a{ href:  "" }
+        - @products.each do |product|
+          .top-page__item
             .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox  
+              = link_to image_tag("#{product.images.first.image}"),product_path(product)
+            .top-page__itemnamebox
               .top-page__itemname
-                %h6 ハンドバッグ
+                %h6
+                  = product.product_name
               .top-page__itempricebox
                 .top-page__itemprice
-                  %h5 ¥1000
+                  %h5
+                    = "¥#{product.price}"
                 .top-page__iconlike
+                  = image_tag "sample_heart.png",width: "25" ,hight: "25"
                   %i.icon-arrow-right
                   %span<>3
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox 
-              .top-page__itemname
-                %h6 
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemnamebox 
-              .top-page__itemname
-                %h6 
-              .top-page__itempricebox
-                .top-page__itemprice
-                  %h5 
-                .top-page__iconlike
-                  %i.icon-arrow-right
-                  %span<>
-        .top-page__item
-          %a{ href:  "" }
-            .top-page__itemimg
-              %img{ src: "" }/
-            .top-page__itemname
-              %h6 
-            .top-page__itempricebox
-              .top-page__itemprice
-                %h5 
-              .top-page__iconlike
-                %i.icon-arrow-right
-                %span<>
+
     .top-page__categorisee
       %h6 全ての商品をみる
-  .top-page__senden
-    .top-page__senden
-      %h4 ＜スマホでカンタンフリマアプリ！＞
-      .top-page__sendenimg
-        %img{ src: "" }/
 .top-page__footer
   =render 'shared/footer'
   = render  'shared/selling_btn'
