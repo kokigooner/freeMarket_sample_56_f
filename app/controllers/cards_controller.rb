@@ -2,7 +2,7 @@ class CardsController < ApplicationController
   before_action :confirm_user, only: [:add, :show, :remake, :destroy]
 
   require "payjp"
-  Payjp.api_key = ENV['PAYJP_SECRET_KEY']
+  Payjp.api_key = 'sk_test_75a3bf2aaa150915275ad5cd'
   
   def new
   end

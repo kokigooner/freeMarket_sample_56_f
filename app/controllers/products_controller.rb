@@ -4,7 +4,6 @@ class ProductsController < ApplicationController
 
   def toppage
     @products   = Product.order(id: "DESC").limit(4)
-    @productimage   = Image.order(id: "DESC").limit(4)
   end
 
   def show
