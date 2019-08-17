@@ -18,12 +18,11 @@
         - @products.each do |product|
           .top-page__item
             .top-page__itemimg
-              = link_to image_tag("#{product.images.first.image}"),product_path(product) 
+              = link_to image_tag("#{product.images.first.image}"),product_path(product)
             .top-page__itemnamebox
               .top-page__itemname
                 %h6
                   = product.product_name
-                  -# = link_to ("#{product.product_name.first.product_name}"),product_path(product)
               .top-page__itempricebox
                 .top-page__itemprice
                   %h5
