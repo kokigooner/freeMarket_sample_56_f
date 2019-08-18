@@ -1,19 +1,23 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "products#toppage"
 
   get '/products', to: 'products#toppage'
   get '/products/search', to: 'products#search'
   get "/products/confirm", to: "products#confirm"
   get "/products/sell", to: "products#sell"
-  resources :products, only: [:show]
- 
+
+  resources :products, only: [:show] do
+    member do
+      get 'confirm'
+      post 'purchase'
+    end
+  end
   get '/users/mypage/profile', to: 'users#profile'
   get "/users/mypage", to: "users#mypage"
   get "/users/mypage/myitems", to: "users#myitems"
   get "/users/mypage/myitem/:id", to: "users#myitemdetail",as: :users_mypage_myitem
-  delete "/users/mypage/myitem/:id", to: "products#delete"
+  delete "/users/mypage/myitem/:id", to: "products#destroy"
   get "/mypage/identification", to: "users#identification" 
   post "/mypage/identification", to: "users#updata_address" 
   get "/mypage/logout", to: "users#logout"

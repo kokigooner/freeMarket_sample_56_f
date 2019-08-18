@@ -85,8 +85,20 @@
     .or or
     .products-detail-btn-style.gray
       = link_to "出品を一旦停止する", root_path
-    .products-detail-btn-style.gray
-      = link_to "この商品を削除する", users_mypage_myitem_path, method: :delete
+    .products-detail-btn-style.gray#openModel
+      = link_to "この商品を削除する"
+  .overlay
+    .modal
+      .modal-body
+        %p.modal-title
+          確認
+        .modal-text
+          = simple_format "削除すると二度と復活できません。\n削除する代わりに停止することもできます。\n \n本当に削除しますか?"
+      .modal-menus
+        .modal-menus-btn.cancel#closeModel
+          キャンセル
+        .modal-menus-btn.delete
+          = link_to '削除する', users_mypage_myitem_path, method: :delete
   .product-detail-message
     .message-container
       .message-content
@@ -94,6 +106,6 @@
           %p
             相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
           = f.text_area :message, class: 'textarea-default'
-          = f.submit "コメントする", {class: "message-submit btn-default btn-gray"} 
-  = render 'shared/bread-crumbs'
-  = render  'shared/footer'
+          = f.submit "コメントする", {class: "message-submit btn-default btn-gray"}
+= render 'shared/bread-crumbs'
+= render  'shared/footer'

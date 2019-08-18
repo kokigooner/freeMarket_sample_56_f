@@ -1,3 +1,6 @@
+$gray: #ccc;
+$overlaycolor: rgba(0, 0, 0, .8);
+
 .product {
   $white2:#fafafa;
   $red2: #ea352d;
@@ -499,4 +502,55 @@
       background: #ea352d;
   }
   }
+}
+
+.modal {
+  background: $white;
+  display: none;
+  height: 300px;
+  margin: 20px auto;
+  max-width: none;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 600px;
+  z-index: 2;
+
+  &-body {
+    height: 108px;
+    line-height: 1.5;
+    padding: 64px;
+  }
+
+  &-title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &-menus {
+    display: flex;
+    height: 64px;
+
+    &-btn {
+      border-top: 1px solid $gray;
+      line-height: 64px;
+      text-align: center;
+      width: 50%;
+    }
+
+    .delete {
+      border-left: 1px solid $gray;
+    }
+  }
+}
+
+.overlay {
+  background: $overlaycolor;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
