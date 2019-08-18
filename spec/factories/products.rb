@@ -2,9 +2,9 @@ FactoryBot.define do
   factory :product do
     user_id{'1'}
     product_name{'テストプロダクト'}
-    price{'test@exa'} 
+    price{'test@exa'}
     description{'testtest'}
-    first_category_id{"1"}
+    first_category_id{'1'}
     second_category_id{'1'}
     third_category_id{'1'}
     brand_id{'1'}
