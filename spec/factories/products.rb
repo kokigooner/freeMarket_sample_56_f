@@ -4,7 +4,7 @@ FactoryBot.define do
     product_name{'テストプロダクト'}
     price{'test@exa'} 
     description{'testtest'}
-    first_category{"1"}
+    first_category_id{"1"}
     second_category_id{'1'}
     third_category_id{'1'}
     brand_id{'1'}
