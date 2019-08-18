@@ -4,6 +4,7 @@ $formborder: #ccc;
 $white: #fff;
 $red: #ea352d;
 $filefield: #f5f5f5;
+$ashgray: #888;
 
 body {
   background: rgb(245, 245, 245);
@@ -67,8 +68,8 @@ main {
     float: left;
 
     ul {
-    display: block;
-    width: 100%;
+      display: block;
+      width: 100%;
     }
   }
 
@@ -87,32 +88,32 @@ main {
       width: 150px;
       z-index: 2;
     }
-    
+
     &__imageview {
       background: $filefield;
       border: 1px dashed $formborder;
       float: left;
       height: 190px;
       width: 145px;
+    }
 
-      .uploadimg {
-        height: 100px;
-        padding-top: 25px;
-        width: 145px;
-      }
+    &__imageview .uploadimg {
+      height: 100px;
+      padding-top: 25px;
+      width: 145px;
+    }
 
-      .img_del {
-        color: $lightblue;
-        cursor: pointer;
-        font-size: 14px;
-        font-weight: 400;
-        position: relative;
-        text-align: center;
-        top: 30px;
+    &__imageview  .img_del {
+      color: $lightblue;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      position: relative;
+      text-align: center;
+      top: 30px;
 
-        &:hover {
-          opacity: .5;
-        }
+      &:hover {
+        opacity: .5;
       }
     }
   }
@@ -142,6 +143,17 @@ main {
 .sell__content {
   border-top: 1px solid $bordercolor;
   padding: 40px;
+  p a {
+    color: $lightblue;
+    display: inline;
+    text-decoration: none;
+    word-wrap: break-word;
+  }
+}
+
+.select--wrap {
+  background: $white;
+  position: relative;
 }
 
 .form__group {
@@ -172,7 +184,7 @@ main {
     padding: 10px 0 0 10px;
 
     select {
-      background-color: #ffffff;
+      background-color: $white;
       border: 0;
       height: 30px;
       width: 100%;
@@ -185,6 +197,12 @@ main {
   }
 }
 
+label {
+  display: inline-block;
+  margin: 8px 0 0 5px;
+
+}
+
 .input__default {
   background: $white;
   border: 1px solid $formborder;
@@ -192,12 +210,6 @@ main {
   font-size: 16px;
   line-height: 1.5;
   padding: 10px 16px 8px;
-}
-
-label {
-  display: inline-block;
-  margin: 8px 0 0 5px;
-
 }
 
 .textarea__default {
@@ -214,7 +226,7 @@ label {
 }
 
 .sell--sub__head {
-  color: #888;
+  color: $ashgray;
   float: left;
   font-size: 14px;
 }
@@ -222,11 +234,6 @@ label {
 .sell__form__box {
   margin-left: auto;
   width: 400px;
-}
-
-.select--wrap {
-  background: $white;
-  position: relative;
 }
 
 .select__default {
@@ -244,14 +251,14 @@ label {
 }
 
 .sell_price {
-  li:first-child {
-    border: 0;
-    padding: 0 0 24px;
-  }
-
   li {
     border-top: 1px solid $formborder;
     padding: 24px 0;
+  }
+
+  li:first-child {
+    border: 0;
+    padding: 0 0 24px;
   }
 
   .form__group .l-left {
@@ -282,13 +289,6 @@ label {
 .sell__btn__box p {
   display: inline;
   line-height: 1.5;
-  word-wrap: break-word;
-}
-
-.sell__content p a {
-  color: $lightblue;
-  display: inline;
-  text-decoration: none;
   word-wrap: break-word;
 }
 
