@@ -11,9 +11,9 @@
                 %span.form--require 必須
               %p 最大4枚までアップロードできます
               = f.fields_for :images do |fi|
-                = fi.label :product_image, class: "sell--upload__drop__box" do
+                = fi.label :image, class: "sell--upload__drop__box" do
                   .sell--upload__drop__box__imageview
-                    = fi.file_field :product_image,class:"file",style:"display:none;"
+                    = fi.file_field :image,class:"file",style:"display:none;"
                     %pre
                       #preview
                         クリックしてファイルをアップロード
