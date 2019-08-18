@@ -97,40 +97,46 @@ main {
       width: 145px;
     }
 
-    &__imageview .uploadimg {
-      height: 100px;
-      padding-top: 25px;
-      width: 145px;
+    &__imageview {
+      .uploadimg {
+        height: 100px;
+        padding-top: 25px;
+        width: 145px;
+      }
     }
 
-    &__imageview  .img_del {
-      color: $lightblue;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: 400;
-      position: relative;
-      text-align: center;
-      top: 30px;
+    &__imageview  {
+      .img_del {
+        color: $lightblue;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 400;
+        position: relative;
+        text-align: center;
+        top: 30px;
 
-      &:hover {
-        opacity: .5;
+        &:hover {
+          opacity: .5;
+        }
       }
     }
   }
 
-  &__drop__box pre {
-    font-size: 14px;
-    left: 16px;
-    line-height: 1.5;
-    overflow: auto;
-    pointer-events: none;
-    position: absolute;
-    right: 16px;
-    text-align: center;
-    top: 20%;
-    transform: translate(0, -50%);
-    white-space: pre-wrap;
-    word-wrap: break-word;
+  &__drop__box {
+    pre {
+      font-size: 14px;
+      left: 16px;
+      line-height: 1.5;
+      overflow: auto;
+      pointer-events: none;
+      position: absolute;
+      right: 16px;
+      text-align: center;
+      top: 20%;
+      transform: translate(0, -50%);
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
   }
 }
 
