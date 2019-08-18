@@ -341,35 +341,35 @@ label {
 }
 
 .btn__default {
-  display: block;
-  width: 100%;
-  line-height: 48px;
-  font-size: 14px;
   border: 1px solid transparent;
   cursor: pointer;
+  display: block;
+  font-size: 14px;
+  line-height: 48px;
   text-align: center;
+  width: 100%;
 }
 
 .form--require {
   background: $red;
-  margin: 0 0 0 8px;
-  padding: 2px 4px;
   border-radius: 2px;
   color: $white;
   font-size: 12px;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
   vertical-align: top;
 }
 
 .form__question {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
   background: $lightblue;
+  border-radius: 50%;
   color: $white;
-  line-height: 14px;
+  display: inline-block;
   font-size: 12px;
+  height: 14px;
+  line-height: 14px;
   text-align: center;
+  width: 14px;
 }
 
 .clearfix {
