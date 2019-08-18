@@ -7,15 +7,16 @@
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null:false,unique|
-|email|string|null:false,unique|
+|email_address|string|null:false,unique|
 |password|string|null:false|
 |family_name|string|null:false|
 |first_name|string|null:false|
 |family_name_kana|string|null:false|
 |first_name_kana|string|null:false|
-|birth_year|integer|null:false|
-|birth_month|integer|null:false|
-|birth_day|integer|null:false|
+|birthday_year|integer|null:false|
+|birthday_month|integer|null:false|
+|birthday_day|integer|null:false|
+|phone_number|integer|null:false,unique|
 |introduction|text||
 
 * has_many :products, dependent: :destroy
@@ -25,7 +26,7 @@
 * has_many :product_purchase_messages
 * has_many :likes
 * has_many :points, dependent: :destroy
-* has_many :cards, dependent: :destroy
+* has_many :payments, dependent: :destroy
 * has_many :comments
 * has_many :ratings
 * has_many :evalution, dependent: :destroy
@@ -36,17 +37,10 @@
 ## adressesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|family_name|string|null:false|
-|first_name|string|null:false|
-|family_name_kana|string|null:false|
-|first_name_kana|string|null:false|
-|postal_code|string|null:false|
-|prefecture_id|integer|null:false|
+|postal_code|integer|null:false|
 |minicipality|string|null:false|
 |address|string|null:false|
 |building|string||
-|phone_number|string||
-|user_id|reference||
 
 belongs_to :user
 
@@ -125,13 +119,15 @@ belongs_to :user
 
 * belongs_to :user
 
-## cardsテーブル
+## paymentsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|reference|foreign_key:true|
-|customer_id|string|null:false|
-|card_id|string|null:false|
+|card_number|integer||
+|varid_year|integer||
+|varid_month|integer||
+|cvc|integer||
+|users_id|reference|foreign_key:true|
 
 * belongs_to :user
 
