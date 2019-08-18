@@ -21,6 +21,7 @@ $color-black: #333;
     }
 
     .slide-banner.owl-carousel.owl-loaded.owl-drag {
+      width: 100%;
 
       .owl-stage-outer {
         width: 100%;
@@ -103,7 +104,7 @@ $color-black: #333;
     div.top-page__pickupcat {
       width: 100%;
       height: 50px;
-      margin-top: 0px;
+      margin-top:0;
       padding: 0 40px;
       box-sizing: border-box;
       h4 {
@@ -115,7 +116,7 @@ $color-black: #333;
     }
     div.top-page__categoritwo {
       height: 400px;
-      margin-top: 0px;
+      margin-top:0;
       padding: 0 40px;
       box-sizing: border-box;
       h5 {
@@ -131,7 +132,7 @@ $color-black: #333;
         display: flex;
         justify-content: center;
         height: 300px;
-        margin-top: 0px;
+        margin-top:0;
         padding: 0 40px;
         box-sizing: border-box;
         width: 100%;
@@ -191,178 +192,13 @@ $color-black: #333;
             }
           } 
         }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
       }
     }
     div.top-page__categorisee {
       width: calc(100% - 180px);
       box-sizing: border-box;
       height: 30px;
-      margin-top: 0px;
+      margin-top:0;
       padding: 0 60px;
       text-align: right;
       box-sizing: border-box;
@@ -373,7 +209,7 @@ $color-black: #333;
     }
     div.top-page__categorithree {
       height: 400px;
-      margin-top: 0px;
+      margin-top:0;
       padding: 0 40px;
       box-sizing: border-box;
       h5 {
@@ -389,7 +225,7 @@ $color-black: #333;
         display: flex;
         justify-content: center;
         height: 300px;
-        margin-top: 0px;
+        margin-top:0;
         padding: 0 40px;
         box-sizing: border-box;
         width: 100%;
@@ -401,171 +237,7 @@ $color-black: #333;
           .top-page__itemimg{
             height: 200px;
             width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
+            overflow: hidden;
           }
           .top-page__itemnamebox{
             height: 100px;
@@ -619,7 +291,7 @@ $color-black: #333;
       width: calc(100% - 180px);
       box-sizing: border-box;
       height: 30px;
-      margin-top: 0px;
+      margin-top:0;
       padding: 0 60px;
       text-align: right;
       box-sizing: border-box;
@@ -630,7 +302,7 @@ $color-black: #333;
     }
     div.top-page__categorifour {
       height: 400px;
-      margin-top: 0px;
+      margin-top:0;
       padding: 0 40px;
       box-sizing: border-box;
       h5 {
@@ -646,7 +318,7 @@ $color-black: #333;
         display: flex;
         justify-content: center;
         height: 300px;
-        margin-top: 0px;
+        margin-top:0;
         padding: 0 40px;
         box-sizing: border-box;
         width: 100%;
@@ -656,171 +328,7 @@ $color-black: #333;
           width: 220px;
           background-color: white;
           .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
+            overflow: hidden;
             height: 200px;
             width: 220px;
           }
@@ -876,7 +384,7 @@ $color-black: #333;
       width: calc(100% - 180px);
       box-sizing: border-box;
       height: 30px;
-      margin-top: 0px;
+      margin-top:0;
       padding: 0 60px;
       text-align: right;
       box-sizing: border-box;
@@ -887,7 +395,7 @@ $color-black: #333;
     }
     div.top-page__categorifive {
       height: 400px;
-      margin-top: 0px;
+      margin-top:0;
       padding: 0 40px;
       box-sizing: border-box;
       h5 {
@@ -903,7 +411,7 @@ $color-black: #333;
         display: flex;
         justify-content: center;
         height: 300px;
-        margin-top: 0px;
+        margin-top:0;
         padding: 0 40px;
         box-sizing: border-box;
         width: 100%;
@@ -913,171 +421,7 @@ $color-black: #333;
           width: 220px;
           background-color: white;
           .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
+            overflow: hidden;
             height: 200px;
             width: 220px;
           }
@@ -1133,7 +477,7 @@ $color-black: #333;
       width: calc(100% - 180px);
       box-sizing: border-box;
       height: 30px;
-      margin-top: 0px;
+      margin-top:0;
       padding: 0 60px;
       text-align: right;
       box-sizing: border-box;
@@ -1145,10 +489,10 @@ $color-black: #333;
     div.top-page__pickupcattwo {
       width: 100%;
       height: 50px;
-      margin-top: 0px;
+      margin-top:0;
       padding: 0 40px;
       box-sizing: border-box;
-      h4 {
+      &_title {
         color: rgb(46, 40, 40);
         font-size: 25px;
         text-align: center;
@@ -1157,7 +501,7 @@ $color-black: #333;
     }
     div.top-page__categorisix {
       height: 400px;
-      margin-top: 0px;
+      margin-top:0;
       padding: 0 40px;
       box-sizing: border-box;
       h5 {
@@ -1173,7 +517,7 @@ $color-black: #333;
         display: flex;
         justify-content: center;
         height: 300px;
-        margin-top: 0px;
+        margin-top:0;
         padding: 0 40px;
         box-sizing: border-box;
         width: 100%;
@@ -1183,171 +527,7 @@ $color-black: #333;
           width: 220px;
           background-color: white;
           .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
+            overflow: hidden;
             height: 200px;
             width: 220px;
           }
@@ -1403,7 +583,7 @@ $color-black: #333;
       width: calc(100% - 180px);
       box-sizing: border-box;
       height: 30px;
-      margin-top: 0px;
+      margin-top:0;
       padding: 0 60px;
       box-sizing: border-box;
       text-align: right;
@@ -1414,7 +594,7 @@ $color-black: #333;
     }
     div.top-page__categoriseven {
       height: 400px;
-      margin-top: 0px;
+      margin-top:0;
       padding: 0 40px;
       box-sizing: border-box;
       h5 {
@@ -1430,7 +610,7 @@ $color-black: #333;
         display: flex;
         justify-content: center;
         height: 300px;
-        margin-top: 0px;
+        margin-top:0;
         padding: 0 40px;
         box-sizing: border-box;
         width: 100%;
@@ -1440,171 +620,7 @@ $color-black: #333;
           width: 220px;
           background-color: white;
           .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
+            overflow: hidden;
             height: 200px;
             width: 220px;
           }
@@ -1660,7 +676,7 @@ $color-black: #333;
       width: calc(100% - 180px);
       box-sizing: border-box;
       height: 30px;
-      margin-top: 0px;
+      margin-top:0;
       box-sizing: border-box;
       padding: 0 60px;
       text-align: right;
@@ -1671,7 +687,7 @@ $color-black: #333;
     }
     div.top-page__categorieight {
       height: 400px;
-      margin-top: 0px;
+      margin-top:0;
       padding: 0 40px;
       box-sizing: border-box;
       h5 {
@@ -1687,7 +703,7 @@ $color-black: #333;
         display: flex;
         justify-content: center;
         height: 300px;
-        margin-top: 0px;
+        margin-top:0;
         padding: 0 40px;
         box-sizing: border-box;
         width: 100%;
@@ -1697,171 +713,7 @@ $color-black: #333;
           width: 220px;
           background-color: white;
           .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
+            overflow: hidden;
             height: 200px;
             width: 220px;
           }
@@ -1917,7 +769,7 @@ $color-black: #333;
       width: calc(100% - 180px);
       box-sizing: border-box;
       height: 30px;
-      margin-top: 0px;
+      margin-top:0;
       padding: 0 60px;
       box-sizing: border-box;
       text-align: right;
@@ -1928,7 +780,7 @@ $color-black: #333;
     }
     div.top-page__categorinine {
       height: 400px;
-      margin-top: 0px;
+      margin-top:0;
       padding: 0 40px;
       box-sizing: border-box;
       h5 {
@@ -1944,7 +796,7 @@ $color-black: #333;
         display: flex;
         justify-content: center;
         height: 300px;
-        margin-top: 0px;
+        margin-top:0;
         padding: 0 40px;
         box-sizing: border-box;
         width: 100%;
@@ -1954,171 +806,7 @@ $color-black: #333;
           width: 220px;
           background-color: white;
           .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
-            height: 200px;
-            width: 220px;
-          }
-          .top-page__itemnamebox{
-            height: 100px;
-            width: 220px;
-            padding: 10px;
-            .top-page__itemname{
-              height: 30px;
-                h6 {
-                  color: rgb(63, 52, 52);
-                  font-size: 15px;
-                  height: 30px;
-                  text-align: left;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                }
-            }
-            .top-page__itempricebox{
-              height: 30px;
-              width: 200px;
-              .top-page__itemprice{
-                height: 30px;
-                float: left;
-                width: 100px;
-                  h5 {
-                    color: rgb(63, 52, 52);
-                    font-size: 20px;
-                    height: 20px;
-                    text-align: left;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                  }
-              }
-              .top-page__iconlike{
-                height: 30px;
-                width: 60px;
-                float: right;
-                padding: 3px 5px 0 0;
-                  span{
-                    font-size: 15px;
-                    float: right;
-                    padding: 3px 5px 0 0;
-                  }
-              }
-            }
-          } 
-        }
-        div.top-page__item {
-          height: 300px;
-          margin: 0 15px;
-          width: 220px;
-          background-color: white;
-          .top-page__itemimg{
+            overflow: hidden;
             height: 200px;
             width: 220px;
           }
@@ -2174,30 +862,13 @@ $color-black: #333;
       width: calc(100% - 180px);
       box-sizing: border-box;
       height: 30px;
-      margin-top: 0px;
+      margin-top:0;
       padding: 0 60px;
       box-sizing: border-box;
       text-align: right;
       h6 {
         color: rgb(0, 172, 252);
         font-size: 10px;
-      }
-    }
-  }
-  div.top-page__senden {
-    width: 100%;
-    box-sizing: border-box;
-    div.top-page__senden {
-      height: 200px;
-      margin-top: 0px;
-      padding: 0 40px;
-      h4 {
-        color: rgb(27, 20, 20);
-        font-size: 30px;
-        text-align: center;
-      }
-      div.top-page__sendenimg {
-        margin: auto;
       }
     }
   }
