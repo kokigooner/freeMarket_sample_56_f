@@ -7,14 +7,14 @@ RSpec.describe ProductsController, type: :controller do
     let!(:product) { FactoryBot.create :product }
 
     it 'リクエストが成功すること' do
-      delete :destroy, params: { id: product }
+      delete :destroy, params: { id: product.id }
       expect(response.status).to eq 302
     end
 
     it '商品が削除されること' do
       expect do
-        delete :destroy, params: { id: product }
-      end.to change(destroy, :count).by(-1)
+        delete :destroy, params: { id: product.id }
+      end.to change(Product, :count).by(-1)
     end
 
     it 'トップページにリダイレクトすること' do
