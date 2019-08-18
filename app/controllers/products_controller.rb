@@ -44,6 +44,7 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    binding.pry
     @product.destroy
     redirect_to root_path
   end
