@@ -4,8 +4,9 @@
     %div.large-content
       %section.product-item-container.clearfix
         .search-result-head
-          -unless @s[:product_name_cont] == ""
-            = @s[:product_name_cont]
+          -unless @s == nil || @s[:product_name_cont_all] == []
+            - @s[:product_name_cont_all].each do |sss|
+              = "#{sss} "
             %span.search-result-text
               の検索結果
           -else
@@ -164,5 +165,7 @@
             クリア
           = s.submit class:"btn-default btn-red"
   - breadcrumb :search
-  = render "shared/bread-crumbs"
+  -unless @s == nil || @s[:product_name_cont_all] == []
+    = render "shared/bread-crumbs"
+  -else
   = render  'shared/footer'

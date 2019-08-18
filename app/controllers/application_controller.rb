@@ -17,9 +17,16 @@ class ApplicationController < ActionController::Base
 
   def search_set
   @s = params[:q]
-  @q = Product.ransack(params[:q])
-  @s_products = @q.result(distinct: true)
+    if @s != nil
+      params[:q]['product_name_cont_all'] = params[:q]['product_name_cont_all'].split(/[\p{blank}\s]+/)
+      @q = Product.ransack(params[:q])
+      @s_products = @q.result
+    else
+      @q = Product.ransack(params[:q])
+      @s_products = @q.result
+    end
   end
 
 
 end
+

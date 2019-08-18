@@ -7,7 +7,7 @@ crumb :user do |user|
 end
 
 crumb :search do |product|
-  link "#{params[:q][:product_name_cont]}", ""
+  link "#{params[:q][:product_name_cont_all].join(" ")}", ""
 end
 
 crumb :mypage_identification do |user|
