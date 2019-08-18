@@ -6,6 +6,9 @@ crumb :user do |user|
   link 'マイページ',"/users/mypage"
 end
 
+crumb :search do |product|
+  link "#{params[:q][:product_name_cont]}", ""
+end
 
 crumb :mypage_identification do |user|
   link "本人情報の登録 ", "/mypage/identification"

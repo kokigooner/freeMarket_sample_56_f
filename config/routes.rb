@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   root to: "products#toppage"
 
   get '/products', to: 'products#toppage'
+  get '/products/search', to: 'products#search'
   get "/products/confirm", to: "products#confirm"
   get "/products/sell", to: "products#sell"
-
   resources :products, only: [:show]
  
   get '/users/mypage/profile', to: 'users#profile'

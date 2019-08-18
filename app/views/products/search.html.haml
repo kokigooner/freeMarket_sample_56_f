@@ -1,0 +1,168 @@
+.default-container 
+  = render  'shared/header'
+  %main.large-container
+    %div.large-content
+      %section.product-item-container.clearfix
+        .search-result-head
+          -unless @s[:product_name_cont] == ""
+            = @s[:product_name_cont]
+            %span.search-result-text
+              の検索結果
+          -else
+            %span.search-result-text
+              全商品
+        .search-result-head
+          .search-result-number
+            = page_entries_info @s_products
+      .search-box-content.clearfix
+        - @s_products.each do |pro|
+          %section.search-box{"class":"search-id"}
+            = link_to product_path(pro) do
+              %figure.search-box-photo
+                = image_tag "#{pro.images.first.image}",width: "160" ,hight: "160"
+              .search-box-body
+                %h3.search-box-name.font-2
+                  = pro.product_name
+                .search-box-num
+                  .search-box-price.font-5
+                    = "¥#{pro.price.to_s(:delimited)}"
+                  .font-2
+                    %i.icon-like-border
+                      %i.far.fa-heart
+                      %span
+                      = "#{"1"}"
+      %ul.pager
+        = paginate @s_products
+    %div.large-side-search
+      .form-group.search-form
+        %select.search-sort.select-default
+          %option
+            並べ替え
+          %option
+            安いじゅん
+          %option
+            高いじゅん
+          %option
+            old
+          %option
+            new
+          %option
+            いいね！
+      = search_form_for(@q, url:products_search_path,class:"search-dropdown-content") do |s|
+        %h3.visible-large 詳細検索
+        .form-group.search-form
+          %label
+            .fas.fa-plus
+            %span
+              キーワードを追加する
+            = s.search_field :product_name_cont,class:"input-default"
+        .form-group
+          %label
+            .fas.fa-list.fa-lg
+            %span
+              カテゴリー選択する
+            %select.search-size.select-default
+              %option
+                レディース
+              %option
+                メンズ
+              %option
+                キッズ
+              %option
+                インテリア
+        .form-group
+          %label
+            .fas.fa-tag.fa-lg
+            %span
+              ブランド名から探す
+            = s.search_field :product_name_cont,class:"input-default"
+        .form-group
+          %label
+            .fas.fa-vector-square.fa-lg
+            %span
+              サイズを指定する
+            %select.search-size.select-default
+              %option
+                洋服サイズ
+              %option
+                レディース靴
+              %option
+                メンズ靴
+              %option
+                キッズ靴
+        .form-group.search-price
+          %label
+            .fas.fa-coins.fa-lg
+            %span
+              価格
+            %select.select-default
+              %option
+                選択してください
+              %option
+                0~500
+              %option
+                1000~5000
+              %option
+                5000~10000
+              %option
+                10000~30000
+              %option
+                30000~50000
+              %option
+                50000~
+            = s.search_field :product_name_cont,class:"input-default"
+            %span
+              〜
+            = s.search_field :product_name_cont,class:"input-default"
+        .form-group
+          %label
+            .far.fa-star.fa-lg
+            %span
+              商品の状態
+            %div
+              .checkbox-default
+                %input{name: "example", type: "radio", value: "サンプル"}
+                  すべて
+              .checkbox-default
+                %input{name: "example", type: "radio", value: "サンプル"}
+                  着払い(購入者負担)
+              .checkbox-default
+                %input{name: "example", type: "radio", value: "サンプル"}
+                  送料込み(出品者負担)
+        .form-group
+          %label
+            .fas.fa-truck-moving.fa-lg
+            %span
+              配送料の負担
+            %div
+              .checkbox-default
+                %input{name: "example", type: "radio", value: "サンプル"}
+                  すべて
+              .checkbox-default
+                %input{name: "example", type: "radio", value: "サンプル"}
+                  販売中
+              .checkbox-default
+                %input{name: "example", type: "radio", value: "サンプル"}
+                  売り切れ
+        .form-group
+          %label
+            .fas.fa-cart-plus.fa-lg
+            %span
+              販売状況
+            %div
+              .checkbox-default
+                %input{name: "example", type: "radio", value: "サンプル"}
+                  すべて
+              .checkbox-default
+                %input{name: "example", type: "radio", value: "サンプル"}
+                  販売中
+              .checkbox-default
+                %input{name: "example", type: "radio", value: "サンプル"}
+                  売り切れ
+        .search-extend-btn.clearfix
+          .btn-default.btn-gray
+            クリア
+          = s.submit class:"btn-default btn-red"
+  - breadcrumb :search
+  = render "shared/bread-crumbs"
+  = render  'shared/footer'
