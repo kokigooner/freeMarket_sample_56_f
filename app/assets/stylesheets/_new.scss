@@ -47,14 +47,15 @@ main {
     border-top: 1px solid $bordercolor;
     padding: 40px;
     width: 620px;
-      h3 {
-        font-weight: bold;
-      }
 
-      p {
-        line-height: 1.5;
-        margin: 8px 0 0;
-      }
+    h3 {
+      font-weight: bold;
+    }
+
+    p {
+      line-height: 1.5;
+      margin: 8px 0 0;
+    }
   }
 
   &__head {
@@ -64,10 +65,11 @@ main {
   &__items {
     display: block;
     float: left;
-     ul {
-      display: block;
-      width: 100%;
-     }
+
+    ul {
+    display: block;
+    width: 100%;
+    }
   }
 
   &__drop__box {
@@ -78,12 +80,13 @@ main {
     position: relative;
     text-align: center;
     width: 150px;
-      img {
-        height: 161px;
-        position: relative;
-        width: 150px;
-        z-index: 2;
-      }
+
+    img {
+      height: 161px;
+      position: relative;
+      width: 150px;
+      z-index: 2;
+    }
     
     &__imageview {
       background: $filefield;
