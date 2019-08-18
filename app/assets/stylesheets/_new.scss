@@ -179,7 +179,7 @@ main {
     }
   }
 
-  & .input__default {
+  .input__default {
     margin: 8px 0 0;
     width: 100%;
   }
@@ -208,9 +208,9 @@ label {
   line-height: 1.5;
   margin: 8px 0 0;
   max-width: 100%;
-  width: 100%;
   min-height: 104px;
   padding: 10px;
+  width: 100%;
 }
 
 .sell--sub__head {
@@ -225,8 +225,8 @@ label {
 }
 
 .select--wrap {
-  position: relative;
   background: $white;
+  position: relative;
 }
 
 .select__default {
@@ -255,8 +255,8 @@ label {
   }
 
   .form__group .l-left {
-    width: 50%;
     line-height: 48px;
+    width: 50%;
   }
 
   .bold .l-right {
@@ -270,7 +270,7 @@ label {
   .sell__price--input div {
     display: inline-block;
     margin: 0 0 0 5%;
-    width: 80%; 
+    width: 80%;
   }
 
   .sell__price--input .input__default {
@@ -280,7 +280,7 @@ label {
 }
 
 .sell__btn__box p {
-  display:inline;
+  display: inline;
   line-height: 1.5;
   word-wrap: break-word;
 }
@@ -309,8 +309,8 @@ label {
   }
 
   .btn--gray {
-    width: 45%;
     margin: 24px auto 0;
+    width: 45%;
   }
 }
 
