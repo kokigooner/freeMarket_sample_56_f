@@ -81,20 +81,20 @@ main {
     text-align: center;
     width: 150px;
     
-    &__imageview{
+    &__imageview {
       background: $filefield;
       border: 1px dashed $formborder;
       float: left;
       height: 190px;
       width: 145px;
 
-      .uploadimg{
+      .uploadimg {
         height: 100px;
         padding-top: 25px;
         width: 145px;
       }
 
-      .img_del{
+      .img_del {
         color: $lightblue;
         cursor: pointer;
         font-size: 14px;
@@ -103,13 +103,13 @@ main {
         text-align: center;
         top: 30px;
 
-        &:hover{
+        &:hover {
           opacity: .5;
         }
       }
     }
 
-    img{
+    img {
       height: 161px;
       width: 150px;
       position: relative;
@@ -306,7 +306,7 @@ label {
   & .btn--red {
     margin: 40px 0 0;
   }
-  
+
   & .btn--gray {
     width: 45%;
     margin: 24px auto 0;
