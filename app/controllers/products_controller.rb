@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   require 'payjp'
 
   before_action :set_product, only: [:show, :edit, :update, :destroy, :purchase, :confirm]
+  before_action :set_category, only: [:toppage, :show]
 
   def toppage
     @products   = Product.order(id: "DESC").limit(4)

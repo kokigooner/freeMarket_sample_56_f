@@ -14,4 +14,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def set_category
+    @categories = FirstCategory.all.includes(
+      :second_categories, {
+        second_categories: :third_categories
+      }
+    )
+  end
 end

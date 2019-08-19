@@ -1,68 +1,47 @@
--# %header.sp-header.visible-sp
 %header.mpcheader.visible-pc 
-  %div.mpcheader-inner
-    %div.mpcheader-top
+  .mpcheader-inner
+    .mpcheader-top
       %h1
-        = link_to image_tag("logo.svg", width: '134',hight: "36", alt: "サンプル画像"), root_path
+        = link_to(image_tag("logo.svg",
+          width: '134', 
+          height: "36",
+          alt: "サンプル画像"),
+          root_path)
       = form_for :item ,html:{ class: "mpcheader-form"}  do |f|
         = f.text_field "keyword", class: "input-default",placeholder: '何をお探しですか？'
         %div.icon-search
           = f.button :submit do 
             %i.fas.fa-search.fa-lg
-    %div.mpcheader-nav-box.clearfix
-      %dev.large-left
-        %ul.mpcheader-nav
-          %li
-            %h2
-              %a.fas.fa-list.fa-lg
-              カテゴリーから探す
-            -# %ul.mpcheader-nav-parent-wrap{"data-mega": "#{1}"}
-            -#   %li.mpcheader-nav-parent
-            -#     %h3
-            -#       レディース
-            -#     %ul.mpcheader-nav-child-wrap{"data-mega": "#{2}"}
-            -#       %li.mpcheader-nav-child
-            -#         %a
-            -#           トップス
-            -#         %ul.mpcheader-nav-grand-child-wrap{"data-mega": "#{3}"}
-            -#           %li.mpcheader-nav-grand-child
-            -#             %a
-            -#               Tシャツ/カットソー（半袖/袖なし）
-            -#           %li.mpcheader-nav-grand-child
-            -#             %a
-            -#               Tシャツ/カットソー（七分/長袖）
-            -#       %li.mpcheader-nav-child
-            -#         %a
-            -#           ジャケット/アウター
-            -#         %ul.mpcheader-nav-grand-child-wrap{"data-mega": "#{3}"}
-            -#           %li.mpcheader-nav-grand-child
-            -#             %a
-            -#               なんたら
-            -#           %li.mpcheader-nav-grand-child
-            -#             %a
-            -#               かんたら
-            -#   %li.mpcheader-nav-parent
-            -#     %h3
-            -#       メンズ
-            -#     %ul.mpcheader-nav-child-wrap{"data-mega": "#{2}"}
-                
-          %li
-            %h2
+    .mpcheader-nav-box.clearfix
+      %ul.mpcheader-nav
+        %li.mpcheader-nav-list
+          %h2
+            .category-search.first-show
+              %span#category-search
+                %a.fas.fa-list.fa-lg
+                カテゴリーから探す
+          %ul.category-first__wrapper.first-show
+            - @categories.each_with_index do |first_category, idx1|
+              %li.category-first
+                %h5
+                  = link_to("#{first_category.first_category}",
+                  root_path)
+                %ul.category-second__wrapper{class: "cs-#{idx1}"}
+                  - first_category.second_categories.each_with_index do |second_category, idx2|
+                    %li.category-second
+                      = link_to("#{second_category.second_category}",
+                        root_path)
+                      %ul.category-third__wrapper{class: "ct-#{idx2}"}
+                        - second_category.third_categories.each do |third_category|
+                          %li.category-third
+                            = link_to("#{third_category.third_category}",
+                              root_path)
+        %li
+          %h2
+            %span.brand-search
               %a.fas.fa-tag.fa-lg
-              %span
-                ブランドから探す
-              -# %ul.mpcheader-nav-parent-wrap
-              -#   %li.mpcheader-nav-parent
-              -#     %h3
-              -#       %a
-              -#         ナイキ
-              -# %ul.mpcheader-nav-parent-wrap
-              -#   %li.mpcheader-nav-parent
-              -#     %h3
-              -#       %a
-              -#         シュプリーム
-
-      %div.large-right
+              ブランドから探す
+      .large-right
         - if user_signed_in?
           %ul.mpcheader-user-nav
             %li.liked-items-link
@@ -92,91 +71,9 @@
                   = image_tag "member.png", class: "mpcheader-menu-mypage-img"
                 %span
                   マイページ
-              -# %div.mpcheader-user-box.mpcheader-mypage-box
-                %div.mpcheader-mypage-state.text-center
-                  %figure
-                    %div
-                      = image_tag "member.png"
-                    %figcaption
-                      =  @test_model[:name]
-                  %ul.mpcheader-mypage-review-listing
-                    %li
-                      %a.mpcheader-link
-                        = "評価:"+"#{0}"
-                    %li
-                      %a.mpcheader-link
-                        = "出品集:"+"#{0}"
-                  %ul.mpcheader-mypage-sales-point
-                    %li
-                      %a.mpcheader-link.clearfix
-                        %div.large-left
-                          売上金
-                        %div.right
-                        =  "¥ "+"#{0}"
-                        %i.icon-arrow-right
-                          >
-                    %li
-                      %a.mpcheader-link.clearfix
-                        %div.large-left
-                          ポイント
-                        %div.right
-                        ="P "+ "#{0}"
-                        %i.icon-arrow-right
-                          >
-                %ul.mypage-nav-list
-                  %li
-                    %a.mypage-nav-list-item
-                      マイページ
-                      %i.icon-arrow-right
-                        >
-                  %li
-                    %a.mypage-nav-list-item
-                      お知らせ
-                      %i.icon-arrow-right
-                        >
-                  %li
-                    %a.mypage-nav-list-item
-                      やることリスト
-                      %i.icon-arrow-right
-                        >
-                  %li
-                    %a.mypage-nav-list-item
-                      いいね一覧
-                      %i.icon-arrow-right
-                        >
-                  %li
-                    %a.mypage-nav-list-item
-                      出品する
-                      %i.icon-arrow-right
-                        >
-                  %li
-                    %a.mypage-nav-list-item
-                      出品した商品・出品中
-                      %i.icon-arrow-right
-                        >
-                  %li
-                    %a.mypage-nav-list-item
-                      出品した商品・取引中
-                      %i.icon-arrow-right
-                        >
-                  %li
-                    %a.mypage-nav-list-item
-                      出品した商品・売却済み
-                      %i.icon-arrow-right
-                        >
-                  %li
-                    %a.mypage-nav-list-item
-                      購入した商品・取引中
-                      %i.icon-arrow-right
-                        >
-                  %li
-                    %a.mypage-nav-list-item
-                      購入した商品・過去の取引
-                      %i.icon-arrow-right
-                        >
         - else
           %ul.mpcheader-user-btn
             %li.mpcheader-user-signin
               = link_to "新規会員登録", new_user_path, class: "mpcheader-user-red"
             %li.mpcheader-user-login
-              = link_to "ログイン",  users_login_path
+              = link_to "ログイン", users_login_path
