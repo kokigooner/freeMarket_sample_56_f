@@ -74,6 +74,23 @@ main {
   }
 
   &__drop__box {
+    pre {
+      font-size: 14px;
+      left: 16px;
+      line-height: 1.5;
+      overflow: auto;
+      pointer-events: none;
+      position: absolute;
+      right: 16px;
+      text-align: center;
+      top: 20%;
+      transform: translate(0, -50%);
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  }
+
+  &__drop__box {
     cursor: pointer;
     flex: 1;
     height: 190px;
@@ -88,54 +105,40 @@ main {
       width: 150px;
       z-index: 2;
     }
+  }
 
-    &__imageview {
-      background: $filefield;
-      border: 1px dashed $formborder;
-      float: left;
-      height: 190px;
+  &__imageview {
+    cursor: pointer;
+    flex: 1;
+    height: 190px;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    width: 150px;
+    background: $filefield;
+    border: 1px dashed $formborder;
+    float: left;
+    height: 190px;
+    width: 145px;
+
+    .uploadimg {
+      height: 100px;
+      padding-top: 25px;
       width: 145px;
     }
 
-    &__imageview {
-      .uploadimg {
-        height: 100px;
-        padding-top: 25px;
-        width: 145px;
-      }
-    }
-
-    &__imageview  {
-      .img_del {
-        color: $lightblue;
-        cursor: pointer;
-        font-size: 14px;
-        font-weight: 400;
-        position: relative;
-        text-align: center;
-        top: 30px;
-
-        &:hover {
-          opacity: .5;
-        }
-      }
-    }
-  }
-
-  &__drop__box {
-    pre {
+    .img_del {
+      color: $lightblue;
+      cursor: pointer;
       font-size: 14px;
-      left: 16px;
-      line-height: 1.5;
-      overflow: auto;
-      pointer-events: none;
-      position: absolute;
-      right: 16px;
+      font-weight: 400;
+      position: relative;
       text-align: center;
-      top: 20%;
-      transform: translate(0, -50%);
-      white-space: pre-wrap;
-      word-wrap: break-word;
+      top: 30px;
+
+      &:hover {
+        opacity: .5;
+      }
     }
   }
 }
