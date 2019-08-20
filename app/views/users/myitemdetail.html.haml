@@ -5,19 +5,19 @@
       = @product.product_name
     .product-main-content.clearfix
       .product-photo
-        .owl-carousel.owl-loaded.owl-drag
-          .owl-stage-outer
-            .owl-stage
-              .owl-product.active
-                .owl-product-inner.is-higher-height
+        .eagle-carousel.eagle-loaded.eagle-drag
+          .eagle-stage-outer
+            .eagle-stage
+              .eagle-product.active
+                .eagle-product-inner.is-higher-height
                   = image_tag "#{@product.images.first[:image]}",
-                  class: 'owl-lazy',width: "300" ,hight: "300"
-          .owl-dots
+                  class: 'eagle-lazy',width: "300" ,hight: "300"
+          .eagle-dots
             - @product.images.each do |thumbnail|
-              .owl-dot
-                .owl-dot-inner
+              .eagle-dot
+                .eagle-dot-inner
                   = image_tag "#{thumbnail.image}",
-                  class: 'owl-lazy',width: "60" ,hight: "60"
+                  class: 'eagle-lazy',width: "60" ,hight: "60"
       %table.product-detail-table
         %tbody
           %tr

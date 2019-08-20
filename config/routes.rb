@@ -3,6 +3,13 @@ Rails.application.routes.draw do
   root to: "products#toppage"
 
   get '/products', to: 'products#toppage'
+  get "/products/sell", to: "products#new"
+  post "/products" => "products#create"
+
+  match 'secondcategory', to: 'products#secondcategory', via: [:get, :post]
+  match 'thirdcategory', to: 'products#thirdcategory', via: [:get, :post]
+  get '/products/search', to: 'products#search'
+  get "/products/confirm", to: "products#confirm"
   get "/products/sell", to: "products#sell"
 
   resources :products, only: [:show] do

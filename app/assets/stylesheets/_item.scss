@@ -50,6 +50,7 @@ $overlaycolor: rgba(0, 0, 0, .8);
       width: auto;
       margin: 0 auto;
     }
+
   }
   &-user-ratings {
     display: inline-block;
@@ -315,6 +316,12 @@ $overlaycolor: rgba(0, 0, 0, .8);
           color: #333;
         }
       }
+
+    &-photo {
+      height: 220px;
+      overflow: hidden;
+      width: 220px;
+    }
     }
   &-id3 {
     margin-right: 0;
@@ -338,6 +345,187 @@ $overlaycolor: rgba(0, 0, 0, .8);
     }
   }
 }
+
+.search {
+  $white3: #fff;
+  $black3: rgba(255, 255, 255, 0);
+  $black4: #333;
+  $black5: #888;
+  $black6: rgb(136, 136, 136);
+
+  &-box {
+    background: $white3;
+    float: left;
+    margin: 0 20px 20px 0;
+    position: relative;
+    width: 160px;
+
+    a {
+      color: $black4;
+      display: block;
+    }
+
+    &-content {
+      width: auto;
+    }
+
+    &-body {
+      box-sizing: border-box;
+      height: 80px;
+      padding: 8px 12px;
+      }
+
+    &-head {
+      font-size: 22px;
+      margin: 24px 0 8px;
+    }
+
+    &-name {
+      font-weight: 400;
+      height: 3em;
+      line-height: 1.5;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+      white-space: normal;
+      word-break: break-word;
+    }
+
+    &-num {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2px;
+    }
+
+    &-photo {
+      height: 160px;
+      overflow: hidden;
+      width: 160px;
+    }
+
+    .font-2 {
+      color: $black4;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .font-5 {
+      color: $black4;
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+  }
+
+  &-result-head {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0 0 8px;
+  }
+
+  &-result-text {
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  &-result-numbe {
+    color: $black5;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 16px 0;
+  }
+
+  &-id:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  &-box:nth-child(4n+1) {
+    margin-left: 0;
+  }
+
+  &-in-user-profile {
+    margin: 0 auto;
+    width: 700px;
+
+    .products-box-overflow:last-of-type {
+      margin-bottom: 40px;
+    }
+
+    .related-product-column:last-of-type {
+      margin-bottom: 40px;
+    }
+  }
+
+  &-form {
+    margin: 0;
+
+    .fas {
+      color: $black6;
+    }
+  }
+
+  &-extend-btn {
+    height: 90px;
+    padding: 40px 0 0;
+
+    .btn-red {
+      float: right;
+      width: 45%;
+  }
+
+    .btn-gray {
+      float: left;
+      width: 45%;
+    }
+  }
+}
+
+.search-price .input-default {
+  width: 45%;
+}
+
+.visible-large {
+  font-size: 16px;
+  margin: 0 0 24px;
+}
+
+.pager {
+  $red2: #ea352d;
+  $white:#fff;
+  $black4: #333;
+  $gray: #ccc;
+  margin: 40px 0 0;
+  position: relative;
+  text-align: center;
+
+  .pagination {
+    margin: 0 auto;
+    max-width: 220px;
+
+    span {
+      background: $white;
+      border: 1px solid $gray;
+      border-radius: 4px;
+      display: inline-block;
+      font-size: 14px;
+      height: 44px;
+      line-height: 42px;
+      width: 44px;
+    }
+
+    a {
+      color: $black4;
+    }
+
+    .page.current {
+      background: $red2;
+      color: $white;
+    }
+  }
+}
+
 .modal {
   background: $white;
   display: none;
@@ -388,3 +576,4 @@ $overlaycolor: rgba(0, 0, 0, .8);
   width: 100%;
   z-index: 1;
 }
+

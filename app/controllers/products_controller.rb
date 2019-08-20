@@ -2,10 +2,26 @@ class ProductsController < ApplicationController
   require 'payjp'
 
   before_action :set_product, only: [:show, :edit, :update, :destroy, :purchase, :confirm]
-  before_action :set_category, only: [:toppage, :show]
+  before_action :set_category_menu, only: [:toppage, :show]
+  before_action :set_Category, only: [:new, :create, :edit, :update]
+
 
   def toppage
     @products   = Product.order(id: "DESC").limit(4)
+  end
+
+  def new
+    @product = current_user.products.new
+    4.times{@product.images.build}
+  end
+
+  def create
+    @product = current_user.products.new(product_params)
+    if @product.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def show
@@ -43,12 +59,35 @@ class ProductsController < ApplicationController
     end
   end
 
+  def search
+      @q = Product.ransack(params[:q])
+      @s_products = @q.result(distinct: true).page(params[:page]).per(16)
+  end
+
   def destroy
     @product.destroy
     redirect_to root_path
   end
+
+  def secondcategory
+    @secondcategory = SecondCategory.where(first_category_id: params[:product][:first_category_id])
+  end
+
+  def thirdcategory
+    @thirdcategory = ThirdCategory.where(second_category_id: params[:product][:second_category_id])
+  end
   
   private
+  def product_params
+    params.require(:product).permit(:product_name, :description, :first_category_id, :second_category_id, :third_category_id, :condition, :delivery_charge, :delivery_way, :delivery_date,:price,
+      :order_status, images_attributes: [ :image, :_destroy, :id ])   
+  end
+  
+  def set_Category
+    @first = FirstCategory.all
+    @second = SecondCategory.all
+  end
+
   def set_product
     @product = Product.find(params[:id])
   end
