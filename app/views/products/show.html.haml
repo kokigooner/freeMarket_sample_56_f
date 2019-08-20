@@ -39,11 +39,11 @@
             %th カテゴリー
             %td
               %div
-              = link_to "未実装","/"
+              = link_to @product.first_category.first_category, root_path
               %div
-              = link_to "> 未実装","/"
+              = link_to @product.second_category.second_category, root_path
               %div
-              = link_to "> 未実装","/"
+              = link_to @product.third_category.third_category, root_path
           %tr
             %th ブランド
             %td 

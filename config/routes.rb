@@ -18,13 +18,22 @@ Rails.application.routes.draw do
       post 'purchase'
     end
   end
+
+  resources :categories, only: [] do
+    member do
+      get 'first'
+      get 'second'
+      get 'third'
+    end
+  end
+  
   get '/users/mypage/profile', to: 'users#profile'
   get "/users/mypage", to: "users#mypage"
   get "/users/mypage/myitems", to: "users#myitems"
   get "/users/mypage/myitem/:id", to: "users#myitemdetail",as: :users_mypage_myitem
   delete "/users/mypage/myitem/:id", to: "products#destroy"
   get "/mypage/identification", to: "users#identification" 
-  post "/mypage/identification", to: "users#updata_address" 
+  post "/mypage/identification", to: "users#update_address" 
   get "/mypage/logout", to: "users#logout"
   
   get "/users/signup/registration", to: "users#registration"
