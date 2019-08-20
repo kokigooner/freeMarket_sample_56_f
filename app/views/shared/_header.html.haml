@@ -25,7 +25,7 @@
               %li.category-first
                 %h5
                   = link_to("#{first_category.first_category}",
-                  root_path)
+                    root_path)
                 %ul.category-second__wrapper{class: "cs-#{idx1}"}
                   - first_category.second_categories.each_with_index do |second_category, idx2|
                     %li.category-second

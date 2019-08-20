@@ -1,0 +1,11 @@
+= render "shared/header"
+= render "shared/bread-crumbs"
+
+.result-container
+  %h1.result-head
+    カテゴリーの商品一覧
+  .category-items
+    - @products.each do |product|
+      = render partial: "shared/item",
+        locals: { product: product }
+= render "shared/footer"

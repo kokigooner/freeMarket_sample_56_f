@@ -11,6 +11,10 @@ Rails.application.routes.draw do
       post 'purchase'
     end
   end
+
+  get '/first_category/:id', to: 'categories#first_category'
+  get '/second_category/:id', to: 'categories#second_category'
+  get '/third_category/:id', to: 'categories#third_category'
   
   get '/users/mypage/profile', to: 'users#profile'
   get "/users/mypage", to: "users#mypage"

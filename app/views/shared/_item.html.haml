@@ -1,0 +1,14 @@
+.item-box
+  .item-box__photo
+    = image_tag product.images.first.image,
+      class: 'item-box__photo-img'
+  .item-box__body
+    .item-box__name
+      = product.product_name
+    .item-box__info
+      .item-box__price
+        %span<>¥
+        = product.price
+      .item-box__likes
+        %i.far.fa-heart
+        %span 0
