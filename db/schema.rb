@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20190818033515) do
+
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string  "postal_code",      null: false
@@ -55,6 +57,16 @@ ActiveRecord::Schema.define(version: 20190818033515) do
     t.text    "image",      limit: 65535, null: false
     t.integer "product_id"
     t.index ["product_id"], name: "index_images_on_product_id", using: :btree
+  end
+
+  create_table "likes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "product_id"
+    t.integer  "user_id"
+    t.integer  "like"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_likes_on_product_id", using: :btree
+    t.index ["user_id"], name: "index_likes_on_user_id", using: :btree
   end
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -141,6 +153,8 @@ ActiveRecord::Schema.define(version: 20190818033515) do
   add_foreign_key "products", "second_categories"
   add_foreign_key "products", "sizes"
   add_foreign_key "products", "third_categories"
+  add_foreign_key "likes", "products"
+  add_foreign_key "likes", "users"
   add_foreign_key "products", "users"
   add_foreign_key "second_categories", "first_categories"
   add_foreign_key "sizes", "size_categories"

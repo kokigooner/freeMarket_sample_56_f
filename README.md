@@ -123,11 +123,9 @@ belongs_to :user
 
 |Column|Type|Options|
 |------|----|-------|
-|card_number|integer||
-|varid_year|integer||
-|varid_month|integer||
-|cvc|integer||
-|users_id|reference|foreign_key:true|
+|user_id|reference|foreign_key:true|
+|customer|string|null:false|
+|card|string|null:false|
 
 * belongs_to :user
 
