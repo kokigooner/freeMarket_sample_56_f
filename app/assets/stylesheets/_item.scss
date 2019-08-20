@@ -50,6 +50,7 @@ $overlaycolor: rgba(0, 0, 0, .8);
       width: auto;
       margin: 0 auto;
     }
+
   }
   &-user-ratings {
     display: inline-block;
@@ -314,6 +315,11 @@ $overlaycolor: rgba(0, 0, 0, .8);
           font-weight: 600;
           color: #333;
         }
+      }
+      &-photo{
+        height: 220px;
+        overflow: hidden;
+        width: 220px;
       }
     }
   &-id3 {
