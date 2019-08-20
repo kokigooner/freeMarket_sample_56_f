@@ -1,15 +1,15 @@
-.default-container 
+.default-container
   = render  'shared/header'
   %main.large-container
     %div.large-content
       %section.product-item-container.clearfix
         .search-result-head
-          -unless @s == nil || @s[:product_name_cont_all] == []
+          - unless @s == nil || @s[:product_name_cont_all] == []
             - @s[:product_name_cont_all].each do |sss|
               = "#{sss} "
             %span.search-result-text
               の検索結果
-          -else
+          - else
             %span.search-result-text
               全商品
         .search-result-head
@@ -17,7 +17,7 @@
             = page_entries_info @s_products
       .search-box-content.clearfix
         - @s_products.each do |pro|
-          %section.search-box{"class":"search-id"}
+          %section.search-box.search-id
             = link_to product_path(pro) do
               %figure.search-box-photo
                 = image_tag "#{pro.images.first.image}",width: "160" ,hight: "160"
@@ -122,13 +122,13 @@
               商品の状態
             %div
               .checkbox-default
-                %input{name: "example", type: "radio", value: "サンプル"}
+                %input{ name: "example", type: "radio", value: "サンプル" }
                   すべて
               .checkbox-default
-                %input{name: "example", type: "radio", value: "サンプル"}
+                %input{ name: "example", type: "radio", value: "サンプル" }
                   着払い(購入者負担)
               .checkbox-default
-                %input{name: "example", type: "radio", value: "サンプル"}
+                %input{ name: "example", type: "radio", value: "サンプル" }
                   送料込み(出品者負担)
         .form-group
           %label
@@ -165,7 +165,7 @@
             クリア
           = s.submit class:"btn-default btn-red"
   - breadcrumb :search
-  -unless @s == nil || @s[:product_name_cont_all] == []
+  - unless @s == nil || @s[:product_name_cont_all] == []
     = render "shared/bread-crumbs"
-  -else
+  - else
   = render  'shared/footer'
