@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :basic_auth, if: :production?
+  before_action :search_set
   protect_from_forgery with: :exception
 
   private
@@ -14,4 +15,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def search_set
+  @s = params[:q]
+  params[:q]['product_name_cont_all'] = params[:q]['product_name_cont_all'].split(/[\p{blank}\s]+/) unless @s = nil
+  @q = Product.ransack(params[:q])
+  @s_products = @q.result
+  end
+
+
 end
+

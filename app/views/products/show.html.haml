@@ -5,23 +5,23 @@
       = @product.product_name
     .product-main-content.clearfix
       .product-photo
-        .owl-carousel.owl-loaded.owl-drag
-          .owl-stage-outer
-            .owl-stage{"style": "#{'left: 0px width: 900px'}"}  
-              .owl-product.active{"style": "#{'width: 300px'}"} 
-                .owl-product-inner.is-higher-height
-                  = image_tag "#{@product.images.first[:image]}", class: 'owl-lazy',width: "300" ,hight: "300"
-          .owl-dots
+        .eagle-carousel.eagle-loaded.eagle-drag
+          .eagle-stage-outer
+            .eagle-stage{ "style":"left: 0px width: 900px" }
+              .eagle-product.active{ "style":"width: 300px" }
+                .eagle-product-inner.is-higher-height
+                  = image_tag "#{@product.images.first[:image]}", class: 'eagle-lazy',width: "300" ,hight: "300"
+          .eagle-dots
             - @product.images.each do |thumbnail|
-              .owl-dot
-                .owl-dot-inner
-                  = image_tag "#{thumbnail.image}", class: 'owl-lazy',width: "60" ,hight: "60"
+              .eagle-dot
+                .eagle-dot-inner
+                  = image_tag "#{thumbnail.image}", class: 'eagle-lazy',width: "60" ,hight: "60"
       %table.product-detail-table
         %tbody
           %tr
             %th 出品者
             %td
-              = link_to "#{@product.product_name}","/"
+              = link_to "#{@product.user.nickname}","/"
               %div
                 .product-user-ratings
                   %i.icon-good.icon-size
@@ -70,7 +70,7 @@
               = @product.delivery_date
     .product-price-box.text-center
       %span.product-price.bold
-        = "¥#{@product.price}"
+        = "¥#{@product.price.to_s(:delimited)}"
       %span.product-tax
         (税込)
       %span.product-shipping-fee
@@ -102,9 +102,6 @@
             = image_tag "sample_flag.png",width: "15" ,hight: "15"
             %span
               不適切な商品の報告
-        %input{"type":"#{"hidden"}","name":"#{"like_add_url"}","value":"#{""}"}
-        %input{"type":"#{"hidden"}","name":"#{"like_del_url"}","value":"#{""}"}
-        %input{"type":"#{"hidden"}","name":"#{"__csrf_value"}","value":"#{""}"}
       .product-button-right
         %i.icon-lock
           あんしん・あんぜんへの取り込み

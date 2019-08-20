@@ -1,4 +1,5 @@
 $(function(){
+
   $(".owl-example").owlCarousel({
     items: 1, 
     loop:true,
@@ -7,4 +8,3 @@ $(function(){
     smartSpeed: 1000
   });
 });
-
