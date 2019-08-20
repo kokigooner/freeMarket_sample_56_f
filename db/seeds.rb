@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 FirstCategory.create!(
   [
     {
@@ -361,7 +359,6 @@ SecondCategory.create!(
   ]
 )
 
->>>>>>> Stashed changes
 ThirdCategory.create!(
   [
     {
@@ -1889,10 +1886,6 @@ ThirdCategory.create!(
       third_category: 'その他',
     },
   ]
-<<<<<<< Updated upstream
-)
-=======
-)
 
 
 # 以下はカテゴリ検索の実装用の商品データです
@@ -1918,10 +1911,10 @@ ThirdCategory.create!(
 #   )
 # end
 
+
 # (1..381).each do |n|
 #   Image.create!(
 #     product_id: n,
 #     image: File.open("./app/assets/images/mercarisampleitem4.jpg")
 #   )
 # end
->>>>>>> Stashed changes

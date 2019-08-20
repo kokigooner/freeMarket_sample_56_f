@@ -1,5 +1,12 @@
 $gray: #ccc;
+$black4: #333;
 $overlaycolor: rgba(0, 0, 0, .8);
+
+.pager {
+  a {
+    color: $black4;
+  }
+}
 
 .product {
   $white2:#fafafa;
@@ -489,41 +496,6 @@ $overlaycolor: rgba(0, 0, 0, .8);
 .visible-large {
   font-size: 16px;
   margin: 0 0 24px;
-}
-
-.pager {
-  $red2: #ea352d;
-  $white:#fff;
-  $black4: #333;
-  $gray: #ccc;
-  margin: 40px 0 0;
-  position: relative;
-  text-align: center;
-
-  .pagination {
-    margin: 0 auto;
-    max-width: 220px;
-
-    span {
-      background: $white;
-      border: 1px solid $gray;
-      border-radius: 4px;
-      display: inline-block;
-      font-size: 14px;
-      height: 44px;
-      line-height: 42px;
-      width: 44px;
-    }
-
-    a {
-      color: $black4;
-    }
-
-    .page.current {
-      background: $red2;
-      color: $white;
-    }
-  }
 }
 
 .modal {

@@ -1,0 +1,12 @@
+= render "shared/header"
+= render "shared/bread-crumbs"
+
+.result-container
+  %h1.result-head
+    カテゴリーの商品一覧
+  .category-items
+    = render partial: "product",
+      collection: @products
+  .category-page-menu
+    = paginate @products
+= render "shared/footer"

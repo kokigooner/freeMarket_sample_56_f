@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   require 'payjp'
 
   before_action :set_product, only: [:show, :edit, :update, :destroy, :purchase, :confirm]
+  before_action :set_category_menu, only: [:toppage, :show, :search]
   before_action :set_Category, only: [:new, :create, :edit, :update]
 
 
@@ -60,8 +61,8 @@ class ProductsController < ApplicationController
   end
 
   def search
-      @q = Product.ransack(params[:q])
-      @s_products = @q.result(distinct: true).page(params[:page]).per(16)
+    @q = Product.ransack(params[:q])
+    @s_products = @q.result(distinct: true).page(params[:page]).per(16)
   end
 
   def destroy
