@@ -1,8 +1,10 @@
-$color:#0099e8;
-$red:#ea352d;
-$white:  #fff;
+$color-blue: #0099e8;
+$red: #ea352d;
+$white: #fff;
+$color-light-gray: #eee;
 $color-black: #333;
 $box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .16);
+$menu-shadow: rgba(0, 0, 0, .24);
 
 .mpcheader { 
   background: $white;
@@ -41,12 +43,12 @@ $box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .16);
   }
 
   &-user-icon {
-      display: inline-block;
-      position: relative;
-      text-align: center;
-      vertical-align: middle;
-      overflow: hidden;
-      border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    border-radius: 50%;
   }
 
   &-nav {
@@ -62,7 +64,7 @@ $box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .16);
     }
 
     span:hover {
-      color: #0099e8;
+      color: $color-blue;
     }
 
     h2 {
@@ -101,7 +103,7 @@ $box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .16);
       font-size: 0;
       display: inline-block;
       height: 40px;
-      
+
       li {
         position: relative;
         display: inline-block;
@@ -127,17 +129,17 @@ $box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .16);
       list-style: none;
       text-align: center;
       width: 106px;
+    }
 
-      a {
-        color: #fff;
-      }
+    &-signin a {
+      color: $white;
     }
 
     &-login {
       background-color: $white;
-      border: 1px solid $color;
+      border: 1px solid $color-blue;
       border-radius: 4px;
-      color: #0099e8;
+      color: $color-blue;
       display: block;
       line-height: 30px;
       list-style: none;
@@ -208,7 +210,7 @@ $box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .16);
     button:focus {
       outline: none;
     }
-      
+
     .fa-search {
       cursor: pointer;
       display: flex;
@@ -283,13 +285,13 @@ $box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .16);
   a {
     color: $color-black;
     display: block;
-    padding: 0 16px;
     line-height: 44px;
+    padding: 0 16px;
   }
 
   &__wrapper {
     background: $white;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
+    box-shadow: 0 1px 1px 0 $menu-shadow;
     box-sizing: border-box;
     display: none;
     height: 572px;
@@ -316,17 +318,14 @@ $box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .16);
   }
 
   &:hover {
-    background: #eee;
-    a {
-      color: inherit;
-    }
+    background: $color-light-gray;
   }
 
   &__wrapper {
-    background-color: #fff;
-    border: none;
+    background-color: $white;
+    border: 0;
     bottom: 0;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
+    box-shadow: 0 1px 1px 0 $menu-shadow;
     box-sizing: border-box;
     display: none;
     height: 572px;
@@ -345,16 +344,17 @@ $box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .16);
   width: 320px;
 
   &:hover {
-    background: #eee;
+    background: $color-light-gray;
+
     a {
       color: inherit;
     }
   }
 
   &__wrapper {
-    background: #fff;
+    background: $white;
     bottom: 0;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
+    box-shadow: 0 1px 1px 0 $menu-shadow;
     box-sizing: border-box;
     display: none;
     height: 572px;
@@ -365,19 +365,19 @@ $box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .16);
 }
 
 .category-search {
-  line-height: 44px;
   height: 44px;
+  line-height: 44px;
 }
 
 @for $i from 1 through 20 {
   .cs-#{$i} {
-    top: #{$i * -44}px
+    top: #{$i * -44}px;
   }
 }
 
 @for $i from 1 through 20 {
   .ct-#{$i} {
-    top: #{$i * -30}px
+    top: #{$i * -30}px;
   }
 }
 

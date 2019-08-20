@@ -1,7 +1,9 @@
-$bg-gray: #F5F5F5;
+$bg-gray: #f5f5f5;
 $white: #fff;
+$gray: #ccc;
 $black: #333;
-$red: #EA362E;
+$black-shadow: rgba(255, 255, 255, 0);
+$red: #ea362e;
 
 .result-container {
   margin: 40px auto 0;
@@ -32,7 +34,7 @@ $red: #EA362E;
   display: block;
   height: 298px;
   margin: 0 20px 20px 0;
-  width:  188px;
+  width: 188px;
 
   &:nth-child(5n) {
     margin-right: 0;
@@ -54,28 +56,28 @@ $red: #EA362E;
     line-height: 1.5;
     overflow: hidden;
     position: relative;
-    word-break: break-word;
     white-space: normal;
+    word-break: break-word;
 
     &::after {
-    background: linear-gradient(
-      to right,
-      rgba(255,255,255,0),
-      $white 72%
-      );
-    bottom: 0;
-    content: '';
-    display: block;
-    height: 1.5em;
-    position: absolute;
-    right: 0;
-    width: 50%;
+      background: linear-gradient(
+        to right,
+        $black-shadow,
+        $white 72%
+        );
+      bottom: 0;
+      content: '';
+      display: block;
+      height: 1.5em;
+      position: absolute;
+      right: 0;
+      width: 50%;
     }
   }
 
   &__info {
-    justify-content: space-between;
     display: flex;
+    justify-content: space-between;
     margin: 8px 0 0;
   }
 
@@ -89,7 +91,7 @@ $red: #EA362E;
     font-size: 16px;
 
     i {
-      color: #ccc;
+      color: $gray;
     }
   }
 }
@@ -107,9 +109,11 @@ $red: #EA362E;
     display: inline-block;
     width: 44px;
     height: 44px;
-    border-radius: 4px;
     background: #fff;
-    border: 1px solid #ccc;
+    border: 1px solid $gray;
+    border-radius: 4px;
+
+
     font-size: 14px;
     line-height: 42px;
     margin: 0;
