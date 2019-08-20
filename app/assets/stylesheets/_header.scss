@@ -357,18 +357,21 @@ $menu-shadow: rgba(0, 0, 0, .24);
   label {
     display: inline-block;
   }
-
-  .breadcrumbs {
-    width: 1020px;
-    margin: 0 auto;
-    padding: 16px 0;
-    white-space: normal;
-    font-size: 14px;
-    line-height: 1.2;
-
-    span:last-child {
-      font-weight: bold;
-    }
-  }
 }
 
+.breadcrumbs {
+  width: 1020px;
+  margin: 0 auto;
+  padding: 16px 0;
+  white-space: normal;
+  font-size: 14px;
+  line-height: 1.2;
+
+  a {
+    color: $color-black;
+  }
+
+  span:last-child {
+    font-weight: bold;
+  }
+}
