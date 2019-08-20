@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :set_category
+  before_action :set_category_menu
 
   def first_category
     @products = Product.all
