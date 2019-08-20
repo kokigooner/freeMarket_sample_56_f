@@ -150,6 +150,7 @@ main {
 .sell-content {
   border-top: 1px solid $bordercolor;
   padding: 40px;
+
   p a {
     color: $lightblue;
     display: inline;
@@ -161,6 +162,11 @@ main {
 .select-wrap {
   background: $white;
   position: relative;
+}
+
+label {
+  display: inline-block;
+  margin: 8px 0 0 5px;
 }
 
 .form-group {
@@ -198,19 +204,13 @@ main {
     }
   }
 
-  .inputDefault {
+  .input-default {
     margin: 8px 0 0;
     width: 100%;
   }
 }
 
-label {
-  display: inline-block;
-  margin: 8px 0 0 5px;
-
-}
-
-.inputDefault {
+.input-default {
   background: $white;
   border: 1px solid $formborder;
   border-radius: 4px;
@@ -232,18 +232,18 @@ label {
   width: 100%;
 }
 
-.sellSubHead {
+.sell-sub-head {
   color: $ashgray;
   float: left;
   font-size: 14px;
 }
 
-.sellFormBox {
+.sell-form-box {
   margin-left: auto;
   width: 400px;
 }
 
-.selectDefault {
+.select-default {
   background: 0;
   border: 1px solid $formborder;
   border-radius: 4px;
@@ -257,7 +257,7 @@ label {
   z-index: 2;
 }
 
-.sellPrice {
+.sell-price {
   li {
     border-top: 1px solid $formborder;
     padding: 24px 0;
@@ -268,7 +268,7 @@ label {
     padding: 0 0 24px;
   }
 
-  .form-group .lLeft {
+  .form-group .l-left {
     line-height: 48px;
     width: 50%;
   }
@@ -287,7 +287,7 @@ label {
     width: 80%;
   }
 
-  .sell-price-input .inputDefault {
+  .sell-price-input .input-default {
     margin: 0;
     text-align: right;
   }
@@ -305,7 +305,7 @@ label {
   width: 80%;
 }
 
-.sell-price-input .inputDefault {
+.sell-price-input .input-default {
   margin: 0;
   text-align: right;
 }

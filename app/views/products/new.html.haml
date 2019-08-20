@@ -23,15 +23,15 @@
                   商品名
                   %span.form-require 必須
                 %div
-                  = f.text_field :product_name, class: "inputDefault", placeholder: "商品名（必須 40文字まで)"
+                  = f.text_field :product_name, class: "input-default", placeholder: "商品名（必須 40文字まで)"
               .form-group
                 %label
                   商品の説明
                   %span.form-require 必須
                 = f.text_area :description, class: "textareaDefault", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows: "5"
             .sell-content.clearfix
-              %h3.sellSubHead 商品の詳細
-              .sellFormBox
+              %h3.sell-sub-head 商品の詳細
+              .sell-form-box
                 .form-group
                   %label
                     カテゴリー
@@ -48,9 +48,9 @@
                   .select-wrap  
                     = f.select :condition ,["---","新品、未使用","未使用に近い","目立った傷や汚れなし","やや傷や汚れあり","傷や汚れあり","全体的に状態が悪い"]
             .sell-content.clearfix
-              %h3.sellSubHead 配送について
+              %h3.sell-sub-head 配送について
               = link_to '?', "/jp/help_center/article/68/",class: "form-question"
-              .sellFormBox
+              .sell-form-box
                 .form-group
                   %label
                     配送料の負担
@@ -62,7 +62,7 @@
                     配送方法
                     %span.form-require 必須
                   .select-wrap
-                    = f.select :delivery_way, ["---","未定","らくらくメルカリ便","ゆうメール","レターパック","普通郵便(定形,定形外)","クロネコヤマト","ゆうパック","クリックポスト","ゆうパケット"], class: "selectDefault"
+                    = f.select :delivery_way, ["---","未定","らくらくメルカリ便","ゆうメール","レターパック","普通郵便(定形,定形外)","クロネコヤマト","ゆうパック","クリックポスト","ゆうパケット"], class: "select-default"
                 .form-group
                   %label
                     発送元の地域
@@ -73,27 +73,27 @@
                     発送までの日数
                     %span.form-require 必須
                     .select-wrap
-                      = f.select :delivery_date, ["---","1〜2日で発送","2〜3日で発送","4〜7日で発送"], class: "selectDefault"
+                      = f.select :delivery_date, ["---","1〜2日で発送","2〜3日で発送","4〜7日で発送"], class: "select-default"
             .sell-content.clearfix
-              %h3.sellSubHead 販売価格(300〜9,999,999)
+              %h3.sell-sub-head 販売価格(300〜9,999,999)
               = link_to '?', "/jp/help_center/article/68/", class: "form-question"
-              .sellFormBox
+              .sell-form-box
                 %ul.sell__price
                   %li.form-group
                     .clearfix
-                      %label.lLeft
+                      %label.l-left
                         価格
                         %span.form-require 必須
                       .l-right.sell-price-input
                         ¥
-                        %div#sellprice
-                          =f.number_field :price, class: "inputDefault", id: "input__price", placeholder: "例）300", value: ""
+                        %div#sell-price
+                          =f.number_field :price, class: "input-default", id: "input__price", placeholder: "例）300", value: ""
                   %li.clearfix
-                    .lLeft
+                    .l-left
                       販売手数料 (10%)
                     .l-right#output -
                   %li.clearfix.bold
-                    .lLeft 販売利益
+                    .l-left 販売利益
                     .l-right#output2 -
             = f.number_field :order_status_id, value: "1", type: "hidden"
             .sell-content.sell-btn-box
