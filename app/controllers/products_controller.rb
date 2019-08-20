@@ -60,8 +60,8 @@ class ProductsController < ApplicationController
   end
 
   def search
-      @q = Product.ransack(params[:q])
-      @s_products = @q.result(distinct: true).page(params[:page]).per(16)
+    @q = Product.ransack(params[:q])
+    @s_products = @q.result(distinct: true).page(params[:page]).per(16)
   end
 
   def destroy

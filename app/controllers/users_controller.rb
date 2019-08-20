@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   before_action :set_product, only: [:destroy]
   before_action :has_user_params?, only: [:authentication, :address, :payment]
-  before_action :set_category_menu, only: [:mypage]
+  before_action :set_category_menu, only: [:mypage, :profile, :sell, :myitems, :mypage_item, :identification, :update_address, :logout]
 
 
   def new
@@ -82,12 +82,6 @@ class UsersController < ApplicationController
   def mypage_item
   end
 
-  def card
-  end
-
-  def card_create
-  end
-
   def identification
   end
 
@@ -98,7 +92,7 @@ class UsersController < ApplicationController
     @product.destoroy
   end
 
-  def updata_address
+  def update_address
     if current_user.address.update_attributes(update_address_params)
       redirect_to mypage_identification_path
     else
