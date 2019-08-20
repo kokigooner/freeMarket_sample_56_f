@@ -85,10 +85,13 @@ nav ol, nav ul {
       width: 100%;
     }
 
-    &-carousel img {
-      padding: 0 auto;
-      vertical-align: bottom;
-      width: 100%;
+    &-carousel {
+      
+      img {
+        padding: 0 auto;
+        vertical-align: bottom;
+        width: 100%;
+      }
     }
 
     &-item {
