@@ -74,23 +74,6 @@ main {
   }
 
   &__drop__box {
-    pre {
-      font-size: 14px;
-      left: 16px;
-      line-height: 1.5;
-      overflow: auto;
-      pointer-events: none;
-      position: absolute;
-      right: 16px;
-      text-align: center;
-      top: 20%;
-      transform: translate(0, -50%);
-      white-space: pre-wrap;
-      word-wrap: break-word;
-    }
-  }
-
-  &__drop__box {
     cursor: pointer;
     flex: 1;
     height: 190px;
@@ -104,6 +87,21 @@ main {
       position: relative;
       width: 150px;
       z-index: 2;
+    }
+
+    pre {
+      font-size: 14px;
+      left: 16px;
+      line-height: 1.5;
+      overflow: auto;
+      pointer-events: none;
+      position: absolute;
+      right: 16px;
+      text-align: center;
+      top: 20%;
+      transform: translate(0, -50%);
+      white-space: pre-wrap;
+      word-wrap: break-word;
     }
   }
 
