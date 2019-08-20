@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   match 'secondcategory', to: 'products#secondcategory', via: [:get, :post]
   match 'thirdcategory', to: 'products#thirdcategory', via: [:get, :post]
+  get '/products/search', to: 'products#search'
+  get "/products/confirm", to: "products#confirm"
+  get "/products/sell", to: "products#sell"
 
   resources :products, only: [:show] do
     member do
@@ -15,7 +18,6 @@ Rails.application.routes.draw do
       post 'purchase'
     end
   end
-  
   get '/users/mypage/profile', to: 'users#profile'
   get "/users/mypage", to: "users#mypage"
   get "/users/mypage/myitems", to: "users#myitems"
