@@ -19,9 +19,13 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/first_category/:id', to: 'categories#first_category'
-  get '/second_category/:id', to: 'categories#second_category'
-  get '/third_category/:id', to: 'categories#third_category'
+  resources :categories, only: [:show] do
+    member do
+      get 'first'
+      get 'second'
+      get 'third'
+    end
+  end
   
   get '/users/mypage/profile', to: 'users#profile'
   get "/users/mypage", to: "users#mypage"

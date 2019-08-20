@@ -1,9 +1,15 @@
 $bg-gray: #F5F5F5;
 $white: #fff;
+$black: #333;
+$red: #EA362E;
 
 .result-container {
   margin: 40px auto 0;
   width: 1020px;
+
+  a {
+    color: $black;
+  }
 }
 
 .result-head {
@@ -16,7 +22,7 @@ $white: #fff;
   align-content: flex-start;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
   width: auto;
 }
 
@@ -28,7 +34,7 @@ $white: #fff;
   margin: 0 20px 20px 0;
   width:  188px;
 
-  &:nth-child(5) {
+  &:nth-child(5n) {
     margin-right: 0;
   }
 
@@ -85,5 +91,41 @@ $white: #fff;
     i {
       color: #ccc;
     }
+  }
+}
+
+.category-page-menu {
+  margin-bottom: 40px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    text-align: center;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    background: #fff;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    line-height: 42px;
+    margin: 0;
+  }
+
+  .current {
+    background-color: $red;
+    color: $white;
+  }
+
+  a {
+    display: block;
+  }
+
+  i {
+    line-height: 44px;
+    font-size: 20px;
   }
 }

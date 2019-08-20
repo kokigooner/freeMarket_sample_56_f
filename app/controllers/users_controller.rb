@@ -2,6 +2,8 @@ class UsersController < ApplicationController
 
   before_action :set_product, only: [:destroy]
   before_action :has_user_params?, only: [:authentication, :address, :payment]
+  before_action :set_category_menu, only: [:mypage]
+
 
   def new
   end
@@ -59,7 +61,6 @@ class UsersController < ApplicationController
   end
 
   def mypage
-    
   end
   
   def myitems

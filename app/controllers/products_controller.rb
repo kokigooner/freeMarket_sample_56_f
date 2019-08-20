@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   require 'payjp'
 
   before_action :set_product, only: [:show, :edit, :update, :destroy, :purchase, :confirm]
-  before_action :set_category_menu, only: [:toppage, :show]
+  before_action :set_category_menu, only: [:toppage, :show, :search]
   before_action :set_Category, only: [:new, :create, :edit, :update]
 
 

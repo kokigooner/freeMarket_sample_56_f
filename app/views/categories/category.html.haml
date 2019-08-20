@@ -8,4 +8,7 @@
     - @products.each do |product|
       = render partial: "shared/item",
         locals: { product: product }
+  .category-page-menu
+    = paginate @products
 = render "shared/footer"
+  

@@ -1,18 +1,18 @@
 class CategoriesController < ApplicationController
   before_action :set_category_menu
 
-  def first_category
-    @products = Product.all
+  def first
+    @products = Product.where(first_category_id: params[:id]).page(params[:page]).per(130)
     render :category
   end
 
-  def second_category
-    @products = Product.all
+  def second
+    @products = Product.where(second_category_id: params[:id]).page(params[:page]).per(130)
     render :category
   end
 
-  def third_category
-    @products = Product.all
+  def third
+    @products = Product.where(third_category_id: params[:id]).page(params[:page]).per(130)
     render :category
   end
 end
