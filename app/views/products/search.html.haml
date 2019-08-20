@@ -1,7 +1,7 @@
 .default-container
   = render  'shared/header'
   %main.large-container
-    %div.large-content
+    .large-content
       %section.product-item-container.clearfix
         .search-result-head
           - unless @s == nil || @s[:product_name_cont_all] == []
@@ -34,7 +34,7 @@
                       = "#{"1"}"
       %ul.pager
         = paginate @s_products
-    %div.large-side-search
+    .large-side-search
       .form-group.search-form
         %select.search-sort.select-default
           %option
