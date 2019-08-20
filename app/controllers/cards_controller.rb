@@ -1,5 +1,6 @@
 class CardsController < ApplicationController
   before_action :confirm_user, only: [:add, :show, :remake, :destroy]
+  before_action :set_category_menu, only: [:add, :show]
 
   require "payjp"
   Payjp.api_key = ENV['PAYJP_SECRET_KEY']
