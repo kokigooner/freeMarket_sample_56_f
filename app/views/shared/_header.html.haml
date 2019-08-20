@@ -25,17 +25,20 @@
               %li.category-first
                 %h5
                   = link_to("#{fc.first_category}",
-                    first_category_path(fc))
+                    first_category_path(fc),
+                    class: "category-first__link")
                 %ul.category-second__wrapper{ class: "cs-#{idx1}" }
                   - fc.second_categories.each_with_index do |sc, idx2|
                     %li.category-second
                       = link_to("#{sc.second_category}",
-                        second_category_path(sc))
+                        second_category_path(sc),
+                        class: "category-second__link")
                       %ul.category-third__wrapper{ class: "ct-#{idx2}" }
                         - sc.third_categories.each do |tc|
                           %li.category-third
                             = link_to("#{tc.third_category}",
-                              third_category_path(tc))
+                              third_category_path(tc),
+                              class: "category-second__link")
         %li
           %h2
             %a.fas.fa-tag.fa-lg
