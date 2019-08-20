@@ -7,8 +7,8 @@
       .product-photo
         .eagle-carousel.eagle-loaded.eagle-drag
           .eagle-stage-outer
-            .eagle-stage{ "style":"#{'left: 0px width: 900px'}" }  
-              .eagle-product.active{ "style":"#{'width: 300px'}" } 
+            .eagle-stage{ "style":"left: 0px width: 900px" }  
+              .eagle-product.active{ "style":"width: 300px" } 
                 .eagle-product-inner.is-higher-height
                   = image_tag "#{@product.images.first[:image]}", class: 'eagle-lazy',width: "300" ,hight: "300"
           .eagle-dots
