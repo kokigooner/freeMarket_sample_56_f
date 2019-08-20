@@ -3,7 +3,7 @@ FactoryBot.define do
     user { FactoryBot.build(:user) }
     # user_id{'1'}
     product_name{'テストプロダクト'}
-    price{'test@exa'} 
+    price{'test@exa'}
     description{'testtest'} 
     # first_category_id{'1'}
     # second_category_id{'1'}

@@ -321,6 +321,7 @@ $mypage-white: #f5f5f5;
   .mypage-item-body {
     float: left;
     margin: 0 0 0 20px;
+    width: 550px;
 
     .product-title {
       -webkit-box-orient: vertical;
@@ -332,6 +333,7 @@ $mypage-white: #f5f5f5;
       max-height: 4.4em;
       overflow: hidden;
       text-overflow: ellipsis;
+      white-space: nowrap;
       }
   }
 
