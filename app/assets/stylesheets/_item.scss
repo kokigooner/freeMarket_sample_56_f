@@ -517,7 +517,7 @@ $overlaycolor: rgba(0, 0, 0, .8);
       }
     }
 
-    span.page.current {
+    .page.current {
       background: $red2;
       color: $white;
     }
