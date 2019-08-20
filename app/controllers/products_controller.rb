@@ -7,7 +7,8 @@ class ProductsController < ApplicationController
 
 
   def toppage
-    @products   = Product.order(id: "DESC").limit(4)
+    @products = Product.order(id: "DESC").limit(4)
+    
   end
 
   def new

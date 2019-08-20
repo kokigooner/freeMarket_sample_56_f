@@ -32,4 +32,3 @@ class ApplicationController < ActionController::Base
     @s_products = @q.result
   end
 end
-
