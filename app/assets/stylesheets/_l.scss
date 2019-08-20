@@ -1,5 +1,6 @@
 .large{
   $white: #fff;
+  $gray: rgb(136, 136, 136);
   &-single{
     &-container {
       width: 700px;
@@ -68,11 +69,11 @@
     }
 
     .fas {
-      color: rgb(136, 136, 136);
+      color: $gray;
     }
 
     .far {
-      color: rgb(136, 136, 136);
+      color: $gray;
     }
 
     .fa-tag {
