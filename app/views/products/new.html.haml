@@ -86,8 +86,9 @@
                         %span.form-require 必須
                       .l-right.sell-price-input
                         ¥
-                        %div#sell-price
-                          =f.number_field :price, class: "input-default", id: "input__price", placeholder: "例）300", value: ""
+                        %div
+                          #sell-price
+                            =f.number_field :price, class: "input-default", id: "input__price", placeholder: "例）300", value: ""
                   %li.clearfix
                     .l-left
                       販売手数料 (10%)
