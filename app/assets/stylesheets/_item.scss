@@ -350,6 +350,8 @@ $overlaycolor: rgba(0, 0, 0, .8);
   $white3: #fff;
   $black3: rgba(255, 255, 255, 0);
   $black4: #333;
+  $black5: #888;
+  $black6: rgb(136, 136, 136);
 
   &-box {
     background: $white3;
@@ -429,7 +431,7 @@ $overlaycolor: rgba(0, 0, 0, .8);
   }
 
   &-result-numbe {
-    color: #888;
+    color: $black5;
     font-size: 12px;
     font-weight: normal;
     margin: 16px 0;
@@ -460,7 +462,7 @@ $overlaycolor: rgba(0, 0, 0, .8);
     margin: 0;
 
     .fas {
-      color: rgb(136, 136, 136);
+      color: $black6;
     }
   }
 
