@@ -8,8 +8,8 @@ $menu-shadow: rgba(0, 0, 0, .24);
 
 .mpcheader { 
   background: $white;
-  box-shadow: $box-shadow;
   position: relative;
+  z-index: 5;
 
   &-top {
     display: flex;
@@ -239,7 +239,7 @@ $menu-shadow: rgba(0, 0, 0, .24);
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.16);
   color: $color-black;
   position: relative;
-  z-index: 1;
+  z-index: 3;
 
   label {
     display: inline-block;
@@ -270,7 +270,6 @@ $menu-shadow: rgba(0, 0, 0, .24);
   font-size: 14px;
   margin: 0;
   width: 100%;
-  z-index: 1010;
 
   &:hover {
     background-color: $red;
@@ -297,6 +296,7 @@ $menu-shadow: rgba(0, 0, 0, .24);
     position: absolute;
     top: 44px;
     width: 224px;
+    z-index: 1000;
   }
 }
 
