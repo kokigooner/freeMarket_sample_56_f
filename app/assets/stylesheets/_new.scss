@@ -308,25 +308,6 @@ label {
   }
 }
 
-.sell-btn-box {
-
-  p {
-  display: inline;
-  line-height: 1.5;
-  word-wrap: break-word;
-  }
-
-  .btn-red {
-    margin: 40px 0 0;
-  }
-
-  .btn-gray {
-    margin: 24px auto 0;
-    width: 45%;
-  }
-
-}
-
 .btn-red {
   background: $red;
   border: 1px solid $red;
@@ -343,6 +324,25 @@ label {
   line-height: 48px;
   text-align: center;
   width: 100%;
+}
+
+.sell-btn-box {
+
+  p {
+    display: inline;
+    line-height: 1.5;
+    word-wrap: break-word;
+  }
+
+  .btn-red {
+    margin: 40px 0 0;
+  }
+
+  .btn-gray {
+    margin: 24px auto 0;
+    width: 45%;
+  }
+
 }
 
 .bold {
