@@ -1,2 +1,0 @@
-class ThridCategory < ApplicationRecord
-end

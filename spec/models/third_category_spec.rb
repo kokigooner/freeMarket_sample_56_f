@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe ThridCategory, type: :model do
+RSpec.describe ThirdCategory, type: :model do
   pending "add some examples to (or delete) #{__FILE__}"
 end
