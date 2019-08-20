@@ -362,6 +362,10 @@ $menu-shadow: rgba(0, 0, 0, .24);
     display: inline-block;
   }
 
+  a {
+    color: $color-black;
+  }
+
   .breadcrumbs {
     width: 1020px;
     margin: 0 auto;
@@ -372,10 +376,6 @@ $menu-shadow: rgba(0, 0, 0, .24);
 
     span:last-child {
       font-weight: bold;
-    }
-
-    a {
-      color: $color-black;
     }
   }
 }
