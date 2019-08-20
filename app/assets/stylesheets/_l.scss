@@ -55,34 +55,39 @@
     float: right;
   }
 
-  &-side-search{
+  &-side-search {
     display: table;
     width: 280px;
-    .search-dropdown-content{
+
+    .search-dropdown-content {
       background-color: #ffffff;
-      padding: 16px;
-      margin: 40px 0 0 0;
       font-weight: normal;
-      .fas{
+      margin: 40px 0 0;
+      padding: 16px;
+
+      .fas {
         color: rgb(136, 136, 136);
       }
+
       .fa-tag {
         transform: rotate(-45deg);
+      }
     }
-    }
+
     .input-default {
-    font-weight: normal;
+      font-weight: normal;
     }
+
     .select-default{
-    font-weight: normal;
+      font-weight: normal;
     }
-    .checkbox-default{
-    font-weight: normal;
-    display: inline-block;
-    width: 48%;
-    vertical-align: middle;
-    word-break: break-word;
-    
+
+    .checkbox-default {
+      display: inline-block;
+      font-weight: normal;
+      vertical-align: middle;
+      width: 48%;
+      word-break: break-word;
     }
   }
 }
