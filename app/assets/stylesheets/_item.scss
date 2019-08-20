@@ -2,6 +2,12 @@ $gray: #ccc;
 $black4: #333;
 $overlaycolor: rgba(0, 0, 0, .8);
 
+.pager {
+  a {
+    color: $black4;
+  }
+}
+
 .product {
   $white2:#fafafa;
   $red2: #ea352d;
@@ -490,12 +496,6 @@ $overlaycolor: rgba(0, 0, 0, .8);
 .visible-large {
   font-size: 16px;
   margin: 0 0 24px;
-}
-
-.pager {
-  a {
-    color: $black4;
-  }
 }
 
 .modal {
