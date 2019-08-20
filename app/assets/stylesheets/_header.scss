@@ -43,12 +43,12 @@ $menu-shadow: rgba(0, 0, 0, .24);
   }
 
   &-user-icon {
+    border-radius: 50%;
     display: inline-block;
+    overflow: hidden;
     position: relative;
     text-align: center;
     vertical-align: middle;
-    overflow: hidden;
-    border-radius: 50%;
   }
 
   &-nav {
@@ -120,21 +120,6 @@ $menu-shadow: rgba(0, 0, 0, .24);
       display: flex;
     }
 
-    &-signin {
-      background-color: $red;
-      border: 1px solid $red;
-      border-radius: 4px;
-      display: block;
-      line-height: 30px;
-      list-style: none;
-      text-align: center;
-      width: 106px;
-    }
-
-    &-signin a {
-      color: $white;
-    }
-
     &-login {
       background-color: $white;
       border: 1px solid $color-blue;
@@ -146,6 +131,21 @@ $menu-shadow: rgba(0, 0, 0, .24);
       margin: 0 0 0 8px;
       text-align: center;
       width: 78px;
+    }
+  }
+
+  &-user-signin {
+    background-color: $red;
+    border: 1px solid $red;
+    border-radius: 4px;
+    display: block;
+    line-height: 30px;
+    list-style: none;
+    text-align: center;
+    width: 106px;
+
+    a {
+      color: $white;
     }
   }
 
