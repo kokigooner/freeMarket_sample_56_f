@@ -316,7 +316,8 @@ $overlaycolor: rgba(0, 0, 0, .8);
           color: #333;
         }
       }
-      &-photo{
+
+      &-photo {
         height: 220px;
         overflow: hidden;
         width: 220px;
@@ -370,12 +371,6 @@ $overlaycolor: rgba(0, 0, 0, .8);
       box-sizing: border-box;
       height: 80px;
       padding: 8px 12px;
-
-      .font-2 {
-        color: $black4;
-        font-size: 14px;
-        font-weight: 400;
-      }
       }
 
     &-head {
@@ -399,12 +394,6 @@ $overlaycolor: rgba(0, 0, 0, .8);
       display: flex;
       justify-content: space-between;
       margin-top: 2px;
-
-      .font-5 {
-        color: $black4;
-        font-size: 17px;
-        font-weight: 600;
-      }
     }
 
     &-photo {
@@ -412,6 +401,19 @@ $overlaycolor: rgba(0, 0, 0, .8);
       overflow: hidden;
       width: 160px;
     }
+
+    .font-2 {
+      color: $black4;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .font-5 {
+      color: $black4;
+      font-size: 17px;
+      font-weight: 600;
+    }
+
   }
 
   &-result-head {
@@ -488,7 +490,10 @@ $overlaycolor: rgba(0, 0, 0, .8);
 }
 
 .pager {
+  $red2: #ea352d;
+  $white:#fff;
   $black4: #333;
+  $gray: #ccc;
   margin: 40px 0 0;
   position: relative;
   text-align: center;
@@ -498,23 +503,23 @@ $overlaycolor: rgba(0, 0, 0, .8);
     max-width: 220px;
 
     span {
-      background: #fff;
-      border: 1px solid #ccc;
+      background: $white;
+      border: 1px solid $gray;
       border-radius: 4px;
       display: inline-block;
       font-size: 14px;
       height: 44px;
       line-height: 42px;
       width: 44px;
-    }
 
-    span a {
-      color: $black4;
+      a {
+        color: $black4;
+      }
     }
 
     span.page.current {
-      background: #ea352d;
-      color: #fff;
+      background: $red2;
+      color: $white;
     }
   }
 }
