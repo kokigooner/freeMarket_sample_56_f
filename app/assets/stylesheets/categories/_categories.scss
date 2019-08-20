@@ -105,18 +105,16 @@ $red: #ea362e;
   justify-content: space-between;
 
   span {
-    text-align: center;
-    display: inline-block;
-    width: 44px;
-    height: 44px;
-    background: #fff;
+    background: $white;
     border: 1px solid $gray;
     border-radius: 4px;
-
-
+    display: inline-block;
     font-size: 14px;
+    height: 44px;
     line-height: 42px;
     margin: 0;
+    text-align: center;
+    width: 44px;
   }
 
   .current {

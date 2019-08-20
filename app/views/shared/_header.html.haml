@@ -2,8 +2,14 @@
   .mpcheader-inner
     .mpcheader-top
       %h1
-        = link_to image_tag("logo.svg", width: '134', height: "36", alt: "サンプル画像"), root_path
-      = search_form_for(@q, url: products_search_path, class: "mpcheader-form") do |f|
+        = link_to image_tag("logo.svg",
+          width: '134',
+          height: "36",
+          alt: "サンプル画像"),
+          root_path
+      = search_form_for(@q,
+        url: products_search_path,
+        class: "mpcheader-form") do |f|
         = f.search_field :product_name_cont_all, class: "input-default"
         = f.button "", class: "fas fa-search fa-lg"
     %div.mpcheader-nav-box.clearfix
@@ -15,21 +21,21 @@
                 %a.fas.fa-list.fa-lg
                 カテゴリーから探す
           %ul.category-first__wrapper.first-show
-            - @categories.each_with_index do |first_category, idx1|
+            - @categories.each_with_index do |fc, idx1|
               %li.category-first
                 %h5
-                  = link_to("#{first_category.first_category}",
-                    first_category_path(first_category))
-                %ul.category-second__wrapper{class: "cs-#{idx1}"}
-                  - first_category.second_categories.each_with_index do |second_category, idx2|
+                  = link_to("#{fc.first_category}",
+                    first_category_path(fc))
+                %ul.category-second__wrapper{ class: "cs-#{idx1}" }
+                  - fc.second_categories.each_with_index do |sc, idx2|
                     %li.category-second
-                      = link_to("#{second_category.second_category}",
-                        second_category_path(second_category))
-                      %ul.category-third__wrapper{class: "ct-#{idx2}"}
-                        - second_category.third_categories.each do |third_category|
+                      = link_to("#{sc.second_category}",
+                        second_category_path(sc))
+                      %ul.category-third__wrapper{ class: "ct-#{idx2}" }
+                        - sc.third_categories.each do |tc|
                           %li.category-third
-                            = link_to("#{third_category.third_category}",
-                              third_category_path(third_category))
+                            = link_to("#{tc.third_category}",
+                              third_category_path(tc))
         %li
           %h2
             %a.fas.fa-tag.fa-lg

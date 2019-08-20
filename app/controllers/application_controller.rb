@@ -27,12 +27,9 @@ class ApplicationController < ActionController::Base
   @s = params[:q]
     if @s != nil
       params[:q]['product_name_cont_all'] = params[:q]['product_name_cont_all'].split(/[\p{blank}\s]+/)
-      @q = Product.ransack(params[:q])
-      @s_products = @q.result
-    else
-      @q = Product.ransack(params[:q])
-      @s_products = @q.result
     end
+    @q = Product.ransack(params[:q])
+    @s_products = @q.result
   end
 end
 

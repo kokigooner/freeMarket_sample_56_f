@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :categories, only: [:show] do
+  resources :categories, only: [] do
     member do
       get 'first'
       get 'second'
