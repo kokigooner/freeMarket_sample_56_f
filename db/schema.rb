@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20190818033515) do
-
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string  "postal_code",      null: false
@@ -148,13 +146,13 @@ ActiveRecord::Schema.define(version: 20190818033515) do
   add_foreign_key "brands_categories", "first_categories"
   add_foreign_key "cards", "users"
   add_foreign_key "images", "products"
+  add_foreign_key "likes", "products"
+  add_foreign_key "likes", "users"
   add_foreign_key "products", "brands"
   add_foreign_key "products", "first_categories"
   add_foreign_key "products", "second_categories"
   add_foreign_key "products", "sizes"
   add_foreign_key "products", "third_categories"
-  add_foreign_key "likes", "products"
-  add_foreign_key "likes", "users"
   add_foreign_key "products", "users"
   add_foreign_key "second_categories", "first_categories"
   add_foreign_key "sizes", "size_categories"

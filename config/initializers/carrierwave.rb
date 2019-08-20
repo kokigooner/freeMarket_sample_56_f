@@ -17,6 +17,7 @@ CarrierWave.configure do |config|
     config.enable_processing = false if Rails.env.test?
   end
   
-  config.fog_directory  = 'photo-strage-for-mercari'
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/photo-strage-for-mercari'
+  # config.fog_directory  = 'photo-strage-for-mercari'
+  # config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/photo-strage-for-mercari'
 end
+

@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :first_category do
-    first_category { "MyString" }
-    null { "" }
+  id{'1'}
+  first_category{'レディース'} 
   end
 end

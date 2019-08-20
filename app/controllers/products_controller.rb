@@ -88,6 +88,7 @@ class ProductsController < ApplicationController
   end
 
   def set_product
+    binding.pry
     @product = Product.find(params[:id])
   end
 end
