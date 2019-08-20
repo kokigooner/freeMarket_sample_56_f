@@ -5,98 +5,98 @@
         .sell__container__inner
           %h2.sell__head 商品の情報を入力
           = form_for @product, class: "sell__form" do |f|
-            .sellUpload__box
-              %h3.sellUpload__head
+            .sell-upload__box
+              %h3.sell-upload__head
                 出品画像
-                %span.formRequire 必須
+                %span.form-require 必須
               %p 最大4枚までアップロードできます
               = f.fields_for :images do |fi|
-                = fi.label :image, class: "sellUpload__drop__box" do
-                  .sellUpload__imageview
+                = fi.label :image, class: "sell-upload__drop__box" do
+                  .sell-upload__imageview
                     = fi.file_field :image,class:"file",style:"display:none;"
                     %pre
                       #preview
                         クリックしてファイルをアップロード
-            .sellContent
-              .formGroup
+            .sell-content
+              .form-group
                 %label
                   商品名
-                  %span.formRequire 必須
+                  %span.form-require 必須
                 %div
                   = f.text_field :product_name, class: "inputDefault", placeholder: "商品名（必須 40文字まで)"
-              .formGroup
+              .form-group
                 %label
                   商品の説明
-                  %span.formRequire 必須
+                  %span.form-require 必須
                 = f.text_area :description, class: "textareaDefault", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows: "5"
-            .sellContent.clearfix
+            .sell-content.clearfix
               %h3.sellSubHead 商品の詳細
               .sellFormBox
-                .formGroup
+                .form-group
                   %label
                     カテゴリー
-                    %span.formRequire 必須
+                    %span.form-require 必須
                   %div
-                    .selectWrap
+                    .select-wrap
                       = f.select :first_category_id, options_from_collection_for_select( @first, :id, :first_category),{prompt: '---'}, {data: {remote: true, url: url_for(action: :secondcategory)}}
                     #second-select
                     #third-select
-                .formGroup
+                .form-group
                   %label
                     商品の状態
-                    %span.formRequire 必須
-                  .selectWrap  
+                    %span.form-require 必須
+                  .select-wrap  
                     = f.select :condition ,["---","新品、未使用","未使用に近い","目立った傷や汚れなし","やや傷や汚れあり","傷や汚れあり","全体的に状態が悪い"]
-            .sellContent.clearfix
+            .sell-content.clearfix
               %h3.sellSubHead 配送について
-              = link_to '?', "/jp/help_center/article/68/",class: "formQuestion"
+              = link_to '?', "/jp/help_center/article/68/",class: "form-question"
               .sellFormBox
-                .formGroup
+                .form-group
                   %label
                     配送料の負担
-                    %span.formRequire 必須
-                  .selectWrap
+                    %span.form-require 必須
+                  .select-wrap
                     = f.select :delivery_charge, ["---","送料込み(出品者負担)","着払い(購入者負担)"]
-                .formGroup
+                .form-group
                   %label
                     配送方法
-                    %span.formRequire 必須
-                  .selectWrap
+                    %span.form-require 必須
+                  .select-wrap
                     = f.select :delivery_way, ["---","未定","らくらくメルカリ便","ゆうメール","レターパック","普通郵便(定形,定形外)","クロネコヤマト","ゆうパック","クリックポスト","ゆうパケット"], class: "selectDefault"
-                .formGroup
+                .form-group
                   %label
                     発送元の地域
-                    %span.formRequire 必須
+                    %span.form-require 必須
                   = select_tag "prefecture", options_for_select({北海道:1,青森県:2,岩手県:3,宮城県:4,秋田県:5,山形県:6,福島県:7,茨城県:8,栃木県:9,群馬県:10,埼玉県:11,千葉県:12,東京都:13,神奈川県:14,新潟県:15,富山県:16,石川県:17,福井県:18,山梨県:19,長野県:20,岐阜県:21,静岡県:22,愛知県:23,三重県:24,滋賀県:25,京都府:26,大阪府:27,兵庫県:28,奈良県:29,和歌山県:30,鳥取県:31,島根県:32,岡山県:33,広島県:34,山口県:35,徳島県:36,香川県:37,愛媛県:38,高知県:39,福岡県:40,佐賀県:41,長崎県:42,熊本県:43,大分県:44,宮崎県:45,鹿児島県:46,沖縄県:47}), class:"registration__form__input"
-                .formGroup
+                .form-group
                   %label
                     発送までの日数
-                    %span.formRequire 必須
-                    .selectWrap
+                    %span.form-require 必須
+                    .select-wrap
                       = f.select :delivery_date, ["---","1〜2日で発送","2〜3日で発送","4〜7日で発送"], class: "selectDefault"
-            .sellContent.clearfix
+            .sell-content.clearfix
               %h3.sellSubHead 販売価格(300〜9,999,999)
-              = link_to '?', "/jp/help_center/article/68/", class: "formQuestion"
+              = link_to '?', "/jp/help_center/article/68/", class: "form-question"
               .sellFormBox
                 %ul.sell__price
-                  %li.formGroup
+                  %li.form-group
                     .clearfix
                       %label.lLeft
                         価格
-                        %span.formRequire 必須
-                      .lRight.sellPriceInput
+                        %span.form-require 必須
+                      .l-right.sell-price-input
                         ¥
                         %div#sellprice
                           =f.number_field :price, class: "inputDefault", id: "input__price", placeholder: "例）300", value: ""
                   %li.clearfix
                     .lLeft
                       販売手数料 (10%)
-                    .lRight#output -
+                    .l-right#output -
                   %li.clearfix.bold
                     .lLeft 販売利益
-                    .lRight#output2 -
+                    .l-right#output2 -
             = f.number_field :order_status_id, value: "1", type: "hidden"
-            .sellContent.sellBtnBox
+            .sell-content.sell-btn-box
               %div
                 %p
                   = link_to '禁止されている出品', "/jp/help_center/getting_started/prohibited_items/"
@@ -110,5 +110,5 @@
                   また、出品をもちまして
                   = link_to '加盟店規約', "/jp/seller_terms/"
                   に同意したことになります。
-              = f.submit class: "btnDefault btnRed", value: "出品する"
-              = link_to 'もどる', root_path, class: "btnGray"
+              = f.submit class: "btn-default btn-red", value: "出品する"
+              = link_to 'もどる', root_path, class: "btn-gray"

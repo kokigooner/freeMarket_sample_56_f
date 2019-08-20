@@ -45,7 +45,7 @@ main {
   }
 }
 
-.sellUpload {
+.sell-upload {
   &__box {
     border-top: 1px solid $bordercolor;
     padding: 40px;
@@ -119,13 +119,13 @@ main {
     text-align: center;
     width: 145px;
 
-    .uploadImg {
+    .upload-img {
       height: 100px;
       padding-top: 25px;
       width: 145px;
     }
 
-    .imgDel {
+    .img_del {
       color: $lightblue;
       cursor: pointer;
       font-size: 14px;
@@ -141,13 +141,13 @@ main {
   }
 }
 
-.sellDropboxContainer {
+.sell-dropbox-container {
   display: block;
   margin: 16px auto 0;
   width: 620px;
 }
 
-.sellContent {
+.sell-content {
   border-top: 1px solid $bordercolor;
   padding: 40px;
   p a {
@@ -158,12 +158,12 @@ main {
   }
 }
 
-.selectWrap {
+.select-wrap {
   background: $white;
   position: relative;
 }
 
-.formGroup {
+.form-group {
   margin: 40px 0 0;
 
   &:first-child {
@@ -179,7 +179,7 @@ main {
     width: 100%;
   }
 
-  .selectWrap {
+  .select-wrap {
     background: 0;
     border: 1px solid $formborder;
     border-radius: 4px;
@@ -268,60 +268,60 @@ label {
     padding: 0 0 24px;
   }
 
-  .formGroup .lLeft {
+  .form-group .lLeft {
     line-height: 48px;
     width: 50%;
   }
 
-  .bold .lRight {
+  .bold .l-right {
     font-size: 34px;
   }
 
-  .formGroup .lRight {
+  .form-group .l-right {
     width: 50%;
   }
 
-  .sellPriceInput div {
+  .sell-price-input div {
     display: inline-block;
     margin: 0 0 0 5%;
     width: 80%;
   }
 
-  .sellPriceInput .inputDefault {
+  .sell-price-input .inputDefault {
     margin: 0;
     text-align: right;
   }
 }
 
-.sellBtnBox p {
+.sell-btn-box p {
   display: inline;
   line-height: 1.5;
   word-wrap: break-word;
 }
 
-.sellPriceInput div {
+.sell-price-input div {
   display: inline-block;
   margin: 0 0 0 5%;
   width: 80%;
 }
 
-.sellPriceInput .inputDefault {
+.sell-price-input .inputDefault {
   margin: 0;
   text-align: right;
 }
 
-.sellBtnBox {
-  .btnRed {
+.sell-btn-box {
+  .btn-red {
     margin: 40px 0 0;
   }
 
-  .btnGray {
+  .btn-gray {
     margin: 24px auto 0;
     width: 45%;
   }
 }
 
-.lRight {
+.l-right {
   float: right;
 }
 
@@ -329,13 +329,13 @@ label {
   font-weight: 600;
 }
 
-.btnRed {
+.btn-red {
   background: $red;
   border: 1px solid $red;
   color: $white;
 }
 
-.btnGray {
+.btn-gray {
   background: $ashcolor;
   border: 1px solid $ashcolor;
   color: $white;
@@ -347,7 +347,7 @@ label {
   width: 100%;
 }
 
-.btnDefault {
+.btn-default {
   border: 1px solid transparent;
   cursor: pointer;
   display: block;
@@ -357,7 +357,7 @@ label {
   width: 100%;
 }
 
-.formRequire {
+.form-require {
   background: $red;
   border-radius: 2px;
   color: $white;
@@ -367,7 +367,7 @@ label {
   vertical-align: top;
 }
 
-.formQuestion {
+.form-question {
   background: $lightblue;
   border-radius: 50%;
   color: $white;
