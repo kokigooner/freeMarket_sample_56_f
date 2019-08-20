@@ -342,16 +342,15 @@ $overlaycolor: rgba(0, 0, 0, .8);
 .search {
   $white3: #fff;
   $black3: rgba(255, 255, 255, 0);
-  
+  $black4: #333;
   &-box {
     background: $white3;
     float: left;
     margin: 0 20px 20px 0;
     position: relative;
     width: 160px;
-
     a {
-      color: #333;
+      color: $black4;
       display: block;
     }
 
@@ -359,13 +358,13 @@ $overlaycolor: rgba(0, 0, 0, .8);
       width: auto;
     }
 
-      &-body {
-      box-sizing:border-box;
-      padding: 8px 12px;
-      height: 80px;
+    &-body {
+    box-sizing:border-box;
+    padding: 8px 12px;
+    height: 80px;
 
       .font-2 {
-        color: #333;
+        color: $black4;
         font-size: 14px;
         font-weight: 400;
     }
@@ -396,7 +395,6 @@ $overlaycolor: rgba(0, 0, 0, .8);
         right: 0;
         width: 50%;
         height: 1.5em;
-
       }
       }
 
@@ -408,7 +406,7 @@ $overlaycolor: rgba(0, 0, 0, .8);
         .font-5 {
           font-size: 17px;
           font-weight: 600;
-          color: #333;
+          color: $black4;
         }
       }
     &-photo{
@@ -505,7 +503,7 @@ $overlaycolor: rgba(0, 0, 0, .8);
       line-height: 42px;
     }
     span a{
-      color: #333;
+      color: $black4;
   }
     span.page.current {
       color: #fff;

@@ -1,14 +1,15 @@
 $color:#0099e8;
 $red:#ea352d;
 $white: #fff;
-$box-shadow: 0 3px 3px 0 rgba(0,0,0,.16);
+$box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .16) ;
 
 .mpcheader { 
   position: relative;
   z-index: 1001;
   background: #fff;
   box-shadow: $box-shadow;
-  &-top{
+
+  &-top {
     display: flex;
     height: 40px;
   }
