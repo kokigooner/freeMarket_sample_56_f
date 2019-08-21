@@ -4,18 +4,6 @@ $color-black: #333;
 $black-shadow: rgba(255, 255, 255, 0);
 $color-red: #ea362e;
 
-.owl-nav {
-  color: transparent;
-}
-
-.owl-prev {
-  left: 5px;
-}
-
-.owl-next {
-  right: 5px;
-}
-
 .slide-banner.owl-carousel.owl-loaded.owl-drag {
   width: 100%;
 }
@@ -30,11 +18,9 @@ $color-red: #ea362e;
 
 .owl-prev {
   background-color: $color-none;
-  height: 0;
   left: 1px;
   position: absolute;
   top: 40%;
-  width: 0;
 
   &:focus {
     outline: none;
@@ -43,21 +29,21 @@ $color-red: #ea362e;
   span {
     background-image: url('carousel-prev.png');
     cursor: pointer;
-    height: 100px;
+    font-size: 0;
+    height: 50px;
     left: 0;
     position: absolute;
     top: 0;
-    width: 50px;
+    width: 35px;
   }
 }
 
 .owl-next {
   background-color: $color-none;
   float: right;
-  height: 0;
   position: absolute;
+  right: 5px;
   top: 40%;
-  width: 0;
 
   &:focus {
     outline: none;
@@ -66,6 +52,7 @@ $color-red: #ea362e;
   span {
     background-image: url('carousel-next.png');
     cursor: pointer;
+    font-size: 0;
     height: 100px;
     position: absolute;
     right: -70px;
@@ -120,8 +107,8 @@ $color-red: #ea362e;
 }
 
 .top-container {
-  width: 940px;
   margin: 0 auto;
+  width: 940px;
 }
 
 .top-items-container {
