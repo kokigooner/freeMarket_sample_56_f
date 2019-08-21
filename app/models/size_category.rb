@@ -1,2 +1,3 @@
 class SizeCategory < ApplicationRecord
+  
 end

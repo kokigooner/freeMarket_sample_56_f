@@ -189,6 +189,7 @@ $overlaycolor: rgba(0, 0, 0, .8);
       color: #333;
       background: #f5f5f5;
       border: 1px solid #f5f5f5;
+      float: right;
     }
 
     &-like {
@@ -437,7 +438,7 @@ $overlaycolor: rgba(0, 0, 0, .8);
     font-weight: normal;
   }
 
-  &-result-numbe {
+  &-result-number {
     color: $black5;
     font-size: 12px;
     font-weight: normal;
@@ -549,3 +550,6 @@ $overlaycolor: rgba(0, 0, 0, .8);
   z-index: 1;
 }
 
+.default-container{
+  background-color: #f5f5f5;
+}
