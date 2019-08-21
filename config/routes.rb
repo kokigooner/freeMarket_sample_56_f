@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  resources :products do
+    resources :likes, only: [:create, :destroy]
+  end
+
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: "products#toppage"
 

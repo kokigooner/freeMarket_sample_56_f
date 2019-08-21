@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190818033515) do
+ActiveRecord::Schema.define(version: 20190818052146) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string  "postal_code",      null: false
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 20190818033515) do
     t.string  "delivery_date",                    null: false
     t.string  "delivery_way",                     null: false
     t.string  "order_status"
+    t.integer "likes_count"
     t.integer "first_category_id"
     t.integer "second_category_id"
     t.integer "third_category_id"

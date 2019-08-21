@@ -85,14 +85,15 @@
     -#     購入画面に進む
     -#     =link_to "購入画面に進む", myprofile_path(@product.id)
       -# .product-action-text{"data-toggle": "#{'open-app'}","data-url-scheme": "#{'mercari://'}","data-action": "#{'product/openDetail'}",'data-key': "#{'id=aaaaaaaa'}","data-paly-id": "#{"com.kouzoh.mercari"}","data-adjust-url": "http://app.adjust.io/xio2ii?campaign=iOS&adgroup=items.buy_button1aaaaaa"}
-      -#   アプリで購入　　←※スマホ用
+      -#   アプリで購入←※スマホ用
     .product-description.f14
       = simple_format "#{@product.description}", class:'product-description-inner'
     .product-button-container.clearfix
       .product-button-left
         %button.product-button.product-button-like{"name": "like!","data-toggle": "like","data-id": "#{"xxxxxxxx"}","data-ga":"#{"element"}","dara-ga-category": "#{'LIKE'}"}
           %i.icon-like-border
-            = image_tag "sample_heart.png",width: "15" ,hight: "15"
+            =render 'likes/like'
+            -# = image_tag "sample_heart.png",width: "15" ,hight: "15"
             %span
               良いね！
             %span.fade-in-down{"data-num":"#{"like"}"}

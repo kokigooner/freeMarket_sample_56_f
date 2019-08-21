@@ -5,4 +5,12 @@ class Product < ApplicationRecord
   belongs_to :first_category
   belongs_to :second_category
   belongs_to :third_category
+
+  has_many :likes, dependent: :destroy
+  # def like_user(user_id)
+  #  likes.find_by(user_id: user_id)
+  # end
+  def like_user(id)
+    likes.find_by(user_id: id)
+  end
 end
