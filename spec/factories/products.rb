@@ -6,11 +6,11 @@ FactoryBot.define do
     product_name{'テストプロダクト'}
     price{'1000'}
     description{'testtest'} 
-    first_category {FactoryBot.build(:second_category)}
-    second_category {FactoryBot.build(:second_category)}
-    third_category {FactoryBot.build(:third_category)}
-    brand {FactoryBot.build(:brand)}
-    size {FactoryBot.build(:size)}
+    # first_category {FactoryBot.build(:second_category)}
+    # second_category {FactoryBot.build(:second_category)}
+    # third_category {FactoryBot.build(:third_category)}
+    # brand {FactoryBot.build(:brand)}
+    # size {FactoryBot.build(:size)}
     condition{'悪い'}
     delivery_charge{"送料込み(出品者負担)"}
     delivery_date{"1~2日で発送"}
