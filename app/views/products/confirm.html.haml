@@ -1,75 +1,72 @@
-.products-confirm
-  %header.products-confirm__header
-    = link_to root_path do
-      = image_tag 'mercari_logo_horizontal.png',
-        class: 'products-confirm__header__logo'
-  %main.products-confirm__main
-    .products-confirm__main__container
-      %h2.products-confirm__main__head
-        購入内容の確認
-      .products-confirm__main__item
-        .products-confirm__main--inner
-          = image_tag 'products_confirm_img.jpg',
-            class: 'products-confirm__image'
-          %p.products-confirm__product-name
-            - if @product.product_name.length > 39
-              = @product.product_name.slice(0..38)
-              %span<>…
-            - else
-              = @product.product_name
-          %p.products-confirm__product-price
-            %span<>¥
+.confirm-header
+  = render partial: "users/signup-header"
+.confirm-main
+  .confirm-main__container
+    %h2.confirm-head
+      購入内容の確認
+    .confirm-content
+      .confirm-item
+        = image_tag @product.images.first.image,
+          class: 'confirm-item__image'
+        %p.confirm-item__name
+          - if @product.product_name.length > 39
+            = @product.product_name.slice(0..38)
+            %span<>…
+          - else
+            = @product.product_name
+        %p.confirm-item__price
+          %span<>¥
+          = @product.price.to_s(:delimited, delimiter: ',')
+          %span.confirm-item__shipment-fee
+            = @product.delivery_charge
+        .confirm-item__point
+          ポイントはありません
+        .confirm-item__total-price-label
+          支払い金額
+          %span.confirm-item__total-price<>
+            ¥
             = @product.price.to_s(:delimited, delimiter: ',')
-            %span.products-confirm__product-price--shipment-fee
-              = @product.delivery_charge
-          .products-confirm__users-point--none
-            ポイントはありません
-          .products-confirm__buy-price-label
-            支払い金額
-            %span.products-confirm__buy-price 
-              = @product.price.to_s(:delimited, delimiter: ',')
-          - if @address.blank? || @cards.blank?
-            .products-confirm__error-message
-              配送先と支払い方法の入力を完了してください。
+        - if @address.blank? || @cards.blank?
+          .confirm-item__error-message
+            配送先と支払い方法の入力を完了してください。
+          .confirm-purchase-btn.btn-disabled
+            購入する
+        - else
           = link_to("購入する",
             purchase_product_path,
             method: :post,
-            class: "products-confirm__purchase-btn")
-        .products-confirm__user-info
-          .products-confirm__main--inner
-            %h3.products-confirm__user-info__address--head
-              配送先
-            .products-confirm__user-info__address
-              %span<>〒
-              = @address.postal_code
-              %br
-              = user_address(@address)
-              %br
-              = user_name(@address)
-            .products-confirm__user-info__link
-              = link_to("変更する＞",
-                root_path,
-                class: "products-confirm__user-info__change")
-        .products-confirm__user-info.products-confirm__user-info--bottom
-          .products-confirm__main--inner
-            %h3.products-confirm__user-info__payment--head
-              支払い方法
-            .products-confirm__user-info__payment
-              - if @cards.blank?
-                %span /
-              - else
-                ************
-                %span<>
-                = @cards[0]["last4"]
-                %br
-                = sprintf("%02d", @cards[0]["exp_month"])
-                %span /
-                = @cards[0]["exp_year"] % 100
-                %br
-                = render "cards/cards",
-                  brand: @cards[0]["brand"]
-              .products-confirm__user-info__link
-                = link_to("変更する＞",
-                  root_path,
-                  class: "products-confirm__user-info__change")
-  = render partial: "users/signup-footer"
+            class: "confirm-purchase-btn")
+      .confirm-user
+        %h3.confirm-address__head
+          配送先
+        .confirm-address
+          %span<>〒
+          = @address.postal_code
+          %br
+          = user_address(@address)
+          %br
+          = user_name(@address)
+        .confirm-link
+          = link_to("変更する＞",
+            root_path)
+      .confirm-user.confirm-user--btm
+        %h3.confirm-address__head
+          支払い方法
+        .confirm-address
+          - if @cards.blank?
+            %span /
+          - else
+            ************
+            %span<>
+            = @cards[0]["last4"]
+            %br
+            = sprintf("%02d", @cards[0]["exp_month"])
+            %span /
+            = @cards[0]["exp_year"] % 100
+            %br
+            = render "cards/cards",
+              brand: @cards[0]["brand"]
+          .confirm-link
+            = link_to("変更する＞",
+              root_path)
+= render partial: "users/signup-footer"

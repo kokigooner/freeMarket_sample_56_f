@@ -83,7 +83,7 @@ $color-red: #ea362e;
     outline: none;
   }
 
-  &:active {
+  &.active {
     background: $color-black;
     opacity: 1;
   }
