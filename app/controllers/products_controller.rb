@@ -18,8 +18,9 @@ class ProductsController < ApplicationController
 
   def create
     @product = current_user.products.new(product_params)
+    logger.debug @product.errors.inspect
     if @product.save
-      redirect_to root_path
+      redirect_to root_path, notice: '記事が投稿されました'
     else
       render :new
     end
