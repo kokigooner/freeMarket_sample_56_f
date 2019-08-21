@@ -5,6 +5,7 @@ RSpec.describe '商品詳細ページテスト', type: :feature do
     let(:user_b) { FactoryBot.create(:user, nickname:'ユーザーB',email: 'b@example.com')}
     let!(:product_a) { FactoryBot.create(:product, product_name:'Aのプロダクト',user:user_a)}
     let!(:image_a) {FactoryBot.create(:image,product:product_a)}
+    
 
       before do 
       visit users_login_path
