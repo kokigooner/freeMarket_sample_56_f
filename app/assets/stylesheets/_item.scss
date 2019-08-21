@@ -494,9 +494,10 @@ $dc-color:#f5f5f5;
     }
   }
 }
-
-.search-price .input-default {
+.form-group.search-price{
+.input-default {
   width: 45%;
+}
 }
 
 .visible-large {

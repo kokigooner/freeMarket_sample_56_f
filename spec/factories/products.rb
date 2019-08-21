@@ -6,7 +6,7 @@ FactoryBot.define do
     product_name{'テストプロダクト'}
     price{'1000'}
     description{'testtest'} 
-    first_category {FactoryBot.build(:first_category) }
+    first_category {FactoryBot.build(:second_category)}
     second_category {FactoryBot.build(:second_category)}
     third_category {FactoryBot.build(:third_category)}
     brand {FactoryBot.build(:brand)}
@@ -18,6 +18,14 @@ FactoryBot.define do
     # order_id{"1"}
     # profit_id{"1"}
     order_status{"1"}
+    prefecture_id{"1"}
+
+
+    trait :skip_validate do
+      to_create {|instance| instance.save(validate: false)}
+
+   end
 
   end
+
 end

@@ -10,7 +10,7 @@
       = search_form_for(@q,
         url: products_search_path,
         class: "mpcheader-form") do |f|
-        = f.search_field :product_name_cont_all, class: "input-default"
+        = f.search_field :product_name_cont_all, class: "input-default" , placeholder: "何かお探しですか？"
         = f.button "", class: "fas fa-search fa-lg"
     %div.mpcheader-nav-box.clearfix
       %ul.mpcheader-nav
