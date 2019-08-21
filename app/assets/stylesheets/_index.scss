@@ -190,3 +190,27 @@ $color-red: #ea362e;
   text-align: right;
   width: 100%;
 }
+
+.tag-sold {
+  border-top: 65px solid transparent;
+  border-right: 65px solid transparent;
+  border-bottom: 65px solid $color-red;
+  border-left: 65px solid transparent;
+  bottom: 280px;
+  box-sizing: border-box;
+  height: 65px;
+  margin-bottom: -130px;
+  position: relative;
+  right: 65px;
+  width: 65px;
+  transform: rotate(-45deg);
+
+  &__text {
+    color: $color-white;
+    font-size: 23px;
+    position: relative;
+    right: 32px;
+    top: 35px;
+    z-index: 10;
+  }
+}

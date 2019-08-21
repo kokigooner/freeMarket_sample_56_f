@@ -1,3 +1,6 @@
+$color-gray: #888;
+$white: #fff;
+
 .visible-sp {
   display: none;
 }
@@ -147,4 +150,40 @@ nav ol, nav ul {
     position: relative;
     width: auto;
   }
+}
+
+.tag-sold-show {
+  border-top: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 80px solid $color-red;
+  border-left: 80px solid transparent;
+  bottom: 380px;
+  box-sizing: border-box;
+  height: 80px;
+  margin-bottom: -130px;
+  position: relative;
+  right: 80px;
+  width: 80px;
+  transform: rotate(-45deg);
+
+  &__text {
+    color: $color-white;
+    font-size: 26px;
+    position: relative;
+    right: 35px;
+    top: 45px;
+    z-index: 10;
+  }
+}
+
+.product-btn-sold {
+  background-color: $color-gray;
+  color: $white;
+  cursor: not-allowed;
+  font-size: 24px;
+  font-weight: 600;
+  height: 56px;
+  line-height: 56px;
+  margin: 16px 0;
+  text-align: center;
 }

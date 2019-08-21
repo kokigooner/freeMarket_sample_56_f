@@ -57,6 +57,7 @@ class ProductsController < ApplicationController
     )
 
     if charge["captured"]
+      @product.update(order_status: true, buyer_id: current_user.id)
       redirect_to root_path
     else
       render :confirm

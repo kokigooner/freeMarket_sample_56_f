@@ -3,13 +3,16 @@
   .top-items__photo
     = image_tag product.images.first.image,
       class: 'top-items__photo-img'
+  - if product.order_status == true
+    .tag-sold.tag-sold__bg
+      %span.tag-sold__text SOLD
   .top-items__body
     .top-items__name
       = product.product_name
     .top-items__info
       .top-items__price
         %span<>¥
-        = product.price
+        = product.price.to_s(:delimited)
       .top-items__likes
         %i.far.fa-heart
         %span 0
