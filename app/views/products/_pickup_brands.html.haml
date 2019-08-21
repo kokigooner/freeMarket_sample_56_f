@@ -1,0 +1,11 @@
+%h3.top-text-center
+  = link_to "#{brand} 新着アイテム",
+    root_path
+.top-container
+  .top-items-container
+    = render partial: "product",
+      collection: products
+  .top-link
+    = link_to "すべての商品を見る",
+      root_path,
+      class: "top-link__text"
