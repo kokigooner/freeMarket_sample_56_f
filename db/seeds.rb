@@ -1888,7 +1888,6 @@ ThirdCategory.create!(
   ]
 )
 
-
 以下はカテゴリ検索の実装用の商品データです
 (1..381).each do |n|
   third_category = ThirdCategory.find(n)
@@ -1912,10 +1911,10 @@ ThirdCategory.create!(
   )
 end
 
-(1..381).each do |n|
-  Image.create!(
-    product_id: n,
-    image: File.open("./app/assets/images/mercarisampleitem4.jpg")
-  )
-end
 
+# (1..381).each do |n|
+#   Image.create!(
+#     product_id: n,
+#     image: File.open("./app/assets/images/mercarisampleitem4.jpg")
+#   )
+# end
