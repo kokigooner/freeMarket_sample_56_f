@@ -1888,28 +1888,29 @@ ThirdCategory.create!(
   ]
 )
 
-# 以下はカテゴリ検索の実装用の商品データです
-# (1..381).each do |n|
-#   third_category = ThirdCategory.find(n)
-#   second_category_id = ThirdCategory.find(n)[:second_category_id]
-#   second_category = SecondCategory.find(second_category_id)
-#   first_category_id = SecondCategory.find(second_category_id)[:first_category_id]
-#   first_category = FirstCategory.find(first_category_id)
+以下はカテゴリ検索の実装用の商品データです
+(1..381).each do |n|
+  third_category = ThirdCategory.find(n)
+  second_category_id = ThirdCategory.find(n)[:second_category_id]
+  second_category = SecondCategory.find(second_category_id)
+  first_category_id = SecondCategory.find(second_category_id)[:first_category_id]
+  first_category = FirstCategory.find(first_category_id)
 
-#   Product.create!(
-#     first_category_id: first_category_id,
-#     second_category_id: second_category_id,
-#     third_category_id: n,
-#     user_id: 1,
-#     product_name: "大カテゴリ#{first_category.first_category}:中カテゴリ#{second_category.second_category}:小カテゴリ#{third_category.third_category}の商品",
-#     price: 3000,
-#     description: "サンプル商品です",
-#     condition: "傷や汚れあり",
-#     delivery_charge: "送料込み(出品者負担)",
-#     delivery_date: "1~2日で発送",
-#     delivery_way: "未定"
-#   )
-# end
+  Product.create!(
+    first_category_id: first_category_id,
+    second_category_id: second_category_id,
+    third_category_id: n,
+    user_id: 1,
+    product_name: "大カテゴリ#{first_category.first_category}:中カテゴリ#{second_category.second_category}:小カテゴリ#{third_category.third_category}の商品",
+    price: 3000,
+    description: "サンプル商品です",
+    condition: "傷や汚れあり",
+    delivery_charge: "送料込み(出品者負担)",
+    delivery_date: "1~2日で発送",
+    delivery_way: "未定"
+  )
+end
+
 
 # (1..381).each do |n|
 #   Image.create!(

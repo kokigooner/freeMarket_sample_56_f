@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :second_category do
-    second_category { "MyString" }
-    first_category_id { "" }
+    second_category { "トップス" }
+    first_category_id { "1" }
   end
 end
