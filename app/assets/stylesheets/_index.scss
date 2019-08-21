@@ -1,0 +1,192 @@
+$color-none: rgba(255, 255, 255, 0);
+$color-white: #fff;
+$color-black: #333;
+$black-shadow: rgba(255, 255, 255, 0);
+$color-red: #ea362e;
+
+.slide-banner.owl-carousel.owl-loaded.owl-drag {
+  width: 100%;
+}
+
+.owl-stage-outer {
+  width: 100%;
+}
+
+.owl-nav.disabled {
+  color: transparent;
+}
+
+.owl-prev {
+  background-color: $color-none;
+  left: 1px;
+  position: absolute;
+  top: 40%;
+
+  &:focus {
+    outline: none;
+  }
+
+  span {
+    background-image: url('carousel-prev.png');
+    cursor: pointer;
+    font-size: 0;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 35px;
+  }
+}
+
+.owl-next {
+  background-color: $color-none;
+  float: right;
+  position: absolute;
+  right: 5px;
+  top: 40%;
+
+  &:focus {
+    outline: none;
+  }
+
+  span {
+    background-image: url('carousel-next.png');
+    cursor: pointer;
+    font-size: 0;
+    height: 100px;
+    position: absolute;
+    right: -70px;
+    top: 0;
+    width: 100px;
+  }
+}
+
+.owl-dots {
+  background-color: $color-none;
+  bottom: 10px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.owl-dot {
+  background: $color-white;
+  border-radius: 50%;
+  height: 12px;
+  margin-right: 15px;
+  min-height: 12px;
+  opacity: .4;
+  position: relative;
+  width: 12px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background: $color-black;
+    opacity: 1;
+  }
+}
+
+.pickup-container {
+  margin: 40px 0;
+  width: 100%;
+}
+
+.pickup-head {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.top-text-center {
+  font-size: 22px;
+  margin: 26px 11px;
+  text-align: center;
+}
+
+.top-container {
+  margin: 0 auto;
+  width: 940px;
+}
+
+.top-items-container {
+  color: $color-black;
+  display: flex;
+  height: 330px;
+  justify-content: space-between;
+  width: 100%;
+
+  a {
+    color: $color-black;
+  }
+}
+
+.top-items {
+  background-color: $white;
+  box-sizing: border-box;
+  height: 323px;
+  width: 213px;
+
+  &__photo-img {
+    height: 213px;
+    width: 213px;
+  }
+
+  &__body {
+    padding: 16px;
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 400;
+    height: 3em;
+    line-height: 1.5;
+    overflow: hidden;
+    position: relative;
+    white-space: normal;
+    word-break: break-word;
+
+    &::after {
+      background: linear-gradient(
+        to right,
+        $black-shadow,
+        $white 72%
+        );
+      bottom: 0;
+      content: '';
+      display: block;
+      height: 1.5em;
+      position: absolute;
+      right: 0;
+      width: 50%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0 0;
+  }
+
+  &__price {
+    display: inline;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  &__likes {
+    font-size: 16px;
+
+    i {
+      color: $gray;
+    }
+  }
+}
+
+.top-link {
+  padding: 20px 0 30px;
+  text-align: right;
+  width: 100%;
+}

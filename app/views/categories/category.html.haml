@@ -3,7 +3,8 @@
 
 .result-container
   %h1.result-head
-    カテゴリーの商品一覧
+    = @category_name
+    %span<>の商品一覧
   .category-items
     = render partial: "product",
       collection: @products

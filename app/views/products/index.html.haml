@@ -1,0 +1,34 @@
+= render 'shared/header'
+.top-page-banner
+  .owl-example.owl-stage-outer.owl-loaded.owl-drag
+    .box
+      = image_tag "mercari_index.png",
+        height: "390px",
+        width: "1440px"
+    .boy
+      = image_tag "banner-camp.jpg"
+    .cat
+      = image_tag "banner-summer-fes.jpg"
+.pickup-container
+  %h2.pickup-head
+    ピックアップカテゴリー
+  = render partial: "pickup_categories",
+    locals: { category: @categories[0], products: @products_ladies }
+  = render partial: "pickup_categories",
+    locals: { category: @categories[1], products: @products_mens }
+  = render partial: "pickup_categories",
+    locals: { category: @categories[2], products: @products_kids }
+  = render partial: "pickup_categories",
+    locals: { category: @categories[6], products: @products_cosmetics }
+  %h2.pickup-head
+    ピックアップブランド
+  = render partial: "pickup_brands",
+    locals: { brand: "シャネル", products: @products }
+  = render partial: "pickup_brands",
+    locals: { brand: "ルイヴィトン", products: @products }
+  = render partial: "pickup_brands",
+    locals: { brand: "シュプリーム", products: @products }
+  = render partial: "pickup_brands",
+    locals: { brand: "ナイキ", products: @products }
+= render 'shared/footer'
+= render 'shared/selling_btn'
