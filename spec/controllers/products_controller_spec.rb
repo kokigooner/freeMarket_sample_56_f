@@ -38,4 +38,15 @@ RSpec.describe ProductsController, type: :controller do
 
 
 
+    context 'when product searched' do
+
+        specify do
+          @params = Hash.new
+          @params[:q] = Hash.new
+          @params[:q]['product_name_cont_all'] = 'あああ'
+          get :search, @params
+          
+        end
+      end
+
 end

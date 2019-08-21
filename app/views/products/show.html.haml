@@ -10,7 +10,7 @@
             .eagle-stage{ "style":"left: 0px width: 900px" }
               .eagle-product.active{ "style":"width: 300px" }
                 .eagle-product-inner.is-higher-height
-                  = image_tag "#{@product.images.first[:image]}", class: 'eagle-lazy',width: "300" ,hight: "300"
+                  = image_tag "#{@product.images.first.image}", class: 'eagle-lazy',width: "300" ,hight: "300"
           .eagle-dots
             - @product.images.each do |thumbnail|
               .eagle-dot
@@ -63,7 +63,7 @@
           %tr
             %th 配送元地域
             %td 
-              = link_to "??????","/"
+              =  Prefecture.find(@product.prefecture_id)[:name]
           %tr
             %th 発送日の目安
             %td
