@@ -1,6 +1,6 @@
-$shadow-color:rgba(0, 0, 0, 0.16);
+$shadow-color:rgba(0, 0, 0, .16);
 
-.shadow{
+.shadow {
   box-shadow: 0 3px 3px 0 $shadow-color;
   height: 1px;
 }
