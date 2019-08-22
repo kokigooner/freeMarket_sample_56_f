@@ -83,6 +83,7 @@
     }
 
     .input-default {
+      
       font-weight: normal;
     }
 
@@ -94,9 +95,35 @@
     .checkbox-default {
       display: inline-block;
       font-weight: normal;
+      margin: 16px 0 0;
       vertical-align: middle;
       width: 48%;
       word-break: break-word;
+      input {
+        display: none;
+      }
+      .fa-check-square {
+        position: absolute;
+        height: 18px;
+        border-radius: 2px;
+        background: #fff;
+        border: 1px solid #ccc;
+        font-size: 10px;
+        line-height: 20px;
+        text-align: center;
+        color: #fff;
+        margin: 0 4px 0 0;
+        vertical-align: middle;
+        width: 18px;
+      }
+      label {
+        margin: 0;
+        position: relative;
+        padding: 0 0 0 28px;
+        font-size: 14px;
+        font-weight: 400;
+        vertical-align: middle;
+      }
     }
   }
 }
