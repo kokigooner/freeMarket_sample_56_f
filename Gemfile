@@ -78,6 +78,7 @@ gem 'active_hash'
 gem 'payjp'
 gem 'ransack'
 gem 'kaminari'
+gem "recaptcha"
 
 group :production do
   gem 'unicorn', '5.4.1'

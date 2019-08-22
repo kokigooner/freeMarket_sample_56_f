@@ -29,6 +29,11 @@ ja:
         birth_month: 誕生月
         birth_day: 誕生日
     errors:
+      models:
+        user:
+          attributes:
+            base:
+              unverified: "選択してください"
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
         restrict_dependent_destroy:

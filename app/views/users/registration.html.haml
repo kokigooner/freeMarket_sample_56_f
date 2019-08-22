@@ -2,7 +2,7 @@
   %header.registration-header
     %h1
       = link_to(root_path, class: "registration-header__logo") do
-        = image_tag 'mercari_logo_horizontal',
+        = image_tag 'mercari_logo_horizontal.png',
           class: 'registration-header__logo__img'
     %nav.registration-header__progress-bar
       %ol
@@ -33,7 +33,7 @@
     .registration-main__container
       %h2.registration-main__text 会員情報入力
       = form_for @user,
-        url: users_signup_confirmation_path,
+        url: users_signup_confirm_path,
         method: :post,
         html: { class: "registration__form" } do |f|
         .registration__form__content
@@ -42,8 +42,7 @@
             %span.registration__form--require 必須
             = f.text_field :nickname,
               class: "registration__form__input",
-              placeholder: "例) メルカリ太郎",
-              value: @nickname
+              placeholder: "例) メルカリ太郎"
             = render 'error_messages',
               errors: @user.errors.full_messages_for(:nickname)
           .registration__form__group
@@ -51,8 +50,7 @@
             %span.registration__form--require 必須
             = f.email_field :email,
               class: "registration__form__input",
-              placeholder: "PC・携帯どちらでも可",
-              value: @email
+              placeholder: "PC・携帯どちらでも可"
             = render 'error_messages',
               errors: @user.errors.full_messages_for(:email)
           .registration__form__group
@@ -128,7 +126,10 @@
                   errors: @user.errors.full_messages_for(:birth_day)
             %p.registration__form__text
               ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
-          = image_tag 'recaptcha.jpeg', class: 'registration__form__recaptcha-icon'
+          .recaptcha-box
+            = recaptcha_tags
+            = render 'error_messages',
+                errors: @user.errors.full_messages_for(:base)
           %p.registration__form__text.registration__form__text--center
             「次へ進む」のボタンを押すことにより、
             %span<>
