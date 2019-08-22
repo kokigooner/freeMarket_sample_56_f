@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20190822041124) do
-
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string  "postal_code",      null: false
@@ -85,8 +83,8 @@ ActiveRecord::Schema.define(version: 20190822041124) do
     t.integer "brand_id"
     t.integer "size_id"
     t.integer "prefecture_id",                    null: false
-    t.integer "likes_count"
     t.integer "buyer_id"
+    t.integer "likes_count"
     t.index ["brand_id"], name: "index_products_on_brand_id", using: :btree
     t.index ["first_category_id"], name: "index_products_on_first_category_id", using: :btree
     t.index ["second_category_id"], name: "index_products_on_second_category_id", using: :btree
