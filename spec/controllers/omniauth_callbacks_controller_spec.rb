@@ -1,53 +1,42 @@
-# 使用する可能性がるので一応コメントアウトで残しておきます
-# require 'rails_helper'
+require "rails_helper"
 
-#   before do 
-#     request.env["devise.mapping"] = Devise.mappings[:user] # Deviseを使う場合
-#     request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:facebook] 
-#   end
+feature "omniauthfeature" do
 
-#   def failure
-#     redirect_to root_path if current_user
-#   end
+  feature "facebook連携でサインアップする" do
+    background do
+      OmniAuth.config.mock_auth[:facebook] = nil
+      Rails.application.env_config['omniauth.auth'] = facebook_mock
+    end
 
+    scenario "facebookで登録するを押すと登録フォームに遷移する" do
+      visit('/users/new')
+      find(".signup__form__btn--facebook").click
+      expect(current_path).to eq users_signup_registration_path
+    end
 
-#   RSpec.describe OmniauthCallbacksController, type: :controller do
-#     before { request.env["omniauth.auth"] = facebook_mock }
-#     subject { get :create, params: { provider: "facebook" } }
-    
-#     context "provider, uid, email, nameがある場合" do
-#       it "トップページにリダイレクト" do
-#         expect { subject }.to change { User.count }.from(0).to(1)
-#         expect { subject }.to change { Sns_credential.count }.from(0).to(1)
-#         expect(subject).to redirect_to root_path
-#       end
-#     end
+    scenario "DBに情報がない場合Facebookでログインを押しても登録フォームに遷移する" do
+      visit('/users/login')
+      click_link 'Facebookでログイン'
+      expect(current_path).to eq users_signup_registration_path
+    end
+  end
 
-#     context "provider, uid, email, nameがない場合" do
-#       it "登録画面へリダイレクト" do
-#         request.env["omniauth.auth"]["info"]["email"] = nil
-#         request.env['omniauth.auth']["uid"] = nil
-#         request.env['omniauth.auth']["provider"] = nil
-#         request.env['omniauth.auth']["info"]["name"] = nil
-#         expect(subject).to redirects_to users_signup_registration_path
-#       end
-#     end
-#   end
+  feature "google連携でサインアップする" do
+    background do
+      OmniAuth.config.mock_auth[:google] = nil
+      Rails.application.env_config['omniauth.auth'] = google_mock
+    end
 
-#   RSpec.describe "omniauth", type: :request do
+    scenario "googleで登録するを押すと登録フォームに遷移する" do
+      visit('/users/new')
+      find(".signup__form__btn--google").click
+      expect(current_path).to eq users_signup_registration_path
+    end
 
-#     describe "GET #failure" do
-#       let(:user) { create(:user) }
-#       before { request.env["omniauth.auth"] = facebook_invalid_mock }
-#       subject { get :create, params: { provider: "facebook" }
-
-#       it "current_userが存在する" do
-#         sigin_in user
-#         expect(subject).to redirect_to user_setting_social_profiles_path
-#       end
-#       it "current_userが存在しない" do
-#         expect(subject).to render_template :failure
-#       end
-#     end
-#   end
-# end
+    scenario "DBに情報がない場合Googleでログインを押しても登録フォームに遷移する" do
+      visit('/users/login')
+      click_link 'Googleでログイン'
+      expect(current_path).to eq users_signup_registration_path
+    end
+  end
+end
