@@ -7,7 +7,7 @@
         %a{href: "/", class: "signup__footer__nav__link"} メルカリ利用規約
       %li
         %a{href: "/", class: "signup__footer__nav__link"} 特定商取引に関する表記
-    %a(href="/")
+    = link_to root_path do
       = image_tag 'mercari_logo_vertical', class: 'signup__footer__nav__logo'
     %p.signup__footer__nav__text
       © 2019 Mercari

@@ -7,13 +7,13 @@ Rails.application.routes.draw do
   match 'secondcategory', to: 'products#secondcategory', via: [:get, :post]
   match 'thirdcategory', to: 'products#thirdcategory', via: [:get, :post]
   get '/products/search', to: 'products#search'
-  get "/products/confirm", to: "products#confirm"
   get "/products/sell", to: "products#sell"
 
   resources :products, only: [:index, :show, :create] do
     member do
       get 'confirm'
       post 'purchase'
+      get 'complete'
     end
   end
 

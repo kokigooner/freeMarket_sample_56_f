@@ -20,7 +20,12 @@
           %section.search-box.search-id
             = link_to product_path(pro) do
               %figure.search-box-photo
-                = image_tag "#{pro.images.first.image}",width: "160" ,hight: "160"
+                = image_tag "#{pro.images.first.image}",
+                  width: "160",
+                  height: "160"
+                - if pro.order_status == true
+                  .tag-sold.tag-sold--search
+                    %span.tag-sold__text SOLD
               .search-box-body
                 %h3.search-box-name.font-2
                   = pro.product_name
