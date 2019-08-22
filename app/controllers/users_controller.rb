@@ -18,9 +18,11 @@ class UsersController < ApplicationController
 
   def confirmation
     @user = User.new(user_params)
-    if @user.valid?
+    if @user.valid? && verify_recaptcha(model: @user)
       session[:user_params] = user_params
     else
+      @user.errors.add(:base, :unverified) unless verify_recaptcha
+      binding.pry
       render :registration
     end
   end
@@ -55,9 +57,6 @@ class UsersController < ApplicationController
   end
 
   def profile
-  end
-
-  def sell
   end
 
   def mypage

@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   match 'secondcategory', to: 'products#secondcategory', via: [:get, :post]
   match 'thirdcategory', to: 'products#thirdcategory', via: [:get, :post]
   get '/products/search', to: 'products#search'
-  get "/products/sell", to: "products#sell"
 
   resources :products, only: [:index, :show, :create] do
     member do
@@ -49,8 +48,5 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:new]
-
-  get "/users/sell", to: "users#sell"
   get "/users/login", to: "users#login"
-  get '/users/sign_out', to: 'devise/sessions#destroy'
 end

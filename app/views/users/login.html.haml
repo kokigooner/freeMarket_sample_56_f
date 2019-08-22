@@ -28,8 +28,12 @@
         = f.password_field :password,
           placeholder: "パスワード",
           class: "login__form__input"
-        = image_tag 'recaptcha.jpeg',
-          class: 'login__form__recaptcha-img'
+        .recaptcha-box
+          = recaptcha_tags
+          - if @user.errors[:base].present?
+            .recaptcha-box--unverified
+          = render 'error_messages',
+            errors: @user.errors.full_messages_for(:base)
         = f.submit class: "login__form__submit-btn",
           value: "ログイン"
       = link_to 'パスワードをお忘れの方',
