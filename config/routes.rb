@@ -3,11 +3,9 @@ Rails.application.routes.draw do
 
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
-  root to: "products#toppage"
+  root to: "products#index"
 
-  get '/products', to: 'products#toppage'
   get "/products/sell", to: "products#new"
-  post "/products" => "products#create"
 
   match 'secondcategory', to: 'products#secondcategory', via: [:get, :post]
   match 'thirdcategory', to: 'products#thirdcategory', via: [:get, :post]
@@ -15,7 +13,7 @@ Rails.application.routes.draw do
   get "/products/confirm", to: "products#confirm"
   get "/products/sell", to: "products#sell"
 
-  resources :products, only: [:show] do
+  resources :products, only: [:index, :show, :create] do
     member do
       get 'confirm'
       post 'purchase'

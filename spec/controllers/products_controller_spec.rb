@@ -2,6 +2,19 @@ require 'rails_helper'
 
 RSpec.describe ProductsController, type: :controller do
 
+  describe "Product#show" do
+    let!(:product) { FactoryBot.create :product }
+    it "create product" do
+      expect(product).to be_valid
+    end
+
+    it "visit show" do
+      get :show, params: {  id: product }
+    end
+  end
+
+
+
   describe 'DELETE #destroy' do
     let!(:user) { FactoryBot.create :user }
     let!(:product) { FactoryBot.create :product }
@@ -22,4 +35,18 @@ RSpec.describe ProductsController, type: :controller do
       expect(response).to redirect_to(root_path)
     end
   end
+
+
+
+    context 'when product searched' do
+
+        specify do
+          @params = Hash.new
+          @params[:q] = Hash.new
+          @params[:q]['product_name_cont_all'] = 'あああ'
+          get :search, @params
+          
+        end
+      end
+
 end

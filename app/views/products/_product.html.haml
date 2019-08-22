@@ -1,0 +1,15 @@
+= link_to(product_path(product),
+  class: "top-items") do
+  .top-items__photo
+    = image_tag product.images.first.image,
+      class: 'top-items__photo-img'
+  .top-items__body
+    .top-items__name
+      = product.product_name
+    .top-items__info
+      .top-items__price
+        %span<>¥
+        = product.price
+      .top-items__likes
+        %i.far.fa-heart
+        %span 0

@@ -4,6 +4,7 @@
   &-single{
     &-container {
       width: 700px;
+
       &-content {
         max-width: 320px;
         margin: 0 auto;
@@ -15,6 +16,7 @@
     &-inner {
       border-top: 1px solid #f5f5f5;
       padding: 64px;
+      background-color: $white;
       p {
         font-size: 14px;
         margin: 8px 0 0;
@@ -86,6 +88,7 @@
 
     .select-default {
       font-weight: normal;
+      background-color: $white;
     }
 
     .checkbox-default {
