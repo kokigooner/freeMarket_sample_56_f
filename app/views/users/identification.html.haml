@@ -38,7 +38,7 @@
               都道府県
             %span.form-arbitrary
               任意
-            %div.select-wrap
+            %div
               = f.collection_select :prefecture_id, Prefecture.all, :id, :name , { include_blank: true, selected: current_user.address.prefecture_id}, { class: 'select-default' }
           %div.form-group
             %label 
