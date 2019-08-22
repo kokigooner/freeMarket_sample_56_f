@@ -19,6 +19,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :products, only: [:show] do
+    resources :likes, only: [:create, :destroy]
+  end
+
   resources :categories, only: [] do
     member do
       get 'first'
@@ -26,6 +30,8 @@ Rails.application.routes.draw do
       get 'third'
     end
   end
+
+
   
   get '/users/mypage/profile', to: 'users#profile'
   get "/users/mypage", to: "users#mypage"

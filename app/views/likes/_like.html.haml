@@ -1,0 +1,19 @@
+- if user_signed_in?
+  -if @product.likes_user(current_user.id)
+    = link_to product_like_path(product_id: @product.id, id: @product.likes.ids), method: :delete, id: "like-buttons", remote: true do
+      %span.fade-in-down
+        .fas.fa-heart
+        いいね！
+        = @product.likes_count
+  -else
+    = link_to product_likes_path(@product.id), method: :post, id: "like-buttons", remote: true do
+      %span.fade-in-down
+        .far.fa-heart
+        いいね！
+        = @product.likes_count
+- else
+  %i.far.fa-heart.product-heart-icon
+  %span
+    良いね！
+  %span.fade-in-down
+    = @product.likes_count
