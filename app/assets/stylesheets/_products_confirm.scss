@@ -4,6 +4,9 @@ $color-light-gray: #ccc;
 $color-red: #ea352d;
 $color-gray: #888;
 $color-bg-yellow: #fff6cf;
+$color-pink: #ef5185;
+$color-orange: #fbaa34;
+$color-blue: #69b5d8;
 
 .confirm-main {
   background-color: $color-bg-gray;
@@ -221,16 +224,14 @@ $color-bg-yellow: #fff6cf;
   padding: 10px 0 0;
 
   &-wink {
-    color: #ef5185;
+    color: $color-pink;
   }
 
   &-meh {
-    color: #fbaa34;
+    color: $color-orange;
   }
 
   &-frown {
-    color: #69b5d8;
+    color: $color-blue;
   }
 }
-
-

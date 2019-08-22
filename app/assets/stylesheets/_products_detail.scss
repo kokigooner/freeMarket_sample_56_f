@@ -1,4 +1,6 @@
 $color-gray: #888;
+$color-pink: #f28fb1;
+$color-purple: #be4dda;
 $white: #fff;
 
 .visible-sp {
@@ -163,8 +165,8 @@ nav ol, nav ul {
   margin-bottom: -130px;
   position: relative;
   right: 80px;
-  width: 80px;
   transform: rotate(-45deg);
+  width: 80px;
 
   &__text {
     color: $color-white;
@@ -189,9 +191,9 @@ nav ol, nav ul {
 }
 
 .product-heart-icon {
-  color: #f28fb1;
+  color: $color-pink;
 }
 
 .product-flag-icon {
-  color: #be4dda;
+  color: $color-purple;
 }
