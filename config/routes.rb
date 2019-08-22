@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  devise_for :users, controllers: {
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    sessions: 'users/sessions'
+  }
   root to: "products#index"
 
   get "/products/sell", to: "products#new"
@@ -34,7 +37,8 @@ Rails.application.routes.draw do
   get "/mypage/logout", to: "users#logout"
   
   get "/users/signup/registration", to: "users#registration"
-  post "/users/signup/confirmation", to: "users#confirmation"
+  post "users/signup/confirm", to: "users#confirm_user" 
+  get "/users/signup/confirmation", to: "users#confirmation"
   get "/users/signup/authentication", to: "users#authentication"
   get "/users/signup/address", to: "users#address"
   post "/users/signup/payment", to: "users#payment"
@@ -48,5 +52,4 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:new]
-  get "/users/login", to: "users#login"
 end

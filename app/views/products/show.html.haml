@@ -93,7 +93,7 @@
             class: "product-buy-btn"
       - else 
         = link_to "購入画面に進む",
-          users_login_path,
+          new_user_session_path,
           class: "product-buy-btn"
     .product-description.f14
       = simple_format "#{@product.description}",
