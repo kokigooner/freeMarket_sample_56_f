@@ -1,8 +1,3 @@
--# .projects
--#   =render @projects
--# .like-link
--#   = render partial: 'likes/like_links', locals:{ product: product }
-
 - if user_signed_in?
   - if @product.like_user(current_user.id)
     = button_to product_like_path(product_id: @product.id, id: @product.likes.ids), method: :delete, id: "like-buttons", remote: true do
@@ -11,7 +6,6 @@
         = @product.likes_count
   - else
     = button_to product_likes_path(@product.id), method: :post, id: "like-buttons", remote: true do
-      -# = button_to product_likes_path(@product) do
       = image_tag "whiteheart.png"
       %span
         = @product.likes_count
@@ -19,12 +13,3 @@
   = image_tag "whiteheart.png"
   %span
   = @product.like_count
-
--# .like_button_on
--#   = link_to "いいね済み", product_like_path(product_id: @product.id), {method: "post", remote: true}do
--#     = @like_count
--#     = image_tag "redheart.png"
--# .like_button
--#   = link_to "いいね", product_likes_path(product_id: @product.id)), {method: "post", remote: true}do
--#   = @like_count
--#   = image_tag "whiteheart.png"
