@@ -42,6 +42,7 @@ class User < ApplicationRecord
   validates :birth_day, presence: true
   has_many :sns_credentials, dependent: :destroy
   has_many :products
+  has_many :likes
 
   def self.find_for_oauth(auth)
     sns = SnsCredential.where(uid: auth.uid, provider: auth.provider).first

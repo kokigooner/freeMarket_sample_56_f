@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+
+
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: "products#index"
 
@@ -17,6 +20,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :products, only: [:show] do
+    resources :likes, only: [:create, :destroy]
+  end
+
   resources :categories, only: [] do
     member do
       get 'first'
@@ -24,6 +31,8 @@ Rails.application.routes.draw do
       get 'third'
     end
   end
+
+
   
   get '/users/mypage/profile', to: 'users#profile'
   get "/users/mypage", to: "users#mypage"
@@ -53,4 +62,6 @@ Rails.application.routes.draw do
   get "/users/sell", to: "users#sell"
   get "/users/login", to: "users#login"
   get '/users/sign_out', to: 'devise/sessions#destroy'
+
+
 end

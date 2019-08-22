@@ -32,6 +32,7 @@ class ProductsController < ApplicationController
     @next = Product.where('id > ?',"#{params[:id]}").first
     @previous = Product.where('id < ?',"#{params[:id]}").last
     @product_user = @product.user
+    
   end
 
   def confirm
