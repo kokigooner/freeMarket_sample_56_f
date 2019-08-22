@@ -33,6 +33,7 @@ class ProductsController < ApplicationController
     @next = Product.where('id > ?',"#{params[:id]}").first
     @previous = Product.where('id < ?',"#{params[:id]}").last
     @product_user = @product.user
+    @product_category = @product.third_category
   end
 
   def confirm
