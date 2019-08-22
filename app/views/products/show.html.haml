@@ -1,5 +1,7 @@
 .default-container 
   = render 'shared/header'
+  .shadow
+    = render 'shared/shadow'
   %section.product-box-container.large-single-container
     %h1.product-name
       = @product.product_name
@@ -176,9 +178,9 @@
     %section.products-box-container.clearfix.related-product-column
       %h2.products-box-head
         %a
-          = "#{@product_user.nickname}"+"のその他の出品"
+          = "#{@product_category.third_category}"+"のその他の出品"
       .products-box-content.clearfix
-      - @product_user.products.last(6).each.with_index do |pro,i|
+      - @product_category.products.last(6).each.with_index do |pro,i|
         %section.products-box{"class":"products-id#{i+1}"}
           = link_to product_path(pro) do
             %figure.products-box-photo

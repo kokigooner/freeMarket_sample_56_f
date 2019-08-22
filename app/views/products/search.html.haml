@@ -1,5 +1,7 @@
 .default-container
   = render  'shared/header'
+  .shadow
+  = render 'shared/shadow'
   %main.large-container
     .large-content
       %section.product-item-container.clearfix
@@ -45,9 +47,9 @@
           %option
             並べ替え
           %option
-            安いじゅん
+            安い順
           %option
-            高いじゅん
+            高い順
           %option
             old
           %option
