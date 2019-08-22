@@ -6,6 +6,12 @@ require File.expand_path('../../config/environment', __FILE__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 require 'capybara/rspec'
+require 'devise'
+Dir[Rails.root.join('spec/support/omniauth_macros.rb')].each { |f| require f }
+Dir[Rails.root.join('spec/support/omniauth_macros.rb')].each { |f| require f }
+ActiveRecord::Migration.maintain_test_schema!
+
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -32,9 +38,25 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 
-OmniAuth.config.test_mode = true
-
 RSpec.configure do |config|
+  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.use_transactional_fixtures = true
+  config.infer_spec_type_from_file_location!
+  config.filter_rails_from_backtrace!
+  OmniAuth.config.test_mode = true
+  config.include OmniauthMacros
+  # def facebook_mock
+  #   OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new(
+  #     provider: 'facebook',
+  #     uid: 1234567890,
+  #     info: {
+  #       name {"メルカリ" }
+  #       email { "aaaa@example.com" }
+  #     }
+  #   )
+  # end
+  
+  # OmniAuth.config.test_mode = true
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   

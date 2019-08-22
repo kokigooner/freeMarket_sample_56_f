@@ -131,3 +131,27 @@ $red: #ea362e;
     line-height: 44px;
   }
 }
+
+.tag-sold-category {
+  border-bottom: 65px solid $color-red;
+  border-left: 65px solid transparent;
+  border-right: 65px solid transparent;
+  border-top: 65px solid transparent;
+  bottom: 255px;
+  box-sizing: border-box;
+  height: 65px;
+  margin-bottom: -130px;
+  position: relative;
+  right: 65px;
+  transform: rotate(-45deg);
+  width: 65px;
+
+  &__text {
+    color: $color-white;
+    font-size: 23px;
+    position: relative;
+    right: 32px;
+    top: 35px;
+    z-index: 10;
+  }
+}

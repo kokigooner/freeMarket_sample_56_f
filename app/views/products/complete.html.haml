@@ -1,0 +1,71 @@
+= render partial: "users/signup-header"
+.confirm-main
+  .confirm-main__container
+    .complete-alert
+      .complete-alert-head
+        %i.far.fa-clock.fa-2x
+        %span 発送をお待ちください
+      .complete-alert-text
+        出品者からの発送通知をお待ちください
+    %h2.complete-head
+      購入内容の確認
+    .confirm-content
+      .complete-item
+        = image_tag @product.images.first.image,
+          class: 'complete-item__image'
+        .complete-item__text
+          = @product.product_name
+      .complete-text-center
+        %span.complete-price-text<>
+          ¥
+          = @product.price.to_s(:delimited, delimiter: ',')
+        %span.confirm-item__shipment-fee
+          = @product.delivery_charge
+      .complete-text-left
+        %h3.confirm-address__head
+          配送先
+        .confirm-address
+          %span<>〒
+          = current_user.address.postal_code
+          %br
+          = user_address(current_user.address)
+          %br
+          = user_name(current_user.address)
+      .complete-text-left
+        %h3.confirm-address__head
+          支払い方法
+        .confirm-address
+          - if @cards.blank?
+            %span /
+          - else
+            ************
+            %span<>
+            = @cards[0]["last4"]
+            %br
+            = sprintf("%02d", @cards[0]["exp_month"])
+            %span /
+            = @cards[0]["exp_year"] % 100
+            %br
+            = render "cards/cards",
+              brand: @cards[0]["brand"]
+      .complete-text-center
+        .complete-text-bold
+          発送通知後の流れ
+          .complete-icons
+            %i.far.fa-star.fa-xs
+            %i.far.fa-star.fa-sm
+            %i.fas.fa-smile-wink.complete-icons-wink
+            %i.fas.fa-meh.complete-icons-meh
+            %i.fas.fa-frown-open.complete-icons-frown
+            %i.far.fa-star.fa-sm
+            %i.far.fa-star.fa-xs
+        .complete-text
+          商品を受け取ったら出品者の評価をしましょう。
+          %br
+          購入代金が出品者に振り込まれます。
+          %br
+          評価後に取引は完了です。
+        = link_to("マイページへ戻る",
+          users_mypage_path,
+          class: "complete-link-text")
+= render partial: "users/signup-footer"

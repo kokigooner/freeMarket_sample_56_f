@@ -83,7 +83,7 @@ $color-red: #ea362e;
     outline: none;
   }
 
-  &:active {
+  &.active {
     background: $color-black;
     opacity: 1;
   }
@@ -189,4 +189,32 @@ $color-red: #ea362e;
   padding: 20px 0 30px;
   text-align: right;
   width: 100%;
+}
+
+.tag-sold {
+  border-bottom: 65px solid $color-red;
+  border-left: 65px solid transparent;
+  border-right: 65px solid transparent;
+  border-top: 65px solid transparent;
+  bottom: 280px;
+  box-sizing: border-box;
+  height: 65px;
+  margin-bottom: -130px;
+  position: relative;
+  right: 65px;
+  transform: rotate(-45deg);
+  width: 65px;
+
+  &__text {
+    color: $color-white;
+    font-size: 23px;
+    position: relative;
+    right: 32px;
+    top: 35px;
+    z-index: 10;
+  }
+
+  &--search {
+    bottom: 230px;
+  }
 }

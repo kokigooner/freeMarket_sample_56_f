@@ -1,5 +1,7 @@
 .default-container
   = render  'shared/header'
+  .shadow
+  = render 'shared/shadow'
   %main.large-container
     .large-content
       %section.product-item-container.clearfix
@@ -20,7 +22,12 @@
           %section.search-box.search-id
             = link_to product_path(pro) do
               %figure.search-box-photo
-                = image_tag "#{pro.images.first.image}",width: "160" ,hight: "160"
+                = image_tag "#{pro.images.first.image}",
+                  width: "160",
+                  height: "160"
+                - if pro.order_status == true
+                  .tag-sold.tag-sold--search
+                    %span.tag-sold__text SOLD
               .search-box-body
                 %h3.search-box-name.font-2
                   = pro.product_name
@@ -40,9 +47,9 @@
           %option
             並べ替え
           %option
-            安いじゅん
+            安い順
           %option
-            高いじゅん
+            高い順
           %option
             old
           %option
