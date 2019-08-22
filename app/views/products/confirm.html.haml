@@ -1,5 +1,4 @@
-.confirm-header
-  = render partial: "users/signup-header"
+= render partial: "users/signup-header"
 .confirm-main
   .confirm-main__container
     %h2.confirm-head
@@ -26,7 +25,7 @@
           %span.confirm-item__total-price<>
             ¥
             = @product.price.to_s(:delimited, delimiter: ',')
-        - if @address.blank? || @cards.blank?
+        - if current_user.address.blank? || @cards.blank?
           .confirm-item__error-message
             配送先と支払い方法の入力を完了してください。
           .confirm-purchase-btn.btn-disabled
@@ -41,11 +40,11 @@
           配送先
         .confirm-address
           %span<>〒
-          = @address.postal_code
+          = current_user.address.postal_code
           %br
-          = user_address(@address)
+          = user_address(current_user.address)
           %br
-          = user_name(@address)
+          = user_name(current_user.address)
         .confirm-link
           = link_to("変更する＞",
             root_path)

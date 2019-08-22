@@ -3,11 +3,7 @@ $color-white: #fff;
 $color-light-gray: #ccc;
 $color-red: #ea352d;
 $color-gray: #888;
-
-
-.confirm-header {
-  background-color: $color-bg-gray;
-}
+$color-bg-yellow: #FFF6CF;
 
 .confirm-main {
   background-color: $color-bg-gray;
@@ -141,3 +137,87 @@ $color-gray: #888;
     text-decoration: underline;
   }
 }
+
+.complete-alert {
+  background-color: $color-bg-yellow;
+  border-bottom: 1px solid $color-bg-gray;
+  padding: 22px 16px;
+
+  &-head {
+    align-items: center;
+    color: $color-red;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    justify-content: center;
+    padding: 0 0 16px;
+  }
+
+  &-text {
+    text-align: center;
+  }
+}
+
+.complete-head {
+  border-bottom: 1px solid $color-bg-gray;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.complete-item {
+  border-bottom: 1px solid $color-bg-gray;
+  text-align: center;
+  
+  &__image {
+    padding: 8px;
+    width: 160px;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 0 20px;
+  }
+}
+
+.complete-text-center {
+  border-bottom: 1px solid $color-bg-gray;
+  padding: 32px;
+  text-align: center;
+}
+
+.complete-price-text {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.complete-text-left {
+  border-bottom: 1px solid $color-bg-gray;
+  margin: 0 auto;
+  width: 320px;
+  padding: 26px 0 32px;
+}
+
+.complete-text-bold {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 0 16px;
+}
+
+.complete-link-text {
+  display: block;
+  font-weight: bold;
+  padding: 16px 0 0;
+}
+
+.complete-text {
+  line-height: 1.5;
+}
+
+.complete-icons {
+  padding: 10px 0 0;
+}
+
