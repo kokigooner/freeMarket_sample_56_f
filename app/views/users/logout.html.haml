@@ -4,9 +4,12 @@
   %main.large-container.clearfix
     .large-content
       .large-chapter-container
-        = form_tag('users_identification_path', method: :post,class: "large-single-inner" ) do |f|
+        = form_tag('users_identification_path',
+          method: :post,class: "large-single-inner" ) do |f|
           .large-single-content
-            = link_to "ログアウト", destroy_user_session_path,
-              method: :delete, class: "btn-red btn-default"
+            = link_to "ログアウト",
+              destroy_user_session_path,
+              method: :delete,
+              class: "btn-red btn-default"
     = render 'shared/l-side'
   = render 'shared/footer'

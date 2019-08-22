@@ -16,11 +16,13 @@ class UsersController < ApplicationController
     session.delete(:email)
   end
 
-  def confirmation
+  def confirm_user
     @user = User.new(user_params)
-    if @user.valid?
+    if @user.valid? && verify_recaptcha(model: @user)
       session[:user_params] = user_params
+      redirect_to users_signup_confirmation_path
     else
+      @user.errors.add(:base, :unverified) unless verify_recaptcha
       render :registration
     end
   end
@@ -50,14 +52,7 @@ class UsersController < ApplicationController
   def complete
   end
 
-  def login
-    @user = User.new
-  end
-
   def profile
-  end
-
-  def sell
   end
 
   def mypage
