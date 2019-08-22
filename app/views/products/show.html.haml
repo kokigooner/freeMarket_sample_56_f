@@ -92,12 +92,13 @@
       .product-button-left
         %button.product-button.product-button-like{"name": "like!","data-toggle": "like","data-id": "#{"xxxxxxxx"}","data-ga":"#{"element"}","dara-ga-category": "#{'LIKE'}"}
           %i.icon-like-border
+            .buttons_product.id
             =render 'likes/like'
             -# = image_tag "sample_heart.png",width: "15" ,hight: "15"
             %span
               良いね！
-            %span.fade-in-down{"data-num":"#{"like"}"}
-              0
+            -# %span.fade-in-down{"data-num":"#{"like"}"}
+            -#   0
         %button.product-button.product-button-report.clearfix{"data-modal":"#{"report-product"}","data-open":"#{"modal"}"}
           %i.icon-flag
             = image_tag "sample_flag.png",width: "15" ,hight: "15"

@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :products do
-    resources :likes, only: [:create, :destroy]
-  end
+
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: "products#toppage"
@@ -60,4 +58,8 @@ Rails.application.routes.draw do
   get "/users/sell", to: "users#sell"
   get "/users/login", to: "users#login"
   get '/users/sign_out', to: 'devise/sessions#destroy'
+
+  resources :products do
+    resources :likes, only: [:create, :destroy]
+  end
 end

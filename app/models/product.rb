@@ -11,6 +11,7 @@ class Product < ApplicationRecord
   #  likes.find_by(user_id: user_id)
   # end
   def like_user(id)
+
     likes.find_by(user_id: id)
   end
 end
