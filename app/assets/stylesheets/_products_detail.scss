@@ -153,10 +153,10 @@ nav ol, nav ul {
 }
 
 .tag-sold-show {
-  border-top: 80px solid transparent;
-  border-right: 80px solid transparent;
   border-bottom: 80px solid $color-red;
   border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-top: 80px solid transparent;
   bottom: 380px;
   box-sizing: border-box;
   height: 80px;
@@ -186,4 +186,12 @@ nav ol, nav ul {
   line-height: 56px;
   margin: 16px 0;
   text-align: center;
+}
+
+.product-heart-icon {
+  color: #f28fb1;
+}
+
+.product-flag-icon {
+  color: #be4dda;
 }

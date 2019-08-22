@@ -3,7 +3,7 @@ $color-white: #fff;
 $color-light-gray: #ccc;
 $color-red: #ea352d;
 $color-gray: #888;
-$color-bg-yellow: #FFF6CF;
+$color-bg-yellow: #fff6cf;
 
 .confirm-main {
   background-color: $color-bg-gray;
@@ -47,8 +47,8 @@ $color-bg-yellow: #FFF6CF;
   &__price {
     font-size: 22px;
     font-weight: bold;
+    margin: 15px 0 0;
     text-align: center;
-    margin: 15px 0 0 0;
     width: 100%;
   }
 
@@ -122,7 +122,7 @@ $color-bg-yellow: #FFF6CF;
 }
 
 .confirm-address {
-  margin: 8px 0 0 0;
+  margin: 8px 0 0;
 
   &__head {
     font-weight: bold;
@@ -132,8 +132,8 @@ $color-bg-yellow: #FFF6CF;
 .confirm-link {
   text-align: right;
 
-    &:hover {
-    opacity: 0.7;
+  &:hover {
+    opacity: .7;
     text-decoration: underline;
   }
 }
@@ -170,7 +170,7 @@ $color-bg-yellow: #FFF6CF;
 .complete-item {
   border-bottom: 1px solid $color-bg-gray;
   text-align: center;
-  
+
   &__image {
     padding: 8px;
     width: 160px;
@@ -197,8 +197,8 @@ $color-bg-yellow: #FFF6CF;
 .complete-text-left {
   border-bottom: 1px solid $color-bg-gray;
   margin: 0 auto;
-  width: 320px;
   padding: 26px 0 32px;
+  width: 320px;
 }
 
 .complete-text-bold {
@@ -219,5 +219,18 @@ $color-bg-yellow: #FFF6CF;
 
 .complete-icons {
   padding: 10px 0 0;
+
+  &-wink {
+    color: #ef5185;
+  }
+
+  &-meh {
+    color: #fbaa34;
+  }
+
+  &-frown {
+    color: #69b5d8;
+  }
 }
+
 

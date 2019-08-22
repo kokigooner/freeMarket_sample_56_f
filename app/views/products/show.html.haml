@@ -15,7 +15,6 @@
                   - if @product.order_status == true
                     .tag-sold-show
                       %span.tag-sold-show__text SOLD
-                  
           .eagle-dots
             - @product.images.each do |thumbnail|
               .eagle-dot
@@ -103,14 +102,14 @@
       .product-button-left
         %button.product-button.product-button-like
           %i.icon-like-border
-            %i.far.fa-heart{ style: "color: #F28FB1" }
+            %i.far.fa-heart.product-heart-icon
             %span
               良いね！
             %span.fade-in-down
               0
         %button.product-button.product-button-report.clearfix
           %i.icon-flag
-            %i.far.fa-flag{ style: "color: #BE4DDA" }
+            %i.far.fa-flag.product-flag-icon
             %span
               不適切な商品の報告
       .product-button-right

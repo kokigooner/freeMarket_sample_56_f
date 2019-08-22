@@ -48,18 +48,15 @@
             %br
             = render "cards/cards",
               brand: @cards[0]["brand"]
-          .confirm-link
-            = link_to("変更する＞",
-              root_path)
       .complete-text-center
         .complete-text-bold
           発送通知後の流れ
           .complete-icons
             %i.far.fa-star.fa-xs
             %i.far.fa-star.fa-sm
-            %i.fas.fa-smile-wink{style: "color: #ef5185"}
-            %i.fas.fa-meh{style: "color: #fbaa34"}
-            %i.fas.fa-frown-open{style: "color: #69b5d8"}
+            %i.fas.fa-smile-wink.complete-icons-wink
+            %i.fas.fa-meh.complete-icons-meh
+            %i.fas.fa-frown-open.complete-icons-frown
             %i.far.fa-star.fa-sm
             %i.far.fa-star.fa-xs
         .complete-text

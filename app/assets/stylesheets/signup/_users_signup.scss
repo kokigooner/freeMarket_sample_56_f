@@ -9,15 +9,17 @@ $color-bg-gray: #f5f5f5;
 }
 .signup {
   &__header {
+    align-items: center;
     background-color: $color-bg-gray;
     display: flex;
-    width: 100vw;
     height: 128px;
     justify-content: center;
-    align-items: center;
+    width: 100vw;
+
     &__logo {
       width: 230px;
     }
+
     &__logo:hover {
       opacity: 0.7;
     }
