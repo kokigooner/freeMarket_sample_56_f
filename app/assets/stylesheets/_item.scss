@@ -171,6 +171,7 @@ $dc-color:#f5f5f5;
     &-container {
       margin: 16px 0 0;
       font-size: 0;
+      
 
       a{
         display: inline-block;
@@ -182,10 +183,17 @@ $dc-color:#f5f5f5;
       }
 
       span {
+        color: $black4;
         display: inline-block;
         margin: 1px 0 0 8px;
         font-size: 14px;
         vertical-align: middle;
+      }
+      .fas.fa-heart{
+        color: #ea352d;
+      }
+      .far.fa-heart{
+        color: $black4;
       }
     }
 

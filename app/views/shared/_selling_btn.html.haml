@@ -1,5 +1,6 @@
-.footer-sell-btn
-  = link_to products_sell_path do
-    %div 出品
-    %i.icon-camera
-      %i.fas.fa-camera.fa-3x
+- if user_signed_in?
+  .footer-sell-btn
+    = link_to products_sell_path do
+      %div 出品
+      %i.icon-camera
+        %i.fas.fa-camera.fa-3x
