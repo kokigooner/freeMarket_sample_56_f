@@ -76,7 +76,17 @@ th {
   padding: 0;
 }
 
-.search-container .items-box, .category-brand-list .items-box, .related-item-column .items-box {
+.search-container .items-box{
+  width: calc(33.3333% - 2.666666px);
+  margin: 0 4px 4px 0;
+}
+
+ .category-brand-list .items-box{
+  width: calc(33.3333% - 2.666666px);
+  margin: 0 4px 4px 0;
+}
+
+  .related-item-column .items-box {
   width: calc(33.3333% - 2.666666px);
   margin: 0 4px 4px 0;
 }
@@ -88,9 +98,9 @@ table {
 
 th {
   display: table-cell;
-  vertical-align: inherit;
   font-weight: bold;
   text-align: -internal-center;
+  vertical-align: inherit;
 }
 
 nav ol, nav ul {
