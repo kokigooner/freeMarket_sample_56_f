@@ -101,7 +101,7 @@ class ProductsController < ApplicationController
       :price,
       :order_status,
       :prefecture_id,
-      images_attributes: [ :image, :_destroy, :id ]
+      images_attributes: [ :image, :_destroy, :id ])
   end
   
   def set_Category
