@@ -113,6 +113,7 @@ class ProductsController < ApplicationController
   end
 
   def set_card
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
     @cards = Array.new
     users_cards = current_user.cards
     users_cards.each do |card|
