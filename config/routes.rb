@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   get '/products/search', to: 'products#search'
 
-  resources :products, only: [:index, :show, :create] do
+  resources :products, only: [:index, :show, :update, :create] do
     member do
       get 'confirm'
       post 'purchase'

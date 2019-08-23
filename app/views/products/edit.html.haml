@@ -18,9 +18,9 @@
                     %pre
                       #preview
                         クリックしてファイルをアップロード
-                      -unless fi.object.new_record?
-                        .sell--upload__drop__box__preview
-                        = image_tag fi.object.image, class: "uploadimg"
+                    - unless fi.object.new_record?
+                      .sell-upload__imageview
+                        = image_tag fi.object.image, class: "upload-img"
                         = fi.label :_destroy, class: "img_del" do
                           = fi.check_box :_destroy, {}, 1, 0
                           画像を削除する
