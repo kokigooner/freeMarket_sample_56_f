@@ -6,9 +6,12 @@ Rails.application.routes.draw do
   root to: "products#index"
 
   get "/products/sell", to: "products#new"
+  get "/products/edit", to: "products#edit"
+  
 
   match 'secondcategory', to: 'products#secondcategory', via: [:get, :post]
   match 'thirdcategory', to: 'products#thirdcategory', via: [:get, :post]
+
   get '/products/search', to: 'products#search'
 
   resources :products, only: [:index, :show, :create] do
