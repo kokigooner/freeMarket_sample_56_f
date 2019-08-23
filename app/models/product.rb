@@ -5,8 +5,8 @@ class Product < ApplicationRecord
   belongs_to :first_category
   belongs_to :second_category
   belongs_to :third_category
-  # belongs_to :brand
-  # belongs_to :size
+  belongs_to :brand
+  belongs_to :size
   
 
   has_many :likes, dependent: :destroy

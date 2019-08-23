@@ -59,15 +59,19 @@ th {
 .visible-sp {
   display: none;
 }
+
 .bold {
   font-weight: 600;
 }
+
 [data-toggle='open-app'] {
   display: none;
 }
+
 [data-client='visible'] {
   display: none;
 }
+
 .f14 {
   font-size: 14px;
 }
@@ -77,6 +81,7 @@ th {
   padding: 16px;
   background: #eee;
 }
+
 * {
   background-repeat: no-repeat;
   margin: 0;
@@ -87,6 +92,7 @@ th {
   width: calc(33.3333% - 2.666666px);
   margin: 0 4px 4px 0;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -114,11 +120,13 @@ nav ol, nav ul {
   display: block;
   clear: both;
 }
+
 .btn-gray {
   background: #aaa;
   border: 1px solid #aaa;
   color: #fff;
 }
+
 .f18-24 {
   font-size: 24px;
 }

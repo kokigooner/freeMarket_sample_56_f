@@ -3,6 +3,7 @@ $color-white: #fff;
 $color-black: #333;
 $black-shadow: rgba(255, 255, 255, 0);
 $color-red: #ea362e;
+$back-white: #f5f5f5;
 
 .slide-banner.owl-carousel.owl-loaded.owl-drag {
   width: 100%;
@@ -91,9 +92,9 @@ $color-red: #ea362e;
 }
 
 .pickup-container {
+  background-color: $back-white;
   padding: 40px 0;
   width: 100%;
-  background-color: #f5f5f5;
 }
 
 .pickup-head {
