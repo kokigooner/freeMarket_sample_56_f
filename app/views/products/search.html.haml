@@ -38,7 +38,10 @@
                     %i.icon-like-border
                       %i.far.fa-heart
                       %span
-                      = "#{"1"}"
+                        - if pro.likes_count?
+                          = pro.likes_count
+                        - else
+                          0
       %ul.pager
         = paginate @s_products
     .large-side-search

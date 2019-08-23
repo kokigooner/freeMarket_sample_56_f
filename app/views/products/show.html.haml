@@ -170,7 +170,10 @@
                   %i.icon-like-border
                     %i.far.fa-heart
                     %span
-                    = "#{"1"}"
+                      - if pro.likes_count?
+                        = pro.likes_count
+                      - else
+                        0
     %section.products-box-container.clearfix.related-product-column
       %h2.products-box-head
         %a
@@ -191,6 +194,9 @@
                   %i.icon-like-border
                     %i.far.fa-heart
                     %span
-                    = "#{"1"}"
+                      - if pro.likes_count?
+                        = pro.likes_count
+                      - else
+                        0
   = render 'shared/bread-crumbs'
   = render 'shared/footer'
