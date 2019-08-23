@@ -1,5 +1,7 @@
 .default-container 
-  = render  'shared/header'
+  = render 'shared/header'
+  .shadow
+    = render 'shared/shadow'
   %section.product-box-container.large-single-container
     %h1.product-name
       = @product.product_name
@@ -7,47 +9,55 @@
       .product-photo
         .eagle-carousel.eagle-loaded.eagle-drag
           .eagle-stage-outer
-            .eagle-stage{ "style":"left: 0px width: 900px" }
-              .eagle-product.active{ "style":"width: 300px" }
+            .eagle-stage
+              .eagle-product.active
                 .eagle-product-inner.is-higher-height
-                  = image_tag "#{@product.images.first[:image]}", class: 'eagle-lazy',width: "300" ,hight: "300"
+                  = image_tag "#{@product.images.first.image}",
+                    class: 'eagle-lazy'
+                  - if @product.order_status == true
+                    .tag-sold-show
+                      %span.tag-sold-show__text SOLD
           .eagle-dots
             - @product.images.each do |thumbnail|
               .eagle-dot
                 .eagle-dot-inner
-                  = image_tag "#{thumbnail.image}", class: 'eagle-lazy',width: "60" ,hight: "60"
+                  = image_tag "#{thumbnail.image}",
+                    class: 'eagle-lazy'
       %table.product-detail-table
         %tbody
           %tr
             %th 出品者
             %td
-              = link_to "#{@product.user.nickname}","/"
+              = link_to "#{@product.user.nickname}", root_path
               %div
                 .product-user-ratings
                   %i.icon-good.icon-size
                     %i.far.fa-smile-wink
-                  %span ??
+                  %span 1
                 .product-user-ratings
                   %i.icon-normal.icon-size
                     %i.far.fa-meh
-                  %span ??
+                  %span 2
                 .product-user-ratings
                   %i.icon-bad.icon-size
                     %i.far.fa-frown-open 
-                  %span ??
+                  %span 3
           %tr
             %th カテゴリー
             %td
               %div
-              = link_to @product.first_category.first_category, root_path
+              = link_to @product.first_category.first_category,
+                root_path
               %div
-              = link_to @product.second_category.second_category, root_path
+              = link_to "＞#{@product.second_category.second_category}",
+                root_path
               %div
-              = link_to @product.third_category.third_category, root_path
+              = link_to "＞#{@product.third_category.third_category}",
+                root_path
           %tr
             %th ブランド
             %td 
-              = link_to "未実装","/"
+              = link_to "未実装", root_path
           %tr
             %th 商品の状態
             %td 
@@ -63,7 +73,7 @@
           %tr
             %th 配送元地域
             %td 
-              = link_to "??????","/"
+              =  Prefecture.find(@product.prefecture_id)[:name]
           %tr
             %th 発送日の目安
             %td
@@ -75,31 +85,29 @@
         (税込)
       %span.product-shipping-fee
         送料込み
-      - if user_signed_in?
+      - if @product.order_status == true
+        .product-btn-sold
+          売り切れました
+      - elsif user_signed_in?
         - unless current_user.id == @product.user_id
-          = link_to "購入画面に進む",  destroy_user_session_path,class: "product-buy-btn", method: :delete
+          = link_to "購入画面に進む",
+            confirm_product_path(@product),
+            class: "product-buy-btn"
       - else 
-        = link_to "購入画面に進む",  destroy_user_session_path,class: "product-buy-btn", method: :delete
-    -# %a.product-btn-client
-    -#   %div{"data-client": "#{'visible'}"}
-    -#     購入画面に進む
-    -#     =link_to "購入画面に進む", myprofile_path(@product.id)
-      -# .product-action-text{"data-toggle": "#{'open-app'}","data-url-scheme": "#{'mercari://'}","data-action": "#{'product/openDetail'}",'data-key': "#{'id=aaaaaaaa'}","data-paly-id": "#{"com.kouzoh.mercari"}","data-adjust-url": "http://app.adjust.io/xio2ii?campaign=iOS&adgroup=items.buy_button1aaaaaa"}
-      -#   アプリで購入　　←※スマホ用
+        = link_to "購入画面に進む",
+          new_user_session_path,
+          class: "product-buy-btn"
     .product-description.f14
-      = simple_format "#{@product.description}", class:'product-description-inner'
+      = simple_format "#{@product.description}",
+        class:'product-description-inner'
     .product-button-container.clearfix
       .product-button-left
-        %button.product-button.product-button-like{"name": "like!","data-toggle": "like","data-id": "#{"xxxxxxxx"}","data-ga":"#{"element"}","dara-ga-category": "#{'LIKE'}"}
+        .product-button.product-button-like
           %i.icon-like-border
-            = image_tag "sample_heart.png",width: "15" ,hight: "15"
-            %span
-              良いね！
-            %span.fade-in-down{"data-num":"#{"like"}"}
-              0
-        %button.product-button.product-button-report.clearfix{"data-modal":"#{"report-product"}","data-open":"#{"modal"}"}
+            =render "likes/like"
+        %button.product-button.product-button-report.clearfix
           %i.icon-flag
-            = image_tag "sample_flag.png",width: "15" ,hight: "15"
+            %i.far.fa-flag.product-flag-icon
             %span
               不適切な商品の報告
       .product-button-right
@@ -134,13 +142,13 @@
     %ul.social-media-box
       %li
         %a
-          = image_tag "fb_b.png",width: "44" ,hight: "44"
+          = image_tag "fb_b.png", width: "44"
       %li
         %a
-          = image_tag "tw_b.png",width: "44" ,hight: "44"
+          = image_tag "tw_b.png", width: "44"
       %li
         %a
-          = image_tag "pin_r.jpg",width: "44" ,hight: "44"
+          = image_tag "pin_r.jpg", width: "44"
   .products-in-user-profile
     %section.products-box-container.clearfix.related-product-column.products-in-user-profile
       %h2.products-box-head
@@ -166,9 +174,9 @@
     %section.products-box-container.clearfix.related-product-column
       %h2.products-box-head
         %a
-          = "#{@product_user.nickname}"+"のその他の出品"
+          = "#{@product_category.third_category}"+"のその他の出品"
       .products-box-content.clearfix
-      - @product_user.products.last(6).each.with_index do |pro,i|
+      - @product_category.products.last(6).each.with_index do |pro,i|
         %section.products-box{"class":"products-id#{i+1}"}
           = link_to product_path(pro) do
             %figure.products-box-photo
@@ -185,4 +193,4 @@
                     %span
                     = "#{"1"}"
   = render 'shared/bread-crumbs'
-  = render  'shared/footer'
+  = render 'shared/footer'

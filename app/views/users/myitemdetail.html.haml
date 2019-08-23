@@ -10,14 +10,17 @@
             .eagle-stage
               .eagle-product.active
                 .eagle-product-inner.is-higher-height
-                  = image_tag "#{@product.images.first[:image]}",
-                  class: 'eagle-lazy',width: "300" ,hight: "300"
+                  = image_tag "#{@product.images.first.image}",
+                    class: 'eagle-lazy'
+                  - if @product.order_status == true
+                    .tag-sold-show
+                      %span.tag-sold-show__text SOLD
           .eagle-dots
             - @product.images.each do |thumbnail|
               .eagle-dot
                 .eagle-dot-inner
                   = image_tag "#{thumbnail.image}",
-                  class: 'eagle-lazy',width: "60" ,hight: "60"
+                    class: 'eagle-lazy'
       %table.product-detail-table
         %tbody
           %tr

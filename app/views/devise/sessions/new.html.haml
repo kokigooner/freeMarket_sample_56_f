@@ -24,12 +24,17 @@
       = form_for @user, url: session_path(@user) do |f|
         = f.email_field :email,
           placeholder: "メールアドレス",
-          class: "login__form__input"
+          class: "login__form__input",
+          value: @user.email
         = f.password_field :password,
           placeholder: "パスワード",
           class: "login__form__input"
-        = image_tag 'recaptcha.jpeg',
-          class: 'login__form__recaptcha-img'
+        .recaptcha-box
+          = recaptcha_tags
+          - if @user.errors[:base].present?
+            .recaptcha-box--unverified
+          = render 'users/error_messages',
+            errors: @user.errors.full_messages_for(:base)
         = f.submit class: "login__form__submit-btn",
           value: "ログイン"
       = link_to 'パスワードをお忘れの方',
