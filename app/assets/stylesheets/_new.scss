@@ -8,20 +8,6 @@ $ashgray: #888;
 $darkcolor: #333;
 $ashcolor: #aaa;
 
-body {
-  background: $white;
-  color: $darkcolor;
-  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
-  font-size: 14px;
-  line-height: 1;
-  min-height: 100%;
-  position: relative;
-}
-
-main {
-  display: block;
-}
-
 .container {
   background: $white;
   margin: 0 auto;
@@ -162,6 +148,7 @@ main {
 .select-wrap {
   background: $white;
   position: relative;
+  font-weight: normal;
 }
 
 label {
