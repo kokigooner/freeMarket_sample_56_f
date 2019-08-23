@@ -73,9 +73,9 @@ th {
 }
 
 [data-comment='body'] {
+  background: #eee;
   margin: 16px 0 0;
   padding: 16px;
-  background: #eee;
 }
 
 * {
@@ -103,10 +103,6 @@ th {
   vertical-align: inherit;
   font-weight: bold;
   text-align: -internal-center;
-}
-
-.f14 {
-  font-size: 18px;
 }
 
 nav ol, nav ul {
