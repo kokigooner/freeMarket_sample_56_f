@@ -21,11 +21,16 @@ class ProductsController < ApplicationController
 
   def create
     @product = current_user.products.new(product_params)
+    binding.pry
     if @product.save
       redirect_to root_path, notice: '記事が投稿されました'
     else
       render :new
     end
+  end
+
+  def edit
+    (4 - @product.images.size).times{@product.images.new}
   end
 
   def show
@@ -83,13 +88,12 @@ class ProductsController < ApplicationController
   
   private
   def product_params
-    params.require(:product).permit(:product_name, :description, :first_category_id, :second_category_id, :third_category_id, :condition, :delivery_charge, :delivery_way, :delivery_date,:price,
+    params.require(:product).permit(:product_name, :description, :first_category_id, :second_category_id, :third_category_id, :size_id, :brand_id, :condition, :delivery_charge, :delivery_way, :delivery_date,:price,
       :order_status, :prefecture_id, images_attributes: [ :image, :_destroy, :id ])   
   end
   
   def set_Category
     @first = FirstCategory.all
-    @second = SecondCategory.all
   end
 
   def set_product

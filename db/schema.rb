@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190821050433) do
+ActiveRecord::Schema.define(version: 20190822040935) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string  "postal_code",      null: false
@@ -119,7 +119,9 @@ ActiveRecord::Schema.define(version: 20190821050433) do
   create_table "third_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string  "third_category",     null: false
     t.integer "second_category_id"
+    t.integer "size_category_id"
     t.index ["second_category_id"], name: "index_third_categories_on_second_category_id", using: :btree
+    t.index ["size_category_id"], name: "index_third_categories_on_size_category_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -159,4 +161,5 @@ ActiveRecord::Schema.define(version: 20190821050433) do
   add_foreign_key "sizes", "size_categories"
   add_foreign_key "sns_credentials", "users"
   add_foreign_key "third_categories", "second_categories"
+  add_foreign_key "third_categories", "size_categories"
 end
