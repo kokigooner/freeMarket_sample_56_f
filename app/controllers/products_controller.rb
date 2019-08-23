@@ -36,6 +36,17 @@ class ProductsController < ApplicationController
     (4 - @product.images.size).times{@product.images.new}
   end
 
+  def update
+    if @product.user_id == current_user.id
+      if @product.update(product_params)
+        redirect_to users_mypage_myitem_path(@product)
+      else
+        (4 - @product.images.size).times{@product.images.new}
+        render :edit
+      end
+    end
+  end
+
   def show
     @next = Product.where('id > ?',"#{params[:id]}").first
     @previous = Product.where('id < ?',"#{params[:id]}").last
@@ -111,7 +122,11 @@ class ProductsController < ApplicationController
   end
 
   def set_product
-    @product = Product.find(params[:id])
+    if params[:id] == nil
+      @product = Product.find(params[:format])
+    else
+      @product = Product.find(params[:id])
+    end
   end
 
   def set_card

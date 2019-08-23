@@ -84,7 +84,7 @@
       =simple_format "#{@product.description}", class:'product-description-inner'
   .products-detail-btn
     .products-detail-btn-style.edit
-      = link_to "商品の編集", root_path
+      = link_to "商品の編集", products_edit_path(@product)
     .or or
     .products-detail-btn-style.gray
       = link_to "出品を一旦停止する", root_path
