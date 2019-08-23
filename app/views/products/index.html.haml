@@ -23,12 +23,12 @@
   %h2.pickup-head
     ピックアップブランド
   = render partial: "pickup_brands",
-    locals: { brand: "シャネル", products: @products }
+    locals: { brand: "シャネル", products: @products_chanel }
   = render partial: "pickup_brands",
-    locals: { brand: "ルイヴィトン", products: @products }
+    locals: { brand: "ルイヴィトン", products: @products_lv }
   = render partial: "pickup_brands",
-    locals: { brand: "シュプリーム", products: @products }
+    locals: { brand: "シュプリーム", products: @products_supreme }
   = render partial: "pickup_brands",
-    locals: { brand: "ナイキ", products: @products }
+    locals: { brand: "ナイキ", products: @products_nike }
 = render 'shared/footer'
 = render 'shared/selling_btn'

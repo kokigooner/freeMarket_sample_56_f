@@ -8,11 +8,14 @@ class ProductsController < ApplicationController
 
 
   def index
-    @products = Product.order(id: "DESC").limit(4)
     @products_ladies = Product.where(first_category_id: 1).order(id: "DESC").limit(4)
     @products_mens = Product.where(first_category_id: 2).order(id: "DESC").limit(4)
     @products_kids = Product.where(first_category_id: 3).order(id: "DESC").limit(4)
     @products_cosmetics = Product.where(first_category_id: 7).order(id: "DESC").limit(4)
+    @products_chanel = Product.where(brand_id: 1).order(id: "DESC").limit(4)
+    @products_lv = Product.where(brand_id: 3).order(id: "DESC").limit(4)
+    @products_supreme = Product.where(brand_id: 4).order(id: "DESC").limit(4)
+    @products_nike = Product.where(brand_id: 2).order(id: "DESC").limit(4)
   end
 
   def new
