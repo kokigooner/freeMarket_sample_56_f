@@ -1,3 +1,6 @@
+$checkbox-color: #fff;
+$bordercolor: #ccc;
+
 .large{
   $white: #fff;
   $gray: rgb(136, 136, 136);
@@ -58,76 +61,74 @@
   &-right {
     float: right;
   }
+}
 
-  &-side-search {
-    display: table;
-    width: 280px;
+.large-side-search {
+  display: table;
+  width: 280px;
 
-    .search-dropdown-content {
-      background-color: $white;
-      font-weight: normal;
-      margin: 40px 0 0;
-      padding: 16px;
+  .search-dropdown-content {
+    background-color: $white;
+    font-weight: normal;
+    margin: 40px 0 0;
+    padding: 16px;
+  }
+
+  .fas {
+    color: $gray;
+  }
+
+  .far {
+    color: $gray;
+  }
+
+  .fa-tag {
+    transform: rotate(-45deg);
+  }
+
+  .input-default {
+    font-weight: normal;
+  }
+
+  .select-default {
+    font-weight: normal;
+    background-color: $white;
+  }
+
+  .checkbox-default {
+    display: inline-block;
+    font-weight: normal;
+    margin: 16px 0 0;
+    vertical-align: middle;
+    width: 48%;
+    word-break: break-word;
+
+    input {
+      display: none;
     }
 
-    .fas {
-      color: $gray;
-    }
-
-    .far {
-      color: $gray;
-    }
-
-    .fa-tag {
-      transform: rotate(-45deg);
-    }
-
-    .input-default {
-      font-weight: normal;
-    }
-
-    .select-default {
-      font-weight: normal;
-      background-color: $white;
-    }
-
-    .checkbox-default {
-      display: inline-block;
-      font-weight: normal;
-      margin: 16px 0 0;
+    .fa-check-square {
+      background: $checkbox-color;
+      border: 1px solid $bordercolor;
+      border-radius: 2px;
+      color: $checkbox-color;
+      font-size: 10px;
+      height: 18px;
+      line-height: 20px;
+      margin: 0 4px 0 0;
+      position: absolute;
+      text-align: center;
       vertical-align: middle;
-      width: 48%;
-      word-break: break-word;
+      width: 18px;
+    }
 
-      input {
-        display: none;
-      }
-
-      .fa-check-square {
-        background: #fff;
-        border: 1px solid #ccc;
-        border-radius: 2px;
-        color: #fff;
-        font-size: 10px;
-        height: 18px;
-        line-height: 20px;
-        margin: 0 4px 0 0;
-        position: absolute;
-        text-align: center;
-        vertical-align: middle;
-        width: 18px;
-      }
-
-      label {
-        font-size: 14px;
-        font-weight: 400;
-        margin: 0;
-        padding: 0 0 0 28px;
-        position: relative;
-        vertical-align: middle;
-      }
+    label {
+      font-size: 14px;
+      font-weight: 400;
+      margin: 0;
+      padding: 0 0 0 28px;
+      position: relative;
+      vertical-align: middle;
     }
   }
 }
-
-
