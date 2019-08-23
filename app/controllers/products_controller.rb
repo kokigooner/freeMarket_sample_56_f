@@ -29,6 +29,10 @@ class ProductsController < ApplicationController
     end
   end
 
+  def edit
+    (4 - @product.images.size).times{@product.images.new}
+  end
+
   def show
     @next = Product.where('id > ?',"#{params[:id]}").first
     @previous = Product.where('id < ?',"#{params[:id]}").last
@@ -88,6 +92,8 @@ class ProductsController < ApplicationController
       :first_category_id,
       :second_category_id,
       :third_category_id,
+      :size_id,
+      :brand_id,
       :condition,
       :delivery_charge,
       :delivery_way,
@@ -96,12 +102,10 @@ class ProductsController < ApplicationController
       :order_status,
       :prefecture_id,
       images_attributes: [ :image, :_destroy, :id ]
-      )   
   end
   
   def set_Category
     @first = FirstCategory.all
-    @second = SecondCategory.all
   end
 
   def set_product

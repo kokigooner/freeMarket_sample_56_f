@@ -18,6 +18,12 @@
                     %pre
                       #preview
                         クリックしてファイルをアップロード
+                      -unless fi.object.new_record?
+                        .sell--upload__drop__box__preview
+                        = image_tag fi.object.image, class: "uploadimg"
+                        = fi.label :_destroy, class: "img_del" do
+                          = fi.check_box :_destroy, {}, 1, 0
+                          画像を削除する
             .sell-content
               .form-group
                 %label
@@ -53,8 +59,7 @@
                   %label
                     ブランド
                     %span.form-require 任意
-                  .select-wrap
-                    = f.collection_select :brand_id, Brand.all, :id, :brand,{prompt: '---'}
+                  = f.text_field :brand_id, class: "input-default"
                 .form-group
                   %label
                     商品の状態
@@ -126,6 +131,6 @@
                   また、出品をもちまして
                   = link_to '加盟店規約', "/jp/seller_terms/"
                   に同意したことになります。
-              = f.submit class: "btn-default btn-red", value: "出品する"
+              = f.submit class: "btn-default btn-red", value: "編集する"
               = link_to 'もどる', root_path, class: "btn-gray"
 = render 'users/signup-footer'
