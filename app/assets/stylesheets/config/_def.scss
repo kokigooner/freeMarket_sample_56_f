@@ -60,10 +60,6 @@ th {
   display: none;
 }
 
-.bold {
-  font-weight: 600;
-}
-
 [data-toggle='open-app'] {
   display: none;
 }
@@ -97,9 +93,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 .visible-sp {
   display: none;
 }
+
 th {
   display: table-cell;
   vertical-align: inherit;
