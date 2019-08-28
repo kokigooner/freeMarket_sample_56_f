@@ -44,15 +44,19 @@
             %th カテゴリー
             %td
               %div
-              = link_to "未実装","/"
+              = link_to @product.first_category.first_category,
+                first_category_path(@product.first_category)
               %div
-              = link_to "> 未実装","/"
+              = link_to "＞#{@product.second_category.second_category}",
+                second_category_path(@product.second_category)
               %div
-              = link_to "> 未実装","/"
+              = link_to "＞#{@product.third_category.third_category}",
+                third_category_path(@product.third_category)
           %tr
             %th ブランド
             %td
-              = link_to "未実装","/"
+              = link_to "＞#{@product.brand.brand}",
+                root_path
           %tr
             %th 商品の状態
             %td
@@ -68,7 +72,7 @@
           %tr
             %th 配送元地域
             %td
-              = link_to "??????","/"
+              =  Prefecture.find(@product.prefecture_id)[:name]
           %tr
             %th 発送日の目安
             %td
