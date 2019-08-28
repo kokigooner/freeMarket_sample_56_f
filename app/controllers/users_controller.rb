@@ -59,7 +59,7 @@ class UsersController < ApplicationController
     @like = 0
     if current_user.products.present?
         current_user.products.each do |like|
-          unless like.likes_count == nil 
+          if like.likes_count.kind_of?(Integer)
             @like += like.likes_count
           end
         end
