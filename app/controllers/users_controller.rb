@@ -57,8 +57,10 @@ class UsersController < ApplicationController
 
   def mypage
     @like = 0
-    current_user.products.each do |like|
-      @like += like.likes_count
+    if current_user.products.present?
+        current_user.products.each do |like|
+          @like += like.likes_count
+        end
     end
   end
   
