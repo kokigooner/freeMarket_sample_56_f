@@ -56,14 +56,6 @@ class UsersController < ApplicationController
   end
 
   def mypage
-    @like = 0
-    if current_user.products.present?
-        current_user.products.each do |like|
-          if like.likes_count.kind_of?(Integer)
-            @like += like.likes_count
-          end
-        end
-    end
   end
   
   def myitems
