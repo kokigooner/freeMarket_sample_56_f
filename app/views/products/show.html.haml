@@ -47,13 +47,13 @@
             %td
               %div
               = link_to @product.first_category.first_category,
-                root_path
+                first_category_path(@product.first_category)
               %div
               = link_to "＞#{@product.second_category.second_category}",
-                root_path
+                second_category_path(@product.second_category)
               %div
               = link_to "＞#{@product.third_category.third_category}",
-                root_path
+                third_category_path(@product.third_category)
           %tr
             %th ブランド
             %td 
