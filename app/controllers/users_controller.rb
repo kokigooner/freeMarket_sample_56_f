@@ -59,7 +59,7 @@ class UsersController < ApplicationController
     @like = 0
     if current_user.products.present?
         current_user.products.each do |like|
-          if like.likes_count.present?
+          unless like.likes_count == nil 
             @like += like.likes_count
           end
         end
