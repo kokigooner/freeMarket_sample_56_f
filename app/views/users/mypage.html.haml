@@ -16,11 +16,11 @@
             .mypage-user__review
               評価
               %span.mypage-user__num
-                2
+                = @like
             .mypage-user__products
               商品数
               %span.mypage-user__num
-                16
+                = current_user.products.length
       %section.mypage-news
         %ul.mypage-news__menu
           %li.mypage-news__menu__left

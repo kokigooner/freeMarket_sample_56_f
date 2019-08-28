@@ -56,6 +56,10 @@ class UsersController < ApplicationController
   end
 
   def mypage
+    @like = 0
+    current_user.products.each do |like|
+      @like += like.likes_count
+    end
   end
   
   def myitems
